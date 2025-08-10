@@ -24,4 +24,4 @@
 6) 유기농 관련 정부 정책, 인증 기준 등의 정보 제공
 -> 유기농 인증 제도 및 프로세스 안내
 
-https://github.com/huni2/greenOasis/blob/main/usecase/usecasegreOa.jpg
+<img src= "https://github.com/huni2/greenOasis/blob/main/usecase/usecasegreOa.jpg" />
