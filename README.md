@@ -58,4 +58,4 @@
 ## 결론
 Green Oasis는 유기농 제품과 관련된 정보 공유 및 커뮤니티 활동을 통해 지속 가능한 소비 문화를 형성하는 것을 목표로 합니다. 사용자들이 신뢰할 수 있는 정보를 바탕으로 친환경 소비를 실천할 수 있도록 지원합니다.
 
-<img src= "https://github.com/huni2/greenOasis/blob/main/usecase/usecasegreOa.jpg" />
+<img src= "산출물/usecase/usecasegreOa.jpg" />
