@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>SK hynix 자산관리시스템</title>
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/common.css">
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
+</head>
+<body>
+    
+    <div class="dimmed"></div>
+    <div class="popup popup-widget" style="width:1000px;"><!--팝업사이즈 조절-->
+        <div class="popTitle">
+            <h2>위젯 추가</h2>
+        </div>
+        <div class="popCont oh">
+            <div class="inner">
+                <div class="widget-functional-header">
+                    <ul class="tabs">
+                        <li class="current" data-tab="tab1"><a href="#none">전체</a></li>
+                        <li class="" data-tab="tab2"><a href="#none">현황</a></li>
+                        <li class="" data-tab="tab3"><a href="#none">통계</a></li>
+                        <li class="" data-tab="tab4"><a href="#none">게시판</a></li>
+                        <li class="" data-tab="tab5"><a href="#none">기타</a></li>
+                    </ul>
+                    <span class="search_wrap">
+                        <input type="text" placeholder="위젯명">
+                        <span class="search"></span>
+                    </span>
+                </div>
+
+                <div id="tab1" class="tab-cont current">
+                    <div class="in">
+                        <p class="total">Total : <em>99,999</em></p>
+                        <div class="widget-add-contents">
+
+                                <!-- dbwg10 -->
+                                <div class="widget-add-card">
+                                    <div class="widget-add-title">
+                                        <input type="checkbox" class="inp_chk" name="dbwg10" id="dbwg10"><label for="dbwg10" class="mr_5">종합 자산 현황</label>
+                                        <a href="#">
+                                            <span class="screen-out">설정하기</span>
+                                            <span class="setting-icon"></span>
+                                        </a>
+                                    </div>
+                                    <div class="widget-add-graph-area">
+
+                                        <div class="widget-preview">
+                                            
+                                            <div class="widget-tooltip">
+                                                <img src="../images/widget/dbwg10.jpg" alt="">
+                                                <div class="tooltiptext">
+                                                    자산의 Super EQ Master, EQ Master 현황을 표기하고 자산의 Tracker 부착율을 보여줍니다.
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- dbwg11 -->
+                                <div class="widget-add-card">
+                                    <div class="widget-add-title">
+                                        <input type="checkbox" class="inp_chk" name="dbwg11" id="dbwg11"><label for="dbwg11" class="mr_5">자산 Count 추이</label>
+                                        <a href="#">
+                                            <span class="screen-out">설정하기</span>
+                                            <span class="setting-icon"></span>
+                                        </a>
+                                    </div>
+                                    <div class="widget-add-graph-area">
+
+                                        <div class="widget-preview">
+                                            
+                                            <div class="widget-tooltip">
+                                                <img src="../images/widget/dbwg11.jpg" alt="">
+                                                <div class="tooltiptext">
+                                                    기간별 자산 Count 추이를 그래프로 표시합니다.
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- dbwg12 -->
+                                <div class="widget-add-card">
+                                    <div class="widget-add-title">
+                                        <input type="checkbox" class="inp_chk" name="dbwg12" id="dbwg12"><label for="dbwg12" class="mr_5">이설 자산 현황</label>
+                                        <a href="#">
+                                            <span class="screen-out">설정하기</span>
+                                            <span class="setting-icon"></span>
+                                        </a>
+                                    </div>
+                                    <div class="widget-add-graph-area">
+
+                                        <div class="widget-preview">
+                                            
+                                            <div class="widget-tooltip">
+                                                <img src="../images/widget/dbwg11.jpg" alt="">
+                                                <div class="tooltiptext">
+                                                    자산상태중 ‘이설’ 상태의 자산의 위치별 현황을 차트로 보여줍니다.
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- dbwg13 -->
+                                <div class="widget-add-card">
+                                    <div class="widget-add-title">
+                                        <input type="checkbox" class="inp_chk" name="dbwg13" id="dbwg13"><label for="dbwg13" class="mr_5">철거 자산 현황</label>
+                                        <a href="#">
+                                            <span class="screen-out">설정하기</span>
+                                            <span class="setting-icon"></span>
+                                        </a>
+                                    </div>
+                                    <div class="widget-add-graph-area">
+
+                                        <div class="widget-preview">
+                                            
+                                            <div class="widget-tooltip">
+                                                <img src="../images/widget/dbwg13.jpg" alt="">
+                                                <div class="tooltiptext">
+                                                    자산상태중 ‘철거’ 상태의 자산의 위치별 현황을 차트로 보여줍니다.
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- dbwg14 -->
+                                <div class="widget-add-card">
+                                    <div class="widget-add-title">
+                                        <input type="checkbox" class="inp_chk" name="dbwg14" id="dbwg14"><label for="dbwg14" class="mr_5">유후 자산 현황</label>
+                                        <a href="#">
+                                            <span class="screen-out">설정하기</span>
+                                            <span class="setting-icon"></span>
+                                        </a>
+                                    </div>
+                                    <div class="widget-add-graph-area">
+
+                                        <div class="widget-preview">
+                                            
+                                            <div class="widget-tooltip">
+                                                <img src="../images/widget/dbwg13.jpg" alt="">
+                                                <div class="tooltiptext">
+                                                    자산상태중 ‘유휴’ 상태의 자산의 위치별 현황을 차트로 보여줍니다.
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- dbwg15 -->
+                                <div class="widget-add-card">
+                                    <div class="widget-add-title">
+                                        <input type="checkbox" class="inp_chk" name="dbwg15" id="dbwg15"><label for="dbwg15" class="mr_5">Tracker 현황</label>
+                                        <a href="#">
+                                            <span class="screen-out">설정하기</span>
+                                            <span class="setting-icon"></span>
+                                        </a>
+                                    </div>
+                                    <div class="widget-add-graph-area">
+
+                                        <div class="widget-preview">
+                                            
+                                            <div class="widget-tooltip">
+                                                <img src="../images/widget/dbwg15.jpg" alt="">
+                                                <div class="tooltiptext">
+                                                    Tracker의 정상, 장애, 대기, 폐기 현황을 파악할 수 있습니다.
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- dbwg01 -->
+                                <div class="widget-add-card">
+                                    <div class="widget-add-title">
+                                        <input type="checkbox" class="inp_chk" name="dbwg01" id="dbwg01"><label for="dbwg01" class="mr_5">자산 상태 통계</label>
+                                        <a href="#">
+                                            <span class="screen-out">설정하기</span>
+                                            <span class="setting-icon"></span>
+                                        </a>
+                                    </div>
+                                    <div class="widget-add-graph-area">
+    
+                                        <div class="widget-preview">
+                                            
+                                            <div class="widget-tooltip">
+                                                <img src="../images/widget/dbwg01.jpg" alt="">
+                                                <div class="tooltiptext">
+                                                    주간 월간 자산 상태를 표시 합니다. 
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- dbwg03 -->
+                                <div class="widget-add-card">
+                                    <div class="widget-add-title">
+                                        <input type="checkbox" class="inp_chk" name="dbwg03" id="dbwg03"><label for="dbwg03" class="mr_5">Tracker 장애 통계</label>
+                                        <a href="#">
+                                            <span class="screen-out">설정하기</span>
+                                            <span class="setting-icon"></span>
+                                        </a>
+                                    </div>
+                                    <div class="widget-add-graph-area">
+    
+                                        <div class="widget-preview">
+                                            
+                                            <div class="widget-tooltip">
+                                                <img src="../images/widget/dbwg03.jpg" alt="">
+                                                <div class="tooltiptext">
+                                                    주간 월간 Tracker 장애 통계를 표시 합니다.
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- dbwg04 -->
+                                <div class="widget-add-card">
+                                    <div class="widget-add-title">
+                                        <input type="checkbox" class="inp_chk" name="dbwg04" id="dbwg04"><label for="dbwg04" class="mr_5">주간 월간 Tracker 배터리 저하 통계</label>
+                                        <a href="#">
+                                            <span class="screen-out">설정하기</span>
+                                            <span class="setting-icon"></span>
+                                        </a>
+                                    </div>
+                                    <div class="widget-add-graph-area">
+    
+                                        <div class="widget-preview">
+                                            
+                                            <div class="widget-tooltip">
+                                                <img src="../images/widget/dbwg03.jpg" alt="">
+                                                <div class="tooltiptext">
+                                                    주간 월간 Tracker 배터리 저하 현황을 표시 합니다.
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- dbwg05 -->
+                                <div class="widget-add-card">
+                                    <div class="widget-add-title">
+                                        <input type="checkbox" class="inp_chk" name="dbwg05" id="dbwg05"><label for="dbwg05" class="mr_5">WiFi AP 장애 통계</label>
+                                        <a href="#">
+                                            <span class="screen-out">설정하기</span>
+                                            <span class="setting-icon"></span>
+                                        </a>
+                                    </div>
+                                    <div class="widget-add-graph-area">
+    
+                                        <div class="widget-preview">
+                                            
+                                            <div class="widget-tooltip">
+                                                <img src="../images/widget/dbwg05.jpg" alt="">
+                                                <div class="tooltiptext">
+                                                    주간 월간 WiFi AP 장애 통계를 표시 합니다.
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- dbwg06 -->
+                                <div class="widget-add-card">
+                                    <div class="widget-add-title">
+                                        <input type="checkbox" class="inp_chk" name="dbwg06" id="dbwg06"><label for="dbwg06" class="mr_5">BLE AP 장애 통계</label>
+                                        <a href="#">
+                                            <span class="screen-out">설정하기</span>
+                                            <span class="setting-icon"></span>
+                                        </a>
+                                    </div>
+                                    <div class="widget-add-graph-area">
+    
+                                        <div class="widget-preview">
+                                            
+                                            <div class="widget-tooltip">
+                                                <img src="../images/widget/dbwg06.jpg" alt="">
+                                                <div class="tooltiptext">
+                                                    주간 월간 BLE AP 장애 통계를 표시 합니다.
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- dbwg16 -->
+                                <div class="widget-add-card">
+                                    <div class="widget-add-title">
+                                        <input type="checkbox" class="inp_chk" name="dbwg16" id="dbwg16"><label for="dbwg16" class="mr_5">위치 불명확 자산 통계</label>
+                                        <a href="#">
+                                            <span class="screen-out">설정하기</span>
+                                            <span class="setting-icon"></span>
+                                        </a>
+                                    </div>
+                                    <div class="widget-add-graph-area">
+    
+                                        <div class="widget-preview">
+                                            
+                                            <div class="widget-tooltip">
+                                                <img src="../images/widget/dbwg16.jpg" alt="">
+                                                <div class="tooltiptext">
+                                                    위치 불명확 자산의 통계을 보여줍니다.
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>    
+                                
+                                <!-- dbwg17 -->
+                                <div class="widget-add-card">
+                                    <div class="widget-add-title">
+                                        <input type="checkbox" class="inp_chk" name="dbwg17" id="dbwg17"><label for="dbwg17" class="mr_5">담당자 미확인 자산 통계</label>
+                                        <a href="#">
+                                            <span class="screen-out">설정하기</span>
+                                            <span class="setting-icon"></span>
+                                        </a>
+                                    </div>
+                                    <div class="widget-add-graph-area">
+    
+                                        <div class="widget-preview">
+                                            
+                                            <div class="widget-tooltip">
+                                                <img src="../images/widget/dbwg17.jpg" alt="">
+                                                <div class="tooltiptext">
+                                                    담당자 미확인 자산의 통계를 보여줍니다.
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>  
+
+                                <!-- dbwg18 -->
+                                <div class="widget-add-card">
+                                    <div class="widget-add-title">
+                                        <input type="checkbox" class="inp_chk" name="dbwg18" id="dbwg18"><label for="dbwg18" class="mr_5">유해화학물질값 초과 자산 통계</label>
+                                        <a href="#">
+                                            <span class="screen-out">설정하기</span>
+                                            <span class="setting-icon"></span>
+                                        </a>
+                                    </div>
+                                    <div class="widget-add-graph-area">
+    
+                                        <div class="widget-preview">
+                                            
+                                            <div class="widget-tooltip">
+                                                <img src="../images/widget/dbwg18.jpg" alt="">
+                                                <div class="tooltiptext">
+                                                    유해화학물질값 초과 자산의 통계를 보여줍니다.
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>  
+
+                                <!-- dbwg19 -->
+                                <div class="widget-add-card">
+                                    <div class="widget-add-title">
+                                        <input type="checkbox" class="inp_chk" name="dbwg19" id="dbwg19"><label for="dbwg19" class="mr_5">Tracker 장애 통계</label>
+                                        <a href="#">
+                                            <span class="screen-out">설정하기</span>
+                                            <span class="setting-icon"></span>
+                                        </a>
+                                    </div>
+                                    <div class="widget-add-graph-area">
+    
+                                        <div class="widget-preview">
+                                            
+                                            <div class="widget-tooltip">
+                                                <img src="../images/widget/dbwg19.jpg" alt="">
+                                                <div class="tooltiptext">
+                                                    Tracker 장애 통계를 보여줍니다.
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div> 
+
+                                <!-- dbwg20 -->
+                                <div class="widget-add-card">
+                                    <div class="widget-add-title">
+                                        <input type="checkbox" class="inp_chk" name="dbwg20" id="dbwg20"><label for="dbwg20" class="mr_5">Tracker 폐기 통계</label>
+                                        <a href="#">
+                                            <span class="screen-out">설정하기</span>
+                                            <span class="setting-icon"></span>
+                                        </a>
+                                    </div>
+                                    <div class="widget-add-graph-area">
+    
+                                        <div class="widget-preview">
+                                            
+                                            <div class="widget-tooltip">
+                                                <img src="../images/widget/dbwg20.jpg" alt="">
+                                                <div class="tooltiptext">
+                                                    Tracker 폐기 통계를 보여줍니다.
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div> 
+                                
+                                <!-- dbwg07 -->
+                                <div class="widget-add-card">
+                                    <div class="widget-add-title">
+                                        <input type="checkbox" class="inp_chk" name="dbwg07" id="dbwg07"><label for="dbwg07" class="mr_5">공지사항 목록</label>
+                                        <a href="#">
+                                            <span class="screen-out">설정하기</span>
+                                            <span class="setting-icon"></span>
+                                        </a>
+                                    </div>
+                                    <div class="widget-add-graph-area">
+    
+                                        <div class="widget-preview">
+                                            
+                                            <div class="widget-tooltip">
+                                                <img src="../images/widget/dbwg07.jpg" alt="">
+                                                <div class="tooltiptext">
+                                                    최근에 발생한 공지사항 리스트를 표시 합니다.
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- dbwg08 -->
+                                <div class="widget-add-card">
+                                    <div class="widget-add-title">
+                                        <input type="checkbox" class="inp_chk" name="dbwg08" id="dbwg08"><label for="dbwg08" class="mr_5">게시판 목록</label>
+                                        <a href="#">
+                                            <span class="screen-out">설정하기</span>
+                                            <span class="setting-icon"></span>
+                                        </a>
+                                    </div>
+                                    <div class="widget-add-graph-area">
+    
+                                        <div class="widget-preview">
+                                            
+                                            <div class="widget-tooltip">
+                                                <img src="../images/widget/dbwg08.jpg" alt="">
+                                                <div class="tooltiptext">
+                                                    최근에 발생한 게시판 리스트를 표시 합니다.
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- dbwg09 -->
+                                <div class="widget-add-card">
+                                    <div class="widget-add-title">
+                                        <input type="checkbox" class="inp_chk" name="dbwg09" id="dbwg09"><label for="dbwg09" class="mr_5">Q&A 목록</label>
+                                        <a href="#">
+                                            <span class="screen-out">설정하기</span>
+                                            <span class="setting-icon"></span>
+                                        </a>
+                                    </div>
+                                    <div class="widget-add-graph-area">
+    
+                                        <div class="widget-preview">
+                                            
+                                            <div class="widget-tooltip">
+                                                <img src="../images/widget/dbwg09.jpg" alt="">
+                                                <div class="tooltiptext">
+                                                    최근에 발생한 Q&A 리스트를 표시 합니다.
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+
+                            
+                        </div>
+                    </div>
+
+
+                </div>
+                <div id="tab2" class="tab-cont">
+
+                    <div class="in">
+
+                        <div class="widget-add-contents">
+
+                                <!-- dbwg10 -->
+                                <div class="widget-add-card">
+                                    <div class="widget-add-title">
+                                        <input type="checkbox" class="inp_chk" name="dbwg10" id="dbwg10"><label for="dbwg10" class="mr_5">종합 자산 현황</label>
+                                        <a href="#">
+                                            <span class="screen-out">설정하기</span>
+                                            <span class="setting-icon"></span>
+                                        </a>
+                                    </div>
+                                    <div class="widget-add-graph-area">
+
+                                        <div class="widget-preview">
+                                            
+                                            <div class="widget-tooltip">
+                                                <img src="../images/widget/dbwg10.jpg" alt="">
+                                                <div class="tooltiptext">
+                                                    자산의 Super EQ Master, EQ Master 현황을 표기하고 자산의 Tracker 부착율을 보여줍니다.
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- dbwg11 -->
+                                <div class="widget-add-card">
+                                    <div class="widget-add-title">
+                                        <input type="checkbox" class="inp_chk" name="dbwg11" id="dbwg11"><label for="dbwg11" class="mr_5">자산 Count 추이</label>
+                                        <a href="#">
+                                            <span class="screen-out">설정하기</span>
+                                            <span class="setting-icon"></span>
+                                        </a>
+                                    </div>
+                                    <div class="widget-add-graph-area">
+
+                                        <div class="widget-preview">
+                                            
+                                            <div class="widget-tooltip">
+                                                <img src="../images/widget/dbwg11.jpg" alt="">
+                                                <div class="tooltiptext">
+                                                    기간별 자산 Count 추이를 그래프로 표시합니다.
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- dbwg12 -->
+                                <div class="widget-add-card">
+                                    <div class="widget-add-title">
+                                        <input type="checkbox" class="inp_chk" name="dbwg12" id="dbwg12"><label for="dbwg12" class="mr_5">이설 자산 현황</label>
+                                        <a href="#">
+                                            <span class="screen-out">설정하기</span>
+                                            <span class="setting-icon"></span>
+                                        </a>
+                                    </div>
+                                    <div class="widget-add-graph-area">
+
+                                        <div class="widget-preview">
+                                            
+                                            <div class="widget-tooltip">
+                                                <img src="../images/widget/dbwg11.jpg" alt="">
+                                                <div class="tooltiptext">
+                                                    자산상태중 ‘이설’ 상태의 자산의 위치별 현황을 차트로 보여줍니다.
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- dbwg13 -->
+                                <div class="widget-add-card">
+                                    <div class="widget-add-title">
+                                        <input type="checkbox" class="inp_chk" name="dbwg13" id="dbwg13"><label for="dbwg13" class="mr_5">철거 자산 현황</label>
+                                        <a href="#">
+                                            <span class="screen-out">설정하기</span>
+                                            <span class="setting-icon"></span>
+                                        </a>
+                                    </div>
+                                    <div class="widget-add-graph-area">
+
+                                        <div class="widget-preview">
+                                            
+                                            <div class="widget-tooltip">
+                                                <img src="../images/widget/dbwg13.jpg" alt="">
+                                                <div class="tooltiptext">
+                                                    자산상태중 ‘철거’ 상태의 자산의 위치별 현황을 차트로 보여줍니다.
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- dbwg14 -->
+                                <div class="widget-add-card">
+                                    <div class="widget-add-title">
+                                        <input type="checkbox" class="inp_chk" name="dbwg14" id="dbwg14"><label for="dbwg14" class="mr_5">유후 자산 현황</label>
+                                        <a href="#">
+                                            <span class="screen-out">설정하기</span>
+                                            <span class="setting-icon"></span>
+                                        </a>
+                                    </div>
+                                    <div class="widget-add-graph-area">
+
+                                        <div class="widget-preview">
+                                            
+                                            <div class="widget-tooltip">
+                                                <img src="../images/widget/dbwg13.jpg" alt="">
+                                                <div class="tooltiptext">
+                                                    자산상태중 ‘유휴’ 상태의 자산의 위치별 현황을 차트로 보여줍니다.
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- dbwg15 -->
+                                <div class="widget-add-card">
+                                    <div class="widget-add-title">
+                                        <input type="checkbox" class="inp_chk" name="dbwg15" id="dbwg15"><label for="dbwg15" class="mr_5">Tracker 현황</label>
+                                        <a href="#">
+                                            <span class="screen-out">설정하기</span>
+                                            <span class="setting-icon"></span>
+                                        </a>
+                                    </div>
+                                    <div class="widget-add-graph-area">
+
+                                        <div class="widget-preview">
+                                            
+                                            <div class="widget-tooltip">
+                                                <img src="../images/widget/dbwg15.jpg" alt="">
+                                                <div class="tooltiptext">
+                                                    Tracker의 정상, 장애, 대기, 폐기 현황을 파악할 수 있습니다.
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                        </div>
+                        <!--//widget-add-contents-->
+
+                    </div>
+                
+                </div>
+                <div id="tab3" class="tab-cont">
+
+                    <div class="in">
+                    
+                        <div class="widget-add-contents">
+
+                                <!-- dbwg01 -->
+                                <div class="widget-add-card">
+                                    <div class="widget-add-title">
+                                        <input type="checkbox" class="inp_chk" name="dbwg01" id="dbwg01"><label for="dbwg01" class="mr_5">자산 상태 통계</label>
+                                        <a href="#">
+                                            <span class="screen-out">설정하기</span>
+                                            <span class="setting-icon"></span>
+                                        </a>
+                                    </div>
+                                    <div class="widget-add-graph-area">
+    
+                                        <div class="widget-preview">
+                                            
+                                            <div class="widget-tooltip">
+                                                <img src="../images/widget/dbwg01.jpg" alt="">
+                                                <div class="tooltiptext">
+                                                    주간 월간 자산 상태를 표시 합니다. 
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- dbwg03 -->
+                                <div class="widget-add-card">
+                                    <div class="widget-add-title">
+                                        <input type="checkbox" class="inp_chk" name="dbwg03" id="dbwg03"><label for="dbwg03" class="mr_5">Tracker 장애 통계</label>
+                                        <a href="#">
+                                            <span class="screen-out">설정하기</span>
+                                            <span class="setting-icon"></span>
+                                        </a>
+                                    </div>
+                                    <div class="widget-add-graph-area">
+    
+                                        <div class="widget-preview">
+                                            
+                                            <div class="widget-tooltip">
+                                                <img src="../images/widget/dbwg03.jpg" alt="">
+                                                <div class="tooltiptext">
+                                                    주간 월간 Tracker 장애 통계를 표시 합니다.
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- dbwg04 -->
+                                <div class="widget-add-card">
+                                    <div class="widget-add-title">
+                                        <input type="checkbox" class="inp_chk" name="dbwg04" id="dbwg04"><label for="dbwg04" class="mr_5">주간 월간 Tracker 배터리 저하 통계</label>
+                                        <a href="#">
+                                            <span class="screen-out">설정하기</span>
+                                            <span class="setting-icon"></span>
+                                        </a>
+                                    </div>
+                                    <div class="widget-add-graph-area">
+    
+                                        <div class="widget-preview">
+                                            
+                                            <div class="widget-tooltip">
+                                                <img src="../images/widget/dbwg03.jpg" alt="">
+                                                <div class="tooltiptext">
+                                                    주간 월간 Tracker 배터리 저하 현황을 표시 합니다.
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- dbwg05 -->
+                                <div class="widget-add-card">
+                                    <div class="widget-add-title">
+                                        <input type="checkbox" class="inp_chk" name="dbwg05" id="dbwg05"><label for="dbwg05" class="mr_5">WiFi AP 장애 통계</label>
+                                        <a href="#">
+                                            <span class="screen-out">설정하기</span>
+                                            <span class="setting-icon"></span>
+                                        </a>
+                                    </div>
+                                    <div class="widget-add-graph-area">
+    
+                                        <div class="widget-preview">
+                                            
+                                            <div class="widget-tooltip">
+                                                <img src="../images/widget/dbwg05.jpg" alt="">
+                                                <div class="tooltiptext">
+                                                    주간 월간 WiFi AP 장애 통계를 표시 합니다.
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- dbwg06 -->
+                                <div class="widget-add-card">
+                                    <div class="widget-add-title">
+                                        <input type="checkbox" class="inp_chk" name="dbwg06" id="dbwg06"><label for="dbwg06" class="mr_5">BLE AP 장애 통계</label>
+                                        <a href="#">
+                                            <span class="screen-out">설정하기</span>
+                                            <span class="setting-icon"></span>
+                                        </a>
+                                    </div>
+                                    <div class="widget-add-graph-area">
+    
+                                        <div class="widget-preview">
+                                            
+                                            <div class="widget-tooltip">
+                                                <img src="../images/widget/dbwg06.jpg" alt="">
+                                                <div class="tooltiptext">
+                                                    주간 월간 BLE AP 장애 통계를 표시 합니다.
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- dbwg16 -->
+                                <div class="widget-add-card">
+                                    <div class="widget-add-title">
+                                        <input type="checkbox" class="inp_chk" name="dbwg16" id="dbwg16"><label for="dbwg16" class="mr_5">위치 불명확 자산 통계</label>
+                                        <a href="#">
+                                            <span class="screen-out">설정하기</span>
+                                            <span class="setting-icon"></span>
+                                        </a>
+                                    </div>
+                                    <div class="widget-add-graph-area">
+    
+                                        <div class="widget-preview">
+                                            
+                                            <div class="widget-tooltip">
+                                                <img src="../images/widget/dbwg16.jpg" alt="">
+                                                <div class="tooltiptext">
+                                                    위치 불명확 자산의 통계을 보여줍니다.
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>    
+                                
+                                <!-- dbwg17 -->
+                                <div class="widget-add-card">
+                                    <div class="widget-add-title">
+                                        <input type="checkbox" class="inp_chk" name="dbwg17" id="dbwg17"><label for="dbwg17" class="mr_5">담당자 미확인 자산 통계</label>
+                                        <a href="#">
+                                            <span class="screen-out">설정하기</span>
+                                            <span class="setting-icon"></span>
+                                        </a>
+                                    </div>
+                                    <div class="widget-add-graph-area">
+    
+                                        <div class="widget-preview">
+                                            
+                                            <div class="widget-tooltip">
+                                                <img src="../images/widget/dbwg17.jpg" alt="">
+                                                <div class="tooltiptext">
+                                                    담당자 미확인 자산의 통계를 보여줍니다.
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>  
+
+                                <!-- dbwg18 -->
+                                <div class="widget-add-card">
+                                    <div class="widget-add-title">
+                                        <input type="checkbox" class="inp_chk" name="dbwg18" id="dbwg18"><label for="dbwg18" class="mr_5">유해화학물질값 초과 자산 통계</label>
+                                        <a href="#">
+                                            <span class="screen-out">설정하기</span>
+                                            <span class="setting-icon"></span>
+                                        </a>
+                                    </div>
+                                    <div class="widget-add-graph-area">
+    
+                                        <div class="widget-preview">
+                                            
+                                            <div class="widget-tooltip">
+                                                <img src="../images/widget/dbwg18.jpg" alt="">
+                                                <div class="tooltiptext">
+                                                    유해화학물질값 초과 자산의 통계를 보여줍니다.
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>  
+
+                                <!-- dbwg19 -->
+                                <div class="widget-add-card">
+                                    <div class="widget-add-title">
+                                        <input type="checkbox" class="inp_chk" name="dbwg19" id="dbwg19"><label for="dbwg19" class="mr_5">Tracker 장애 통계</label>
+                                        <a href="#">
+                                            <span class="screen-out">설정하기</span>
+                                            <span class="setting-icon"></span>
+                                        </a>
+                                    </div>
+                                    <div class="widget-add-graph-area">
+    
+                                        <div class="widget-preview">
+                                            
+                                            <div class="widget-tooltip">
+                                                <img src="../images/widget/dbwg19.jpg" alt="">
+                                                <div class="tooltiptext">
+                                                    Tracker 장애 통계를 보여줍니다.
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div> 
+
+                                <!-- dbwg20 -->
+                                <div class="widget-add-card">
+                                    <div class="widget-add-title">
+                                        <input type="checkbox" class="inp_chk" name="dbwg20" id="dbwg20"><label for="dbwg20" class="mr_5">Tracker 폐기 통계</label>
+                                        <a href="#">
+                                            <span class="screen-out">설정하기</span>
+                                            <span class="setting-icon"></span>
+                                        </a>
+                                    </div>
+                                    <div class="widget-add-graph-area">
+    
+                                        <div class="widget-preview">
+                                            
+                                            <div class="widget-tooltip">
+                                                <img src="../images/widget/dbwg20.jpg" alt="">
+                                                <div class="tooltiptext">
+                                                    Tracker 폐기 통계를 보여줍니다.
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div> 
+
+                            
+                        </div>
+                        <!--//widget-add-contents-->
+
+
+
+                    </div>
+                
+                </div>
+                <div id="tab4" class="tab-cont">
+
+                    <div class="in">
+                    
+                        <div class="widget-add-contents">
+
+                                <!-- dbwg07 -->
+                                <div class="widget-add-card">
+                                    <div class="widget-add-title">
+                                        <input type="checkbox" class="inp_chk" name="dbwg07" id="dbwg07"><label for="dbwg07" class="mr_5">공지사항 목록</label>
+                                        <a href="#">
+                                            <span class="screen-out">설정하기</span>
+                                            <span class="setting-icon"></span>
+                                        </a>
+                                    </div>
+                                    <div class="widget-add-graph-area">
+    
+                                        <div class="widget-preview">
+                                            
+                                            <div class="widget-tooltip">
+                                                <img src="../images/widget/dbwg07.jpg" alt="">
+                                                <div class="tooltiptext">
+                                                    최근에 발생한 공지사항 리스트를 표시 합니다.
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- dbwg08 -->
+                                <div class="widget-add-card">
+                                    <div class="widget-add-title">
+                                        <input type="checkbox" class="inp_chk" name="dbwg08" id="dbwg08"><label for="dbwg08" class="mr_5">게시판 목록</label>
+                                        <a href="#">
+                                            <span class="screen-out">설정하기</span>
+                                            <span class="setting-icon"></span>
+                                        </a>
+                                    </div>
+                                    <div class="widget-add-graph-area">
+    
+                                        <div class="widget-preview">
+                                            
+                                            <div class="widget-tooltip">
+                                                <img src="../images/widget/dbwg08.jpg" alt="">
+                                                <div class="tooltiptext">
+                                                    최근에 발생한 게시판 리스트를 표시 합니다.
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- dbwg09 -->
+                                <div class="widget-add-card">
+                                    <div class="widget-add-title">
+                                        <input type="checkbox" class="inp_chk" name="dbwg09" id="dbwg09"><label for="dbwg09" class="mr_5">Q&A 목록</label>
+                                        <a href="#">
+                                            <span class="screen-out">설정하기</span>
+                                            <span class="setting-icon"></span>
+                                        </a>
+                                    </div>
+                                    <div class="widget-add-graph-area">
+    
+                                        <div class="widget-preview">
+                                            
+                                            <div class="widget-tooltip">
+                                                <img src="../images/widget/dbwg09.jpg" alt="">
+                                                <div class="tooltiptext">
+                                                    최근에 발생한 Q&A 리스트를 표시 합니다.
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                        </div>
+                        <!--//widget-add-contents--> 
+
+                    </div>
+                
+                </div>
+                <div id="tab5" class="tab-cont">
+
+                    <div class="in">
+                    
+                        <!--데이터 없는 경우-->
+                        <div class="no-data-section">
+                            <div>
+                                <img src="../images/ico_result.png" alt="no data">
+                                <p>조회된 데이터가 없습니다.</p>
+                            </div>
+                        </div>
+                        <!--//데이터 없는 경우-->
+
+                    </div>
+                
+                </div>
+
+                <!--//inner-->
+            </div>
+        </div>
+        <div class="tb_bottom mt-3">
+            <button type="button" class="btn btn02"><span>취소</span></button>
+            <button type="button" class="btn btn01"><span>저장</span></button>
+        </div>
+        <!--//popCont-->
+        <button type="button" class="popClose"><span>닫기</span></button>
+    </div>
+    <!--//popup-->
+    <!--//container-scroller -->
+
+</body>
+<script src="../js/template.js"></script>
+<!--
+<script type="text/javascript">
+    $('ul.tabs li').click(function () {
+        var tab_id = $(this).attr('data-tab');
+        $('ul.tabs li').removeClass('current');
+        $('.widget-add-contents-area').removeClass('current');
+        $(this).addClass('current');
+        $("#" + tab_id).addClass('current');
+
+    });
+</script>-->
+
+</html>

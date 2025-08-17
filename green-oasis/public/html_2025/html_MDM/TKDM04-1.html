@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>SK hynix 자산관리시스템</title>
+  <link rel="shortcut icon" href="../images/favicon.ico">
+  <link rel="stylesheet" href="../css/common.css">
+
+  <script type="text/javascript" src="../js/jquery.js"></script>
+  <script type="text/javascript" src="../js/jquery-ui.js"></script>
+</head>
+
+<body class="bg-gray">
+
+  <div class="container-scroller">
+
+    <nav class="navbar fixed-top">
+      <div class="navbar-logo-wrapper">
+        <button class="navbar-toggler" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+      <div class="navbar-menu-wrapper">
+
+        <a class="navbar-logo" href="../index.html"><img src="../images/logo.png" alt="SK hynix 로고" /></a>
+        <span class="navbar-title">자산관리MAPS</span>
+        <ul class="location-link">
+          <li><a href="">이천</a></li>
+          <li><a href="">청주</a></li>
+          <li><a href="">우시</a></li>
+          <li><a href="">충징</a></li>
+        </ul>
+        <ul class="navbar-nav">
+
+          <li class="nav-item nav-language dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="languageDropdown"><i
+                class="flag-korea"></i><span>한국어</span></a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="languageDropdown">
+              <a class="dropdown-item"><i class="flag-us"></i>English</a>
+              <a class="dropdown-item"><i class="flag-china"></i>中文</a>
+            </div>
+          </li>
+          <li class="nav-item nav-error">
+            <a class="nav-link" href="#" title="에러"><i class="icon-error"></i></a>
+          </li>
+          <li class="nav-item nav-mail" title="메일">
+            <a class="nav-link" href="#"><i class="icon-mail"></i></a>
+          </li>
+          <li class="nav-item nav-noti dropdown" title="공지">
+            <a class="nav-link count-indicator dropdown-toggle" id="notiDropdown" href="#" data-toggle="dropdown"><i
+                class="icon-bell mx-0"></i><span class="count"></span></a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notiDropdown">
+              <p class="dropdown-header">공지</p>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-success"><i class="ti-info-alt mx-0"></i></div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject fw-normal">에러</h6>
+                  <p class="fw-light small-text mb-0 text-muted">1분전</p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-warning"><i class="ti-settings mx-0"></i></div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject fw-normal">설정</h6>
+                  <p class="fw-light small-text mb-0 text-muted">메세지</p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-info"><i class="ti-user mx-0"></i></div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject fw-normal">사용자등록</h6>
+                  <p class="fw-light small-text mb-0 text-muted">2일전</p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item nav-profile dropdown ">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown"><img
+                src="../images/top_face.png" alt="profile" /><span>X20220610</span></a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item"><i class="ti-settings text-primary"></i>나의정보</a>
+              <a class="dropdown-item"><i class="ti-power-off text-primary"></i>로그아웃</a>
+            </div>
+          </li>
+          <li class="nav-item nav-name">
+            <div><span>hwchoi</span><span>슈퍼관리자</span></div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--//navbar-->
+
+    <div class="page-body-wrapper">
+
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <script src="../js/nav.js"></script>
+      </nav>
+      <!--//sidebar-->
+
+      <div class="main-panel">
+
+        <div class="content-wrapper">
+
+          <!--TKDM04-1 팝업-->
+          <div class="dimmed"></div>
+          <div class="popup" style="width:1000px">
+            <div class="popTitle">
+              <h2>장비선택</h2>
+            </div>
+            <div class="popCont">
+              <div class="inner">
+                <div class="top-search-area center justify-content-start">
+                  <div class="left">
+                    <dl>
+                      <dt>장비ID</dt>
+                      <dd>
+                        <input type="text" placeholder="" value="" disabled>
+                      </dd>
+                    </dl>
+                    <dl>
+                      <dt>장비명</dt>
+                      <dd>
+                        <input type="text" placeholder="" value="" disabled>
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+                <!--장비 조회-->
+                <div class="top-search-area">
+                  <div class="left">
+                    <dl>
+                      <dt>
+                        <div>장비종류</div>
+                      </dt>
+                      <dd>
+                        <select>
+                          <option>전체</option>
+                        </select>
+                      </dd>
+                    </dl>
+                    <dl>
+                      <dt>
+                        <div>자산번호</div>
+                      </dt>
+                      <dd>
+                        <input type="text" placeholder="검색어" value="">
+                      </dd>
+                    </dl>
+                    <dl>
+                      <dt>
+                        <div>시리얼번호</div>
+                      </dt>
+                      <dd>
+                        <input type="text" placeholder="검색어" value="">
+                      </dd>
+                    </dl>
+                  </div>
+                  <div class="right">
+                    <button type="button" class="btn btn-search"><span class="ti-search"></span><span
+                        class="icon-name">조회</span></button>
+                  </div>
+                </div>
+                <!--//장비 조회-->
+
+                <!--장비 목록리스트-->
+                <div class="tb-list-area mt-3">
+                  <div class="tb_list01">
+                    <div class="tb_thead" style="min-height:120px; max-height: 280px; overflow-y: auto;display: none;">
+                      <table>
+                        <colgroup>
+                          <col width="5%">
+                          <col width="20%">
+                          <col width="20%">
+                          <col width="20%">
+                          <col width="*">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th>
+                              <input type="checkbox" class="inp_chk" name="" id="allCheck"><label
+                                for="allCheck"></label>
+                            </th>
+                            <th>
+                              <div class="th-wrap"><span class="s-tit">장비 ID</span>
+                                <span class="s-ico">
+                                  <span sort="asc" class="ico-sort icon-asc disabled"></span>
+                                  <span sort="desc" class="ico-sort icon-desc disabled"></span>
+                                </span>
+                              </div>
+                            </th>
+                            <th>
+                              <div class="th-wrap"><span class="s-tit">장비명</span>
+                                <span class="s-ico">
+                                  <span sort="asc" class="ico-sort icon-asc disabled"></span>
+                                  <span sort="desc" class="ico-sort icon-desc disabled"></span>
+                                </span>
+                              </div>
+                            </th>
+                            <th>
+                              <div class="th-wrap"><span class="s-tit">자산번호</span>
+                                <span class="s-ico">
+                                  <span sort="asc" class="ico-sort icon-asc disabled"></span>
+                                  <span sort="desc" class="ico-sort icon-desc disabled"></span>
+                                </span>
+                              </div>
+                            </th>
+                            <th>
+                              <div class="th-wrap"><span class="s-tit">시리얼번호</span>
+                                <span class="s-ico">
+                                  <span sort="asc" class="ico-sort icon-asc disabled"></span>
+                                  <span sort="desc" class="ico-sort icon-desc disabled"></span>
+                                </span>
+                              </div>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <input type="checkbox" class="inp_chk" name="" id="chk1"><label for="chk1"></label>
+                            </td>
+                            <td><span>장비 ID</span></td>
+                            <td><span>장비명 1</span></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <input type="checkbox" class="inp_chk" name="" id="chk1"><label for="chk1"></label>
+                            </td>
+                            <td><span>장비 ID</span></td>
+                            <td><span>장비명 1</span></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <input type="checkbox" class="inp_chk" name="" id="chk1"><label for="chk1"></label>
+                            </td>
+                            <td><span>장비 ID</span></td>
+                            <td><span>장비명 1</span></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+
+                    <!--데이터테이블-->
+                    <section class="dataTable-Group">
+                      <!--tb_top-->
+                      <!--//tb_top-->
+                      <!--datatable-->
+                        <div class="dataTable-wrap">
+                          <table class="dataTable">
+                              <thead>
+                                  <tr>
+                                    <th>
+                                      
+                                    </th>
+                                    <th>
+                                      장비 ID
+                                    </th>
+                                    <th>
+                                      장비명
+                                    </th>
+                                    <th>
+                                      자산번호
+                                    </th>
+                                    <th>
+                                      시리얼번호
+                                    </th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    <input type="checkbox" class="inp_chk" name="" id="chk1"><label for="chk1"></label>
+                                  </td>
+                                  <td><span>장비 ID</span></td>
+                                  <td><span>장비명 1</span></td>
+                                  <td></td>
+                                  <td></td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <input type="checkbox" class="inp_chk" name="" id="chk1"><label for="chk1"></label>
+                                  </td>
+                                  <td><span>장비 ID</span></td>
+                                  <td><span>장비명 1</span></td>
+                                  <td></td>
+                                  <td></td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <input type="checkbox" class="inp_chk" name="" id="chk1"><label for="chk1"></label>
+                                  </td>
+                                  <td><span>장비 ID</span></td>
+                                  <td><span>장비명 1</span></td>
+                                  <td></td>
+                                  <td></td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <input type="checkbox" class="inp_chk" name="" id="chk1"><label for="chk1"></label>
+                                  </td>
+                                  <td><span>장비 ID</span></td>
+                                  <td><span>장비명 1</span></td>
+                                  <td></td>
+                                  <td></td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <input type="checkbox" class="inp_chk" name="" id="chk1"><label for="chk1"></label>
+                                  </td>
+                                  <td><span>장비 ID</span></td>
+                                  <td><span>장비명 1</span></td>
+                                  <td></td>
+                                  <td></td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <input type="checkbox" class="inp_chk" name="" id="chk1"><label for="chk1"></label>
+                                  </td>
+                                  <td><span>장비 ID</span></td>
+                                  <td><span>장비명 1</span></td>
+                                  <td></td>
+                                  <td></td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <input type="checkbox" class="inp_chk" name="" id="chk1"><label for="chk1"></label>
+                                  </td>
+                                  <td><span>장비 ID</span></td>
+                                  <td><span>장비명 1</span></td>
+                                  <td></td>
+                                  <td></td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <input type="checkbox" class="inp_chk" name="" id="chk1"><label for="chk1"></label>
+                                  </td>
+                                  <td><span>장비 ID</span></td>
+                                  <td><span>장비명 1</span></td>
+                                  <td></td>
+                                  <td></td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <input type="checkbox" class="inp_chk" name="" id="chk1"><label for="chk1"></label>
+                                  </td>
+                                  <td><span>장비 ID</span></td>
+                                  <td><span>장비명 1</span></td>
+                                  <td></td>
+                                  <td></td>
+                                </tr>
+                              </tbody>
+                          </table>
+
+                        </div>
+                      <!--//datatable-->
+                    </section>
+                    <!--데이터테이블-->
+
+
+                    <ul class="pagination">
+                      <li class="page-item">
+                        <a class="page-link" href="javascript: void(0);" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                        </a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="javascript: void(0);">1</a></li>
+                      <li class="page-item"><a class="page-link" href="javascript: void(0);">2</a></li>
+                      <li class="page-item active"><a class="page-link" href="javascript: void(0);">3</a></li>
+                      <li class="page-item"><a class="page-link" href="javascript: void(0);">4</a></li>
+                      <li class="page-item"><a class="page-link" href="javascript: void(0);">5</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="javascript: void(0);" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!--//장비 목록리스트-->
+
+
+                <!-- nodata -->
+                <div class="msgNodata" style="display:none ;">
+                  해당 장비가 자산에 등록되어 있지 않습니다.
+                </div>
+                <!-- nodata -->
+
+                <div class="box-wrap d-flex justify-center model-box">
+                  <div class="model-img">
+                    <img src="../images/model/model_002.webp" alt="" />
+                  </div>
+                </div>
+
+
+              </div><!--//inner-->
+            </div><!--//popCont-->
+            <div class="tb_bottom">
+              <button type="button" class="btn btn02"><span>취소</span></button>
+              <button type="button" class="btn btn01"><span>저장</span></button>
+            </div>
+            <button type="button" class="popClose"><span>닫기</span></button>
+          </div>
+          <!--//TKDM04-1 팝업-->
+
+        </div>
+        <!--//content-wrapper-->
+
+        <footer class="footer">
+          <div>COPYRIGHT(C) 2025 SK TELECOM INC. ALL RIGHTS RESERVED.</div>
+        </footer>
+        <!--//footer-->
+
+      </div>
+      <!--//main-panel-->
+
+
+    </div>
+    <!--//page-body-wrapper-->
+
+  </div>
+  <!--//container-scroller -->
+</body>
+<script src="../js/template.js"></script>
+
+<!--데이터테이블-->
+<link rel="stylesheet" href="../css/datatables.css">
+<script src="../js/datatables.min.js"></script>
+<script>
+  $(document).ready( function () {
+      $('table.dataTable ').DataTable({
+
+        //가로 스크롤바
+        scrollX: true,
+
+        //세로 스크롤바
+        scrollY: 400,
+
+        //일정높이 이상 시 Y스크롤 추가
+        //"scrollCollapse" : true,
+
+        // 표시 건수기능 
+        lengthChange: false,
+
+        // 검색 기능 
+        searching: false,
+
+        // 정렬 기능 
+        ordering: true,
+
+        // 정보 표시 
+        info: false,
+
+        "pageLength": 10,
+
+        // 페이징 기능 
+        paging: false, 
+
+        pagingType : "full_numbers",
+
+        columnDefs: [
+            { width: "50px", targets: 0 },
+            { width: "100px", targets: 1 },
+            { width: "100px", targets: 2 },
+            { width: "100px", targets: 3 },
+            { width: "100px", targets: 4 },
+        ],
+
+        });
+  } );
+</script>
+<!--//데이터테이블-->
+</html>

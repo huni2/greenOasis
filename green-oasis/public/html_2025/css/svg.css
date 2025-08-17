@@ -1,0 +1,266 @@
+@charset "utf-8";
+
+svg a {fill:transparent;}
+svg .red {fill:#ff4040;}
+svg .blue{fill: #248ad8;}
+svg .targetPos{fill: #40c050;}
+
+svg polygon{opacity: 0;}
+svg polygon:hover{
+opacity: 0.6;
+fill: #474763;
+/* stroke: #000;
+stroke-width: 3px;
+stroke-dasharray: 7,3; 
+transition: .2s all;*/
+}
+svg text{
+  fill: #fff; 
+  font-weight: bold; 
+  font-size: 22px;
+}
+
+/* 전면도 */
+.skhynixWrap-ic.panoramicView a:hover .b_build {
+  opacity:0.7;
+  fill:#fffc00;
+}
+.skhynixWrap-ic.panoramicView .tit_build {
+  fill:#fff;
+  font-size:16px;
+  font-weight:bold;
+}
+.skhynixWrap-ic.panoramicView .tit_b {
+  opacity:0.7;
+  fill:#031525;
+  z-index: 99;
+}
+.skhynixWrap-ic.panoramicView a:hover .tit_b {
+  opacity:1;
+}
+.skhynixWrap-ic.panoramicView a:hover .dark {
+  fill:#9d9b04;
+  opacity: .9;
+}
+
+/* 평면도 */
+.skhynixWrap-ic.floorPlan{
+
+}
+.skhynixWrap-ic.floorPlan .tit_build {
+  fill:#fff;
+  font-size:14px;
+  font-weight:bold;
+}
+.skhynixWrap-ic.floorPlan .tit_b{
+  opacity:0.7;
+  fill:#031525;
+  z-index: 99;
+}
+.skhynixWrap-ic.floorPlan a:hover .tit_b {
+  opacity:1;
+}
+/* 측면도 */
+.skhynixWrap-ic.sideView .dataBox{
+  fill: #1b3441;
+  opacity: .5;
+}
+.skhynixWrap-ic.sideView .dark.dataBox{
+  fill: #5cd9f3;
+  opacity: .9;
+}
+/* .skhynixWrap-ic.sideView a:hover .dataBox:hover{
+  opacity: 1;
+}  */
+.skhynixWrap-ic.sideView a:hover .dataBox{
+  opacity: 1;
+}
+.skhynixWrap-ic.sideView .title{
+  fill: #fffc00;
+  font-size: 13px;
+}
+.skhynixWrap-ic.sideView .dataNumber{
+  fill: #fff;
+  font-size: 11.5px;
+  font-weight: 400;
+  letter-spacing: -.4px;
+}
+.skhynixWrap-ic.sideView a:hover .hoverBox{
+  opacity:0.7;
+  fill:#fffc00;
+  transition: .2s all;
+}
+.skhynixWrap-ic a:hover .opc4{
+  /* fill:#031525; */
+  opacity:0.4;
+}
+
+/* 툴팁 */
+.lay_tooltip{
+  position: absolute;
+  background-color: rgba(29, 31, 32, 0.8);
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+.dataTooltip p.yellow {
+  font-size: 16px; 
+  font-weight: bold; 
+  /*color: yellow; */
+  color: #ffaf00;
+  line-height: 20px; 
+  margin-bottom: 5px; 
+} 
+.dataTooltip .icon1{
+  position: relative;
+  padding-right:3px;
+}
+.dataTooltip .icon1::before{
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: -5px;
+  width: 3px;
+  height: 3px;
+  background-color: #fff;
+  opacity: .8;
+}
+.dataTooltip table { 
+  color: #666; 
+  line-height: 18px; 
+  padding: 10px; 
+  color: #fff;
+  font-family: roboto;
+}
+.dataTooltip table td{
+  padding: 2px;
+  padding-left: 5px;
+  font-size: 13;
+}
+.lay_tooltip .downArrow{
+  position: absolute;
+  bottom: -9px;
+  left: 50%;
+  margin-left: -6px;
+  width: 12px;
+  height: 9px;
+  border-color: black;
+  background: url(../images/tooltip-arrow.png) no-repeat;
+}
+
+/* 영역 기본 색상이 검은색으로 표시되는 부분을 수정 by applecode */
+.skhynix_ic rect {
+  opacity: 0;
+  fill:#fffc00;
+}
+
+/* .skhynix_ic path:hover ~ .hoverBox_yellow,
+.skhynix_ic rect:hover.hoverBox_yellow {
+  opacity:0.7;
+  fill:#fffc00;
+  transition: .2s all;
+} */
+
+
+
+/*층수 |  M10C*/
+.level-area {
+}
+.level-area .dataBox {
+  fill: #000;
+  opacity: .5;
+  font-size: 11px;
+}
+.level-area a:hover .dataBox{
+  opacity: 1;
+}
+.view-M10C .level-area .hoverBox {
+  opacity:0.5;
+  fill: #fffc00;
+  transition: .2s all;
+  display: none;
+}
+.view-M10C .level-area a:hover polygon.hoverBox{
+  display: block;
+}
+.level-area .title{
+  fill: #fffc00;
+  font-size: 13px;
+}
+.level-area .dataNumber{
+  fill: #fff;
+  font-size: 11.5px;
+  font-weight: 400;
+  letter-spacing: -.4px;
+}
+
+
+/*FAB | M10C*/
+.fab-area .dataBox.dataBox-fab {
+  fill: #000;
+  opacity: .5;
+  font-size: 11px;
+}
+.fab-area .title.title-FAB {
+  fill: #FF6600;
+  font-size: 11px;
+  letter-spacing: -0.5px;
+}
+
+.fab-area .dataNumber{
+  fill: #fff;
+  font-size: 11.5px;
+  font-weight: 400;
+  letter-spacing: -.4px;
+}
+.dataBox-arrow-r {
+  fill: #000;
+  opacity: .5;
+  font-size: 11px;
+}
+.view-M10C a:hover .dataBox.dataBox-fab,
+.fab-area a:hover .dataBox.dataBox-fab + .dataBox-arrow-r{
+  opacity: 1;
+}
+
+
+/*s: 커스텀*/
+.mapplic-hovertip > .mapplic-tooltip-wrap {border-radius: 5px}
+.mapplic-tooltip-bottom.mapplic-tooltip:after ,
+.mapplic-tooltip:after {
+	content: '';
+	border-color: rgb(29,31,32,0.8) transparent transparent transparent !important;
+}
+/*e: 커스텀*/
+
+svg polygon.bay {
+    pointer-events:all;
+    opacity: 0.1;
+    fill:#deebf5;
+    z-index: 99;
+    stroke:#d651bf;
+    stroke-width:1;
+}
+svg polygon.bay:hover {
+  opacity: 0.1;
+  fill:#034274;
+  z-index: 99;
+  stroke:#000;
+  stroke-width:1;
+}
+
+svg polygon.equip {
+    pointer-events:all;
+    opacity: 0.1;
+    fill:#248afd;
+    z-index: 99;
+    stroke:black;
+    stroke-width:1;
+}
+
+svg text.assetInfo {
+    fill: rgba(0, 0, 0, 0.6);
+    /*stroke: rgba(0, 0, 0, 0.56);*/
+    font-size : 5px;
+}
+

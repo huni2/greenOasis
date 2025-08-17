@@ -1,0 +1,12 @@
+<!--M16_6F SVG-->
+<svg id="" data-name="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 4500 1400"><!--뷰포트는 여백을 위해 가로 세로 추가함(xy좌표는 이미지 기준이라 영향을 미치지 않음)-->
+    <image width="4500" height="1400" xlink:href="/static/images/panorama/M16_6F.png" /><!--실제 이미지 2배 사이즈: 2688px * 840px , 파일명 336m * 105m는 캐드도면사이즈-->
+    <g class="skhynixWrap-ic floorPlan">
+        <g id="landmark">
+            <rect class="tit_b" x="1930" y="1358" width="66" height="28" rx="14" ry="14"></rect>
+            <text transform="translate(1945 1378)" class="tit_build">출입구</text>
+            <a xlink:href="#">
+            </a>
+        </g>
+    </g>
+</svg>

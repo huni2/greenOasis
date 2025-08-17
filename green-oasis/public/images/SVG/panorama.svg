@@ -1,0 +1,35 @@
+<!--<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 -100 1900 1047">-->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1500 947">
+<!--    <image width="1500" height="947" xlink:href="/static/images/panorama1.png"></image>-->
+    <image width="1500" height="947" xlink:href="/images/panorama1.png"></image>
+    <g class="skhynixWrap-ic panoramicView">
+        <g id="landmark">
+            <a id="m16Building" xlink:href="javascript:moveLocationFloor('M16');">
+<!--                <title>M16</title>-->
+                <polygon points="711 220 786 294 1023 200 1023 189.57 1016 183 1003.5 190.5 958.5 146.5 958.5 141.5 951.5 134.5 951.5 122.5 946.5 117.5 938.5 119.5 938.5 127.5 923.5 132.5 921.5 130.5 913.5 132.5 912.5 142.5 851.5 164.5 846.5 159.5 842.5 160.5 841.5 163.5 812.5 174.5 812.5 180.5 750 204.04 750 200.64 743.5 194.5 736.5 197.5 736.5 204.5 733.98 205.75 731.5 203.5 725.81 205.75 726.5 208.5 711 213.57 711 220" class="b_build"/>
+                <polygon points="710 219 709 248 705 249 771 315 771 336.81 783 349 784.45 292.47 710 219" class="dark b_build"/>
+                <polygon points="784.5 293.5 1022.5 200.5 1020.5 255.5 783.5 348.5 784.5 293.5" class="dark b_build"/>
+
+                <rect x="840.63" y="195.91" width="73.92" height="25.97" rx="12.98" ry="12.98" transform="translate(-12.69 354.5) rotate(-22.68)" class="tit_b"/>
+                <text transform="translate(863.87 220.22) rotate(-22.68)" class="tit_build">
+                    <tspan x="0" y="0">M16</tspan>
+                </text>
+            </a>
+        </g>
+        <!-- M10C -->
+        <g id="landmark-m10c">
+            <a id="m10cBuilding" xlink:href="javascript:moveLocationFloor('M10C');">
+                <title>M10C</title>
+                <polygon points="960.5 407.5 1072.5 361.5 1072.5 358.54 1109.5 343.5 1162.5 396.5 1012.5 459.5 960.5 407.5" class="b_build"/>
+                <polygon points="1012.5 459.5 1012.5 472.74 1024.5 467.5 1024.5 464.43 1028.5 462.5 1030.5 464.5 1036.5 462.5 1036.5 459.5 1045.5 458.5 1047.5 455.5 1057.5 453.5 1162.5 409.47 1162.5 396.5 1012.5 459.5" class="dark b_build"/>
+                <polygon points="960.5 407.5 959.72 407.5 959.72 420.8 1010.9 473.5 1012.5 472.74 1012.5 459.5 960.5 407.5" class="dark b_build"/>
+    
+                <rect x="1039.47" y="387.91" width="73.92" height="25.97" rx="12.98" ry="12.98" transform="translate(-71.34 446.01) rotate(-22.68)" class="tit_b"/>
+                <text transform="translate(1058.04 415.27) rotate(-22.68)" class="tit_build">
+                    <tspan x="0" y="0">M10C</tspan>
+                </text>
+            </a>
+            <!--// M10C -->
+        </g>
+    </g>
+</svg>

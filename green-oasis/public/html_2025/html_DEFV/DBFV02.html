@@ -1,0 +1,1580 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>SK hynix 자산관리시스템</title>
+  <link rel="shortcut icon" href="../images/favicon.ico">
+  <link rel="stylesheet" href="../css/common.css">
+
+  <script type="text/javascript" src="../js/jquery.js"></script>
+  <script type="text/javascript" src="../js/jquery-ui.js"></script>
+
+</head>
+
+<body class="bg1">
+
+  <div class="container-scroller">
+
+    <nav class="navbar fixed-top">
+      <div class="navbar-logo-wrapper">
+        <button class="navbar-toggler" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+      <div class="navbar-menu-wrapper">
+
+        <a class="navbar-logo" href="../index.html"><img src="../images/logo.png" alt="SK hynix 로고" /></a>
+        <span class="navbar-title">자산관리MAPS</span>
+        <ul class="location-link">
+          <li><a href="">이천</a></li>
+          <li><a href="">청주</a></li>
+          <li><a href="">우시</a></li>
+          <li><a href="">충징</a></li>
+        </ul>
+        <ul class="navbar-nav">
+
+          <li class="nav-item nav-language dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="languageDropdown"><i
+                class="flag-korea"></i><span>한국어</span></a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="languageDropdown">
+              <a class="dropdown-item"><i class="flag-us"></i>English</a>
+              <a class="dropdown-item"><i class="flag-china"></i>中文</a>
+            </div>
+          </li>
+          <li class="nav-item nav-error">
+            <a class="nav-link" href="#" title="에러"><i class="icon-error"></i></a>
+          </li>
+          <li class="nav-item nav-mail" title="메일">
+            <a class="nav-link" href="#"><i class="icon-mail"></i></a>
+          </li>
+          <li class="nav-item nav-noti dropdown" title="공지">
+            <a class="nav-link count-indicator dropdown-toggle" id="notiDropdown" href="#" data-toggle="dropdown"><i
+                class="icon-bell mx-0"></i><span class="count"></span></a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notiDropdown">
+              <p class="dropdown-header">공지</p>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-success"><i class="ti-info-alt mx-0"></i></div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject fw-normal">에러</h6>
+                  <p class="fw-light small-text mb-0 text-muted">1분전</p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-warning"><i class="ti-settings mx-0"></i></div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject fw-normal">설정</h6>
+                  <p class="fw-light small-text mb-0 text-muted">메세지</p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-info"><i class="ti-user mx-0"></i></div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject fw-normal">사용자등록</h6>
+                  <p class="fw-light small-text mb-0 text-muted">2일전</p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item nav-profile dropdown ">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown"><img
+                src="../images/top_face.png" alt="profile" /><span>X20220610</span></a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item"><i class="ti-settings text-primary"></i>나의정보</a>
+              <a class="dropdown-item"><i class="ti-power-off text-primary"></i>로그아웃</a>
+            </div>
+          </li>
+          <li class="nav-item nav-name">
+            <div><span>hwchoi</span><span>슈퍼관리자</span></div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--//navbar-->
+
+    <div class="page-body-wrapper">
+
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <script src="../js/nav.js"></script>
+      </nav>
+      <!--//sidebar-->
+
+      <div class="main-panel">
+
+        <div class="content-wrapper">
+
+
+          <div class="sub-cont">
+
+            <!--상단타이틀영역-->
+            <div class="page-title-box">
+              <div class="left">
+                <h2 class="title">이천 캠퍼스</h2>
+              </div>
+              <div class="right">
+                <div>
+                  <ol class="breadcrumb m-0">
+                    <li class="breadcrumb-item">Home</li>
+                    <li class="breadcrumb-item">전경도</li>
+                    <li class="breadcrumb-item active">이천 캠퍼스</li>
+                  </ol>
+                </div>
+
+              </div>
+            </div>
+            <!--상단타이틀영역-->
+
+            <!--DBFV02 자산관리측면도 - 캠퍼스 자산현황-->
+            <!--고정-->
+            <div class="asset-campus">
+              <div class="asset-data-wrap">
+                <div class="">
+                  <div class="asset-data">
+                    <p class="title">이천캠퍼스 자산현황</p>
+
+                    <div class="ul" style="background-color: #fff;">
+                      <ul>
+                        <li><span class="menu1">Super EQ</span></li>
+                        <li>765</li>
+                      </ul>
+                      <ul>
+                        <li><span class="menu2">EQ</span></li>
+                        <li>3,456</li>
+                      </ul>
+                      <ul>
+                        <li><span class="menu3">TRACKER(마스터/슬레이브)</span></li>
+                        <li>3,456 <label class="badge badge-mint">100%</label></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--//고정-->
+            <!--이동-->
+            <div class="swiper asset-data-wrap">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+
+                  <div class="asset-data">
+                    <p class="title">이천캠퍼스 자산현황</p>
+                    <div class="ul">
+                      <ul>
+                        <li><span class="menu1">Super EQ</span></li>
+                        <li>765</li>
+                      </ul>
+                      <ul>
+                        <li><span class="menu2">EQ</span></li>
+                        <li>3,456</li>
+                      </ul>
+                      <ul>
+                        <li><span class="menu3">TRACKER(마스터/슬레이브)</span></li>
+                        <li>3,456 <label class="badge badge-mint">100%</label></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="swiper-slide">
+
+                  <div class="asset-data">
+                    <p class="title"><a href="">SUPEX Center</a></p>
+                    <div class="ul">
+                      <ul>
+                        <li><span class="menu1">Super EQ</span></li>
+                        <li>765</li>
+                      </ul>
+                      <ul>
+                        <li><span class="menu2">EQ</span></li>
+                        <li>3,456</li>
+                      </ul>
+                      <ul>
+                        <li><span class="menu3">TRACKER(마스터/슬레이브)</span></li>
+                        <li>3,456 <label class="badge badge-mint">100%</label></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="swiper-slide">
+
+                  <div class="asset-data">
+                    <p class="title"><a href="">M10A</a></p>
+                    <div class="ul">
+                      <ul>
+                        <li><span class="menu1">Super EQ</span></li>
+                        <li>765</li>
+                      </ul>
+                      <ul>
+                        <li><span class="menu2">EQ</span></li>
+                        <li>3,456</li>
+                      </ul>
+                      <ul>
+                        <li><span class="menu3">TRACKER(마스터/슬레이브)</span></li>
+                        <li>3,456 <label class="badge badge-mint">100%</label></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="swiper-slide">
+
+                  <div class="asset-data">
+                    <p class="title"><a href="">R&D Center</a></p>
+                    <div class="ul">
+                      <ul>
+                        <li><span class="menu1">Super EQ</span></li>
+                        <li>765</li>
+                      </ul>
+                      <ul>
+                        <li><span class="menu2">EQ</span></li>
+                        <li>3,456</li>
+                      </ul>
+                      <ul>
+                        <li><span class="menu3">TRACKER(마스터/슬레이브)</span></li>
+                        <li>3,456 <label class="badge badge-mint">100%</label></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="swiper-slide">
+
+                  <div class="asset-data">
+                    <p class="title"><a href="">M16CUB</a></p>
+                    <div class="ul">
+                      <ul>
+                        <li><span class="menu1">Super EQ</span></li>
+                        <li>765</li>
+                      </ul>
+                      <ul>
+                        <li><span class="menu2">EQ</span></li>
+                        <li>3,456</li>
+                      </ul>
+                      <ul>
+                        <li><span class="menu3">TRACKER</span></li>
+                        <li>3,456 <label class="badge badge-mint">100%</label></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="swiper-slide">
+
+                  <div class="asset-data">
+                    <p class="title"><a href="">M16</a></p>
+                    <div class="ul">
+                      <ul>
+                        <li><span class="menu1">Super EQ</span></li>
+                        <li>765</li>
+                      </ul>
+                      <ul>
+                        <li><span class="menu2">EQ</span></li>
+                        <li>3,456</li>
+                      </ul>
+                      <ul>
+                        <li><span class="menu3">TRACKER</span></li>
+                        <li>3,456 <label class="badge badge-mint">100%</label></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="swiper-slide">
+
+                  <div class="asset-data">
+                    <p class="title"><a href="">M16</a></p>
+                    <div class="ul">
+                      <ul>
+                        <li><span class="menu1">Super EQ</span></li>
+                        <li>765</li>
+                      </ul>
+                      <ul>
+                        <li><span class="menu2">EQ</span></li>
+                        <li>3,456</li>
+                      </ul>
+                      <ul>
+                        <li><span class="menu3">TRACKER</span></li>
+                        <li>3,456 <label class="badge badge-mint">100%</label></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="swiper-slide">
+
+                  <div class="asset-data">
+                    <p class="title">M</p>
+                    <div class="ul">
+                      <ul>
+                        <li><span class="menu1">Super EQ</span></li>
+                        <li>765</li>
+                      </ul>
+                      <ul>
+                        <li><span class="menu2">EQ</span></li>
+                        <li>3,456</li>
+                      </ul>
+                      <ul>
+                        <li><span class="menu3">TRACKER</span></li>
+                        <li>3,456 <label class="badge badge-mint">100%</label></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="swiper-slide">
+
+                  <div class="asset-data">
+                    <p class="title">M</p>
+                    <div class="ul">
+                      <ul>
+                        <li><span class="menu1">Super EQ</span></li>
+                        <li>765</li>
+                      </ul>
+                      <ul>
+                        <li><span class="menu2">EQ</span></li>
+                        <li>3,456</li>
+                      </ul>
+                      <ul>
+                        <li><span class="menu3">TRACKER</span></li>
+                        <li>3,456 <label class="badge badge-mint">100%</label></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="swiper-slide">
+
+                  <div class="asset-data">
+                    <p class="title">M</p>
+                    <div class="ul">
+                      <ul>
+                        <li><span class="menu1">Super EQ</span></li>
+                        <li>765</li>
+                      </ul>
+                      <ul>
+                        <li><span class="menu2">EQ</span></li>
+                        <li>3,456</li>
+                      </ul>
+                      <ul>
+                        <li><span class="menu3">TRACKER</span></li>
+                        <li>3,456 <label class="badge badge-mint">100%</label></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+            <!--//이동-->
+            <!--접고펴기-->
+            <div class="assetSlideToggle"><button type="button">버튼</button></div>
+            <!--//접고펴기-->
+            <!--//DBFV02 자산관리측면도 - 캠퍼스 자산현황-->
+
+
+            <!--DBFV02 건물측면도-->
+            <div class="mapTopTotal">
+              <div class="selectWrap">
+                <div class="dropdown">
+                  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    SUPEX Center
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <h6 class="dropdown-header">메뉴타이틀</h6>
+                    <a class="dropdown-item" href="#">M10A</a>
+                    <a class="dropdown-item" href="#">R3</a>
+                    <a class="dropdown-item" href="#">SUPEX Center</a>
+                    <a class="dropdown-item" href="#">RC</a>
+                    <div class="dropdown-divider"></div>
+                    <h6 class="dropdown-header">메뉴타이틀</h6>
+                    <a class="dropdown-item" href="#">M14CUB</a>
+                    <a class="dropdown-item" href="#">M10F</a>
+                    <a class="dropdown-item" href="#">M14</a>
+                    <a class="dropdown-item" href="#">R&D Center</a>
+                    <a class="dropdown-item" href="#">TC</a>
+                    <a class="dropdown-item" href="#">M16</a>
+                  </div>
+                </div>
+              </div>
+              <dl>
+                <dt>Super EQ:</dt>
+                <dd>765</dd> /
+                <dt>EQ :</dt>
+                <dd>3,456</dd> /
+                <dt>Tracker :</dt>
+                <dd>3,456</dd>
+              </dl>
+              <div><label class="badge badge-mint">100%</label></div>
+            </div>
+            <div class="mapCont">
+              <div class="mapCov">
+
+                <div class="mapLeft">
+
+                  <div class="inner">
+                    <!-- 0 0 1566.5 899.39 -->
+                    <!-- <img src="../images/panorama2.png" alt=""> -->
+
+                    <!--20241215 나침판추가-->
+                    <div class="ic-compass"></div>
+                    <!--//20241215 나침판추가-->
+
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/" viewBox="-10 0 1100 695">
+                      <image width="1071" height="695" xlink:href="../images/panorama2.png"></image>
+                      <g class="skhynixWrap-ic sideView">
+                        <g>
+                          <a xlink:href="">
+                            <title>M16 B1F</title>
+                              <polygon points="343 640.2 1037 507.6 1037 517.7 345.37 663.12 343 640.2" class="hoverBox"/>
+                              <path d="M512.16,627.67l-185.09,39.34c-7.25,1.54-14.07-3.99-14.07-11.39h0c0-5.58,3.96-10.38,9.44-11.44l185.79-35.9c6.1-1.18,11.77,3.5,11.77,9.71h0c0,4.67-3.27,8.71-7.84,9.68Z" class="dataBox"/>
+                              <text transform="translate(327.96 659.21) rotate(-11.35)">
+                                <tspan x="0" y="0" xml:space="preserve" class="title">M16  B1F</tspan>
+                              </text>
+                              <text transform="translate(508.19 623.15) rotate(-11.35)">
+                                <tspan x="0" y="0" class="dataNumber" text-anchor="end">500 / 400(0) / 500 / 30</tspan>
+                              </text>
+                          </a>
+                        </g>
+                        <g>
+                          <a xlink:href="">
+                            <title>M16 1F</title>
+                            <polygon points="343 615 1037 493 1037 502 344.64 637.89 343 615" class="hoverBox"/>
+                            <path d="M511.58,605.63l-184.64,35.68c-7.23,1.4-13.94-4.14-13.94-11.5h0c0-5.67,4.07-10.53,9.65-11.53l185.12-33.09c6.37-1.14,12.23,3.76,12.23,10.23h0c0,4.98-3.53,9.26-8.42,10.21Z" class="dataBox"/>
+                            <text transform="translate(327.6 633.71) rotate(-10.41)">
+                              <tspan x="0" y="0" xml:space="preserve" class="title">M16   1F</tspan>
+                            </text>
+                            <text transform="translate(508.1 598.99) rotate(-10.41)">
+                              <tspan x="0" y="0" class="dataNumber" text-anchor="end">500 / 400(0) / 500 / 30</tspan>
+                            </text>
+                          </a>
+                        </g>
+                        <g>
+                          <a xlink:href="">
+                            <title>M16 2F</title>
+                            <polygon points="345.37 563.6 1039.15 461.78 1039 480 345.37 597.01 345.37 563.6" class="hoverBox"/>
+                            <path d="M509.46,570.06l-175.12,28.76c-10.13,1.66-19.34-6.15-19.34-16.42h0c0-8.27,6.07-15.28,14.25-16.47l175.63-25.45c9.03-1.31,17.11,5.69,17.11,14.81h0c0,7.33-5.31,13.58-12.54,14.77Z" class="dataBox"/>
+                            <text transform="translate(326.97 588.75) rotate(-8.57)">
+                              <tspan x="0" y="0" xml:space="preserve" class="title">M16   2F</tspan>
+                            </text>
+                            <text transform="translate(508.93 559.65) rotate(-8.57)">
+                              <tspan x="0" y="0" class="dataNumber" text-anchor="end">500 / 400(0) / 500 / 30</tspan>
+                            </text>
+                          </a>
+                        </g>
+                        <g>
+                          <a xlink:href="">
+                            <title>M16 2MF</title>
+                            <polygon points="345.37 525.63 1039.15 446.15 1039.15 458.98 345.37 558.6 345.37 525.63" class="hoverBox"/>
+                            <path d="M510.34,534.69l-176.38,25.56c-10,1.45-18.96-6.31-18.96-16.41h0c0-8.45,6.35-15.55,14.75-16.48l177.13-19.68c8.07-.9,15.12,5.42,15.12,13.53h0c0,6.77-4.97,12.51-11.66,13.48Z" class="dataBox"/>
+                            <text transform="translate(326.48 548.05) rotate(-6.9)">
+                              <tspan x="0" y="0" xml:space="preserve" class="title">M16   2MF</tspan>
+                            </text>
+                            <text transform="translate(508.79 525.35) rotate(-6.9)">
+                              <tspan x="0" y="0" class="dataNumber" text-anchor="end">500 / 400(0) / 500 / 30</tspan>
+                            </text>
+                          </a>
+                        </g>
+                        <g>
+                          <a xlink:href="">
+                            <title>M16 3F</title>
+                            <polygon points="345.37 487.36 1039.15 426.79 1039.15 442.64 345.37 520.63 345.37 487.36" class="hoverBox"/>
+                            <path d="M509.01,502.44l-175.45,19.49c-9.9,1.1-18.56-6.65-18.56-16.61h0c0-8.67,6.63-15.9,15.27-16.65l175.86-15.29c8.53-.74,15.87,5.98,15.87,14.55h0c0,7.44-5.6,13.69-12.99,14.51Z" class="dataBox"/>
+                            <text transform="translate(326.21 510.34) rotate(-5.84)">
+                              <tspan x="0" y="0" xml:space="preserve" class="title">M16   3F</tspan>
+                            </text>
+                            <text transform="translate(508.71 492.15) rotate(-5.84)">
+                              <tspan x="0" y="0" class="dataNumber" text-anchor="end">500 / 400(0) / 500 / 30</tspan>
+                            </text>
+                          </a>
+                        </g>
+                        <g>
+                          <a xlink:href="">
+                            <title>M16 4F</title>
+                            <polygon points="345.37 449.24 1039.15 408.57 1039.15 422.72 345.37 482.36 345.37 449.24" class="hoverBox"/>
+                            <path d="M509.06,468.13l-175.9,15.3c-9.76.85-18.16-6.85-18.16-16.65h0c0-8.85,6.91-16.17,15.75-16.68l176.27-10.22c8.13-.47,14.99,6,14.99,14.14h0c0,7.35-5.62,13.48-12.94,14.11Z" class="dataBox"/>
+                            <text transform="translate(325.83 472.47) rotate(-4.08)">
+                              <tspan x="0" y="0" xml:space="preserve" class="title">M16   4F</tspan>
+                            </text>
+                            <text transform="translate(508.57 458.82) rotate(-4.08)">
+                              <tspan x="0" y="0" class="dataNumber" text-anchor="end">500 / 400(0) / 500 / 30</tspan>
+                            </text>
+                          </a>
+                        </g>
+                        <g>
+                          <a xlink:href="">
+                            <title>M16 5F</title>
+                            <polygon points="345.37 412.12 1039.15 391.32 1039 404 345.37 445.24 345.37 412.12" class="hoverBox"/>
+                            <path d="M508.63,435.78l-175.92,10.2c-9.61.56-17.71-7.09-17.71-16.71h0c0-9.06,7.2-16.47,16.25-16.73l176.14-5.11c8-.23,14.6,6.19,14.6,14.18h0c0,7.52-5.86,13.73-13.37,14.17Z" class="dataBox"/>
+                            <text transform="translate(325.51 434.17) rotate(-2.07)">
+                              <tspan x="0" y="0" xml:space="preserve" class="title">M16   5F</tspan>
+                            </text>
+                            <text transform="translate(508.43 425.44) rotate(-2.07)">
+                              <tspan x="0" y="0" class="dataNumber" text-anchor="end">500 / 400(0) / 500 / 30</tspan>
+                            </text>
+                          </a>
+                        </g>
+                        <g>
+                          <a xlink:href="">
+                            <title>M16 6F</title>
+                            <polygon points="345.37 374.07 1039.15 374.07 1039.16 389.16 345.37 408.57 345.37 374.07" class="hoverBox"/>
+                            <path d="M507.75,403.41l-175.47,5.09c-9.46.27-17.28-7.32-17.28-16.79h0c0-9.24,7.47-16.75,16.71-16.79l175.54-.85c8.13-.04,14.74,6.54,14.74,14.67h0c0,7.94-6.31,14.44-14.25,14.67Z" class="dataBox"/>
+                            <text transform="translate(325.34 396.68) rotate(-.54)">
+                              <tspan x="0" y="0" xml:space="preserve" class="title">M16   6F</tspan>
+                            </text>
+                            <text transform="translate(508.33 393.15) rotate(-.54)">
+                              <tspan x="0" y="0" class="dataNumber" text-anchor="end">500 / 400(0) / 500 / 30</tspan>
+                            </text>
+                          </a>
+                        </g>
+                        <g>
+                          <a xlink:href="">
+                            <title>M16 7F</title>
+                            <polygon points="345.37 337.44 1039.15 347.5 1039 365 345.37 370.71 345.37 337.44" class="hoverBox"/>
+                            <path d="M507.47,369.14l-175.51,1.7c-9.34.09-16.96-7.46-16.96-16.8h0c0-9.37,7.67-16.93,17.04-16.79l175.5,2.54c8.02.12,14.46,6.65,14.46,14.67h0c0,8.05-6.48,14.6-14.53,14.68Z" class="dataBox"/>
+                            <text transform="translate(325.25 358.69) rotate(.66)">
+                              <tspan x="0" y="0" xml:space="preserve" class="title">M16   7F</tspan>
+                            </text>
+                            <text transform="translate(508.26 358.92) rotate(.66)">
+                              <tspan x="0" y="0" class="dataNumber" text-anchor="end">500 / 400(0) / 500 / 30</tspan>
+                            </text>
+                          </a>
+                        </g>
+                        <g>
+                          <a xlink:href="">
+                            <title>M16 7MF</title>
+                            <polygon points="345.37 299.58 1039.16 329.28 1039 345 345.37 333.44 345.37 299.58" class="hoverBox"/>
+                            <path d="M507.12,335.78l-175.57-2.54c-9.18-.13-16.55-7.61-16.55-16.79h0c0-9.53,7.92-17.15,17.44-16.78l175.46,6.78c7.88.3,14.1,6.78,14.1,14.66h0c0,8.19-6.7,14.79-14.88,14.67Z" class="dataBox"/>
+                            <text transform="translate(325.22 321.35) rotate(1.48)">
+                              <tspan x="0" y="0" xml:space="preserve" class="title">M16   7MF</tspan>
+                            </text>
+                            <text transform="translate(508.21 325.76) rotate(1.48)">
+                              <tspan x="0" y="0" class="dataNumber" text-anchor="end">500 / 400(0) / 500 / 30</tspan>
+                            </text>
+                          </a>
+                        </g>
+                        <g>
+                          <a xlink:href="">
+                            <title>M16 8F</title>
+                            <polygon points="345.37 263.05 1039.16 309.87 1039 323 345.37 296.17 345.37 263.05" class="hoverBox"/>
+                            <path d="M507.27,302.43l-176.18-6.81c-8.98-.35-16.09-7.73-16.09-16.72h0c0-9.69,8.2-17.35,17.86-16.69l175.91,11.9c7.45.5,13.23,6.69,13.23,14.15h0c0,8.05-6.69,14.48-14.73,14.17Z" class="dataBox"/>
+                            <text transform="translate(325.2 282.98) rotate(2.93)">
+                              <tspan x="0" y="0" xml:space="preserve" class="title">M16   8F</tspan>
+                            </text>
+                            <text transform="translate(508.13 292.48) rotate(2.93)">
+                              <tspan x="0" y="0" class="dataNumber" text-anchor="end">500 / 400(0) / 500 / 30</tspan>
+                            </text>
+                          </a>
+                        </g>
+                        <g>
+                          <a xlink:href="">
+                            <title>M16 9F</title>
+                            <polygon points="345.37 225.93 1039.16 293.03 1039 307 345.37 259.05 345.37 225.93" class="hoverBox"/>
+                            <path d="M506.89,269.98l-176.32-11.92c-8.77-.59-15.57-7.88-15.57-16.66h0c0-9.86,8.49-17.57,18.31-16.62l175.9,17c7.26.7,12.79,6.8,12.79,14.09h0c0,8.19-6.94,14.68-15.11,14.12Z" class="dataBox"/>
+                            <text transform="translate(325.24 245.82) rotate(4.24)">
+                              <tspan x="0" y="0" xml:space="preserve" class="title">M16   9F</tspan>
+                            </text>
+                            <text transform="translate(508.07 260.22) rotate(4.24)">
+                              <tspan x="0" y="0" class="dataNumber" text-anchor="end">500 / 400(0) / 500 / 30</tspan>
+                            </text>
+                          </a>
+                        </g>
+                        <g>
+                          <a xlink:href="">
+                            <title>M16 10F</title>
+                            <polygon points="345.37 188.81 1039.16 276.17 1039 287 345.37 221.79 345.37 188.81" class="hoverBox"/>
+                            <path d="M507.1,236.63l-177-16.25c-8.55-.79-15.1-7.96-15.1-16.55h0c0-10,8.77-17.74,18.69-16.49l176.36,22.15c6.83.86,11.95,6.66,11.95,13.54h0c0,8.03-6.9,14.33-14.9,13.59Z" class="dataBox"/>
+                            <text transform="translate(325.51 207.01) rotate(7.17)">
+                              <tspan x="0" y="0" xml:space="preserve" class="title">M16   10F</tspan>
+                            </text>
+                            <text transform="translate(507.95 227.64) rotate(7.17)">
+                              <tspan x="0" y="0" class="dataNumber" text-anchor="end">500 / 400(0) / 500 / 30</tspan>
+                            </text>
+                          </a>
+                        </g>
+                        <g>
+                          <a xlink:href="">
+                            <title>M16 11F</title>
+                            <polygon points="345.37 142.64 1039.15 251.22 1039 264 345.37 171.96 345.37 142.64" class="hoverBox"/>
+                            <path d="M507.85,193.15l-180.06-23.49c-7.32-.96-12.8-7.19-12.8-14.58h0c0-9.02,8.04-15.91,16.95-14.53l179.44,27.79c6.1.95,10.61,6.2,10.61,12.38h0c0,7.56-6.65,13.4-14.15,12.42Z" class="dataBox"/>
+                            <text transform="translate(325.71 158.85) rotate(8.49)">
+                              <tspan x="0" y="0" xml:space="preserve" class="title">M16   11F</tspan>
+                            </text>
+                            <text transform="translate(507.91 184.38) rotate(8.49)">
+                              <tspan x="0" y="0" class="dataNumber" text-anchor="end">500 / 400(0) / 500 / 30</tspan>
+                            </text>
+                          </a>
+                        </g>
+                        <g>
+                          <a xlink:href="">
+                            <title>M16 지붕층</title>
+                            <polygon points="345.37 110.38 1039.16 233.79 1039.16 247.22 345.37 139.69 345.37 110.38" class="hoverBox"/>
+                            <path d="M507.61,164.78l-180.2-27.86c-7.14-1.1-12.41-7.25-12.41-14.48h0c0-9.12,8.25-16.03,17.23-14.42l179.49,32.14c5.95,1.07,10.28,6.24,10.28,12.28h0c0,7.65-6.82,13.5-14.39,12.33Z" class="dataBox"/>
+                            <text transform="translate(324.87 127.43) rotate(9.36)">
+                              <tspan x="0" y="0" xml:space="preserve" class="title">M16   지붕층</tspan>
+                            </text>
+                            <text transform="translate(508.88 156.2) rotate(9.36)">
+                              <tspan x="0" y="0" class="dataNumber" text-anchor="end">500 / 400(0) / 500 / 30</tspan>
+                            </text>
+                          </a>
+                        </g>
+                        <g>
+                          <a xlink:href="">
+                            <title>M16 PH</title>
+                            <polygon points="66 169 34 185 34 214.55 66 201.36 66 169" class="hoverBox"/>
+                            <polygon points="66 169 107 174 107 185.29 66 202 66 169" class="hoverBox"/>
+                            <polygon points="302 58 225 95 225 137.79 302 107.37 302 58" class="hoverBox"/>
+                            <polygon points="302 58 355 70 355 92.21 421 104 421 84.06 458 92 458 127.43 315 101.57 302 107.37 302 58" class="hoverBox"/>
+                            <polygon points="633 159 707 144 707 172.81 633 159" class="hoverBox"/>
+                            <polygon points="707 144 737 150 737 168.01 801 180 801 191.42 707 172.81 707 144" class="hoverBox"/>
+                            <polygon points="884 205 955 197 955 218.82 884 205" class="hoverBox"/>
+                            <polygon points="955 197 973 200 973 213.11 990 216 990 203.32 999 205 999 218.82 1016 222 1016 229.67 955 218.82 955 197" class="hoverBox"/>
+                            <path d="M504.86,91.24l-173.21-38.66c-10.02-2.24-15.64-12.93-11.81-22.45h0c3.09-7.67,11.34-11.91,19.37-9.96l172.45,41.92c8.86,2.15,13.75,11.67,10.35,20.13h0c-2.73,6.8-9.99,10.62-17.15,9.02Z" class="dataBox"/>
+                            <text transform="translate(328.57 39.49) rotate(13.34)">
+                              <tspan x="0" y="0" xml:space="preserve" class="title">M16   PH</tspan>
+                            </text>
+                            <text transform="translate(509.5 80.92) rotate(13.34)">
+                              <tspan x="0" y="0" class="dataNumber" text-anchor="end">500 / 400(0) / 500 / 30</tspan>
+                            </text>
+                          </a>
+                        </g>
+
+                      </g>
+                    </svg>
+
+                    <!-- <div class="spot right-sidebar" style="position: absolute;top: 60%;left: 60%;background-color:blue;">
+                      <p class="tooltipBox st01">
+                        <span class="name">SUPEX  Center 5F</span>
+                        <span>95 / 252 / 252</span>
+                        <em>(100%)</em>
+                      </p>
+                    </div>
+
+                    <div class="spot right-sidebar" style="position: absolute;top: 20%;left: 20%;background-color:greenyellow;">
+                      <p class="tooltipBox st01">
+                        <span class="name">SUPEX  Center 5F</span>
+                        <span>95 / 252 / 252</span>
+                        <em>(100%)</em>
+                      </p>
+                    </div>
+
+                    <div class="spot right-sidebar" style="position: absolute;top: 50%;left: 50%;background-color: red;">
+                      <p class="tooltipBox st01">
+                        <span class="name">SUPEX  Center 5F</span>
+                        <span>95 / 252 / 252</span>
+                        <em>(100%)</em>
+                      </p>
+                    </div>
+
+                    <div class="spot right-sidebar" style="position: absolute;top: 40%;left: 20%;background-color: red;">
+                      <p class="tooltipBox st01">
+                        <span class="name">SUPEX  Center 5F</span>
+                        <span>95 / 252 / 252</span>
+                        <em>(100%)</em>
+                      </p>
+                    </div> -->
+
+                  </div>
+
+                </div><!--//mapLeft-->
+                <div class="zoomBtns">
+                  <button type="button" class="btnFull">전체</button>
+                  <button type="button" class="btnPlus">확대</button>
+                  <button type="button" class="btnMinus">축소</button>
+                  <button type="button" class="btnMove">이동</button>
+                </div>
+
+              </div>
+              <div class="mapList">
+
+                <div class="tb_title">
+                  <div>
+                    <p class="title"><span>TRACKER 장착률</span><em>100%</em></p>
+                  </div>
+                  <div>
+                    <div class="search_group">
+                      <span class="input_wrap"><input type="text" placeholder="검색어"></span>
+                      <div class="dropdown-menu dropdown-menu-right navbar-dropdown">
+                        <a class="dropdown-item">M10A</a>
+                        <a class="dropdown-item">M10B</a>
+                        <a class="dropdown-item">M10F</a>
+                        <a class="dropdown-item">M14</a>
+                        <a class="dropdown-item">M14CUB</a>
+                        <a class="dropdown-item">M16</a>
+                      </div>
+                      <button type="submit" class="btn-searchTrack"><span class="text-hidden">검색</span></button>
+                    </div>
+                  </div>
+                </div>
+
+                <!--// 자산상태현황 검색 -->
+                <div class="tb_thead" style="display: none;">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>
+                          <div class="th-wrap"><span class="s-tit">건물명</span>
+                            <span class="s-ico">
+                              <span sort="asc" class="ico-sort icon-asc disabled"></span>
+                              <span sort="desc" class="ico-sort icon-desc disabled"></span>
+                            </span>
+                            </span>
+                        </th>
+                        <th>
+                          <div class="th-wrap"><span class="s-tit">S-EQ</span>
+                            <span class="s-ico">
+                              <span sort="asc" class="ico-sort icon-asc disabled"></span>
+                              <span sort="desc" class="ico-sort icon-desc disabled"></span>
+                            </span>
+                          </div>
+                        </th>
+                        <th>
+                          <div class="th-wrap"><span class="s-tit">EQ</span>
+                            <span class="s-ico">
+                              <span sort="asc" class="ico-sort icon-asc disabled"></span>
+                              <span sort="desc" class="ico-sort icon-desc disabled"></span>
+                            </span>
+                          </div>
+                        </th>
+                        <th>
+                          <div class="th-wrap"><span class="s-tit">Tracker</span>
+                            <span class="s-ico">
+                              <span sort="asc" class="ico-sort icon-asc disabled"></span>
+                              <span sort="desc" class="ico-sort icon-desc disabled"></span>
+                            </span>
+                          </div>
+                        </th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+                <div class="tb_tbody" style="display: none;">
+                  <table class="table">
+                    <tbody>
+                      <tr>
+                        <td><button type="button" class="btn btn-sm btn03"><span>SUPEX Center</span></button></td>
+                        <td><span class="fw-bold">95</span></td>
+                        <td><span>252</span></td>
+                        <td><span class="fw-bold">252</span></td>
+                      </tr>
+                      <tr>
+                        <td><button type="button" class="btn btn-sm btn02"><span>9F</span></button></td>
+                        <td><span class="fw-bold">1123</span></td>
+                        <td><span>3456</span></td>
+                        <td><span class="fw-bold">3456</span></td>
+                      </tr>
+                      <tr>
+                        <td><button type="button" class="btn btn-sm btn02"><span>8F</span></button></td>
+                        <td><span class="fw-bold">36</span></td>
+                        <td><span>201</span></td>
+                        <td><span class="fw-bold">201</span></td>
+                      </tr>
+                      <tr>
+                        <td><button type="button" class="btn btn-sm btn02"><span>7F</span></button></td>
+                        <td><span class="fw-bold">91</span></td>
+                        <td><span>360</span></td>
+                        <td><span class="fw-bold">360</span></td>
+                      </tr>
+                      <tr>
+                        <td><button type="button" class="btn btn-sm btn02"><span>6F</span></button></td>
+                        <td><span class="fw-bold">55</span></td>
+                        <td><span>194</span></td>
+                        <td><span class="fw-bold">194</span></td>
+                      </tr>
+                      <tr>
+                        <td><button type="button" class="btn btn-sm btn02"><span>5F</span></button></td>
+                        <td><span class="fw-bold">95</span></td>
+                        <td><span>252</span></td>
+                        <td><span class="fw-bold">252</span></td>
+                      </tr>
+                      <tr>
+                        <td><button type="button" class="btn btn-sm btn02"><span>4F</span></button></td>
+                        <td><span class="fw-bold">123</span></td>
+                        <td><span>2425</span></td>
+                        <td><span class="fw-bold">2425</span></td>
+                      </tr>
+                      <tr>
+                        <td><button type="button" class="btn btn-sm btn02"><span>3F</span></button></td>
+                        <td><span class="fw-bold">36</span></td>
+                        <td><span>201</span></td>
+                        <td><span class="fw-bold">201</span></td>
+                      </tr>
+                      <tr>
+                        <td><button type="button" class="btn btn-sm btn02"><span>2F</span></button></td>
+                        <td><span class="fw-bold">91</span></td>
+                        <td><span>360</span></td>
+                        <td><span class="fw-bold">360</span></td>
+                      </tr>
+                      <tr>
+                        <td><button type="button" class="btn btn-sm btn02"><span>1F</span></button></td>
+                        <td><span class="fw-bold">55</span></td>
+                        <td><span>194</span></td>
+                        <td><span class="fw-bold">194</span></td>
+                      </tr>
+                      <tr>
+                        <td><button type="button" class="btn btn-sm btn02"><span>B1F</span></button></td>
+                        <td><span class="fw-bold">95</span></td>
+                        <td><span>252</span></td>
+                        <td><span class="fw-bold">252</span></td>
+                      </tr>
+                      <tr>
+                        <td><button type="button" class="btn btn-sm btn02"><span>B2F</span></button></td>
+                        <td><span class="fw-bold">123</span></td>
+                        <td><span>2425</span></td>
+                        <td><span class="fw-bold">2425</span></td>
+                      </tr>
+                      <tr>
+                        <td><button type="button" class="btn btn-sm btn02"><span>B3F</span></button></td>
+                        <td><span class="fw-bold">123</span></td>
+                        <td><span>2425</span></td>
+                        <td><span class="fw-bold">2425</span></td>
+                      </tr>
+                      <tr>
+                        <td><button type="button" class="btn btn-sm btn02"><span>B4F</span></button></td>
+                        <td><span class="fw-bold">123</span></td>
+                        <td><span>2425</span></td>
+                        <td><span class="fw-bold">2425</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+
+                <!--20241129 데이터테이블-->
+                <section class="dataTable-Group">
+                  <!--tb_top-->
+                  <!--//tb_top-->
+                  <!--datatable-->
+                    <div class="dataTable-wrap">
+                      <table class="dataTable">
+                          <thead>
+                              <tr>
+                                <th>
+                                  건물명
+                                </th>
+                                <th>
+                                  마스터자산
+                                </th>
+                                <th>
+                                  슬레이브자산
+                                </th>
+                                <th>
+                                  Tracker
+                                </th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><button type="button" class="btn btn-sm btn02"><span>M10A</span></button></td>
+                              <td><span class="fw-bold">95</span></td>
+                              <td><span>252</span></td>
+                              <td><span class="fw-bold">252</span></td>
+                            </tr>
+                            <tr>
+                              <td><button type="button" class="btn btn-sm btn02"><span>R3</span></button></td>
+                              <td><span class="fw-bold">1123</span></td>
+                              <td><span>3456</span></td>
+                              <td><span class="fw-bold">3456</span></td>
+                            </tr>
+                            <tr>
+                              <td><button type="button" class="btn btn-sm btn02"><span>SUPEX Center</span></button></td>
+                              <td><span class="fw-bold">36</span></td>
+                              <td><span>201</span></td>
+                              <td><span class="fw-bold">201</span></td>
+                            </tr>
+                            <tr>
+                              <td><button type="button" class="btn btn-sm btn02"><span>RC</span></button></td>
+                              <td><span class="fw-bold">91</span></td>
+                              <td><span>360</span></td>
+                              <td><span class="fw-bold">360</span></td>
+                            </tr>
+                            <tr>
+                              <td><button type="button" class="btn btn-sm btn02"><span>M14CUB</span></button></td>
+                              <td><span class="fw-bold">55</span></td>
+                              <td><span>194</span></td>
+                              <td><span class="fw-bold">194</span></td>
+                            </tr>
+                            <tr>
+                              <td><button type="button" class="btn btn-sm btn02"><span>M10F</span></button></td>
+                              <td><span class="fw-bold">95</span></td>
+                              <td><span>252</span></td>
+                              <td><span class="fw-bold">252</span></td>
+                            </tr>
+                            <tr>
+                              <td><button type="button" class="btn btn-sm btn02"><span>M14F</span></button></td>
+                              <td><span class="fw-bold">123</span></td>
+                              <td><span>2425</span></td>
+                              <td><span class="fw-bold">2425</span></td>
+                            </tr>
+                            <tr>
+                              <td><button type="button" class="btn btn-sm btn02"><span>R&D Center</span></button></td>
+                              <td><span class="fw-bold">36</span></td>
+                              <td><span>201</span></td>
+                              <td><span class="fw-bold">201</span></td>
+                            </tr>
+                            <tr>
+                              <td><button type="button" class="btn btn-sm btn02"><span>TC</span></button></td>
+                              <td><span class="fw-bold">91</span></td>
+                              <td><span>360</span></td>
+                              <td><span class="fw-bold">360</span></td>
+                            </tr>
+                            <tr>
+                              <td><button type="button" class="btn btn-sm btn02"><span>M16</span></button></td>
+                              <td><span class="fw-bold">55</span></td>
+                              <td><span>194</span></td>
+                              <td><span class="fw-bold">194</span></td>
+                            </tr>
+                            <tr>
+                              <td><button type="button" class="btn btn-sm btn02"><span>M16CUB</span></button></td>
+                              <td><span class="fw-bold">95</span></td>
+                              <td><span>252</span></td>
+                              <td><span class="fw-bold">252</span></td>
+                            </tr>
+                            <tr>
+                              <td><button type="button" class="btn btn-sm btn02"><span>M10B</span></button></td>
+                              <td><span class="fw-bold">123</span></td>
+                              <td><span>2425</span></td>
+                              <td><span class="fw-bold">2425</span></td>
+                            </tr>
+                        </tbody>
+                      </table>
+
+                    </div>
+                  <!--//datatable-->
+                </section>
+                <!--//20241129 데이터테이블-->
+
+
+
+
+                <button type="button" class="folding">버튼</button>
+              </div>
+            </div>
+            <!--//DBFV02 건물측면도-->
+
+
+            <!--DBFV02 전체/건물별 자산현황-->
+            <p class="layer-condition-title">SUPEX Center 층별 자산 상태 현황</p>
+            <div class="layer-condition row-cols-5">
+              <div class="">
+                <div class="layer-data">
+                  <canvas id="data05-chart"></canvas>
+                  <div id="data05-legend"></div>
+                  <a href="" class="arrow-more">더보기</a>
+                </div>
+              </div>
+              <div class="">
+                <div class="layer-data">
+                  <canvas id="data01-chart"></canvas>
+                  <div id="data01-legend"></div>
+                  <a href="" class="arrow-more">더보기</a>
+                </div>
+              </div>
+              <div class="">
+                <div class="layer-data">
+                  <canvas id="data02-chart"></canvas>
+                  <div id="data02-legend"></div>
+                  <a href="" class="arrow-more">더보기</a>
+                </div>
+              </div>
+              <div class="">
+                <div class="layer-data">
+                  <canvas id="data03-chart"></canvas>
+                  <div id="data03-legend"></div>
+                  <a href="" class="arrow-more">더보기</a>
+                </div>
+              </div>
+              <div class="">
+                <div class="layer-data">
+                  <canvas id="data04-chart"></canvas>
+                  <div id="data04-legend"></div>
+                  <a href="" class="arrow-more">더보기</a>
+                </div>
+              </div>
+            </div>
+            <!--//DBFV02 전체/건물별 자산현황-->
+
+
+          </div><!--//sub-cont-->
+
+        </div>
+        <!--//content-wrapper-->
+
+        <footer class="footer">
+          <div>COPYRIGHT(C) 2025 SK TELECOM INC. ALL RIGHTS RESERVED.</div>
+        </footer>
+        <!--//footer-->
+
+      </div>
+      <!--//main-panel-->
+
+
+    </div>
+    <!--//page-body-wrapper-->
+
+  </div>
+  <!--//container-scroller -->
+</body>
+<script src="../js/template.js"></script>
+<script src="../js/chart.min.js"></script>
+<script src="../js/swiper-bundle.min.js"></script>
+
+<script>
+
+  //전경도 우측테이블 접고펴기
+  $(".mapCont .folding").click(function () {
+    $('.mapCont .mapList').toggleClass('on');
+    $('.mapCont .folding').toggleClass('on');
+  });
+
+  //TRACKER 장착률 검색어 리스트노출
+  $('.search_group .input_wrap input').focus(function () {
+    $(this).parents().next('.dropdown-menu').addClass('show')
+  });
+  $('.search_group .input_wrap input').blur(function () {
+    $(this).parents().next('.dropdown-menu').removeClass('show')
+  });
+
+  //자산현황 좌우이동
+  var swiper = new Swiper('.swiper', {
+    slidesPerView: 4,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }
+  });
+  //자산현황 상하접기
+  $(".assetSlideToggle").click(function () {
+    $(".asset-data-wrap .ul").slideToggle();
+    $(".asset-data-wrap button").slideToggle();
+    $(".assetSlideToggle").toggleClass("closed");
+  });
+
+  //SUPEX Center 층별 주요 현황
+  (function ($) {
+    'use strict';
+    $(function () {
+      if ($("#data05-chart").length) {
+        var areaData = {
+          labels: ["title", "title", "title", "title", "title", "title", "title"],
+          datasets: [{
+            data: [250, 50, 100, 400, 65, 80, 120],
+            backgroundColor: [
+              '#bae8f8',
+              '#a6e0f7',
+              '#91d7f5',
+              '#7ecef2',
+              '#6cc7f0',
+              '#46b1eb',
+              '#3386e1'
+            ],
+            borderColor: "rgba(0,0,0,0)"
+          }
+          ]
+        };
+        var areaOptions = {
+          responsive: true,
+          maintainAspectRatio: true,
+          segmentShowStroke: false,
+          cutoutPercentage: 78,
+          elements: {
+            arc: {
+              borderWidth: 4
+            }
+          },
+          legend: {
+            display: false
+          },
+          tooltips: {
+            enabled: true
+          },
+          legendCallback: function (chart) {
+            var text = [];
+            text.push('<div class="report-chart">');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[0] + '"></div><p style="width:40px;">1F</p></div>');
+            text.push('<p class="mb-0 ml-3">250</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[1] + '"></div><p style="width:40px;">2F</p></div>');
+            text.push('<p class="mb-0 ml-3">50</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[2] + '"></div><p style="width:40px;">3F</p></div>');
+            text.push('<p class="mb-0 ml-3">100</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[3] + '"></div><p style="width:40px;">4F</p></div>');
+            text.push('<p class="mb-0 ml-3">400</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[4] + '"></div><p style="width:40px;">5F</p></div>');
+            text.push('<p class="mb-0 ml-3">65</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[4] + '"></div><p style="width:40px;">6F</p></div>');
+            text.push('<p class="mb-0 ml-3">80</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[4] + '"></div><p style="width:40px;">7F</p></div>');
+            text.push('<p class="mb-0 ml-3">120</p>');
+            text.push('</div>');
+            text.push('</div>');
+            return text.join("");
+          },
+        }
+        var northAmericaChartPlugins = {
+          beforeDraw: function (chart) {
+            var width = chart.chart.width,
+              height = chart.chart.height,
+              ctx = chart.chart.ctx;
+
+            ctx.restore();
+            var fontSize = 1.2;
+            ctx.font = "600 " + fontSize + "em Noto Sans KR";
+            ctx.textBaseline = "middle";
+            ctx.fillStyle = "#13381B";
+
+            var text = "신규설치",
+              textX = Math.round((width - ctx.measureText(text).width) / 2),
+              textY = height / 2;
+
+            ctx.fillText(text, textX, textY);
+            ctx.save();
+          }
+        }
+        var northAmericaChartCanvas = $("#data05-chart").get(0).getContext("2d");
+        var northAmericaChart = new Chart(northAmericaChartCanvas, {
+          type: 'doughnut',
+          data: areaData,
+          options: areaOptions,
+          plugins: northAmericaChartPlugins
+        });
+        document.getElementById('data05-legend').innerHTML = northAmericaChart.generateLegend();
+      }
+      if ($("#data01-chart").length) {
+        var areaData = {
+          labels: ["title", "title", "title", "title", "title", "title", "title"],
+          datasets: [{
+            data: [250, 50, 100, 400, 65, 80, 120],
+            backgroundColor: [
+              '#bae8f8',
+              '#a6e0f7',
+              '#91d7f5',
+              '#7ecef2',
+              '#6cc7f0',
+              '#46b1eb',
+              '#3386e1'
+            ],
+            borderColor: "rgba(0,0,0,0)"
+          }
+          ]
+        };
+        var areaOptions = {
+          responsive: true,
+          maintainAspectRatio: true,
+          segmentShowStroke: false,
+          cutoutPercentage: 78,
+          elements: {
+            arc: {
+              borderWidth: 4
+            }
+          },
+          legend: {
+            display: false
+          },
+          tooltips: {
+            enabled: true
+          },
+          legendCallback: function (chart) {
+            var text = [];
+            text.push('<div class="report-chart">');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[0] + '"></div><p style="width:40px;">1F</p></div>');
+            text.push('<p class="mb-0 ml-3">250</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[1] + '"></div><p style="width:40px;">2F</p></div>');
+            text.push('<p class="mb-0 ml-3">50</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[2] + '"></div><p style="width:40px;">3F</p></div>');
+            text.push('<p class="mb-0 ml-3">100</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[3] + '"></div><p style="width:40px;">4F</p></div>');
+            text.push('<p class="mb-0 ml-3">400</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[4] + '"></div><p style="width:40px;">5F</p></div>');
+            text.push('<p class="mb-0 ml-3">65</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[4] + '"></div><p style="width:40px;">6F</p></div>');
+            text.push('<p class="mb-0 ml-3">80</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[4] + '"></div><p style="width:40px;">7F</p></div>');
+            text.push('<p class="mb-0 ml-3">120</p>');
+            text.push('</div>');
+            text.push('</div>');
+            return text.join("");
+          },
+        }
+        var northAmericaChartPlugins = {
+          beforeDraw: function (chart) {
+            var width = chart.chart.width,
+              height = chart.chart.height,
+              ctx = chart.chart.ctx;
+
+            ctx.restore();
+            var fontSize = 1.2;
+            ctx.font = "600 " + fontSize + "em Noto Sans KR";
+            ctx.textBaseline = "middle";
+            ctx.fillStyle = "#13381B";
+
+            var text = "기존설치",
+              textX = Math.round((width - ctx.measureText(text).width) / 2),
+              textY = height / 2;
+
+            ctx.fillText(text, textX, textY);
+            ctx.save();
+          }
+        }
+        var northAmericaChartCanvas = $("#data01-chart").get(0).getContext("2d");
+        var northAmericaChart = new Chart(northAmericaChartCanvas, {
+          type: 'doughnut',
+          data: areaData,
+          options: areaOptions,
+          plugins: northAmericaChartPlugins
+        });
+        document.getElementById('data01-legend').innerHTML = northAmericaChart.generateLegend();
+      }
+      if ($("#data02-chart").length) {
+        var areaData = {
+          labels: ["title", "title", "title", "title", "title", "title", "title"],
+          datasets: [{
+            data: [250, 50, 100, 400, 65, 65, 65,],
+            backgroundColor: [
+              '#e4f8c4',
+              '#d6f2a9',
+              '#bceb7b',
+              '#ace669',
+              '#a0e056',
+              '#94dc4a',
+              '#7bd434'
+            ],
+            borderColor: "rgba(0,0,0,0)"
+          }
+          ]
+        };
+        var areaOptions = {
+          responsive: true,
+          maintainAspectRatio: true,
+          segmentShowStroke: false,
+          cutoutPercentage: 78,
+          elements: {
+            arc: {
+              borderWidth: 4
+            }
+          },
+          legend: {
+            display: false
+          },
+          tooltips: {
+            enabled: true
+          },
+          legendCallback: function (chart) {
+            var text = [];
+            text.push('<div class="report-chart">');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[0] + '"></div><p style="width:40px;">1F</p></div>');
+            text.push('<p class="mb-0 ml-3">250</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[1] + '"></div><p style="width:40px;">2F</p></div>');
+            text.push('<p class="mb-0 ml-3">50</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[2] + '"></div><p style="width:40px;">3F</p></div>');
+            text.push('<p class="mb-0 ml-3">100</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[3] + '"></div><p style="width:40px;">4F</p></div>');
+            text.push('<p class="mb-0 ml-3">400</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[4] + '"></div><p style="width:40px;">5F</p></div>');
+            text.push('<p class="mb-0 ml-3">65</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[5] + '"></div><p style="width:40px;">6F</p></div>');
+            text.push('<p class="mb-0 ml-3">65</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[6] + '"></div><p style="width:40px;">7F</p></div>');
+            text.push('<p class="mb-0 ml-3">65</p>');
+            text.push('</div>');
+            text.push('</div>');
+            return text.join("");
+          },
+        }
+        var southAmericaChartPlugins = {
+          beforeDraw: function (chart) {
+            var width = chart.chart.width,
+              height = chart.chart.height,
+              ctx = chart.chart.ctx;
+
+            ctx.restore();
+            var fontSize = 1.2;
+            ctx.font = "600 " + fontSize + "em Noto Sans KR";
+            ctx.textBaseline = "middle";
+            ctx.fillStyle = "#000";
+
+            var text = "이설",
+              textX = Math.round((width - ctx.measureText(text).width) / 2),
+              textY = height / 2;
+
+            ctx.fillText(text, textX, textY);
+            ctx.save();
+          }
+        }
+        var southAmericaChartCanvas = $("#data02-chart").get(0).getContext("2d");
+        var southAmericaChart = new Chart(southAmericaChartCanvas, {
+          type: 'doughnut',
+          data: areaData,
+          options: areaOptions,
+          plugins: southAmericaChartPlugins
+        });
+        document.getElementById('data02-legend').innerHTML = southAmericaChart.generateLegend();
+      }
+      if ($("#data03-chart").length) {
+        var areaData = {
+          labels: ["title", "title", "title", "title", "title", "title", "title"],
+          datasets: [{
+            data: [250, 50, 100, 400, 65, 20, 10,],
+            backgroundColor: [
+              '#ffeaf5',
+              '#ffbfe1',
+              '#ff97cf',
+              '#ff86c5',
+              '#ff71bb',
+              '#ef58d6',
+              '#d92bbc'
+            ],
+            borderColor: "rgba(0,0,0,0)"
+          }
+          ]
+        };
+        var areaOptions = {
+          responsive: true,
+          maintainAspectRatio: true,
+          segmentShowStroke: false,
+          cutoutPercentage: 78,
+          elements: {
+            arc: {
+              borderWidth: 4
+            }
+          },
+          legend: {
+            display: false
+          },
+          tooltips: {
+            enabled: true
+          },
+          legendCallback: function (chart) {
+            var text = [];
+            text.push('<div class="report-chart">');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[0] + '"></div><p style="width:40px;">1F</p></div>');
+            text.push('<p class="mb-0 ml-3">250</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[1] + '"></div><p style="width:40px;">2F</p></div>');
+            text.push('<p class="mb-0 ml-3">50</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[2] + '"></div><p style="width:40px;">3F</p></div>');
+            text.push('<p class="mb-0 ml-3">100</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[3] + '"></div><p style="width:40px;">4F</p></div>');
+            text.push('<p class="mb-0 ml-3">400</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[4] + '"></div><p style="width:40px;">5F</p></div>');
+            text.push('<p class="mb-0 ml-3">65</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[5] + '"></div><p style="width:40px;">6F</p></div>');
+            text.push('<p class="mb-0 ml-3">20</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[6] + '"></div><p style="width:40px;">7F</p></div>');
+            text.push('<p class="mb-0 ml-3">10</p>');
+            text.push('</div>');
+            text.push('</div>');
+            return text.join("");
+          },
+        }
+        var southAmericaChartPlugins = {
+          beforeDraw: function (chart) {
+            var width = chart.chart.width,
+              height = chart.chart.height,
+              ctx = chart.chart.ctx;
+
+            ctx.restore();
+            var fontSize = 1.2;
+            ctx.font = "600 " + fontSize + "em Noto Sans KR";
+            ctx.textBaseline = "middle";
+            ctx.fillStyle = "#000";
+
+            var text = "철거",
+              textX = Math.round((width - ctx.measureText(text).width) / 2),
+              textY = height / 2;
+
+            ctx.fillText(text, textX, textY);
+            ctx.save();
+          }
+        }
+        var southAmericaChartCanvas = $("#data03-chart").get(0).getContext("2d");
+        var southAmericaChart = new Chart(southAmericaChartCanvas, {
+          type: 'doughnut',
+          data: areaData,
+          options: areaOptions,
+          plugins: southAmericaChartPlugins
+        });
+        document.getElementById('data03-legend').innerHTML = southAmericaChart.generateLegend();
+      }
+      if ($("#data04-chart").length) {
+        var areaData = {
+          labels: ["title", "title", "title", "title", "title", "title", "title"],
+          datasets: [{
+            data: [250, 50, 100, 400, 65, 65, 65],
+            backgroundColor: [
+              '#dee7f1',
+              '#afbac4',
+              '#b1b7bc',
+              '#7d868f',
+              '#76899e',
+              '#666f7b',
+              '#4c5257'
+            ],
+            borderColor: "rgba(0,0,0,0)"
+          }
+          ]
+        };
+        var areaOptions = {
+          responsive: true,
+          maintainAspectRatio: true,
+          segmentShowStroke: false,
+          cutoutPercentage: 78,
+          elements: {
+            arc: {
+              borderWidth: 4
+            }
+          },
+          legend: {
+            display: false
+          },
+          tooltips: {
+            enabled: true
+          },
+          legendCallback: function (chart) {
+            var text = [];
+            text.push('<div class="report-chart">');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[0] + '"></div><p style="width:40px;">1F</p></div>');
+            text.push('<p class="mb-0 ml-3">250</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[1] + '"></div><p style="width:40px;">2F</p></div>');
+            text.push('<p class="mb-0 ml-3">50</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[2] + '"></div><p style="width:40px;">3F</p></div>');
+            text.push('<p class="mb-0 ml-3">100</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[3] + '"></div><p style="width:40px;">4F</p></div>');
+            text.push('<p class="mb-0 ml-3">400</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[4] + '"></div><p style="width:40px;">5F</p></div>');
+            text.push('<p class="mb-0 ml-3">65</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[5] + '"></div><p style="width:40px;">6F</p></div>');
+            text.push('<p class="mb-0 ml-3">65</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[6] + '"></div><p style="width:40px;">7F</p></div>');
+            text.push('<p class="mb-0 ml-3">65</p>');
+            text.push('</div>');
+            text.push('</div>');
+            return text.join("");
+          },
+        }
+        var southAmericaChartPlugins = {
+          beforeDraw: function (chart) {
+            var width = chart.chart.width,
+              height = chart.chart.height,
+              ctx = chart.chart.ctx;
+
+            ctx.restore();
+            var fontSize = 1.2;
+            ctx.font = "600 " + fontSize + "em sans-serif";
+            ctx.textBaseline = "middle";
+            ctx.fillStyle = "#000";
+
+            var text = "유휴",
+              textX = Math.round((width - ctx.measureText(text).width) / 2),
+              textY = height / 2;
+
+            ctx.fillText(text, textX, textY);
+            ctx.save();
+          }
+        }
+        var southAmericaChartCanvas = $("#data04-chart").get(0).getContext("2d");
+        var southAmericaChart = new Chart(southAmericaChartCanvas, {
+          type: 'doughnut',
+          data: areaData,
+          options: areaOptions,
+          plugins: southAmericaChartPlugins
+        });
+        document.getElementById('data04-legend').innerHTML = southAmericaChart.generateLegend();
+      }
+    });
+
+    // SVG a 클릭 이벤트 속성 지우기
+    $('svg .skhynixWrap-ic a').on('click', function(e){
+      e.preventDefault();
+    })
+  })(jQuery);
+
+</script>
+<!--20241129 데이터테이블-->
+<link rel="stylesheet" href="../css/datatables.css">
+<script src="../js/datatables.min.js"></script>
+<script>
+  $(document).ready( function () {
+      $('table.dataTable ').DataTable({
+
+        //가로 스크롤바
+        scrollX: true,
+
+        //세로 스크롤바
+        scrollY: 400,
+
+        //일정높이 이상 시 Y스크롤 추가
+        //"scrollCollapse" : true,
+
+        // 표시 건수기능 
+        lengthChange: false,
+
+        // 검색 기능 
+        searching: false,
+
+        // 정렬 기능 
+        ordering: true,
+
+        // 정보 표시 
+        info: false,
+
+        "pageLength": 10,
+
+        // 페이징 기능 
+        paging: false, 
+
+        pagingType : "full_numbers",
+
+        columnDefs: [
+            { width: "130px", targets: 0 },
+            { width: "130px", targets: 1 },
+            { width: "130", targets: 3 },
+        ],
+
+        "order":[[1, 'asc']],
+
+        });
+  } );
+</script>
+<!--//20241129 데이터테이블-->
+</html>

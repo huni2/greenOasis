@@ -1,0 +1,555 @@
+/*==========공통적으로 쓰이는 css==============*/
+
+.account-title h1 {
+    font-size: 18px;
+}
+
+.account-area {
+    width: 100%;
+    height: 100%;
+    padding: 24px;
+}
+
+.account-area h2 {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.6;
+    letter-spacing: -0.5px;
+    margin-bottom: 32px;
+}
+
+.account-area p {
+    letter-spacing: -0.5px;
+}
+
+.account-area a {
+    font-size: 14px;
+    letter-spacing: -0.5px;
+    text-decoration: none;
+}
+
+.account-area label {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.account-area button {
+    height: 44px;
+}
+
+.account-mr {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.account-mr p strong {
+    color: #FF4D36;
+}
+
+.account-flex-area {
+    width: 340px;
+}
+
+.account-flex-area .account-flex-area-second {
+    display: flex;
+    justify-content: space-between;
+}
+
+.account-flex-area a {
+    display: inline-block;
+    width: 110px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/*성공과 에러 기호*/
+.account-flex-area span {
+    font-size: 20px;
+    font-weight: bold;
+    height: 44px;
+    line-height: 44px;
+}
+
+/*label 스타일 리스트*/
+.title-label {
+    height: 44px;
+    line-height: 44px;
+}
+
+.label-width-first {
+    width: 80px;
+}
+
+.label-width-second {
+    width: 110px;
+}
+
+/*모달 input 스타일 리스트*/
+.account-area input {
+    height: 44px;
+    padding: 0 12px;
+    font-size: 14px;
+    border: 1px solid #D2D9E2;
+}
+
+.account-area input:hover {
+    border: 1px solid #6A68BC;
+}
+
+.account-area input:focus {
+    border: 1px solid #6A68BC;
+}
+
+.account-area input:active {
+    border: 1px solid #6A68BC;
+}
+
+.account-area input::placeholder {
+    color: #AAB2BD;
+}
+
+/*input width 리스트*/
+.input-width-first {
+    width: 100%;
+}
+
+.input-width-second {
+    width: 220px !important;
+}
+
+.input-width-third {
+    width: 280px !important;
+}
+
+/*패스워드 정책*/
+.password-rule-area {
+    height: auto;
+    background-color: #F7F7F7;
+    padding: 16px;
+}
+
+.password-rule-area p {
+    margin-bottom: 4px;
+}
+
+.password-rule-sucess {
+    color: #007AFF;
+}
+
+.password-rule-error {
+    color: #FF4D36;
+}
+
+/*알림/안내 정보 이메일 전송에 동의합니다, 남은 시간, 패스워드 정책 위에 존재하는 padding값*/
+.small-padding-top {
+    padding-top: 8px;
+}
+
+/*===============Warning======================*/
+.error-border-warning {
+    border: 1px solid #FF4D36 !important;
+}
+
+/*아이디 찾기 / 비밀번호 찾기 영역*/
+.modal-help-center {
+    width: 100%;
+    height: 44px;
+    line-height: 43px;
+    border: 1px solid #D2D9E2;
+    margin-top: 32px;
+}
+
+.modal-help-center ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*아이디 찾기와 비밀번호 찾기 사이에 있는 선*/
+.modal-help-center ul li:nth-child(2) {
+    width: 1px;
+    height: 20px;
+    background-color: #D2D9E2;
+    margin: 0 30px;
+}
+
+.modal-help-center ul li a {
+    color: #333333;
+}
+
+.modal-help-center ul li a:hover {
+    text-decoration: none;
+    color: #5C51D6;
+}
+
+
+/*===========로그인 폼 체크박스*===========*/
+.login-checkbox + label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    margin-left: 25px;
+}
+
+.login-checkbox + label:before {
+    content: "";
+    display: block;
+    position: absolute;
+    border: 1.5px solid #D2D9E2;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: -25px;
+    right: 0px;
+    bottom: 0px;
+}
+
+.login-checkbox + label:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: -24px;
+    right: 0px;
+    bottom: 0px;
+    margin-left: 3px;
+    border-radius: 0;
+    font-family: themify;
+    content: '\e64c';
+    font-size: 11px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.login-checkbox:checked + label:before {
+    background-color: #6A68BC;
+    border: 2px solid #6A68BC;
+}
+
+.login-checkbox:checked + label:after {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+
+.account-title {
+    width: 100%;
+    height: 54px;
+    line-height: 54px;
+    background-color: #505050;
+    color: white;
+    padding-left: 24px;
+}
+
+/*모달창 X닫기*/
+.accout-top-close {
+    position: absolute;
+    top: 18px !important;
+    right: 24px !important;
+}
+
+.bottom-close {
+    width: 100%;
+    text-align: center;
+    padding-top: 32px;
+}
+
+.bottom-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom-flex button {
+    width: 205px;
+}
+
+/*모달창 아래 닫기 버튼*/
+.account-button-close {
+    width: 200px;
+    text-align: center;
+    background-color: #ededed;
+    color: #333;
+    font-size: 14px;
+}
+
+.account-button-close:hover {
+    background: #e6e5e5;
+}
+
+.account-button-success {
+    background-color: #6A68BC;
+    color: #ffffff;
+}
+
+.account-button-success:hover {
+    background: #5c51d6;
+}
+
+.account-button-success:focus {
+    background: #5c51d6;
+}
+
+.account-button-success:active {
+    background: #5c51d6;
+}
+
+.secondary-button {
+    background-color: #5f636f;
+    color: #ffffff;
+}
+
+.secondary-button:hover {
+    background-color: #444852;
+}
+
+.secondary-button:focus {
+    background-color: #444852;
+}
+
+.secondary-button:active {
+    background-color: #444852;
+}
+
+/*===============CMLG01.html=================*/
+.login-wrapper {
+    background-color: #F4F7F9;
+    min-width: 1280px;
+}
+
+.login-space {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.login-space span {
+    display: block;
+    font-size: 14px;
+    text-align: center;
+    padding-top: 24px;
+    color: #BBBBBB;
+}
+
+.login-area {
+    width: 500px;
+    height: auto;
+    background-color: #ffffff;
+    padding: 48px;
+}
+
+.login-wrapper .login-area .login-title {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.login-wrapper .login-area .login-title img {
+    margin-bottom: 16px;
+}
+
+/*===============로그인 스타일=================*/
+.login-area h2 {
+    letter-spacing: -0.5px;
+}
+
+.login-area a {
+    font-size: 14px;
+    letter-spacing: -0.5px;
+    color: #212121;
+    text-decoration: none;
+}
+
+.login-area label {
+    font-size: 14px;
+    letter-spacing: -0.5px;
+}
+
+.login-area p {
+    letter-spacing: -0.5px;
+}
+
+.login-area input {
+    width: 100%;
+    height: 54px;
+    border: 1px solid transparent;
+    padding: 0 16px;
+    font-size: 16px;
+    background-color: #F7F7F7;
+}
+
+.login-area input:hover {
+    border: 1px solid #6A68BC;
+}
+
+.login-area input:focus {
+    border: 1px solid #6A68BC;
+}
+
+.login-area input:active {
+    border: 1px solid #6A68BC;
+}
+
+.login-area input:nth-child(1) {
+    margin-bottom: 10px;
+}
+
+.login-area input::placeholder {
+    color: #AAB2BD;
+}
+
+.login-help {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0 32px 0;
+}
+
+.login-help ul {
+    width: auto;
+    height: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.login-help ul li:nth-child(2) {
+    width: 1px;
+    height: 100%;
+    background-color: #AAB2BD;
+    margin: 2px 14px 0 14px;
+}
+
+.login-help ul li a:hover {
+    color: #6A68BC;
+}
+
+/*로그인 버튼*/
+.login-area input[type=submit] {
+    background-color: #6A68BC;
+    color: #ffffff;
+}
+
+.login-area input[type=submit]:hover {
+    background: #5c51d6;
+}
+
+.login-area input[type=submit]:focus {
+    background: #5c51d6;
+}
+
+.login-area input[type=submit]:active {
+    background: #5c51d6;
+}
+
+.help-center-if {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 24px;
+}
+
+.help-center-if p {
+    font-size: 13px;
+    color: rgb(67, 74, 84);
+}
+
+.help-center-if p strong {
+    font-weight: bold;
+}
+
+/*===============CMLG03.html=================*/
+
+.user-id-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    border: 1px solid #D2D9E2;
+    text-align: center;
+}
+
+.user-id-area p {
+    width: 100%;
+    font-size: 16px;
+    color: #FF4D36;
+}
+
+/*===============CMMA01.html=================*/
+.my-password-area {
+    width: 100%;
+    height: calc(100vh - 280px);
+    position: relative;
+}
+
+.my-password-area .password-entry {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+.my-password-area .password-entry h2 {
+    padding-top: 24px;
+    font-size: 20px;
+}
+
+.entry-in-area {
+    padding-top: 32px;
+}
+
+.entry-in-area input {
+    width: 210px;
+    height: 44px;
+    border: 1px solid #D2D9E2;
+    padding: 0 16px;
+}
+
+.entry-in-area input:hover {
+    border: 1px solid #6A68BC;
+}
+
+.entry-in-area input:focus {
+    border: 1px solid #6A68BC;
+}
+
+.entry-in-area input:active {
+    border: 1px solid #6A68BC;
+}
+
+
+.entry-in-area button {
+    width: 110px;
+    height: 44px;
+    background-color: #6A68BC;
+    color: #ffffff;
+    margin-left: 6px;
+    font-size: 16px;
+}
+
+.entry-in-area button:hover {
+    background-color: #5c51d6;
+}
+
+.entry-in-area button:focus {
+    background-color: #5c51d6;
+}
+
+.entry-in-area button:active {
+    background-color: #5c51d6;
+}

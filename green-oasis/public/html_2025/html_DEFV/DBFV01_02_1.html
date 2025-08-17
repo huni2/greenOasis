@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>SK hynix 자산관리시스템</title>
+  <link rel="shortcut icon" href="../images/favicon.ico">
+  <link rel="stylesheet" href="../css/common.css">
+
+  <script type="text/javascript" src="../js/jquery.js"></script>
+  <script type="text/javascript" src="../js/jquery-ui.js"></script>
+
+</head>
+
+<body class="bg1">
+
+  <div class="container-scroller">
+
+    <nav class="navbar fixed-top">
+      <div class="navbar-logo-wrapper">
+        <button class="navbar-toggler" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+      <div class="navbar-menu-wrapper">
+
+        <a class="navbar-logo" href="../index.html"><img src="../images/logo.png" alt="SK hynix 로고" /></a>
+        <span class="navbar-title">자산관리MAPS</span>
+        <ul class="location-link">
+          <li><a href="DBFV01">이천</a></li>
+          <li><a class="active" href="">청주</a></li>
+          <li><a href="">우시</a></li>
+          <li><a href="">충징</a></li>
+        </ul>
+        <ul class="navbar-nav">
+
+          <li class="nav-item nav-language dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="languageDropdown"><i
+                class="flag-korea"></i><span>한국어</span></a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="languageDropdown">
+              <a class="dropdown-item"><i class="flag-us"></i>English</a>
+              <a class="dropdown-item"><i class="flag-china"></i>中文</a>
+            </div>
+          </li>
+          <li class="nav-item nav-error">
+            <a class="nav-link" href="#" title="에러"><i class="icon-error"></i></a>
+          </li>
+          <li class="nav-item nav-mail" title="메일">
+            <a class="nav-link" href="#"><i class="icon-mail"></i></a>
+          </li>
+          <li class="nav-item nav-noti dropdown" title="공지">
+            <a class="nav-link count-indicator dropdown-toggle" id="notiDropdown" href="#" data-toggle="dropdown"><i
+                class="icon-bell mx-0"></i><span class="count"></span></a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notiDropdown">
+              <p class="dropdown-header">공지</p>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-success"><i class="ti-info-alt mx-0"></i></div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject fw-normal">에러</h6>
+                  <p class="fw-light small-text mb-0 text-muted">1분전</p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-warning"><i class="ti-settings mx-0"></i></div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject fw-normal">설정</h6>
+                  <p class="fw-light small-text mb-0 text-muted">메세지</p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-info"><i class="ti-user mx-0"></i></div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject fw-normal">사용자등록</h6>
+                  <p class="fw-light small-text mb-0 text-muted">2일전</p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item nav-profile dropdown ">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown"><img
+                src="../images/top_face.png" alt="profile" /><span>X20220610</span></a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item"><i class="ti-settings text-primary"></i>나의정보</a>
+              <a class="dropdown-item"><i class="ti-power-off text-primary"></i>로그아웃</a>
+            </div>
+          </li>
+          <li class="nav-item nav-name">
+            <div><span>hwchoi</span><span>슈퍼관리자</span></div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--//navbar-->
+
+    <div class="page-body-wrapper">
+
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <script src="../js/nav.js"></script>
+      </nav>
+      <!--//sidebar-->
+
+      <div class="main-panel">
+
+        <div class="content-wrapper">
+
+          <!--sub-cont-->
+          <div class="sub-cont">
+
+            <!--상단타이틀영역-->
+            <div class="page-title-box">
+              <div class="left">
+                <h2 class="title">청주 1캠퍼스</h2>
+              </div>
+              <div class="right">
+                <div>
+                  <ol class="breadcrumb m-0">
+                    <li class="breadcrumb-item">Home</li>
+                    <li class="breadcrumb-item">전경도</li>
+                    <li class="breadcrumb-item active">청주 캠퍼스</li>
+                  </ol>
+                </div>
+
+              </div>
+            </div>
+            <!--상단타이틀영역-->
+
+            <!--DBFV01 전경도 상단 마스터코드 및 Tracker상태현황-->
+            <div class="row campus-current-state" style="display: none;">
+              <div class="col-8">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row left-box">
+                      <div class="col">
+                        <p class="title">설치:</p>
+                        <p class="data">950 </p>
+                      </div>
+                      <div class="col">
+                        <p class="title">이설:</p>
+                        <p class="data">2,650</p>
+                      </div>
+                      <div class="col">
+                        <p class="title">철거:</p>
+                        <p class="data">2,650</p>
+                      </div>
+                      <div class="col">
+                        <p class="title">유휴:</p>
+                        <p class="data">2,650</p>
+                      </div>
+                      <div class="col">
+                        <p class="title">폐기:</p>
+                        <p class="data">2,650</p>
+                      </div>
+                    </div>
+                    <div class="dropdown campus-current-state-setting">
+                      <button type="button" class="btn dropdown-setting" id="campus-current-state-setting-dropdownBtn"
+                        data-toggle="dropdown">설정</button>
+                      <div class="dropdown-menu" aria-labelledby="campus-current-state-setting-dropdownBtn">
+                        <div class="form-group">
+                          <div class="form-check"><label class="form-check-label"><input type="checkbox"
+                                class="form-check-input" checked>Super EQ Master Code</label></div>
+                          <div class="form-check"><label class="form-check-label"><input type="checkbox"
+                                class="form-check-input" checked>Q Master Code</label></div>
+                          <div class="form-check"><label class="form-check-label"><input type="checkbox"
+                                class="form-check-input" checked>Tracker(장착률)</label></div>
+                          <div class="form-check"><label class="form-check-label"><input type="checkbox"
+                                class="form-check-input">노출정보 A</label></div>
+                          <div class="form-check"><label class="form-check-label"><input type="checkbox"
+                                class="form-check-input">노출정보 B</label></div>
+                          <div class="form-check"><label class="form-check-label"><input type="checkbox"
+                                class="form-check-input">노출정보 C</label></div>
+                          <div class="form-check"><label class="form-check-label"><input type="checkbox"
+                                class="form-check-input">노출정보 D</label></div>
+                          <div class="form-check"><label class="form-check-label"><input type="checkbox"
+                                class="form-check-input" disabled checked>Disabled checked</label></div>
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <div class="selectedList"><span class="material-symbols-outlined">star</span>3개선택</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div><!--//col -->
+
+              <div class="col-4">
+                <div class="card">
+                  <div class="card-body">
+
+                    <p class="title">Tracker 상태현황</p>
+                    <div class="right-box progress-wrap">
+                      <div class="nth1">
+                        <div class="total">
+                          <span>전체</span>
+                          <span class="data">3010</span>
+                        </div>
+                      </div>
+                      <div class="nth2">
+                        <dl>
+                          <dt>정상</dt>
+                          <dd>2977</dd>
+                        </dl>
+                        <div class="progress">
+                          <div class="progress-bar bg-success" role="progressbar" style="width: 75%"
+                            aria-valuenow="2977" aria-valuemin="0" aria-valuemax=""></div>
+                        </div>
+                      </div>
+                      <div class="nth3">
+                        <dl>
+                          <dt>대기</dt>
+                          <dd>33</dd>
+                        </dl>
+                        <div class="progress">
+                          <div class="progress-bar bg-warning" role="progressbar" style="width: 33%" aria-valuenow="33"
+                            aria-valuemin="0" aria-valuemax=""></div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div><!--//card-body-->
+                </div><!--//card-->
+              </div><!--//col-->
+            </div>
+            <!--//DBFV01 전경도 상단 마스터코드 및 Tracker상태현황-->
+            
+
+            <!--20250208 DBFV01 전경도 상단 마스터코드 및 Tracker상태현황-->
+            <div class="row campus-current-state2">
+              <div class="col-12">
+                
+                <div class="card">
+                  <div class="card-body">
+                    <p class="header-title">MDN자산(마스터/슬레이브)</p>
+                    <div class="row master_slave">
+                      <div class="col">
+                        <p class="title">MDM 건수 <label class="badge2">TOTAL</label></p>
+                        <p class="data">2900 / 4810</p>
+                      </div>
+                      <div class="col">
+                        <p class="title">Tracker준비<label class="badge2">READY</label></p>
+                        <p class="data">16 / 135</p>
+                      </div>
+                      <div class="col">
+                        <p class="title">Tracker운영<label class="badge2">OPERATE</label></p>
+                        <p class="data">4/0</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div><!--//col -->
+
+              <div class="col-12">
+                
+                <div class="card">
+                  <div class="card-body">
+                    <p class="header-title hidden">Tracker 상태현황</p>
+                    <div class="row tracker_current">
+                      <div class="title">
+                        <div>
+                          <span>Tracker상태현황(마스터/슬레이브)</span>
+                        </div>
+                      </div>
+                      <div class=" total">
+                        <dl>
+                          <dt>전체</dt>
+                          <dd><a href="#none">4017 / 6901</a></dd>
+                        </dl>
+                      </div>
+                      <div>
+                        <dl>
+                          <dt>재고</dt>
+                          <dd><a href="#none">1391 / 2370</a></dd>
+                        </dl>
+                      </div>
+                      <div>
+                        <dl>
+                          <dt>준비</dt>
+                          <dd><a href="#none">16 / 135</a></dd>
+                        </dl>
+                      </div>
+                      <div >
+                        <dl>
+                          <dt>회수</dt>
+                          <dd><a href="#none">100 / 100</a></dd>
+                        </dl>
+                      </div>
+                      <div>
+                        <dl>
+                          <dt>폐기</dt>
+                          <dd><a href="#none">100 / 100</a></dd>
+                        </dl>
+                      </div><!--
+                      <div>
+                        <dl>
+                          <dt>운영</dt>
+                          <dd><a href="#none">003 / 100</a></dd>
+                        </dl>
+                      </div>-->
+                      <div>
+                        <dl>
+                          <dt>유휴 / 이동 / 장애 / 낙하 / 무응답</dt>
+                          <dd><a href="#none">100 / 100 / 100 / 100 / 100</a></dd>
+                        </dl>
+                      </div>
+                    </div>
+
+                  </div><!--//card-body-->
+                </div><!--//card-->
+              </div><!--//col-->
+            </div>
+            <!--//20250208 DBFV01 전경도 상단 마스터코드 및 Tracker상태현황-->
+            
+
+            <!--DBFV01 전경도-->
+            <div class="mapCont">
+              <div class="mapCov">
+
+                <div class="mapLeft">
+
+                  <div class="inner">
+
+                    <!--20241218 나침판추가-->
+                    <div class="ic-compass"></div>
+                    <!--//20241218 나침판추가-->
+
+                    <img src="../images/floorPlan/Cheongju.png"  alt=""/>
+
+                    <!-- Tooltip -->
+                    <div class="lay_tooltip" style="position: absolute; left: 800px; top: 500px;"> 
+                      <div class="dataTooltip"> 
+                          <div> 
+                              <p class="yellow">청주1A</p> 
+                              <table id=""> 
+                                  <caption>
+                                      <col width="">
+                                      <col width="">
+                                  </caption> 
+                                  <tbody> 
+                                      <tr> 
+                                        <td class="num">   
+                                          마스터자산 : 12<br>
+                                          슬레이브자산 : 4<br>
+                                          마스터Tracker : 10<br>
+                                          슬레이브Tracker : 3<br>
+                                                                      
+                                        </td> 
+                                    </tr>
+                                      
+                                      
+
+                                  </tbody> 
+                              </table> 
+                          </div> 
+                      </div> 
+                      <div class="downArrow"></div> 
+                    </div>
+
+                  </div><!--//inner-->
+
+                </div><!--//mapLeft-->
+
+                <div class="zoomBtns">
+                  <button type="button" class="btnFull">전체</button>
+                  <button type="button" class="btnPlus">확대</button>
+                  <button type="button" class="btnMinus">축소</button>
+                  <button type="button" class="btnMove">이동</button>
+                </div>
+
+              </div><!--//mapCov-->
+              <div class="mapList">
+
+                <!--tb_title-->
+                <div class="tb_title">
+                  <div>
+                    <p class="title"><span>건물별 현황</p>
+                  </div>
+                  <div>
+                    <!-- 2024 / 09 / 14 검색버튼 추가-->
+                    <div class="search_group">
+                      <span class="input_wrap"><input type="text" placeholder="검색어" val=""></span>
+                      <div class="dropdown-menu dropdown-menu-right navbar-dropdown">
+                        <a class="dropdown-item">M10A</a>
+                        <a class="dropdown-item">M10B</a>
+                        <a class="dropdown-item">M10F</a>
+                        <a class="dropdown-item">M14</a>
+                        <a class="dropdown-item">M14CUB</a>
+                        <a class="dropdown-item">M16</a>
+                      </div>
+                      <button type="submit" class="btn-searchTrack"><span class="text-hidden">검색</span></button>
+                    </div>
+                  </div>
+                </div>
+                <!--//tb_title-->
+              
+                <!--20241129 데이터테이블-->
+                <section class="dataTable-Group">
+                  <!--tb_top-->
+                  <!--//tb_top-->
+                  <!--datatable-->
+                    <div class="dataTable-wrap">
+                      <table class="dataTable">
+                          <thead>
+                              <tr>
+                                <th>
+                                  건물명
+                                </th>
+                                <th>
+                                  마스터자산
+                                </th>
+                                <th>
+                                  슬레이브자산
+                                </th>
+                                <th>
+                                  Tracker
+                                </th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><button type="button" class="btn btn-sm btn02"><span>청주1A</span></button></td>
+                              <td><span class="fw-bold">95</span></td>
+                              <td><span>252</span></td>
+                              <td><span class="fw-bold">252</span></td>
+                            </tr>
+                            <tr>
+                              <td><button type="button" class="btn btn-sm btn02"><span>청주1B</span></button></td>
+                              <td><span class="fw-bold">1123</span></td>
+                              <td><span>3456</span></td>
+                              <td><span class="fw-bold">3456</span></td>
+                            </tr>
+                            <tr>
+                              <td><button type="button" class="btn btn-sm btn02"><span>청주1C</span></button></td>
+                              <td><span class="fw-bold">36</span></td>
+                              <td><span>201</span></td>
+                              <td><span class="fw-bold">201</span></td>
+                            </tr>
+                            <tr>
+                              <td><button type="button" class="btn btn-sm btn02"><span>청주1D</span></button></td>
+                              <td><span class="fw-bold">91</span></td>
+                              <td><span>360</span></td>
+                              <td><span class="fw-bold">360</span></td>
+                            </tr>
+                            <tr>
+                              <td><button type="button" class="btn btn-sm btn02"><span>청주1E</span></button></td>
+                              <td><span class="fw-bold">55</span></td>
+                              <td><span>194</span></td>
+                              <td><span class="fw-bold">194</span></td>
+                            </tr>
+                            <tr>
+                              <td><button type="button" class="btn btn-sm btn02"><span>청주1F</span></button></td>
+                              <td><span class="fw-bold">95</span></td>
+                              <td><span>252</span></td>
+                              <td><span class="fw-bold">252</span></td>
+                            </tr>
+                            <tr>
+                              <td><button type="button" class="btn btn-sm btn02"><span>청주1G</span></button></td>
+                              <td><span class="fw-bold">123</span></td>
+                              <td><span>2425</span></td>
+                              <td><span class="fw-bold">2425</span></td>
+                            </tr>
+                            <tr>
+                              <td><button type="button" class="btn btn-sm btn02"><span>청주1H</span></button></td>
+                              <td><span class="fw-bold">36</span></td>
+                              <td><span>201</span></td>
+                              <td><span class="fw-bold">201</span></td>
+                            </tr>
+                            <tr>
+                              <td><button type="button" class="btn btn-sm btn02"><span>청주1I</span></button></td>
+                              <td><span class="fw-bold">91</span></td>
+                              <td><span>360</span></td>
+                              <td><span class="fw-bold">360</span></td>
+                            </tr>
+                            <tr>
+                              <td><button type="button" class="btn btn-sm btn02"><span>청주1J</span></button></td>
+                              <td><span class="fw-bold">55</span></td>
+                              <td><span>194</span></td>
+                              <td><span class="fw-bold">194</span></td>
+                            </tr>
+                            <tr>
+                              <td><button type="button" class="btn btn-sm btn02"><span>청주1K</span></button></td>
+                              <td><span class="fw-bold">95</span></td>
+                              <td><span>252</span></td>
+                              <td><span class="fw-bold">252</span></td>
+                            </tr>
+                            <tr>
+                              <td><button type="button" class="btn btn-sm btn02"><span>청주1L</span></button></td>
+                              <td><span class="fw-bold">123</span></td>
+                              <td><span>2425</span></td>
+                              <td><span class="fw-bold">2425</span></td>
+                            </tr>
+                        </tbody>
+                      </table>
+
+                    </div>
+                  <!--//datatable-->
+                </section>
+                <!--//20241129 데이터테이블-->
+
+                <button type="button" class="folding">버튼</button>
+
+              </div><!--//mapList-->
+
+            </div>
+            <!--//DBFV01 전경도-->
+
+            <!--DBFV01 위치정보 불명확 자산-->
+            <div class="unclearAsset mt-3">
+              
+              <div class="tb_title">
+                <p class="title">위치정보 불명확 자산</p>
+                <button type="button"  class="btn btn-arrow">이동</button>
+              </div>
+              <div class="tb_thead">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>
+                        <div class="th-wrap"><span class="s-tit">No.</span>
+                          <span class="s-ico">
+                            <span sort="asc" class="ico-sort icon-asc disabled"></span>
+                            <span sort="desc" class="ico-sort icon-desc disabled"></span>
+                          </span>
+                        </div>
+                      </th>
+                      <th>
+                        <div class="th-wrap"><span class="s-tit">Super EQ Master</span>
+                          <span class="s-ico">
+                            <span sort="asc" class="ico-sort icon-asc disabled"></span>
+                            <span sort="desc" class="ico-sort icon-desc disabled"></span>
+                          </span>
+                        </div>
+                      </th>
+                      <th>
+                        <div class="th-wrap"><span class="s-tit">EQ Master</span>
+                          <span class="s-ico">
+                            <span sort="asc" class="ico-sort icon-asc disabled"></span>
+                            <span sort="desc" class="ico-sort icon-desc disabled"></span>
+                          </span>
+                        </div>
+                      </th>
+                      <th>
+                        <div class="th-wrap"><span class="s-tit">EQ ID</span>
+                          <span class="s-ico">
+                            <span sort="asc" class="ico-sort icon-asc disabled"></span>
+                            <span sort="desc" class="ico-sort icon-desc disabled"></span>
+                          </span>
+                        </div>
+                      </th>
+                      <th>
+                        <div class="th-wrap"><span class="s-tit">Set Model</span>
+                          <span class="s-ico">
+                            <span sort="asc" class="ico-sort icon-asc disabled"></span>
+                            <span sort="desc" class="ico-sort icon-desc disabled"></span>
+                          </span>
+                        </div>
+                      </th>
+                      <th>
+                        <div class="th-wrap"><span class="s-tit">Asset No</span>
+                          <span class="s-ico">
+                            <span sort="asc" class="ico-sort icon-asc disabled"></span>
+                            <span sort="desc" class="ico-sort icon-desc disabled"></span>
+                          </span>
+                        </div>
+                      </th>
+                      <th>
+                        <div class="th-wrap"><span class="s-tit">Serial No</span>
+                          <span class="s-ico">
+                            <span sort="asc" class="ico-sort icon-asc disabled"></span>
+                            <span sort="desc" class="ico-sort icon-desc disabled"></span>
+                          </span>
+                        </div>
+                      </th>
+                      <th>
+                        <div class="th-wrap"><span class="s-tit">Life Cycle</span>
+                          <span class="s-ico">
+                            <span sort="asc" class="ico-sort icon-asc disabled"></span>
+                            <span sort="desc" class="ico-sort icon-desc disabled"></span>
+                          </span>
+                        </div>
+                      </th>
+                      <th>
+                        <div class="th-wrap"><span class="s-tit">CC</span>
+                          <span class="s-ico">
+                            <span sort="asc" class="ico-sort icon-asc disabled"></span>
+                            <span sort="desc" class="ico-sort icon-desc disabled"></span>
+                          </span>
+                        </div>
+                      </th>
+                      <th>
+                        <div class="th-wrap"><span class="s-tit">CCG</span>
+                          <span class="s-ico">
+                            <span sort="asc" class="ico-sort icon-asc disabled"></span>
+                            <span sort="desc" class="ico-sort icon-desc disabled"></span>
+                          </span>
+                        </div>
+                      </th>
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+              <div class="tb_tbody">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>MR0012</td>
+                      <td>SR01</td>
+                      <td><a href="#" class="link">4ERS1</a></td>
+                      <td>SYM3</td>
+                      <td>2901</td>
+                      <td>123</td>
+                      <td>ERROR</td>
+                      <td>HOMA1</td>
+                      <td>5007</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>MR0012</td>
+                      <td>SR02</td>
+                      <td><a href="#" class="link">4ERS2</a></td>
+                      <td>SYM3</td>
+                      <td>2902</td>
+                      <td>123</td>
+                      <td>ERROR</td>
+                      <td>HOMA1</td>
+                      <td>5007</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>MR0012</td>
+                      <td>SR03</td>
+                      <td><a href="#" class="link">4ERS3</a></td>
+                      <td>SYM3</td>
+                      <td>2903</td>
+                      <td>123</td>
+                      <td>ERROR</td>
+                      <td>HOMA1</td>
+                      <td>5007</td>
+                    </tr>
+                    <!--20220921 4,5 row 삭제
+                  <tr>
+                    <td>4</td>
+                    <td>MR0012</td>
+                    <td>SR04</td>
+                    <td><a href="#" class="link">4ERS4</a></td>
+                    <td>SYM3</td>
+                    <td>2904</td>
+                    <td>123</td>
+                    <td>ERROR</td>
+                    <td>HOMA1</td>
+                    <td>5007</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>MR0012</td>
+                    <td>SR05</td>
+                    <td><a href="#" class="link">4ERS5</a></td>
+                    <td>SYM3</td>
+                    <td>2905</td>
+                    <td>123</td>
+                    <td>ERROR</td>
+                    <td>HOMA1</td>
+                    <td>5007</td>
+                  </tr>-->
+                  </tbody>
+                </table>
+              </div>
+              <!-- Paging -->
+              <ul class="pagination">
+                <li class="page-item">
+                  <a class="page-link" href="javascript: void(0);" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="javascript: void(0);">1</a></li>
+                <li class="page-item"><a class="page-link" href="javascript: void(0);">2</a></li>
+                <li class="page-item active"><a class="page-link" href="javascript: void(0);">3</a></li>
+                <li class="page-item"><a class="page-link" href="javascript: void(0);">4</a></li>
+                <li class="page-item"><a class="page-link" href="javascript: void(0);">5</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="javascript: void(0);" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+              </ul>
+              <!--// Paging -->
+            </div>
+            <!--//DBFV01 위치정보 불명확 자산-->
+
+          </div>
+          <!--//sub-cont-->
+
+        </div>
+        <!--//content-wrapper-->
+
+        <footer class="footer mt-0">
+          <div>COPYRIGHT(C) 2025 SK TELECOM INC. ALL RIGHTS RESERVED.</div>
+        </footer>
+        <!--//footer-->
+
+      </div>
+      <!--//main-panel-->
+
+      <!--#right-sidebar 평면도 자산클릭시-->
+      <div id="right-sidebar" class="sidebar-panel asset">
+        <i class="sidebar-close ti-close"></i>
+        <p class="sidebar-header">자산상세정보</p>
+
+        <!--cont-->
+        <div class="cont">
+
+          <div class="tb_title">자산정보</div>
+          <div class="tb_info01">
+            <div class="tb_thead">
+              <table class="">
+                <thead>
+                  <tr>
+                    <th rowspan="10">기본<br>정보</th>
+                    <td><span>Super EQ Master Code</span></td>
+                    <td>xxxxxx</td>
+                  </tr>
+                  <tr>
+                    <td><span>EQ Master Code</span></td>
+                    <td>xxxx (Main 1/ CH 4)</td>
+                  </tr>
+                  <tr>
+                    <td><span>EQ ID</span></td>
+                    <td>xxxxxx</td>
+                  </tr>
+                  <tr>
+                    <td><span>Set Model</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span>구성도명</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span>Asset No</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span>Serial No</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span>EQ Life Cycle</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span>Cost Center</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span>Cost Center Group</span></td>
+                    <td></td>
+                  </tr>
+                  <tr class="border-top">
+                    <th rowspan="6">자산<br>위치</th>
+                    <td><span>사업장</span></td>
+                    <td>xxxxxx</td>
+                  </tr>
+                  <tr>
+                    <td><span>Campus</span></td>
+                    <td>xxxx</td>
+                  </tr>
+                  <tr>
+                    <td><span>Building</span></td>
+                    <td>xxxx</td>
+                  </tr>
+                  <tr>
+                    <td><span>Floor</span></td>
+                    <td>xxx</td>
+                  </tr>
+                  <tr>
+                    <td><span>Section</span></td>
+                    <td>xxxx</td>
+                  </tr>
+                  <tr>
+                    <td><span>bay</span></td>
+                    <td>23</td>
+                  </tr>
+                </thead>
+              </table>
+            </div>
+          </div>
+
+          <span class="tb_title">Tracker History (위치이력)</span>
+          <div class="tb_list02">
+            <div class="tb_thead">
+              <table class="">
+                <thead>
+                  <th>
+                    <div class="th-wrap"><span class="s-tit">일시</span>
+                      <span class="s-ico">
+                        <span sort="asc" class="ico-sort icon-asc disabled"></span>
+                        <span sort="desc" class="ico-sort icon-desc disabled"></span>
+                      </span>
+                      </span>
+                  </th>
+                  <th>
+                    <div class="th-wrap"><span class="s-tit">위치</span>
+                      <span class="s-ico">
+                        <span sort="asc" class="ico-sort icon-asc disabled"></span>
+                        <span sort="desc" class="ico-sort icon-desc disabled"></span>
+                      </span>
+                      </span>
+                  </th>
+                  </tr>
+                </thead>
+              </table>
+            </div>
+            <div class="tb_tbody">
+              <table class="">
+                <tbody>
+                  <tr>
+                    <td>2022-07-22 02:39:41</td>
+                    <td>1Bay</td>
+                  </tr>
+                  <tr>
+                    <td>2022-07-22 02:39:41</td>
+                    <td>1Bay</td>
+                  </tr>
+                  <tr>
+                    <td>2022-07-22 02:39:41</td>
+                    <td>1Bay</td>
+                  </tr>
+                  <tr>
+                    <td>2022-07-22 02:39:41</td>
+                    <td>1Bay</td>
+                  </tr>
+                  <tr>
+                    <td>2022-07-22 02:39:41</td>
+                    <td>1Bay</td>
+                  </tr>
+                  <tr>
+                    <td>2022-07-22 02:39:41</td>
+                    <td>1Bay</td>
+                  </tr>
+                  <tr>
+                    <td>2022-07-22 02:39:41</td>
+                    <td>1Bay</td>
+                  </tr>
+                  <tr>
+                    <td>2022-07-22 02:39:41</td>
+                    <td>1Bay</td>
+                  </tr>
+                  <tr>
+                    <td>2022-07-22 02:39:41</td>
+                    <td>1Bay</td>
+                  </tr>
+                  <tr>
+                    <td>2022-07-22 02:39:41</td>
+                    <td>1Bay</td>
+                  </tr>
+                  <tr>
+                    <td>2022-07-22 02:39:41</td>
+                    <td>1Bay</td>
+                  </tr>
+                  <tr>
+                    <td>2022-07-22 02:39:41</td>
+                    <td>1Bay</td>
+                  </tr>
+                  <tr>
+                    <td>2022-07-22 02:39:41</td>
+                    <td>1Bay</td>
+                  </tr>
+                  <tr>
+                    <td>2022-07-22 02:39:41</td>
+                    <td>1Bay</td>
+                  </tr>
+                  <tr>
+                    <td>2022-07-22 02:39:41</td>
+                    <td>1Bay</td>
+                  </tr>
+                  <tr>
+                    <td>2022-07-22 02:39:41</td>
+                    <td>1Bay</td>
+                  </tr>
+                  <tr>
+                    <td>2022-07-22 02:39:41</td>
+                    <td>1Bay</td>
+                  </tr>
+                  <tr>
+                    <td>2022-07-22 02:39:41</td>
+                    <td>1Bay</td>
+                  </tr>
+                  <tr>
+                    <td>2022-07-22 02:39:41</td>
+                    <td>1Bay</td>
+                  </tr>
+                  <tr>
+                    <td>2022-07-22 02:39:41</td>
+                    <td>1Bay</td>
+                  </tr>
+                  <tr>
+                    <td>2022-07-22 02:39:41</td>
+                    <td>1Bay</td>
+                  </tr>
+                  <tr>
+                    <td>2022-07-22 02:39:41</td>
+                    <td>1Bay</td>
+                  </tr>
+                  <tr>
+                    <td>2022-07-22 02:39:41</td>
+                    <td>1Bay</td>
+                  </tr>
+                  <tr>
+                    <td>2022-07-22 02:39:41</td>
+                    <td>1Bay</td>
+                  </tr>
+                  <tr>
+                    <td>2022-07-22 02:39:41</td>
+                    <td>1Bay</td>
+                  </tr>
+                  <tr>
+                    <td>2022-07-22 02:39:41</td>
+                    <td>1Bay</td>
+                  </tr>
+                  <tr>
+                    <td>2022-07-22 02:39:41</td>
+                    <td>2Bay</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+        <!--//cont-->
+
+        <ul class="nav nav-tabs border_top" id="sidebar-panel" role="tablist" style="display:none">
+          <li class="nav-item">
+            <a class="nav-link active" id="tracker-tab" data-toggle="tab" href="#tracker-section" role="tab"
+              aria-controls="tracker-section" aria-expanded="true">Tracker 정보</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="history-tab" data-toggle="tab" href="#history-section" role="tab"
+              aria-controls="history-section">Tracker History(위치이력)</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="subList-tab" data-toggle="tab" href="#subList-section" role="tab"
+              aria-controls="subList-section">Sub Section별 List</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="detail-tab" data-toggle="tab" href="#detail-section" role="tab"
+              aria-controls="detail-section">상세장비List</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="sidebar-content" style="display:none">
+
+          <div class="tab-pane fade show active scroll-wrapper" id="tracker-section" role="tabpanel"
+            aria-labelledby="tracker-section">
+            <p class="sidebar-heading">기본정보</p>
+
+            <ul class="tb-list">
+              <li class="list">
+                <div class="info">
+                  <p>Super EQ Master Code</p>
+                </div>
+                <div></div>
+              </li>
+              <li class="list">
+                <div class="info">
+                  <p>EQ Master Code</p>
+                </div>
+                <div></div>
+              </li>
+              <li class="list">
+                <div class="info">
+                  <p>EQ ID</p>
+                </div>
+                <div></div>
+              </li>
+              <li class="list">
+                <div class="info">
+                  <p>Set Model</p>
+                </div>
+                <div></div>
+              </li>
+              <li class="list">
+                <div class="info">
+                  <p>Asset No</p>
+                </div>
+                <div></div>
+              </li>
+              <li class="list">
+                <div class="info">
+                  <p>Serial No</p>
+                </div>
+                <div></div>
+              </li>
+              <li class="list">
+                <div class="info">
+                  <p>EQ Life Cycle</p>
+                </div>
+                <div></div>
+              </li>
+              <li class="list">
+                <div class="info">
+                  <p>Cost Center Group</p>
+                </div>
+                <div></div>
+              </li>
+            </ul>
+
+            <p class="sidebar-heading">장비위치</p>
+            <ul class="tb-list">
+              <li class="list th">
+                <div class="info">
+                  <p>Site</p>
+                </div>
+                <div>이천</div>
+              </li>
+              <li class="list">
+                <div class="info">
+                  <p>Campus</p>
+                </div>
+                <div>이천캠퍼스</div>
+              </li>
+              <li class="list">
+                <div class="info">
+                  <p>Building</p>
+                </div>
+                <div class="text-primary">SUPEX Center</div>
+              </li>
+              <li class="list">
+                <div class="info">
+                  <p>mapLeft</p>
+                </div>
+                <div>3층</div>
+              </li>
+              <li class="list">
+                <div class="info">
+                  <p>Section</p>
+                </div>
+                <div>SUPEX Center 클린룸</div>
+              </li>
+              <li class="list">
+                <div class="info">
+                  <p>Sub Section</p>
+                </div>
+                <div>55</div>
+              </li>
+            </ul>
+
+          </div>
+          <!--//tab01-->
+
+
+          <div class="tab-pane fade" id="history-section" role="tabpanel" aria-labelledby="history-section">
+            <p class="sidebar-heading">Tracker History(위치이력)</p>
+            <ul class="tb-list">
+              <li class="list th">
+                <div class="info">
+                  <p>위치</p>
+                </div>
+                <div>일시</div>
+              </li>
+              <li class="list">
+                <div class="info">
+                  <p>SUPEX Center > 3F > 클린룸 52</p>
+                  <p class="text-muted">최초부착</p>
+                </div>
+                <div>2022.06.05</div>
+              </li>
+              <li class="list">
+                <div class="info">
+                  <p>SUPEX Center > 3F > 클린룸 52</p>
+                  <p class="text-muted">반입</p>
+                </div>
+                <div>2022.06.05</div>
+              </li>
+              <li class="list">
+                <div class="info">
+                  <p>SUPEX Center > 3F > 클린룸 52</p>
+                  <p class="text-muted"></p>
+                </div>
+                <div>2022.06.05</div>
+              </li>
+              <li class="list">
+                <div class="info">
+                  <p>SUPEX Center > 3F > 클린룸 52</p>
+                  <p class="text-muted">OPERATION 시점</p>
+                </div>
+                <div>2022.06.05</div>
+              </li>
+            </ul>
+          </div>
+          <!--//tab02-->
+
+          <div class="tab-pane fade" id="subList-section" role="tabpanel" aria-labelledby="subList-section">
+            <p class="sidebar-heading">Sub Section별 장비위치 List</p>
+            <ul class="tb-list">
+              <li class="list active">
+                <div class="info th">
+                  <p></p>
+                </div>
+                <div></div>
+              </li>
+              <li class="list th">
+                <div class="info">
+                  <p>Sub Section</p>
+                </div>
+                <div>수량</div>
+              </li>
+              <li class="list">
+                <div class="info">
+                  <p>04</p>
+                </div>
+                <div class="text-primary">30(100)</div>
+              </li>
+              <li class="list">
+                <div class="info">
+                  <p>05</p>
+                </div>
+                <div class="text-primary">10(40)</div>
+              </li>
+              <li class="list">
+                <div class="info">
+                  <p>05</p>
+                </div>
+                <div class="text-primary">20(60)</div>
+              </li>
+              <li class="list">
+                <div class="info">
+                  <p>24</p>
+                </div>
+                <div class="text-primary">30(120)</div>
+              </li>
+              <li class="list">
+                <div class="info">
+                  <p>30</p>
+                </div>
+                <div class="text-primary">30(120)</div>
+              </li>
+            </ul>
+          </div>
+          <!--//tab03-->
+          <div class="tab-pane fade" id="detail-section" role="tabpanel" aria-labelledby="detail-section">
+            <p class="sidebar-heading">상세장비List</p>
+            <ul class="tb-list">
+              <li class="list th">
+                <div class="info">
+                  <p>장비 List</p>
+                </div>
+                <div class="">MR000000406677 (Main 1 / CH 4)</div>
+              </li>
+              <li class="list">
+                <div class="info">
+                  <p>EQ ID</p>
+                </div>
+                <div class="text-primary">MR000000406677 (Main 1 / CH 4)</div>
+              </li>
+            </ul>
+          </div>
+          <!--//tab04-->
+
+        </div>
+
+      </div>
+      <!--#right-sidebar 평면도 자산클릭시-->
+
+      <!--#right-sidebar.bay 평면도 bay 클릭시-->
+      <div id="right-sidebar" class="sidebar-panel bay">
+        <i class="sidebar-close ti-close"></i>
+        <p class="sidebar-header">Bay상세정보</p>
+
+        <!--cont-->
+        <div class="cont">
+          <span class="tb_title">Bay 상세정보</span>
+          <div class="tb_list02">
+            <div class="tb_thead">
+              <table class="">
+                <thead>
+                  <tr>
+                    <th>
+                      <div class="th-wrap"><span class="s-tit">EQ ID</span>
+                        <span class="s-ico">
+                          <span sort="asc" class="ico-sort icon-asc disabled"></span>
+                          <span sort="desc" class="ico-sort icon-desc disabled"></span>
+                        </span>
+                      </div>
+                    </th>
+                    <th>
+                      <div class="th-wrap"><span class="s-tit">Master CD(Main/CH)</span>
+                        <span class="s-ico">
+                          <span sort="asc" class="ico-sort icon-asc disabled"></span>
+                          <span sort="desc" class="ico-sort icon-desc disabled"></span>
+                        </span>
+                      </div>
+                    </th>
+                    <th>
+                      <div class="th-wrap"><span class="s-tit">Tracker ID</span>
+                        <span class="s-ico">
+                          <span sort="asc" class="ico-sort icon-asc disabled"></span>
+                          <span sort="desc" class="ico-sort icon-desc disabled"></span>
+                        </span>
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+              </table>
+            </div>
+            <div class="tb_tbody">
+              <table class="">
+                <tbody>
+                  <tr>
+                    <td>xxxxx</td>
+                    <td>xxx(main/CH1)</td>
+                    <td>xxxx</td>
+                  </tr>
+                  <tr>
+                    <td>xxxxx</td>
+                    <td>xxx(main/CH1)</td>
+                    <td>xxxx</td>
+                  </tr>
+                  <tr>
+                    <td>xxxxx</td>
+                    <td>xxx(main/CH1)</td>
+                    <td>xxxx</td>
+                  </tr>
+                  <tr>
+                    <td>xxxxx</td>
+                    <td>xxx(main/CH1)</td>
+                    <td>xxxx</td>
+                  </tr>
+                  <tr>
+                    <td>xxxxx</td>
+                    <td>xxx(main/CH1)</td>
+                    <td>xxxx</td>
+                  </tr>
+                  <tr>
+                    <td>xxxxx</td>
+                    <td>xxx(main/CH1)</td>
+                    <td>xxxx</td>
+                  </tr>
+                  <tr>
+                    <td>xxxxx</td>
+                    <td>xxx(main/CH1)</td>
+                    <td>xxxx</td>
+                  </tr>
+                  <tr>
+                    <td>xxxxx</td>
+                    <td>xxx(main/CH1)</td>
+                    <td>xxxx</td>
+                  </tr>
+                  <tr>
+                    <td>xxxxx</td>
+                    <td>xxx(main/CH1)</td>
+                    <td>xxxx</td>
+                  </tr>
+                  <tr>
+                    <td>xxxxx</td>
+                    <td>xxx(main/CH1)</td>
+                    <td>xxxx</td>
+                  </tr>
+                  <tr>
+                    <td>xxxxx</td>
+                    <td>xxx(main/CH1)</td>
+                    <td>xxxx</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+        <!--//cont-->
+
+      </div>
+      <!--#right-sidebar.bay 평면도 bay 클릭시-->
+
+
+
+    </div>
+    <!--//page-body-wrapper-->
+
+  </div>
+  <!--//container-scroller -->
+</body>
+<script src="../js/template.js"></script>
+<script src="../js/chart.min.js"></script>
+<script src="../js/swiper-bundle.min.js"></script>
+
+<script>
+
+  //전경도 우측테이블 접고펴기
+  $(".mapCont .folding").click(function () {
+    $('.mapCont .mapList').toggleClass('on');
+    $('.mapCont .folding').toggleClass('on');
+  });
+
+  //TRACKER 장착률 검색어 리스트노출
+  $('.search_group .input_wrap input').focus(function () {
+    $(this).parents().next('.dropdown-menu').addClass('show');
+  });
+  $('.search_group .input_wrap input').blur(function () {
+    $(this).parents().next('.dropdown-menu').removeClass('show')
+  });
+
+  // SVG a 클릭 이벤트 속성 지우기
+  $('svg .skhynixWrap-ic a').on('click', function(e){
+    e.preventDefault();
+  })
+</script>
+
+<!--20241129 데이터테이블-->
+<link rel="stylesheet" href="../css/datatables.css">
+<script src="../js/datatables.min.js"></script>
+<script>
+  $(document).ready( function () {
+      $('table.dataTable ').DataTable({
+
+        //가로 스크롤바
+        scrollX: true,
+
+        //세로 스크롤바
+        scrollY: 400,
+
+        //일정높이 이상 시 Y스크롤 추가
+        //"scrollCollapse" : true,
+
+        // 표시 건수기능 
+        lengthChange: false,
+
+        // 검색 기능 
+        searching: false,
+
+        // 정렬 기능 
+        ordering: true,
+
+        // 정보 표시 
+        info: false,
+
+        "pageLength": 10,
+
+        // 페이징 기능 
+        paging: false, 
+
+        pagingType : "full_numbers",
+
+        columnDefs: [
+            { width: "130px", targets: 0 },
+            { width: "130px", targets: 1 },
+            { width: "130", targets: 3 },
+        ],
+
+        "order":[[1, 'asc']],
+
+        });
+  } );
+</script>
+<!--//20241129 데이터테이블-->
+</html>

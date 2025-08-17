@@ -1,0 +1,119 @@
+.sider {
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1000;
+  box-shadow: 2px 0 8px 0 rgba(29, 35, 41, 0.05);
+  background: #fff !important;
+}
+
+.logo {
+  height: 64px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.logo img {
+  height: 32px;
+  width: auto;
+}
+
+.menu {
+  height: calc(100vh - 64px);
+  border-right: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.menu :global(.ant-menu-item) {
+  margin: 0 !important;
+  width: 100% !important;
+}
+
+.menu :global(.ant-menu-item-selected) {
+  background-color: #e6f7ff !important;
+}
+
+.menu :global(.ant-menu-item-selected::after) {
+  border-right: 3px solid #4747B3 !important;
+}
+
+.menu :global(.ant-menu-submenu-title) {
+  margin: 0 !important;
+}
+
+.menu :global(.ant-menu-submenu-selected) {
+  color: #4747B3 !important;
+}
+
+.menu :global(.ant-menu-submenu-selected > .ant-menu-submenu-title) {
+  color: #4747B3 !important;
+}
+
+.menu :global(.ant-menu-submenu-active) {
+  color: #4747B3 !important;
+}
+
+.menu :global(.ant-menu-submenu-active > .ant-menu-submenu-title) {
+  color: #4747B3 !important;
+}
+
+.menu :global(.ant-menu-item-active) {
+  color: #4747B3 !important;
+  background-color: #f5f5f5 !important;
+}
+
+.menu :global(.ant-menu-item-selected) {
+  color: #4747B3 !important;
+}
+
+.menu :global(.ant-menu-item-selected > a) {
+  color: #4747B3 !important;
+}
+
+.menu :global(.ant-menu-item-active > a) {
+  color: #4747B3 !important;
+}
+
+.menu :global(.ant-menu-submenu-title:hover) {
+  color: #4747B3 !important;
+  background-color: #f5f5f5 !important;
+}
+
+.menu :global(.ant-menu-submenu-selected > .ant-menu-submenu-title:hover) {
+  color: #4747B3 !important;
+}
+
+.menu :global(.ant-menu-submenu-active > .ant-menu-submenu-title:hover) {
+  color: #4747B3 !important;
+}
+
+.menu :global(.ant-menu-item-selected::after) {
+  border-right: 3px solid #4747B3 !important;
+}
+
+.menu :global(.ant-menu-item-active::after) {
+  border-right: 3px solid #4747B3 !important;
+}
+
+.menu :global(.ant-menu-item-selected > a:hover) {
+  color: #4747B3 !important;
+}
+
+.menu :global(.ant-menu-item-active > a:hover) {
+  color: #4747B3 !important;
+}
+
+.menu :global(.ant-menu-submenu-selected > .ant-menu-submenu-title:hover) {
+  color: #4747B3 !important;
+}
+
+.menu :global(.ant-menu-submenu-active > .ant-menu-submenu-title:hover) {
+  color: #4747B3 !important;
+} 

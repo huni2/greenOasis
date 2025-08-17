@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>SK hynix 자산관리시스템</title>
+  <link rel="shortcut icon" href="../images/favicon.ico">
+  <link rel="stylesheet" href="../css/common.css">
+
+  <script type="text/javascript" src="../js/jquery.js"></script>
+  <script type="text/javascript" src="../js/jquery-ui.js"></script>
+
+</head>
+
+<body class="bg1">
+
+  <div class="container-scroller">
+
+    <nav class="navbar fixed-top">
+      <div class="navbar-logo-wrapper">
+        <button class="navbar-toggler" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+      <div class="navbar-menu-wrapper">
+
+        <a class="navbar-logo" href="../index.html"><img src="../images/logo.png" alt="SK hynix 로고" /></a>
+        <span class="navbar-title">자산관리MAPS</span>
+        <ul class="location-link">
+          <li><a href="">이천</a></li>
+          <li><a href="">청주</a></li>
+          <li><a href="">우시</a></li>
+          <li><a href="">충징</a></li>
+        </ul>
+        <ul class="navbar-nav">
+
+          <li class="nav-item nav-language dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="languageDropdown"><i
+                class="flag-korea"></i><span>한국어</span></a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="languageDropdown">
+              <a class="dropdown-item"><i class="flag-us"></i>English</a>
+              <a class="dropdown-item"><i class="flag-china"></i>中文</a>
+            </div>
+          </li>
+          <li class="nav-item nav-error">
+            <a class="nav-link" href="#" title="에러"><i class="icon-error"></i></a>
+          </li>
+          <li class="nav-item nav-mail" title="메일">
+            <a class="nav-link" href="#"><i class="icon-mail"></i></a>
+          </li>
+          <li class="nav-item nav-noti dropdown" title="공지">
+            <a class="nav-link count-indicator dropdown-toggle" id="notiDropdown" href="#" data-toggle="dropdown"><i
+                class="icon-bell mx-0"></i><span class="count"></span></a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notiDropdown">
+              <p class="dropdown-header">공지</p>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-success"><i class="ti-info-alt mx-0"></i></div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject fw-normal">에러</h6>
+                  <p class="fw-light small-text mb-0 text-muted">1분전</p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-warning"><i class="ti-settings mx-0"></i></div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject fw-normal">설정</h6>
+                  <p class="fw-light small-text mb-0 text-muted">메세지</p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-info"><i class="ti-user mx-0"></i></div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject fw-normal">사용자등록</h6>
+                  <p class="fw-light small-text mb-0 text-muted">2일전</p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item nav-profile dropdown ">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown"><img
+                src="../images/top_face.png" alt="profile" /><span>X20220610</span></a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item"><i class="ti-settings text-primary"></i>나의정보</a>
+              <a class="dropdown-item"><i class="ti-power-off text-primary"></i>로그아웃</a>
+            </div>
+          </li>
+          <li class="nav-item nav-name">
+            <div><span>hwchoi</span><span>슈퍼관리자</span></div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--//navbar-->
+
+    <div class="page-body-wrapper">
+
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <script src="../js/nav.js"></script>
+      </nav>
+      <!--//sidebar-->
+
+      <div class="main-panel">
+
+        <div class="content-wrapper">
+
+
+          <div class="sub-cont">
+
+            <!--상단타이틀영역-->
+            <div class="page-title-box">
+              <div class="left">
+                <h2 class="title">이천 캠퍼스</h2>
+              </div>
+              <div class="right">
+                <div>
+                  <ol class="breadcrumb m-0">
+                    <li class="breadcrumb-item">Home</li>
+                    <li class="breadcrumb-item">전경도</li>
+                    <li class="breadcrumb-item active">이천 캠퍼스</li>
+                  </ol>
+                </div>
+
+              </div>
+            </div>
+            <!--상단타이틀영역-->
+
+            <!--DBFV02 자산관리측면도 - 캠퍼스 자산현황-->
+            <!--고정-->
+            <div class="asset-campus">
+              <div class="asset-data-wrap">
+                <div class="">
+                  <div class="asset-data">
+                    <p class="title">이천캠퍼스 자산현황</p>
+
+                    <div class="ul" style="background-color: #fff;">
+                      <ul>
+                        <li><span class="menu1">Super EQ</span></li>
+                        <li>765</li>
+                      </ul>
+                      <ul>
+                        <li><span class="menu2">EQ</span></li>
+                        <li>3,456</li>
+                      </ul>
+                      <ul>
+                        <li><span class="menu3">TRACKER</span></li>
+                        <li>3,456 <label class="badge badge-mint">100%</label></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--//고정-->
+            <!--이동-->
+            <div class="swiper asset-data-wrap">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+
+                  <div class="asset-data">
+                    <p class="title">이천캠퍼스 자산현황</p>
+                    <div class="ul">
+                      <ul>
+                        <li><span class="menu1">Super EQ</span></li>
+                        <li>765</li>
+                      </ul>
+                      <ul>
+                        <li><span class="menu2">EQ</span></li>
+                        <li>3,456</li>
+                      </ul>
+                      <ul>
+                        <li><span class="menu3">TRACKER</span></li>
+                        <li>3,456 <label class="badge badge-mint">100%</label></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="swiper-slide">
+
+                  <div class="asset-data">
+                    <p class="title"><a href="">SUPEX Center</a></p>
+                    <div class="ul">
+                      <ul>
+                        <li><span class="menu1">Super EQ</span></li>
+                        <li>765</li>
+                      </ul>
+                      <ul>
+                        <li><span class="menu2">EQ</span></li>
+                        <li>3,456</li>
+                      </ul>
+                      <ul>
+                        <li><span class="menu3">TRACKER</span></li>
+                        <li>3,456 <label class="badge badge-mint">100%</label></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="swiper-slide">
+
+                  <div class="asset-data">
+                    <p class="title"><a href="">M10A</a></p>
+                    <div class="ul">
+                      <ul>
+                        <li><span class="menu1">Super EQ</span></li>
+                        <li>765</li>
+                      </ul>
+                      <ul>
+                        <li><span class="menu2">EQ</span></li>
+                        <li>3,456</li>
+                      </ul>
+                      <ul>
+                        <li><span class="menu3">TRACKER</span></li>
+                        <li>3,456 <label class="badge badge-mint">100%</label></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="swiper-slide">
+
+                  <div class="asset-data">
+                    <p class="title"><a href="">R&D Center</a></p>
+                    <div class="ul">
+                      <ul>
+                        <li><span class="menu1">Super EQ</span></li>
+                        <li>765</li>
+                      </ul>
+                      <ul>
+                        <li><span class="menu2">EQ</span></li>
+                        <li>3,456</li>
+                      </ul>
+                      <ul>
+                        <li><span class="menu3">TRACKER</span></li>
+                        <li>3,456 <label class="badge badge-mint">100%</label></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="swiper-slide">
+
+                  <div class="asset-data">
+                    <p class="title"><a href="">M16CUB</a></p>
+                    <div class="ul">
+                      <ul>
+                        <li><span class="menu1">Super EQ</span></li>
+                        <li>765</li>
+                      </ul>
+                      <ul>
+                        <li><span class="menu2">EQ</span></li>
+                        <li>3,456</li>
+                      </ul>
+                      <ul>
+                        <li><span class="menu3">TRACKER</span></li>
+                        <li>3,456 <label class="badge badge-mint">100%</label></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="swiper-slide">
+
+                  <div class="asset-data">
+                    <p class="title"><a href="">M16</a></p>
+                    <div class="ul">
+                      <ul>
+                        <li><span class="menu1">Super EQ</span></li>
+                        <li>765</li>
+                      </ul>
+                      <ul>
+                        <li><span class="menu2">EQ</span></li>
+                        <li>3,456</li>
+                      </ul>
+                      <ul>
+                        <li><span class="menu3">TRACKER</span></li>
+                        <li>3,456 <label class="badge badge-mint">100%</label></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="swiper-slide">
+
+                  <div class="asset-data">
+                    <p class="title"><a href="">M16</a></p>
+                    <div class="ul">
+                      <ul>
+                        <li><span class="menu1">Super EQ</span></li>
+                        <li>765</li>
+                      </ul>
+                      <ul>
+                        <li><span class="menu2">EQ</span></li>
+                        <li>3,456</li>
+                      </ul>
+                      <ul>
+                        <li><span class="menu3">TRACKER</span></li>
+                        <li>3,456 <label class="badge badge-mint">100%</label></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="swiper-slide">
+
+                  <div class="asset-data">
+                    <p class="title">M</p>
+                    <div class="ul">
+                      <ul>
+                        <li><span class="menu1">Super EQ</span></li>
+                        <li>765</li>
+                      </ul>
+                      <ul>
+                        <li><span class="menu2">EQ</span></li>
+                        <li>3,456</li>
+                      </ul>
+                      <ul>
+                        <li><span class="menu3">TRACKER</span></li>
+                        <li>3,456 <label class="badge badge-mint">100%</label></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="swiper-slide">
+
+                  <div class="asset-data">
+                    <p class="title">M</p>
+                    <div class="ul">
+                      <ul>
+                        <li><span class="menu1">Super EQ</span></li>
+                        <li>765</li>
+                      </ul>
+                      <ul>
+                        <li><span class="menu2">EQ</span></li>
+                        <li>3,456</li>
+                      </ul>
+                      <ul>
+                        <li><span class="menu3">TRACKER</span></li>
+                        <li>3,456 <label class="badge badge-mint">100%</label></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="swiper-slide">
+
+                  <div class="asset-data">
+                    <p class="title">M</p>
+                    <div class="ul">
+                      <ul>
+                        <li><span class="menu1">Super EQ</span></li>
+                        <li>765</li>
+                      </ul>
+                      <ul>
+                        <li><span class="menu2">EQ</span></li>
+                        <li>3,456</li>
+                      </ul>
+                      <ul>
+                        <li><span class="menu3">TRACKER</span></li>
+                        <li>3,456 <label class="badge badge-mint">100%</label></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+            <!--//이동-->
+            <!--접고펴기-->
+            <div class="assetSlideToggle"><button type="button">버튼</button></div>
+            <!--//접고펴기-->
+            <!--//DBFV02 자산관리측면도 - 캠퍼스 자산현황-->
+
+
+            <!--DBFV02 건물측면도-->
+            <div class="mapTopTotal">
+              <div class="selectWrap">
+                <div class="dropdown">
+                  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    SUPEX Center
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <h6 class="dropdown-header">메뉴타이틀</h6>
+                    <a class="dropdown-item" href="#">M10A</a>
+                    <a class="dropdown-item" href="#">R3</a>
+                    <a class="dropdown-item" href="#">SUPEX Center</a>
+                    <a class="dropdown-item" href="#">RC</a>
+                    <div class="dropdown-divider"></div>
+                    <h6 class="dropdown-header">메뉴타이틀</h6>
+                    <a class="dropdown-item" href="#">M14CUB</a>
+                    <a class="dropdown-item" href="#">M10F</a>
+                    <a class="dropdown-item" href="#">M14</a>
+                    <a class="dropdown-item" href="#">R&D Center</a>
+                    <a class="dropdown-item" href="#">TC</a>
+                    <a class="dropdown-item" href="#">M16</a>
+                  </div>
+                </div>
+              </div>
+              <dl>
+                <dt>Super EQ:</dt>
+                <dd>765</dd> /
+                <dt>EQ :</dt>
+                <dd>3,456</dd> /
+                <dt>Tracker :</dt>
+                <dd>3,456</dd>
+              </dl>
+              <div><label class="badge badge-mint">100%</label></div>
+            </div>
+            <div class="mapCont">
+              <div class="mapCov">
+
+                <div class="mapLeft">
+
+                  <div class="inner">
+                    <!-- 0 0 1566.5 899.39 -->
+                    <!-- <img src="../images/panorama2.png" alt=""> -->
+
+
+                    <!--20241215 나침판추가-->
+                    <div class="ic-compass"></div>
+                    <!--//20241215 나침판추가-->
+
+                    <!--M10C SVG-->
+                    <svg id="_레이어_1" data-name="레이어 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-100 -100 1220 695">
+                      <image width="1220" height="695" xlink:href="../images/panorama/m10c.png"  transform="matrix(1 0 0 1 -142 -116.9528)"/>
+                        <g class="view-M10C">
+                          
+                          <!--level-area-->
+                          <g class="level-area">
+
+                            <a id="svg1F" xlink:href="javascript:moveLocationFloor('1F');">
+                                <title>M10C 1F</title>
+                                <polygon class="hoverBox" points="-82.05,303.05 246.09,398.09 1008.09,297.4 1008.09,357.66 244.91,518.61 -82.05,369.43"></polygon>
+                                <path class="dataBox" d="M445.3,450l-169.7,24.2c-11.2,1.6-21.6-6.4-23.1-17.9l0,0c-1.5-11.6,6.5-21.9,17.8-23.1l171.2-18    c7.9-0.8,15.1,6.2,16.1,15.7l0,0C458.6,440.3,453.2,448.9,445.3,450z"/>
+                                <text transform="matrix(0.9901 -0.1406 0.1406 0.9901 267.8347 461.6919)" class="title">M10C  1F</text>
+                                <text transform="matrix(0.9901 -0.1406 0.1406 0.9901 340.1616 451.5621)" class="dataNumber" x="100" y="0" text-anchor="end">500 / 400(0) / 500 / 30</text>
+                            </a>
+
+                            <a id="svg2F" xlink:href="javascript:moveLocationFloor('2F');">
+                              <title>M10C 2F</title>
+                              <polygon class="hoverBox" points="-82.41,235.97 251.16,276.11 1009.99,233.45 1009,297.3 248.03,397.32 -81.97,302.75"></polygon>
+                              <path xmlns="http://www.w3.org/2000/svg" class="st6" d="M445.5,342.2l-170.2,16.9c-11.9,1.2-22.9-7.9-24.2-20.3l0,0c-1.3-12.4,7.6-23,19.7-23.6l171.6-8.1    c7.5-0.4,14.1,7.1,15,16.6l0,0C458.1,333.2,452.9,341.5,445.5,342.2z"/>
+                              <path class="dataBox" d="M445.5,342.2l-170.2,16.9c-11.9,1.2-22.9-7.9-24.2-20.3l0,0c-1.3-12.4,7.6-23,19.7-23.6l171.6-8.1    c7.5-0.4,14.1,7.1,15,16.6l0,0C458.1,333.2,452.9,341.5,445.5,342.2z"/>
+                              <text transform="matrix(0.9975 -7.100000e-02 7.100000e-02 0.9975 266.8409 341.7031)" class="title">M10C  2F</text>
+                              <text transform="matrix(0.9975 -7.100000e-02 7.100000e-02 0.9975 339.6994 336.6594)" class="dataNumber" x="100" y="0" text-anchor="end">500 / 400(0) / 500 / 30</text>
+                            </a>
+                            
+                            <a id="svg3F" xlink:href="javascript:moveLocationFloor('3F');">
+                              <title>M10C 3F</title>
+                              <polygon class="hoverBox" points="-84.35,170.36 246.09,152.86 1009.39,174.79 1008.09,233.91 247.07,274.74 -83.91,233.91"></polygon>
+                              <path class="dataBox" d="M444.3,227.8l-171.8,4.1c-11.3,0.3-20.8-8.9-20.9-20.6l0,0c-0.1-11.6,9.2-21,20.5-20.8l171.9,2.3    c7.9,0.1,14.3,7.9,14.4,17.4l0,0C458.5,219.7,452.3,227.6,444.3,227.8z"/>
+                              <text transform="matrix(0.9998 -1.880000e-02 1.880000e-02 0.9998 266.3817 217.6696)" class="title">M10C  3F</text>
+                              <text transform="matrix(0.9998 -1.880000e-02 1.880000e-02 0.9998 339.404 216.4307)" class="dataNumber" x="100" y="0" text-anchor="end">500 / 400(0) / 500 / 30</text>
+                            </a>
+
+                            <a id="svg4F" xlink:href="javascript:moveLocationFloor('4F');">
+                              <title>M10C 4F</title>
+                              <polygon class="hoverBox" points="-85.3,106.95 242.13,30.98 1011.74,114.79 1010.43,173.91 243.11,152.86 -84.86,170.03"></polygon>
+                              <path class="dataBox" d="M443.2,126l-172.1-5.5c-11.1-0.4-19.9-9.9-19.4-21.3l0,0c0.5-11.4,10-20,21.1-19.3l171.6,11.2    c8.1,0.5,14.3,8.6,13.9,18.1l0,0C458,118.8,451.3,126.3,443.2,126z"/>
+                              <text transform="matrix(0.9994 3.330151e-02 -3.330151e-02 0.9994 266.1639 106.6848)" class="title">M10C  4F</text>
+                              <text transform="matrix(0.9994 3.330151e-02 -3.330151e-02 0.9994 339.1519 109.258)" class="dataNumber" x="100" y="0" text-anchor="end">500 / 400(0) / 500 / 30</text>                          
+                            </a>
+
+                            <a id="svg5F" xlink:href="javascript:moveLocationFloor('5F');">
+                              <title>M10C 5F</title>
+                              <polygon class="hoverBox" points="-85.8,77.68 246.63,-22.29 1012.23,83.52 1011.93,114.65 247.61,30.59 -85.37,106.76"></polygon>
+                              <path class="dataBox" d="M440.9,46.4L269.5,25.9c-10.7-1.3-18.5-11.2-17.1-22.1l0,0c1.3-10.9,11.2-18.4,21.9-16.9l170.3,24.9    c8.3,1.2,14.1,9.8,13.1,19.3l0,0C456.7,40.5,449.2,47.4,440.9,46.4z"/>
+                              <text transform="matrix(0.9936 0.1131 -0.1131 0.9936 266.2997 13.1423)" class="title">M10C  5F</text>
+                              <text transform="matrix(0.9936 0.1131 -0.1131 0.9936 338.8479 21.5425)" class="dataNumber" x="100" y="0" text-anchor="end">500 / 400(0) / 500 / 30</text>
+                            </a>        
+                            
+                            <a id="svg6F" xlink:href="javascript:moveLocationFloor('6F');">
+                              <title>M10C PH</title>
+                              <polygon class="hoverBox" points="-86.3,52.01 246.13,-57.96 1012.74,59.84 1012.43,82.97 247.11,-22.08 -85.86,77.09"></polygon>
+                              <path class="dataBox" d="M441.4,1.4L271.1-20.9c-11.8-1.5-19.9-10.5-18-19.8l0,0c2-9.3,13.2-15.2,24.8-13.3L446-25.5    c7.4,1.3,12.3,8.2,11.1,15.4l0,0C455.9-2.7,448.9,2.4,441.4,1.4z"/>
+                              <text transform="matrix(0.9902 0.1395 -0.1395 0.9902 266.4702 -33.7072)" class="title">M10C  PH</text>
+                              <text transform="matrix(0.9902 0.1395 -0.1395 0.9902 338.7693 -23.3805)" class="dataNumber" x="100" y="0" text-anchor="end">500 / 400(0) / 500 / 30</text>
+                            </a>
+                          </g>
+                          <!--//level-area-->
+
+                          <!--fab-area-->
+                          <g class="fab-area">
+                            
+                            <a id="svg1FFAB" xlink:href="javascript:moveLocationFloor('1FFAB');">
+                              <title>M10C 1F FAB</title>
+                              <path class="dataBox dataBox-fab" d="M875.5,353.4L681.2,384c-4,0.6-7.7-1.9-8.3-5.6l-2.8-17.8c-0.6-3.7,2.2-7.2,6.2-7.7L872,326.5    c3-0.4,5.7,1.9,6.1,5l2,15.3C880.5,350,878.5,352.9,875.5,353.4z"/>
+                              <polygon class="dataBox-arrow-r" points="878.2,333 883.9,336.6 879.4,341.6   "/>
+                              <text transform="matrix(1.1664 -0.1656 0.1406 0.9901 677.5498 372.6025)" class="title title-FAB">M10C 1F FAB</text>
+                              <text transform="matrix(0.9901 -0.1406 0.1406 0.9901 755.2308 361.5712)" class="dataNumber" x="115" y="0" text-anchor="end">500 / 400(0) / 500 / 30</text>
+                            </a>
+
+                            <a id="svg2FFAB" xlink:href="javascript:moveLocationFloor('2FFAB');">
+                              <title>M10C 2F FAB</title>
+                              <path class="dataBox dataBox-fab" d="M877.5,295.6l-195.8,19.3c-4.4,0.4-8.1-2.8-8.5-7.2l-1.5-21.2c-0.3-4.4,3-8.2,7.4-8.5l196.7-11.9    c2.8-0.2,5.1,2.5,5.3,6l0.9,16.7C882.3,292.3,880.3,295.3,877.5,295.6z"/>
+                              <polygon class="dataBox-arrow-r" points="881.2,275.1 886.6,279.1 881.8,283.8   "/>
+                              <text transform="matrix(1.1751 -8.359999e-02 7.100000e-02 0.9975 678.2538 300.5139)" class="title title-FAB">M10C 2F FAB</text>
+                              <text transform="matrix(0.9975 -7.100000e-02 7.100000e-02 0.9975 756.5167 294.9468)" class="dataNumber" x="115" y="0" text-anchor="end">500 / 400(0) / 500 / 30</text>
+                            </a>
+
+                            <a id="svg3FFAB" xlink:href="javascript:moveLocationFloor('3FFAB');">
+                              <title>M10C 3F FAB</title>
+                              <path class="dataBox dataBox-fab" d="M877,223.8l-196.7,5.9c-4.2,0.1-7.7-3.2-7.8-7.5l-0.4-20.4c-0.1-4.3,3.3-7.7,7.5-7.7l196.9,0.2    c2.9,0,5.2,2.8,5.3,6.3l0.3,16.7C882.1,220.8,879.9,223.7,877,223.8z"/>
+                              <polygon class="dataBox-arrow-r" points="881.8,201.6 887,205.8 882,210.3   "/>
+                              <text transform="matrix(1.1779 -2.220000e-02 1.880000e-02 0.9998 677.865 216.3823)" class="title title-FAB">M10C 3F FAB</text>
+                              <text transform="matrix(0.9998 -1.880000e-02 1.880000e-02 0.9998 756.311 214.9037)" class="dataNumber" x="110" y="0" text-anchor="end" style="letter-spacing: -1px;">500 / 400(0) / 500 / 30</text>
+                            </a>
+
+                            <a id="svg4FFAB" xlink:href="javascript:moveLocationFloor('4FFAB');">
+                              <title>M10C 4F FAB</title>
+                              <path class="dataBox dataBox-fab" d="M875.8,153.1L679,142.8c-4.2-0.2-7.4-3.9-7.2-8.1l1.2-20.4c0.3-4.2,3.9-7.4,8.1-7l196.2,16.4    c2.9,0.2,5,3.2,4.9,6.7l-0.8,16.7C881.1,150.6,878.7,153.3,875.8,153.1z"/>
+                              <polygon class="dataBox-arrow-r" points="881.9,131.4 886.8,136 881.4,140.1   "/>
+                              <text transform="matrix(1.176 6.959708e-02 -5.899752e-02 0.9983 677.4514 130.2752)" class="title title-FAB">M10C 4F FAB</text>
+                              <text transform="matrix(0.9983 5.899752e-02 -5.899752e-02 0.9983 756.2775 134.9371)" class="dataNumber" x="110" y="0" text-anchor="end">500 / 400(0) / 500 / 30</text>
+                            </a>
+
+                            <a id="svg5FFAB" xlink:href="javascript:moveLocationFloor('5FFAB');">
+                              <title>M10C 5F FAB</title>
+                              <path class="dataBox dataBox-fab" d="M874.5,94.4L677.8,76.2c-4.1-0.4-7.1-3.5-6.8-6.9l1.7-16.7c0.4-3.5,4-5.9,8.1-5.5l197.3,22.8    c2.9,0.3,4.9,3,4.5,5.9l-2.1,13.9C880.1,92.6,877.4,94.7,874.5,94.4z"/>
+                              <polygon class="dataBox-arrow-r" points="881.7,77.1 886.3,82 880.8,85.7   "/>
+                              <text transform="matrix(1.1705 0.1333 -0.1131 0.9936 677.6269 64.8639)" class="title title-FAB">M10C 5F FAB</text>
+                              <text transform="matrix(0.9936 0.1131 -0.1131 0.9936 755.5834 73.7409)" class="dataNumber" x="115" y="0" text-anchor="end">500 / 400(0) / 500 / 30</text>
+                            </a>
+
+                            <a id="svg6FFAB" xlink:href="javascript:moveLocationFloor('6FFAB');">
+                              <path class="dataBox dataBox-fab" d="M874.8,62.3L679.2,37.6c-4.6-0.6-7.7-4.1-7.1-7.9l3.1-18.1c0.6-3.8,4.8-6.2,9.3-5.4l193.4,31.9    c2.6,0.4,4.4,3.1,4,5.9l-1.7,13.7C879.9,60.5,877.4,62.6,874.8,62.3z"/>
+                              <polygon class="dataBox-arrow-r" points="881.5,46 886,51 880.3,54.6   "/>
+                              <text transform="matrix(1.1666 0.1644 -0.1395 0.9902 677.8229 28.3738)" class="title title-FAB">M10C PH FAB</text>
+                              <text transform="matrix(0.9902 0.1395 -0.1395 0.9902 755.0164 39.2504)" class="dataNumber" x="115" y="0" text-anchor="end">500 / 400(0) / 500 / 30</text>
+                            </a>
+
+                          </g>
+                          <!--//fab-area-->
+
+                        </g>
+                        <!--//view-M10C-->
+
+                    </svg>
+                    <!--//M10C SVG-->
+        
+
+                    <!-- <div class="spot right-sidebar" style="position: absolute;top: 60%;left: 60%;background-color:blue;">
+                      <p class="tooltipBox st01">
+                        <span class="name">SUPEX  Center 5F</span>
+                        <span>95 / 252 / 252</span>
+                        <em>(100%)</em>
+                      </p>
+                    </div>
+
+                    <div class="spot right-sidebar" style="position: absolute;top: 20%;left: 20%;background-color:greenyellow;">
+                      <p class="tooltipBox st01">
+                        <span class="name">SUPEX  Center 5F</span>
+                        <span>95 / 252 / 252</span>
+                        <em>(100%)</em>
+                      </p>
+                    </div>
+
+                    <div class="spot right-sidebar" style="position: absolute;top: 50%;left: 50%;background-color: red;">
+                      <p class="tooltipBox st01">
+                        <span class="name">SUPEX  Center 5F</span>
+                        <span>95 / 252 / 252</span>
+                        <em>(100%)</em>
+                      </p>
+                    </div>
+
+                    <div class="spot right-sidebar" style="position: absolute;top: 40%;left: 20%;background-color: red;">
+                      <p class="tooltipBox st01">
+                        <span class="name">SUPEX  Center 5F</span>
+                        <span>95 / 252 / 252</span>
+                        <em>(100%)</em>
+                      </p>
+                    </div> -->
+
+                  </div>
+
+                </div><!--//mapLeft-->
+                <div class="zoomBtns">
+                  <button type="button" class="btnFull">전체</button>
+                  <button type="button" class="btnPlus">확대</button>
+                  <button type="button" class="btnMinus">축소</button>
+                  <button type="button" class="btnMove">이동</button>
+                </div>
+
+              </div>
+              <div class="mapList">
+
+                <div class="tb_title">
+                  <div>
+                    <p class="title"><span>TRACKER 장착률</span><em>100%</em></p>
+                  </div>
+                  <div>
+                    <div class="search_group">
+                      <span class="input_wrap"><input type="text" placeholder="검색어"></span>
+                      <div class="dropdown-menu dropdown-menu-right navbar-dropdown">
+                        <a class="dropdown-item">M10A</a>
+                        <a class="dropdown-item">M10B</a>
+                        <a class="dropdown-item">M10F</a>
+                        <a class="dropdown-item">M14</a>
+                        <a class="dropdown-item">M14CUB</a>
+                        <a class="dropdown-item">M16</a>
+                      </div>
+                      <button type="submit" class="btn-searchTrack"><span class="text-hidden">검색</span></button>
+                    </div>
+                  </div>
+                </div>
+                <!-- 자산상태현황 검색 -->
+                <div class="tb_title">
+                  <div>
+                    <p class="title"><span>자산상태 현황</span></p>
+                  </div>
+                  <div>
+                    <div class="search_group">
+                      <span class="input_wrap"><input type="text" placeholder="검색어"></span>
+                      <button type="submit" class="btn-searchTrack"><span class="text-hidden">검색</span></button>
+                    </div>
+                  </div>
+                </div>
+                <!--// 자산상태현황 검색 -->
+                <div class="tb_thead">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>
+                          <div class="th-wrap"><span class="s-tit">건물명</span>
+                            <span class="s-ico">
+                              <span sort="asc" class="ico-sort icon-asc disabled"></span>
+                              <span sort="desc" class="ico-sort icon-desc disabled"></span>
+                            </span>
+                            </span>
+                        </th>
+                        <th>
+                          <div class="th-wrap"><span class="s-tit">S-EQ</span>
+                            <span class="s-ico">
+                              <span sort="asc" class="ico-sort icon-asc disabled"></span>
+                              <span sort="desc" class="ico-sort icon-desc disabled"></span>
+                            </span>
+                          </div>
+                        </th>
+                        <th>
+                          <div class="th-wrap"><span class="s-tit">EQ</span>
+                            <span class="s-ico">
+                              <span sort="asc" class="ico-sort icon-asc disabled"></span>
+                              <span sort="desc" class="ico-sort icon-desc disabled"></span>
+                            </span>
+                          </div>
+                        </th>
+                        <th>
+                          <div class="th-wrap"><span class="s-tit">Tracker</span>
+                            <span class="s-ico">
+                              <span sort="asc" class="ico-sort icon-asc disabled"></span>
+                              <span sort="desc" class="ico-sort icon-desc disabled"></span>
+                            </span>
+                          </div>
+                        </th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+                <div class="tb_tbody">
+                  <table class="table">
+                    <tbody>
+                      <tr>
+                        <td><button type="button" class="btn btn-sm btn03"><span>SUPEX Center</span></button></td>
+                        <td><span class="fw-bold">95</span></td>
+                        <td><span>252</span></td>
+                        <td><span class="fw-bold">252</span></td>
+                      </tr>
+                      <tr>
+                        <td><button type="button" class="btn btn-sm btn02"><span>9F</span></button></td>
+                        <td><span class="fw-bold">1123</span></td>
+                        <td><span>3456</span></td>
+                        <td><span class="fw-bold">3456</span></td>
+                      </tr>
+                      <tr>
+                        <td><button type="button" class="btn btn-sm btn02"><span>8F</span></button></td>
+                        <td><span class="fw-bold">36</span></td>
+                        <td><span>201</span></td>
+                        <td><span class="fw-bold">201</span></td>
+                      </tr>
+                      <tr>
+                        <td><button type="button" class="btn btn-sm btn02"><span>7F</span></button></td>
+                        <td><span class="fw-bold">91</span></td>
+                        <td><span>360</span></td>
+                        <td><span class="fw-bold">360</span></td>
+                      </tr>
+                      <tr>
+                        <td><button type="button" class="btn btn-sm btn02"><span>6F</span></button></td>
+                        <td><span class="fw-bold">55</span></td>
+                        <td><span>194</span></td>
+                        <td><span class="fw-bold">194</span></td>
+                      </tr>
+                      <tr>
+                        <td><button type="button" class="btn btn-sm btn02"><span>5F</span></button></td>
+                        <td><span class="fw-bold">95</span></td>
+                        <td><span>252</span></td>
+                        <td><span class="fw-bold">252</span></td>
+                      </tr>
+                      <tr>
+                        <td><button type="button" class="btn btn-sm btn02"><span>4F</span></button></td>
+                        <td><span class="fw-bold">123</span></td>
+                        <td><span>2425</span></td>
+                        <td><span class="fw-bold">2425</span></td>
+                      </tr>
+                      <tr>
+                        <td><button type="button" class="btn btn-sm btn02"><span>3F</span></button></td>
+                        <td><span class="fw-bold">36</span></td>
+                        <td><span>201</span></td>
+                        <td><span class="fw-bold">201</span></td>
+                      </tr>
+                      <tr>
+                        <td><button type="button" class="btn btn-sm btn02"><span>2F</span></button></td>
+                        <td><span class="fw-bold">91</span></td>
+                        <td><span>360</span></td>
+                        <td><span class="fw-bold">360</span></td>
+                      </tr>
+                      <tr>
+                        <td><button type="button" class="btn btn-sm btn02"><span>1F</span></button></td>
+                        <td><span class="fw-bold">55</span></td>
+                        <td><span>194</span></td>
+                        <td><span class="fw-bold">194</span></td>
+                      </tr>
+                      <tr>
+                        <td><button type="button" class="btn btn-sm btn02"><span>B1F</span></button></td>
+                        <td><span class="fw-bold">95</span></td>
+                        <td><span>252</span></td>
+                        <td><span class="fw-bold">252</span></td>
+                      </tr>
+                      <tr>
+                        <td><button type="button" class="btn btn-sm btn02"><span>B2F</span></button></td>
+                        <td><span class="fw-bold">123</span></td>
+                        <td><span>2425</span></td>
+                        <td><span class="fw-bold">2425</span></td>
+                      </tr>
+                      <tr>
+                        <td><button type="button" class="btn btn-sm btn02"><span>B3F</span></button></td>
+                        <td><span class="fw-bold">123</span></td>
+                        <td><span>2425</span></td>
+                        <td><span class="fw-bold">2425</span></td>
+                      </tr>
+                      <tr>
+                        <td><button type="button" class="btn btn-sm btn02"><span>B4F</span></button></td>
+                        <td><span class="fw-bold">123</span></td>
+                        <td><span>2425</span></td>
+                        <td><span class="fw-bold">2425</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <button type="button" class="folding">버튼</button>
+              </div>
+            </div>
+            <!--//DBFV02 건물측면도-->
+
+
+            <!--DBFV02 전체/건물별 자산현황-->
+            <p class="layer-condition-title">SUPEX Center 층별 자산 상태 현황</p>
+            <div class="layer-condition">
+              <div class="col-3">
+                <div class="layer-data">
+                  <canvas id="data01-chart"></canvas>
+                  <div id="data01-legend"></div>
+                  <a href="" class="arrow-more">더보기</a>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="layer-data">
+                  <canvas id="data02-chart"></canvas>
+                  <div id="data02-legend"></div>
+                  <a href="" class="arrow-more">더보기</a>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="layer-data">
+                  <canvas id="data03-chart"></canvas>
+                  <div id="data03-legend"></div>
+                  <a href="" class="arrow-more">더보기</a>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="layer-data">
+                  <canvas id="data04-chart"></canvas>
+                  <div id="data04-legend"></div>
+                  <a href="" class="arrow-more">더보기</a>
+                </div>
+              </div>
+            </div>
+            <!--//DBFV02 전체/건물별 자산현황-->
+
+
+          </div><!--//sub-cont-->
+
+        </div>
+        <!--//content-wrapper-->
+
+        <footer class="footer">
+          <div>COPYRIGHT(C) 2025 SK TELECOM INC. ALL RIGHTS RESERVED.</div>
+        </footer>
+        <!--//footer-->
+
+      </div>
+      <!--//main-panel-->
+
+
+    </div>
+    <!--//page-body-wrapper-->
+
+  </div>
+  <!--//container-scroller -->
+</body>
+<script src="../js/template.js"></script>
+<script src="../js/chart.min.js"></script>
+<script src="../js/swiper-bundle.min.js"></script>
+
+<script>
+
+  //전경도 우측테이블 접고펴기
+  $(".mapCont .folding").click(function () {
+    $('.mapCont .mapList').toggleClass('on');
+    $('.mapCont .folding').toggleClass('on');
+  });
+
+  //TRACKER 장착률 검색어 리스트노출
+  $('.search_group .input_wrap input').focus(function () {
+    $(this).parents().next('.dropdown-menu').addClass('show')
+  });
+  $('.search_group .input_wrap input').blur(function () {
+    $(this).parents().next('.dropdown-menu').removeClass('show')
+  });
+
+  //자산현황 좌우이동
+  var swiper = new Swiper('.swiper', {
+    slidesPerView: 5,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }
+  });
+  //자산현황 상하접기
+  $(".assetSlideToggle").click(function () {
+    $(".asset-data-wrap .ul").slideToggle();
+    $(".asset-data-wrap button").slideToggle();
+    $(".assetSlideToggle").toggleClass("closed");
+  });
+
+  //SUPEX Center 층별 주요 현황
+  (function ($) {
+    'use strict';
+    $(function () {
+      if ($("#data01-chart").length) {
+        var areaData = {
+          labels: ["title", "title", "title", "title", "title", "title", "title"],
+          datasets: [{
+            data: [250, 50, 100, 400, 65, 80, 120],
+            backgroundColor: [
+              '#bae8f8',
+              '#a6e0f7',
+              '#91d7f5',
+              '#7ecef2',
+              '#6cc7f0',
+              '#46b1eb',
+              '#3386e1'
+            ],
+            borderColor: "rgba(0,0,0,0)"
+          }
+          ]
+        };
+        var areaOptions = {
+          responsive: true,
+          maintainAspectRatio: true,
+          segmentShowStroke: false,
+          cutoutPercentage: 78,
+          elements: {
+            arc: {
+              borderWidth: 4
+            }
+          },
+          legend: {
+            display: false
+          },
+          tooltips: {
+            enabled: true
+          },
+          legendCallback: function (chart) {
+            var text = [];
+            text.push('<div class="report-chart">');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[0] + '"></div><p style="width:40px;">1F</p></div>');
+            text.push('<p class="mb-0 ml-3">250</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[1] + '"></div><p style="width:40px;">2F</p></div>');
+            text.push('<p class="mb-0 ml-3">50</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[2] + '"></div><p style="width:40px;">3F</p></div>');
+            text.push('<p class="mb-0 ml-3">100</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[3] + '"></div><p style="width:40px;">4F</p></div>');
+            text.push('<p class="mb-0 ml-3">400</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[4] + '"></div><p style="width:40px;">5F</p></div>');
+            text.push('<p class="mb-0 ml-3">65</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[4] + '"></div><p style="width:40px;">6F</p></div>');
+            text.push('<p class="mb-0 ml-3">80</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[4] + '"></div><p style="width:40px;">7F</p></div>');
+            text.push('<p class="mb-0 ml-3">120</p>');
+            text.push('</div>');
+            text.push('</div>');
+            return text.join("");
+          },
+        }
+        var northAmericaChartPlugins = {
+          beforeDraw: function (chart) {
+            var width = chart.chart.width,
+              height = chart.chart.height,
+              ctx = chart.chart.ctx;
+
+            ctx.restore();
+            var fontSize = 1.2;
+            ctx.font = "600 " + fontSize + "em Noto Sans KR";
+            ctx.textBaseline = "middle";
+            ctx.fillStyle = "#13381B";
+
+            var text = "이설",
+              textX = Math.round((width - ctx.measureText(text).width) / 2),
+              textY = height / 2;
+
+            ctx.fillText(text, textX, textY);
+            ctx.save();
+          }
+        }
+        var northAmericaChartCanvas = $("#data01-chart").get(0).getContext("2d");
+        var northAmericaChart = new Chart(northAmericaChartCanvas, {
+          type: 'doughnut',
+          data: areaData,
+          options: areaOptions,
+          plugins: northAmericaChartPlugins
+        });
+        document.getElementById('data01-legend').innerHTML = northAmericaChart.generateLegend();
+      }
+      if ($("#data02-chart").length) {
+        var areaData = {
+          labels: ["title", "title", "title", "title", "title", "title", "title"],
+          datasets: [{
+            data: [250, 50, 100, 400, 65, 65, 65,],
+            backgroundColor: [
+              '#e4f8c4',
+              '#d6f2a9',
+              '#bceb7b',
+              '#ace669',
+              '#a0e056',
+              '#94dc4a',
+              '#7bd434'
+            ],
+            borderColor: "rgba(0,0,0,0)"
+          }
+          ]
+        };
+        var areaOptions = {
+          responsive: true,
+          maintainAspectRatio: true,
+          segmentShowStroke: false,
+          cutoutPercentage: 78,
+          elements: {
+            arc: {
+              borderWidth: 4
+            }
+          },
+          legend: {
+            display: false
+          },
+          tooltips: {
+            enabled: true
+          },
+          legendCallback: function (chart) {
+            var text = [];
+            text.push('<div class="report-chart">');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[0] + '"></div><p style="width:40px;">1F</p></div>');
+            text.push('<p class="mb-0 ml-3">250</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[1] + '"></div><p style="width:40px;">2F</p></div>');
+            text.push('<p class="mb-0 ml-3">50</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[2] + '"></div><p style="width:40px;">3F</p></div>');
+            text.push('<p class="mb-0 ml-3">100</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[3] + '"></div><p style="width:40px;">4F</p></div>');
+            text.push('<p class="mb-0 ml-3">400</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[4] + '"></div><p style="width:40px;">5F</p></div>');
+            text.push('<p class="mb-0 ml-3">65</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[5] + '"></div><p style="width:40px;">6F</p></div>');
+            text.push('<p class="mb-0 ml-3">65</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[6] + '"></div><p style="width:40px;">7F</p></div>');
+            text.push('<p class="mb-0 ml-3">65</p>');
+            text.push('</div>');
+            text.push('</div>');
+            return text.join("");
+          },
+        }
+        var southAmericaChartPlugins = {
+          beforeDraw: function (chart) {
+            var width = chart.chart.width,
+              height = chart.chart.height,
+              ctx = chart.chart.ctx;
+
+            ctx.restore();
+            var fontSize = 1.2;
+            ctx.font = "600 " + fontSize + "em Noto Sans KR";
+            ctx.textBaseline = "middle";
+            ctx.fillStyle = "#000";
+
+            var text = "철거",
+              textX = Math.round((width - ctx.measureText(text).width) / 2),
+              textY = height / 2;
+
+            ctx.fillText(text, textX, textY);
+            ctx.save();
+          }
+        }
+        var southAmericaChartCanvas = $("#data02-chart").get(0).getContext("2d");
+        var southAmericaChart = new Chart(southAmericaChartCanvas, {
+          type: 'doughnut',
+          data: areaData,
+          options: areaOptions,
+          plugins: southAmericaChartPlugins
+        });
+        document.getElementById('data02-legend').innerHTML = southAmericaChart.generateLegend();
+      }
+      if ($("#data03-chart").length) {
+        var areaData = {
+          labels: ["title", "title", "title", "title", "title", "title", "title"],
+          datasets: [{
+            data: [250, 50, 100, 400, 65, 20, 10,],
+            backgroundColor: [
+              '#ffeaf5',
+              '#ffbfe1',
+              '#ff97cf',
+              '#ff86c5',
+              '#ff71bb',
+              '#ef58d6',
+              '#d92bbc'
+            ],
+            borderColor: "rgba(0,0,0,0)"
+          }
+          ]
+        };
+        var areaOptions = {
+          responsive: true,
+          maintainAspectRatio: true,
+          segmentShowStroke: false,
+          cutoutPercentage: 78,
+          elements: {
+            arc: {
+              borderWidth: 4
+            }
+          },
+          legend: {
+            display: false
+          },
+          tooltips: {
+            enabled: true
+          },
+          legendCallback: function (chart) {
+            var text = [];
+            text.push('<div class="report-chart">');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[0] + '"></div><p style="width:40px;">1F</p></div>');
+            text.push('<p class="mb-0 ml-3">250</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[1] + '"></div><p style="width:40px;">2F</p></div>');
+            text.push('<p class="mb-0 ml-3">50</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[2] + '"></div><p style="width:40px;">3F</p></div>');
+            text.push('<p class="mb-0 ml-3">100</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[3] + '"></div><p style="width:40px;">4F</p></div>');
+            text.push('<p class="mb-0 ml-3">400</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[4] + '"></div><p style="width:40px;">5F</p></div>');
+            text.push('<p class="mb-0 ml-3">65</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[5] + '"></div><p style="width:40px;">6F</p></div>');
+            text.push('<p class="mb-0 ml-3">20</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[6] + '"></div><p style="width:40px;">7F</p></div>');
+            text.push('<p class="mb-0 ml-3">10</p>');
+            text.push('</div>');
+            text.push('</div>');
+            return text.join("");
+          },
+        }
+        var southAmericaChartPlugins = {
+          beforeDraw: function (chart) {
+            var width = chart.chart.width,
+              height = chart.chart.height,
+              ctx = chart.chart.ctx;
+
+            ctx.restore();
+            var fontSize = 1.2;
+            ctx.font = "600 " + fontSize + "em Noto Sans KR";
+            ctx.textBaseline = "middle";
+            ctx.fillStyle = "#000";
+
+            var text = "철거",
+              textX = Math.round((width - ctx.measureText(text).width) / 2),
+              textY = height / 2;
+
+            ctx.fillText(text, textX, textY);
+            ctx.save();
+          }
+        }
+        var southAmericaChartCanvas = $("#data03-chart").get(0).getContext("2d");
+        var southAmericaChart = new Chart(southAmericaChartCanvas, {
+          type: 'doughnut',
+          data: areaData,
+          options: areaOptions,
+          plugins: southAmericaChartPlugins
+        });
+        document.getElementById('data03-legend').innerHTML = southAmericaChart.generateLegend();
+      }
+      if ($("#data04-chart").length) {
+        var areaData = {
+          labels: ["title", "title", "title", "title", "title", "title", "title"],
+          datasets: [{
+            data: [250, 50, 100, 400, 65, 65, 65],
+            backgroundColor: [
+              '#dee7f1',
+              '#afbac4',
+              '#b1b7bc',
+              '#7d868f',
+              '#76899e',
+              '#666f7b',
+              '#4c5257'
+            ],
+            borderColor: "rgba(0,0,0,0)"
+          }
+          ]
+        };
+        var areaOptions = {
+          responsive: true,
+          maintainAspectRatio: true,
+          segmentShowStroke: false,
+          cutoutPercentage: 78,
+          elements: {
+            arc: {
+              borderWidth: 4
+            }
+          },
+          legend: {
+            display: false
+          },
+          tooltips: {
+            enabled: true
+          },
+          legendCallback: function (chart) {
+            var text = [];
+            text.push('<div class="report-chart">');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[0] + '"></div><p style="width:40px;">1F</p></div>');
+            text.push('<p class="mb-0 ml-3">250</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[1] + '"></div><p style="width:40px;">2F</p></div>');
+            text.push('<p class="mb-0 ml-3">50</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[2] + '"></div><p style="width:40px;">3F</p></div>');
+            text.push('<p class="mb-0 ml-3">100</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[3] + '"></div><p style="width:40px;">4F</p></div>');
+            text.push('<p class="mb-0 ml-3">400</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[4] + '"></div><p style="width:40px;">5F</p></div>');
+            text.push('<p class="mb-0 ml-3">65</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[5] + '"></div><p style="width:40px;">6F</p></div>');
+            text.push('<p class="mb-0 ml-3">65</p>');
+            text.push('</div>');
+            text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[6] + '"></div><p style="width:40px;">7F</p></div>');
+            text.push('<p class="mb-0 ml-3">65</p>');
+            text.push('</div>');
+            text.push('</div>');
+            return text.join("");
+          },
+        }
+        var southAmericaChartPlugins = {
+          beforeDraw: function (chart) {
+            var width = chart.chart.width,
+              height = chart.chart.height,
+              ctx = chart.chart.ctx;
+
+            ctx.restore();
+            var fontSize = 1.2;
+            ctx.font = "600 " + fontSize + "em sans-serif";
+            ctx.textBaseline = "middle";
+            ctx.fillStyle = "#000";
+
+            var text = "유휴",
+              textX = Math.round((width - ctx.measureText(text).width) / 2),
+              textY = height / 2;
+
+            ctx.fillText(text, textX, textY);
+            ctx.save();
+          }
+        }
+        var southAmericaChartCanvas = $("#data04-chart").get(0).getContext("2d");
+        var southAmericaChart = new Chart(southAmericaChartCanvas, {
+          type: 'doughnut',
+          data: areaData,
+          options: areaOptions,
+          plugins: southAmericaChartPlugins
+        });
+        document.getElementById('data04-legend').innerHTML = southAmericaChart.generateLegend();
+      }
+    });
+
+    // SVG a 클릭 이벤트 속성 지우기
+    $('svg .skhynixWrap-ic a').on('click', function(e){
+      e.preventDefault();
+    })
+  })(jQuery);
+
+</script>
+
+</html>

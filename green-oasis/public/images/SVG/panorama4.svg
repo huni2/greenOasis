@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="a"
+     viewBox="0 0 1160 713">
+    <image width="1160" height="713" xlink:href="/images/panorama5.jpg"></image>
+	<!--
+    <g class="skhynix_ic">
+        <g>
+            <rect x="92" y="143" width="85" height="215" class="hoverBox_yellow" />
+        </g>
+        <g class="bg-red">
+            <circle cx="103.45" cy="163.21" r="4.5" id="trackerRed-01"/>
+            <circle cx="103.45" cy="163.21" r="4.5" id="trackerRed-02"/>
+            <circle cx="103.45" cy="163.21" r="4.5" id="trackerRed-03"/>
+            <circle cx="103.45" cy="163.21" r="4.5" id="trackerRed-04"/>
+            <circle cx="103.45" cy="163.21" r="4.5" id="trackerRed-05"/>
+            <circle cx="103.45" cy="178.21" r="4.5" id="trackerRed-06"/>
+            <circle cx="104.45" cy="188.21" r="4.5" id="trackerRed-07"/>
+            <circle cx="100.45" cy="199.21" r="4.5" id="trackerRed-08"/>
+            <circle cx="103.45" cy="215.21" r="4.5" id="trackerRed-09"/>
+            <circle cx="103.45" cy="225.21" r="4.5" id="trackerRed-10"/>
+            <circle cx="102.45" cy="241.21" r="4.5" id="trackerRed-11"/>
+            <circle cx="104.45" cy="254.21" r="4.5" id="trackerRed-12"/>
+            <circle cx="104.45" cy="264.21" r="4.5" id="trackerRed-12"/>
+            <circle cx="105.45" cy="281.21" r="4.5" id="trackerRed-13"/>
+            <circle cx="102.45" cy="290.21" r="4.5" id="trackerRed-14"/>
+            <circle cx="101.45" cy="300.21" r="4.5" id="trackerRed-15"/>
+            <circle cx="102.45" cy="310.21" r="4.5" id="trackerRed-16"/>
+            <circle cx="103.45" cy="321.21" r="4.5" id="trackerRed-17"/>
+            <circle cx="102.45" cy="336.21" r="4.5" id="trackerRed-18"/>
+            <circle cx="102.45" cy="347.21" r="4.5" id="trackerRed-19"/>
+            <circle cx="129.14" cy="165.58" r="4.5" id="trackerRed-20"/>
+            <circle cx="127.14" cy="180.19" r="4.5" id="trackerRed-21"/>
+            <circle cx="125.45" cy="199.21" r="4.5" id="trackerRed-22"/>
+            <circle cx="126.45" cy="217.21" r="4.5" id="trackerRed-23"/>
+            <circle cx="125.45" cy="228.21" r="4.5" id="trackerRed-24"/>
+            <circle cx="128.45" cy="245.21" r="4.5" id="trackerRed-25"/>
+            <circle cx="127.45" cy="265.21" r="4.5" id="trackerRed-26"/>
+            <circle cx="129.45" cy="280.21" r="4.5" id="trackerRed-27"/>
+            <circle cx="123.45" cy="297.21" r="4.5" id="trackerRed-28"/>
+            <circle cx="123.45" cy="307.21" r="4.5" id="trackerRed-29"/>
+            <circle cx="128.45" cy="319.21" r="4.5" id="trackerRed-30"/>
+            <circle cx="125.45" cy="329.21" r="4.5" id="trackerRed-31"/>
+            <circle cx="128.45" cy="340.21" r="4.5" id="trackerRed-32"/>
+            <circle cx="127.45" cy="350.21" r="4.5" id="trackerRed-33"/>
+            <circle cx="142.45" cy="154.21" r="4.5" id="trackerRed-34"/>
+            <circle cx="143.45" cy="166.21" r="4.5" id="trackerRed-35"/>
+            <circle cx="143.45" cy="198.21" r="4.5" id="trackerRed-36"/>
+            <circle cx="142.45" cy="212.21" r="4.5" id="trackerRed-37"/>
+            <circle cx="141.45" cy="222.21" r="4.5" id="trackerRed-38"/>
+            <circle cx="143.45" cy="238.21" r="4.5" id="trackerRed-39"/>
+            <circle cx="142.45" cy="248.21" r="4.5" id="trackerRed-40"/>
+            <circle cx="141.45" cy="258.21" r="4.5" id="trackerRed-41"/>
+            <circle cx="141.45" cy="268.21" r="4.5" id="trackerRed-42"/>
+            <circle cx="143.45" cy="278.21" r="4.5" id="trackerRed-43"/>
+            <circle cx="145.45" cy="289.21" r="4.5" id="trackerRed-44"/>
+            <circle cx="145.45" cy="299.21" r="4.5" id="trackerRed-45"/>
+            <circle cx="145.45" cy="309.21" r="4.5" id="trackerRed-46"/>
+            <circle cx="142.45" cy="319.21" r="4.5" id="trackerRed-47"/>
+            <circle cx="144.45" cy="328.21" r="4.5" id="trackerRed-48"/>
+            <circle cx="143.45" cy="339.21" r="4.5" id="trackerRed-49"/>
+            <circle cx="143.45" cy="349.21" r="4.5" id="trackerRed-50"/>
+            <circle cx="170.45" cy="161.21" r="4.5" id="trackerRed-51"/>
+            <circle cx="168.45" cy="176.21" r="4.5" id="trackerRed-52"/>
+            <circle cx="168.45" cy="200.21" r="4.5" id="trackerRed-53"/>
+            <circle cx="165.45" cy="218.21" r="4.5" id="trackerRed-54"/>
+            <circle cx="164.45" cy="229.21" r="4.5" id="trackerRed-55"/>
+            <circle cx="167.45" cy="241.21" r="4.5" id="trackerRed-56"/>
+            <circle cx="165.45" cy="250.21" r="4.5" id="trackerRed-57"/>
+            <circle cx="164.45" cy="261.21" r="4.5" id="trackerRed-58"/>
+            <circle cx="166.45" cy="284.21" r="4.5" id="trackerRed-59"/>
+            <circle cx="165.45" cy="302.21" r="4.5" id="trackerRed-60"/>
+            <circle cx="163.45" cy="324.21" r="4.5" id="trackerRed-61"/>
+            <circle cx="166.45" cy="339.21" r="4.5" id="trackerRed-62"/>
+            <circle cx="166.45" cy="349.21" r="4.5" id="trackerRed-63"/>
+        </g>
+        <g class="bg-blue">
+            <circle cx="116.45" cy="162.21" r="4.5" id="trackerBlue-01"/>
+            <circle cx="116.45" cy="180.21" r="4.5" id="trackerBlue-02"/>
+            <circle cx="115.45" cy="200.21" r="4.5" id="trackerBlue-03"/>
+            <circle cx="115.45" cy="221.21" r="4.5" id="trackerBlue-04"/>
+            <circle cx="115.45" cy="240.21" r="4.5" id="trackerBlue-05"/>
+            <circle cx="116.45" cy="261.21" r="4.5" id="trackerBlue-06"/>
+            <circle cx="117.45" cy="281.21" r="4.5" id="trackerBlue-07"/>
+            <circle cx="113.45" cy="302.21" r="4.5" id="trackerBlue-08"/>
+            <circle cx="115.45" cy="321.21" r="4.5" id="trackerBlue-09"/>
+            <circle cx="115.45" cy="342.21" r="4.5" id="trackerBlue-10"/>
+            <circle cx="155.45" cy="160.21" r="4.5" id="trackerBlue-11"/>
+            <circle cx="154.45" cy="180.21" r="4.5" id="trackerBlue-12"/>
+            <circle cx="154.45" cy="201.21" r="4.5" id="trackerBlue-13"/>
+            <circle cx="153.45" cy="220.21" r="4.5" id="trackerBlue-14"/>
+            <circle cx="155.45" cy="240.21" r="4.5" id="trackerBlue-15"/>
+            <circle cx="153.45" cy="260.21" r="4.5" id="trackerBlue-16"/>
+            <circle cx="154.45" cy="281.21" r="4.5" id="trackerBlue-17"/>
+            <circle cx="155.45" cy="301.21" r="4.5" id="trackerBlue-18"/>
+            <circle cx="153.45" cy="321.21" r="4.5" id="trackerBlue-19"/>
+            <circle cx="154.45" cy="342.21" r="4.5" id="trackerBlue-20"/>
+        </g>
+    </g>
+	-->
+</svg>

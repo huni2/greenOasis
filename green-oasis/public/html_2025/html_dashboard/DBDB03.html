@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>SK hynix 자산관리시스템</title>
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/common.css">
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
+</head>
+
+<body>
+    <div class="dimmed"></div>
+    <div class="popup" style="width:700px;">
+        <!--팝업사이즈 조절-->
+        <div class="popTitle">
+            <h2>위젯 설정 정보</h2>
+        </div>
+        <div class="popCont oh" style="height:auto;">
+            <div class="inner">
+                <div class="widget-setting-contents-area">
+                    <div class="tb-write-area">
+                        <div class="tb_body">
+                            <div class="">
+                                <dl>
+                                    <dt>
+                                        <div>사용자 그룹</div>
+                                    </dt>
+                                    <dd>
+                                        <div class="td">
+                                            <input type="radio" class="inp_rdo" name="rad1" id="all01" checked=""><label
+                                                for="all01" class="mr_5">전체</label>
+                                            <input type="radio" class="inp_rdo" name="rad1" id="manager02"><label
+                                                for="manager02" class="mr_5">관리자</label>
+                                            <input type="radio" class="inp_rdo" name="rad1" id="systemOperator03"><label
+                                                for="systemOperator03" class="mr_5">운영자</label>
+                                            <input type="radio" class="inp_rdo" name="rad1" id="user04"><label
+                                                for="user04" class="mr_5">사용자</label>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+                                        <div>사용 여부</div>
+                                    </dt>
+                                    <dd>
+                                        <div class="td">
+                                            <input type="radio" class="inp_rdo" name="rad2" id="yes01" checked=""><label
+                                                for="yes01" class="mr_5">Y</label>
+                                            <input type="radio" class="inp_rdo" name="rad2" id="no02"><label for="no02"
+                                                class="mr_5">N</label>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+                                        <div>Link</div>
+                                    </dt>
+                                    <dd>
+                                        <input type="text" placeholder="" value="">
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+                                        <div>위젯 설명</div>
+                                    </dt>
+                                    <dd>
+                                        <textarea id="" placeholder="위젯의 설명 입력 시 추가 화면에서 툴팁으로 설명 표현" onkeydown="resize(this)"
+                                            onkeyup="resize(this)"></textarea>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--//tb-write-area-->
+            </div>
+            <!--//inner-->
+        </div>
+        <!--//popCont-->
+        <div class="tb_bottom">
+            <button type="button" class="btn btn02"><span>취소</span></button>
+            <button type="button" class="btn btn01"><span>저장</span></button>
+        </div>
+
+        <button type="button" class="popClose"><span>닫기</span></button>
+    </div>
+    <!--//popup-->
+    <!--//container-scroller -->
+</body>
+<script src="../js/template.js"></script>
+<link href="../css/skin-win8/ui.fancytree.css" rel="stylesheet" />
+<script src="../js/fancytree/jquery.fancytree-all.min.js"></script>
+
+</html>

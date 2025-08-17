@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>SK hynix 자산관리시스템</title>
+  <link rel="shortcut icon" href="../images/favicon.ico">
+  <link rel="stylesheet" href="../css/common.css">
+
+  <script type="text/javascript" src="../js/jquery.js"></script>
+  <script type="text/javascript" src="../js/jquery-ui.js"></script>
+</head>
+<body class="bg-gray">
+  
+  <div class="container-scroller">
+
+    <nav class="navbar fixed-top">
+      <div class="navbar-logo-wrapper">
+        <button class="navbar-toggler" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+      <div class="navbar-menu-wrapper">
+
+        <a class="navbar-logo" href="../index.html"><img src="../images/logo.png" alt="SK hynix 로고"/></a>
+        <span class="navbar-title">자산관리MAPS</span>
+        <ul class="location-link">
+          <li><a href="">이천</a></li>
+          <li><a href="">청주</a></li>
+          <li><a href="">우시</a></li>
+          <li><a href="">충징</a></li>
+        </ul>
+        <ul class="navbar-nav">
+          
+          <li class="nav-item nav-language dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="languageDropdown"><i class="flag-korea"></i><span>한국어</span></a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="languageDropdown">
+              <a class="dropdown-item"><i class="flag-us"></i>English</a>
+              <a class="dropdown-item"><i class="flag-china"></i>中文</a>              
+            </div>
+          </li>
+          <li class="nav-item nav-error">
+            <a class="nav-link" href="#" title="에러"><i class="icon-error"></i></a>
+          </li>
+          <li class="nav-item nav-mail" title="메일">
+            <a class="nav-link" href="#"><i class="icon-mail"></i></a>
+          </li>
+          <li class="nav-item nav-noti dropdown" title="공지">
+            <a class="nav-link count-indicator dropdown-toggle" id="notiDropdown" href="#" data-toggle="dropdown"><i class="icon-bell mx-0"></i><span class="count"></span></a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notiDropdown">
+              <p class="dropdown-header">공지</p>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-success"><i class="ti-info-alt mx-0"></i></div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject fw-normal">에러</h6>
+                  <p class="fw-light small-text mb-0 text-muted">1분전</p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-warning"><i class="ti-settings mx-0"></i></div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject fw-normal">설정</h6>
+                  <p class="fw-light small-text mb-0 text-muted">메세지</p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-info"><i class="ti-user mx-0"></i></div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject fw-normal">사용자등록</h6>
+                  <p class="fw-light small-text mb-0 text-muted">2일전</p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item nav-profile dropdown ">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown"><img src="../images/top_face.png" alt="profile"/><span>X20220610</span></a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item"><i class="ti-settings text-primary"></i>나의정보</a>
+              <a class="dropdown-item"><i class="ti-power-off text-primary"></i>로그아웃</a>
+            </div>
+          </li>
+          <li class="nav-item nav-name">
+            <div><span>hwchoi</span><span>슈퍼관리자</span></div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--//navbar-->
+
+    <div class="page-body-wrapper">
+
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <script src="../js/nav.js"></script>
+      </nav>
+      <!--//sidebar-->
+
+      <div class="main-panel">
+
+        <div class="content-wrapper">
+
+            <!--MMAS02 자산관리-->
+            <div class="sub-cont">
+
+                <div class="page-title-box">
+                  <div class="left">
+                    <h2 class="title hidden"></h2>
+                  </div>
+                  <div class="right">
+                    <div>
+                      <ol class="breadcrumb m-0">
+                        <li class="breadcrumb-item">Home</li>
+                        <li class="breadcrumb-item">자산관리</li>
+                        <li class="breadcrumb-item active">자산관리</li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tb-detail-area">
+                </div>
+                <!--//tb-detail-area-->
+
+             
+     
+
+            </div>
+            <!--//MMAS02 자산관리-->
+
+           <!--MMAS05 Tracker 변경팝업-->
+            <!--popup-->
+            <div class="dimmed"></div>
+            <div class="popup" style="width:1100px"><!--팝업사이즈 조절-->
+                <div class="popTitle">
+                    <h2>Tracker 추가</h2>
+                </div>
+                <div class="popCont">
+                    <div class="inner">
+
+                
+                        <!--자산정보-->
+                        <div class="top-search-area center">
+                        <div class="left">
+
+                            <dl>
+                                <dt>자산ID</dt>
+                                <dd>
+                                    <input type="text" placeholder="" value="" readonly>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>자산명</dt>
+                                <dd>
+                                    <input type="text" placeholder="" value="" readonly>
+                                </dd>
+                            </dl>
+                            <dl>
+                              <dt>X</dt>
+                              <dd>
+                                  <input type="text" placeholder="" value="" readonly>
+                              </dd>
+                            </dl>
+                            <dl>
+                              <dt>Y</dt>
+                              <dd>
+                                  <input type="text" placeholder="" value="" readonly>
+                              </dd>
+                            </dl>
+                            <dl>
+                                <dt>Super EQ Master CD</dt>
+                                <dd>
+                                    <input type="text" placeholder="" value="" readonly>
+                                </dd>
+                            </dl>
+                            <dl>
+                              <dt>EQ Master CD</dt>
+                              <dd>
+                                  <input type="text" placeholder="" value="" readonly>
+                              </dd>
+                            </dl>
+                            <dl>
+                              <dt>위치</dt>
+                              <dd>
+                                  <input type="text" placeholder="" value="이천 > 이천 캠퍼스 > M14 > 1F > 55 Bay" readonly>
+                              </dd>
+                            </dl>
+                        </div>
+                        </div>
+                        <!--//자산정보-->
+
+                        <!--tracker 조회-->
+                        <div class="top-search-area">
+                            <div class="left">
+                                <dl>
+                                    <dt><div>사업장</div></dt>
+                                    <dd>
+                                    
+                                    <div class="d-flex">
+                                        <select>
+                                            <option>전체</option>
+                                            <option>이천</option>
+                                            <option>청주</option>
+                                            <option>우시</option>
+                                        </select>
+                                    </div>
+
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>Campus</dt>
+                                    <dd>
+                                    <div class="d-flex">
+                                        <select>
+                                            <option>1캠퍼스</option>
+                                            <option>2캠퍼스</option>
+                                            <option>3캠퍼스</option>
+                                            <option>4캠퍼스</option>
+                                        </select>
+                                    </div>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>Building</dt>
+                                    <dd>
+                                    <div class="d-flex">
+                                        <select>
+                                            <option>건물명</option>
+                                            <option>건물명</option>
+                                            <option>건물명</option>
+                                            <option>건물명</option>
+                                        </select>
+                                    </div>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>Floor</dt>
+                                    <dd>
+                                    <div class="d-flex">
+                                        <select>
+                                            <option>1층</option>
+                                            <option>2층</option>
+                                            <option>3층</option>
+                                            <option>4층</option>
+                                        </select>
+                                    </div>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>Section</dt>
+                                    <dd>
+                                    <div class="d-flex">
+                                        <select>
+                                            <option>전체</option>
+                                            <option>사용</option>
+                                            <option>미사용</option>
+                                        </select>
+                                    </div>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>Sub Section</dt>
+                                    <dd>
+                                    <div class="d-flex">
+                                        <select>
+                                            <option>전체</option>
+                                            <option>선택</option>
+                                            <option>선택</option>
+                                        </select>
+                                    </div>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>Tracker ID</dt>
+                                    <dd>
+                                      <input type="text" placeholder="검색어">
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="right">
+                            <button type="button" class="btn btn-search"><span class="ti-search"></span><span class="icon-name">조회</span></button>
+                            </div>
+                        </div>
+                        <!--//tracker 조회-->
+        
+                        <!--tracker 리스트-->
+                        <div class="tb-list-area mt-3">
+                            <div class="tb_list01">
+            
+                                <div class="tb_thead" style="display: none;">
+                                    <table>
+                                        <colgroup>
+                                        <col width="80px"><!--선택-->
+                                        <col width="80px"><!--상태 -->
+                                        <col width="150px"><!--Tracker ID -->
+                                        <col width="100px"><!--Tracker 명 -->
+                                        <col width="80px"><!--배터리 -->
+                                        <col width="200px"><!--위치-->
+                                        <col width="150px"><!--날짜-->
+                                        </colgroup>
+                                        <thead>
+                                        <tr>
+                                            <th>체크</th>
+                                            <th>
+                                              <div class="th-wrap"><span class="s-tit">상태</span>
+                                              <span class="s-ico">
+                                                  <span sort="asc" class="ico-sort icon-asc disabled"></span>
+                                                  <span sort="desc" class="ico-sort icon-desc disabled"></span>
+                                              </span>
+                                              </div>
+                                            </th>
+                                            <th>
+                                              <div class="th-wrap"><span class="s-tit">Tracker ID</span>
+                                              <span class="s-ico">
+                                                  <span sort="asc" class="ico-sort icon-asc disabled"></span>
+                                                  <span sort="desc" class="ico-sort icon-desc disabled"></span>
+                                              </span>
+                                              </div>
+                                            </th>
+                                            <th>
+                                              <div class="th-wrap"><span class="s-tit">Tracker 명</span>
+                                              <span class="s-ico">
+                                                  <span sort="asc" class="ico-sort icon-asc disabled"></span>
+                                                  <span sort="desc" class="ico-sort icon-desc disabled"></span>
+                                              </span>
+                                              </div>
+                                            </th>
+                                            <th>
+                                              <div class="th-wrap"><span class="s-tit">배터리</span>
+                                              <span class="s-ico">
+                                                  <span sort="asc" class="ico-sort icon-asc disabled"></span>
+                                                  <span sort="desc" class="ico-sort icon-desc disabled"></span>
+                                              </span>
+                                              </div>
+                                            </th>
+                                            <th>
+                                              <div class="th-wrap"><span class="s-tit">위치</span>
+                                              <span class="s-ico">
+                                                  <span sort="asc" class="ico-sort icon-asc disabled"></span>
+                                                  <span sort="desc" class="ico-sort icon-desc disabled"></span>
+                                              </span>
+                                              </div>
+                                            </th>
+                                            <th>
+                                              <div class="th-wrap"><span class="s-tit">등록날짜</span>
+                                              <span class="s-ico">
+                                                  <span sort="asc" class="ico-sort icon-asc disabled"></span>
+                                                  <span sort="desc" class="ico-sort icon-desc disabled"></span>
+                                              </span>
+                                              </div>
+                                            </th>
+                                        </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                                <div class="tb_tbody" style="height: 350px;overflow-y: auto;display: none;"><!--높이조절-->
+                                <table>
+                                    <colgroup>
+                                        <col width="80px"><!--선택-->
+                                        <col width="80px"><!--상태 -->
+                                        <col width="150px"><!--Tracker ID -->
+                                        <col width="100px"><!--Tracker 명 -->
+                                        <col width="80px"><!--배터리 -->
+                                        <col width="200px"><!--위치-->
+                                        <col width="150px"><!--날짜-->
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="radio" class="inp_rdo" name="rdo01" id="rdo01"><label for="rdo01" class=""></label></span></td>
+                                            <td>대기</td>
+                                            <td>IFRC2425DWF</td>
+                                            <td>Tracker1</td>
+                                            <td>80%</td>
+                                            <td>이천 > 이천 캠퍼스 > M14 > 1F</td>
+                                            <td>2022-01-06 12:25:30</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" class="inp_rdo" name="rdo01" id="rdo02"><label for="rdo02" class=""></label></span></td>
+                                            <td>대기</td>
+                                            <td>WQAZ9947UE</td>
+                                            <td>Tracker2</td>
+                                            <td>80%</td>
+                                            <td>이천 > 이천 캠퍼스 > M14 > 2F</td>
+                                            <td>2022-01-06 12:25:30</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" class="inp_rdo" name="rdo01" id="rdo03"><label for="rdo03" class=""></label></span></td>
+                                            <td>대기</td>
+                                            <td>MZRJ27354RO</td>
+                                            <td>Tracker3</td>
+                                            <td>80%</td>
+                                            <td>이천 > 이천 캠퍼스 > M14 > 3F</td>
+                                            <td>2022-01-06 12:25:30</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" class="inp_rdo" name="rdo01" id="rdo04"><label for="rdo04" class=""></label></span></td>
+                                            <td>대기</td>
+                                            <td>RJFI485672FG</td>
+                                            <td>Tracker4</td>
+                                            <td>80%</td>
+                                            <td>이천 > 이천 캠퍼스 > M14 > B1F</td>
+                                            <td>2022-01-06 12:25:30</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" class="inp_rdo" name="rdo01" id="rdo01"><label for="rdo01" class=""></label></span></td>
+                                            <td>대기</td>
+                                            <td>IFRC2425DWF</td>
+                                            <td>Tracker1</td>
+                                            <td>80%</td>
+                                            <td>이천 > 이천 캠퍼스 > M14 > 1F</td>
+                                            <td>2022-01-06 12:25:30</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" class="inp_rdo" name="rdo01" id="rdo02"><label for="rdo02" class=""></label></span></td>
+                                            <td>대기</td>
+                                            <td>WQAZ9947UE</td>
+                                            <td>Tracker2</td>
+                                            <td>80%</td>
+                                            <td>이천 > 이천 캠퍼스 > M14 > 2F</td>
+                                            <td>2022-01-06 12:25:30</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" class="inp_rdo" name="rdo01" id="rdo03"><label for="rdo03" class=""></label></span></td>
+                                            <td>대기</td>
+                                            <td>MZRJ27354RO</td>
+                                            <td>Tracker3</td>
+                                            <td>80%</td>
+                                            <td>이천 > 이천 캠퍼스 > M14 > 3F</td>
+                                            <td>2022-01-06 12:25:30</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" class="inp_rdo" name="rdo01" id="rdo04"><label for="rdo04" class=""></label></span></td>
+                                            <td>대기</td>
+                                            <td>RJFI485672FG</td>
+                                            <td>Tracker4</td>
+                                            <td>80%</td>
+                                            <td>이천 > 이천 캠퍼스 > M14 > B1F</td>
+                                            <td>2022-01-06 12:25:30</td>
+                                        </tr>
+                                        <tr>
+                                          <td><input type="radio" class="inp_rdo" name="rdo01" id="rdo02"><label for="rdo02" class=""></label></span></td>
+                                          <td>대기</td>
+                                          <td>WQAZ9947UE</td>
+                                          <td>Tracker2</td>
+                                          <td>80%</td>
+                                          <td>이천 > 이천 캠퍼스 > M14 > 2F</td>
+                                          <td>2022-01-06 12:25:30</td>
+                                      </tr>
+                                      <tr>
+                                          <td><input type="radio" class="inp_rdo" name="rdo01" id="rdo03"><label for="rdo03" class=""></label></span></td>
+                                          <td>대기</td>
+                                          <td>MZRJ27354RO</td>
+                                          <td>Tracker3</td>
+                                          <td>80%</td>
+                                          <td>이천 > 이천 캠퍼스 > M14 > 3F</td>
+                                          <td>2022-01-06 12:25:30</td>
+                                      </tr>
+                                      <tr>
+                                          <td><input type="radio" class="inp_rdo" name="rdo01" id="rdo04"><label for="rdo04" class=""></label></span></td>
+                                          <td>대기</td>
+                                          <td>RJFI485672FG</td>
+                                          <td>Tracker4</td>
+                                          <td>80%</td>
+                                          <td>이천 > 이천 캠퍼스 > M14 > B1F</td>
+                                          <td>2022-01-06 12:25:30</td>
+                                      </tr>
+                                    </tbody>
+                                </table>
+                                </div>
+
+
+                                <!--데이터테이블-->
+                                <section class="dataTable-Group">
+                                  <!--tb_top-->
+                                  <!--//tb_top-->
+                                  <!--datatable-->
+                                    <div class="dataTable-wrap">
+                                      <table class="dataTable">
+                                          <thead>
+                                              <tr>
+                                                <th>
+                                                  
+                                                </th>
+                                                <th>
+                                                  상태
+                                                </th>
+                                                <th>
+                                                  Tracker ID
+                                                </th>
+                                                <th>
+                                                  Tracker 명
+                                                </th>
+                                                <th>
+                                                  배터리
+                                                </th>
+                                                <th>
+                                                  위치
+                                                </th>
+                                                <th>
+                                                  좌표
+                                                </th>
+                                                <th>
+                                                  도면
+                                                </th>
+                                                <th>
+                                                  모델
+                                                </th>
+                                                <th>
+                                                  최초등록
+                                                </th>
+                                                <th>
+                                                  등록날짜
+                                                </th>
+                                              </tr>
+                                          </thead>
+                                          <tbody>
+                                              <tr>
+                                                  <td><input type="checkbox" class="" name="chk01" id="chk01"><label for="chk01" class=""></label></span></td>
+                                                  <td>대기</td>
+                                                  <td>IFRC2425DWF</td>
+                                                  <td>Tracker1</td>
+                                                  <td>80%</td>
+                                                  <td>이천>M16>3 F>23bay</td>
+                                                  <td>5,4</td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td>2022-01-06 12:25:30</td>
+                                              </tr>
+                                              <tr>
+                                                  <td><input type="checkbox" class="" name="chk02" id="chk02"><label for="chk02" class=""></label></span></td>
+                                                  <td>대기</td>
+                                                  <td>WQAZ9947UE</td>
+                                                  <td>Tracker2</td>
+                                                  <td>80%</td>
+                                                  <td>이천>M16>3 F>23bay</td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td>2022-01-06 12:25:30</td>
+                                              </tr>
+                                              <tr>
+                                                  <td><input type="checkbox" class="" name="chk03" id="chk03"><label for="chk03" class=""></label></span></td>
+                                                  <td>대기</td>
+                                                  <td>MZRJ27354RO</td>
+                                                  <td>Tracker3</td>
+                                                  <td>80%</td>
+                                                  <td>이천>M16>3 F>23bay</td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td>2022-01-06 12:25:30</td>
+                                              </tr>
+                                              <tr>
+                                                  <td><input type="checkbox" class="" name="chk04" id="chk04"><label for="chk04" class=""></label></span></td>
+                                                  <td>대기</td>
+                                                  <td>RJFI485672FG</td>
+                                                  <td>Tracker4</td>
+                                                  <td>80%</td>
+                                                  <td>이천>M16>3 F>23bay</td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td>2022-01-06 12:25:30</td>
+                                              </tr>
+                                              <tr>
+                                                  <td><input type="checkbox" class="" name="chk05" id="chk05"><label for="chk05" class=""></label></span></td>
+                                                  <td>대기</td>
+                                                  <td>RJFI485672FG</td>
+                                                  <td>Tracker5</td>
+                                                  <td>80%</td>
+                                                  <td>이천>M16>3 F>23bay</td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td>2022-01-06 12:25:30</td>
+                                              </tr>
+                                              <tr>
+                                                <td><input type="checkbox" class="" name="chk03" id="chk03"><label for="chk03" class=""></label></span></td>
+                                                <td>대기</td>
+                                                <td>MZRJ27354RO</td>
+                                                <td>Tracker3</td>
+                                                <td>80%</td>
+                                                <td>이천>M16>3 F>23bay</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>2022-01-06 12:25:30</td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox" class="" name="chk04" id="chk04"><label for="chk04" class=""></label></span></td>
+                                                <td>대기</td>
+                                                <td>RJFI485672FG</td>
+                                                <td>Tracker4</td>
+                                                <td>80%</td>
+                                                <td>이천>M16>3 F>23bay</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>2022-01-06 12:25:30</td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox" class="" name="chk05" id="chk05"><label for="chk05" class=""></label></span></td>
+                                                <td>대기</td>
+                                                <td>RJFI485672FG</td>
+                                                <td>Tracker5</td>
+                                                <td>80%</td>
+                                                <td>이천>M16>3 F>23bay</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>2022-01-06 12:25:30</td>
+                                            </tr>
+                                            <tr>
+                                              <td><input type="checkbox" class="" name="chk03" id="chk03"><label for="chk03" class=""></label></span></td>
+                                              <td>대기</td>
+                                              <td>MZRJ27354RO</td>
+                                              <td>Tracker3</td>
+                                              <td>80%</td>
+                                              <td>이천>M16>3 F>23bay</td>
+                                              <td></td>
+                                              <td></td>
+                                              <td></td>
+                                              <td></td>
+                                              <td>2022-01-06 12:25:30</td>
+                                          </tr>
+                                          <tr>
+                                              <td><input type="checkbox" class="" name="chk04" id="chk04"><label for="chk04" class=""></label></span></td>
+                                              <td>대기</td>
+                                              <td>RJFI485672FG</td>
+                                              <td>Tracker4</td>
+                                              <td>80%</td>
+                                              <td>이천>M16>3 F>23bay</td>
+                                              <td></td>
+                                              <td></td>
+                                              <td></td>
+                                              <td></td>
+                                              <td>2022-01-06 12:25:30</td>
+                                          </tr>
+                                          <tr>
+                                              <td><input type="checkbox" class="" name="chk05" id="chk05"><label for="chk05" class=""></label></span></td>
+                                              <td>대기</td>
+                                              <td>RJFI485672FG</td>
+                                              <td>Tracker5</td>
+                                              <td>80%</td>
+                                              <td>이천>M16>3 F>23bay</td>
+                                              <td></td>
+                                              <td></td>
+                                              <td></td>
+                                              <td></td>
+                                              <td>2022-01-06 12:25:30</td>
+                                          </tr>
+                                          </tbody>
+                                      </table>
+
+                                    </div>
+                                  <!--//datatable-->
+                                </section>
+                                <!--데이터테이블-->
+
+
+
+                                <ul class="pagination">
+                                  <li class="page-item">
+                                      <a class="page-link" href="javascript: void(0);" aria-label="Previous">
+                                          <span aria-hidden="true">&laquo;</span>
+                                      </a>
+                                  </li>
+                                  <li class="page-item"><a class="page-link" href="javascript: void(0);">1</a></li>
+                                  <li class="page-item"><a class="page-link" href="javascript: void(0);">2</a></li>
+                                  <li class="page-item active"><a class="page-link" href="javascript: void(0);">3</a></li>
+                                  <li class="page-item"><a class="page-link" href="javascript: void(0);">4</a></li>
+                                  <li class="page-item"><a class="page-link" href="javascript: void(0);">5</a></li>
+                                  <li class="page-item">
+                                      <a class="page-link" href="javascript: void(0);" aria-label="Next">
+                                          <span aria-hidden="true">&raquo;</span>
+                                      </a>
+                                  </li>
+                                </ul>
+
+            
+                            </div>
+                        </div>
+                        <!--//tracker 리스트-->
+
+
+                    </div><!--//inner-->
+                </div><!--//popCont-->
+                <div class="tb_bottom">
+                  <button type="button" class="btn btn02"><span>취소</span></button>
+                  <button type="button" class="btn btn01"><span>저장</span></button>
+              </div>
+                <button type="button" class="popClose"><span>닫기</span></button>
+            </div>
+            <!--//popup-->
+           <!--//MMAS05 Tracker 변경팝업-->
+
+
+        </div>
+        <!--//content-wrapper-->
+
+        <footer class="footer">
+          <div>COPYRIGHT(C) 2025 SK TELECOM INC. ALL RIGHTS RESERVED.</div>
+        </footer> 
+        <!--//footer-->
+
+      </div>
+      <!--//main-panel-->
+
+
+    </div>   
+    <!--//page-body-wrapper-->
+
+  </div>
+  <!--//container-scroller -->
+</body>
+  <script src="../js/template.js"></script>
+ 
+  <script>
+	//등록 Tracker 변경 클릭시 레이어팝업-열기
+    $(".btn01").click(function(){
+      $(".popup").show();
+      $('.dimmed').show();
+    });
+  </script>
+
+<!--데이터테이블-->
+<link rel="stylesheet" href="../css/datatables.css">
+<script src="../js/datatables.min.js"></script>
+<script>
+  $(document).ready( function () {
+      $('table.dataTable ').DataTable({
+
+        //가로 스크롤바
+        scrollX: true,
+
+        //세로 스크롤바
+        scrollY: 400,
+
+        //일정높이 이상 시 Y스크롤 추가
+        //"scrollCollapse" : true,
+
+        // 표시 건수기능 
+        lengthChange: false,
+
+        // 검색 기능 
+        searching: false,
+
+        // 정렬 기능 
+        ordering: true,
+
+        // 정보 표시 
+        info: false,
+
+        "pageLength": 10,
+
+        // 페이징 기능 
+        paging: false, 
+
+        pagingType : "full_numbers",
+
+        columnDefs: [
+            { width: "50px", targets: 0 },
+            { width: "50px", targets: 1 },
+            { width: "100px", targets: 3 },
+        ],
+
+        });
+  } );
+</script>
+<!--//데이터테이블-->
+</html>

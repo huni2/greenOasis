@@ -1,0 +1,325 @@
+@charset "utf-8";
+
+/*@import url("react_index_signlw.css");*/
+@import url("react_button.css");
+
+:root {
+    --input-color : #B0B1B5;
+    --input-hover-color: #5c51d6;
+    --primary-color: #4747B3;
+    --swiper-theme-color: #4747B3 !important;
+    --signlw-btn-default-border-color : #8f9094;
+    --signlw-btn-default-color : rgba(0,0,0,.87);
+}
+
+.hideNavUl {
+  display: none;
+}
+
+body {overflow: hidden;}
+.sub-cont{ height: calc(100vh - 90px) ; margin-top:50px; overflow: auto;}
+
+.ant-menu-submenu-title {color: var(--primary-color) }
+.ant-menu-item-selected a {color: var(--primary-color)}
+
+/*층별 자산 상태 현황*/
+.layer-condition-wrap {display: flex;justify-content:space-around;background-color: #FFFFFF;margin:10px 0 60px 0}
+.layer-condition-wrap>div{padding: 20px 0;margin:0;min-width: 280px;width: 100%;}
+.layer-condition-wrap>div:not(:first-child){position: relative;}
+.layer-condition-wrap>div:not(:first-child)::before{content:"";display:block;position:absolute;left:0px;top:50%;width:1px;height:100px;transform: translate(0, -50%);color:#ddd;background:#e4e4e4;}
+
+.mapList p.title {
+    margin-left: 10px !important;
+}
+.mapList p.title::before {
+    display: none;
+}
+
+.floorBackColor {
+    background-color: #edf2f9;
+}
+
+.asset-campus{margin-top: 10px;}
+
+
+
+.popup_modal {box-shadow:0px 1px 10px rgba(0,0,0,0.4);}
+.popup_modal .popTitle{}
+.popup_modal .popTitle h2{margin:0; font-size:16px; font-weight:700; line-height:24px; overflow:hidden; text-overflow:ellipsis; white-space: nowrap;}
+.popup_modal  p.title {margin-bottom:5px;}
+.popup_modal .popCont{width:100%;max-height: calc(100vh - 250px);padding:15px 0 10px;background:#fff;overflow:auto;;}
+.popup_modal .tb_bottom{display: flex;justify-content:end;margin:0 auto;margin-top:10px;padding:10px 0px 0 0;}
+/*
+.popup_modal .lineB{border-bottom:1px solid #D0D1D6;}
+.popup_modal .lineT{border-top:1px solid #D0D1D6;}*/
+
+.tb_bottom {justify-content: flex-end;}
+
+textarea.ant-input {padding: 3px 12px !important}
+.ant-form-item {margin-bottom: 0 !important}
+
+.th-center th{text-align: center !important;}
+.th-center td{text-align: center !important;}
+
+.conn_btn {display: flex; justify-content: right; align-items: center;margin-top:10px;}
+
+.loading .dim {z-index: 3 !important;}
+.loading .circle {z-index: 3 !important;}
+.loading p {z-index: 3 !important;}
+.loading .fullSizeLoading {z-index: 1001 !important;}
+
+.item-group {
+    display: flex;
+    gap: 8px;
+}
+.item-group > div {
+    flex: 1;
+}
+.item-center {align-items: center;}
+
+.mt-10 {
+    margin-top: 10px;
+}
+.ml10 {
+    margin-left: 10px;
+}
+
+.floorPlan-box {
+
+}
+
+.floorPlan-box {
+    height: calc(100vh - 250px); border: 1px solid #ddd; margin-top: 10px;
+}
+.floorPlan-box .msgNodata{ height: 100%;}
+.floorPlan-box img {max-height: 100%;max-width: 100%;}
+
+.mw100{min-width: 100px;}
+.mw120{min-width: 120px;}
+.mw150{min-width: 150px;}
+.mw200{min-width: 200px;}
+
+.conn_group .col2_group section{height:initial}
+.ant-input-group-addon {  padding: 0 !important; border: 0px !important; }
+.ant-input-group-wrapper:hover,
+.ant-input-wrapper:hover {
+  box-shadow: none !important;
+  border-color: #d9d9d9 !important;
+}
+
+.top-search-area dl:first-child>dt,
+.top-search-area .left dt,
+.top-search-area .left dd {min-width: 60px !important;;}
+
+.top-search-area>div dl dd {display: flex;gap: 8px}
+.top-search-area>div dl dd  div + button {margin-left: -1px !important}
+
+[class*="modal-body"] .top-search-area,
+.popCont .top-search-area {margin: 0;margin-bottom: 10px}
+[class*="modal-body"] .btns-wrap div,
+.top-search-area .btns-wrap div { margin-inline-end: 0px !important;}
+
+[class*="-selected"],
+[class*="-selected"] a:hover {color: var(--primary-color) !important; text-decoration: none !important; }
+/*
+:where(.css-dev-only-do-not-override-1d4w9r2).ant-menu-light .ant-menu-submenu-selected>.ant-menu-submenu-title,
+ :where(.css-dev-only-do-not-override-1d4w9r2).ant-menu-light>.ant-menu .ant-menu-submenu-selected>.ant-menu-submenu-title,
+.ant-menu-item-selected a:hover,
+.ant-menu-submenu-active,
+.ant-menu-submenu-selected {
+    color: var(--primary-color) !important;
+}*/
+.btn-input-wrapper {display: flex !important; gap: 8 !important; align-items: center !important;}
+.btn-form-item {margin: 0 !important;}
+.custom-trackerDetail .ant-select-selector{color: black !important; border-color: #B0B1B5 !important; background-color: #eaeaed !important;  }
+.custom-trackerDetail {color: black !important; background-color: #eaeaed !important; border-color: #B0B1B5 !important; }
+
+.tb_Installlist table th{border:1px solid #ddd;position:relative; padding:9px 4px 9px 15px; color:rgba(0,0,0,.87);font-weight: 400;text-align:center; line-height:20px; letter-spacing:-0.5px; border-bottom:1px solid #d0d1d6; background:#eaeaed;}
+.tb_Installlist table td{padding:8px 4px 7px 15px; color:rgba(0,0,0,.87); text-align:center; border: 1px solid #ddd; line-height:24px; border-bottom:1px solid #e1e1e6; font-size: 13px;background-color: #fff;}
+
+/*사용자등록*/
+.ant-dropdown .preview-item {
+  display: flex;
+  align-items: center;
+}
+.ant-dropdown .preview-thumbnail .preview-icon {
+   border-radius: 50%;
+   padding: 6px;
+   text-align: center;
+   display: flex;
+   justify-content: center;
+   color: #fff;
+   margin-right: 15px;
+}
+
+.ant-dropdown .preview-item-content h6 {
+ font-size: 13px; font-weight: normal;
+}
+.ant-dropdown .preview-item-content h6 + p {
+  font-size: 12px; color: rgba(0, 0, 0, 0.57);margin-top: 2px;
+}
+
+.ant-dropdown ul li div {font-size: 13px;}
+.ti-settings,
+.ti-power-off {
+  margin-right: 5px;
+  font-size: 12px; 
+}
+
+
+
+
+/*사이드바 화살표  */
+.ant-menu-submenu-arrow,
+.menu-submenu-arrow {transform: translateY(-2px); flex:none; position: absolute; top: 50%;; right: 18px; width: 16px; line-height: 16px; color: #000000e0; /*transform: translateY(-50%)*/}
+
+/*사이드바 화살표 */
+.ant-menu-submenu-arrow::before,
+.signlw-menu-submenu-arrow::before {
+ transform: rotate(-45deg) translateX(4px)
+}
+.ant-menu-submenu-arrow::after,
+.signlw-menu-submenu-arrow::after {
+ transform: rotate(45deg) translateX(-4px)
+}
+/*사이드바 화살표 open*/
+.signlw-menu .signlw-menu-submenu-open > .signlw-menu-submenu-title > .signlw-menu-submenu-arrow::before,
+.signlw-menu .signlw-menu-submenu-open .signlw-menu-submenu-arrow::before,
+[class*="menu-submenu-open"] [class*="-menu-submenu-arrow"]::before  {
+ transform: rotate(45deg) translateX(4px)
+}
+.signlw-menu .signlw-menu-submenu-open .signlw-menu-submenu-arrow::after,
+[class*="menu-submenu-open"] [class*="-menu-submenu-arrow"]::after  {
+ transform: rotate(-45deg) translateX(-4px)
+}
+/*사이드바 아이콘 있는경우*/
+.signlw-menu-item-icon,
+.signlw-menu-submenu-title .anticon {
+ width: 20px;
+ height: 20px;
+ margin-right: 16px;
+ font-size: 20px;
+ min-width:14px;
+}
+
+
+
+/*사이드바 우측보드 회색선색
+border-inline-end: 1px solid rgba( 5, 5, 5, 0.06)*/
+
+.signlw-menu-submenu-arrow::after,
+[class*="-menu-submenu-arrow"]::after {
+ position: absolute;
+ width: 8px; height: 1px; background-color: rgba(0,0,0,0.88); border-radius: 6px; content: "";
+}
+
+/*접고펴는 버튼*/
+.collapse-icon {
+ width: 18px;
+ height: 54px;
+ background-color: rgb(176, 177, 181)
+}
+.collapse-icon button {min-width: 18px;}
+.collapse-icon button:hover {
+ width: 30px;
+ height: 54px;
+ background-color: #5c51d6;
+ border-radius: 0;
+}
+
+.signlw-menu .signlw-menu-item {
+   transition: border-color 0.3s, background 0.3s, padding 0.2s, cubic-bezier(0.215, 0.61, 0.355, 1); padding: 0 10px; padding-inline:-28px 16px; color: rgba( 0, 0, 0, 0.88);
+   padding-left: 48px; height: 40px;line-height: 40px;list-style-position: inside; list-style-type: disc;}
+.signlw-menu .signlw-menu-item:hover {background-color: #fff3e8}
+
+
+.mapCont .mapLeft svg.svgForIC {
+/* height: calc(100vh - 285px);
+margin: 10px auto */
+}
+.mapCont .mapLeft svg.svgForCJ {
+height: calc(100vh - 265px);
+}/*
+.mapCont .mapLeft .svgForM10A {
+height: calc(100vh - 350px);
+margin-left: 80px
+}
+
+.mapCont .mapLeft .svgForM16 {
+height: calc(100vh - 350px);
+margin-left: 100px
+}
+.mapCont .mapLeft .svgForM10C {
+height: calc(100vh - 350px);
+margin-left: 100px
+}
+.mapCont .mapLeft .svgForM14 {
+height: calc(100vh - 350px);
+margin-left: 50px
+}
+.mapCont .mapLeft .svgForM11 {
+height: calc(100vh - 350px);
+margin-left: 50px
+}
+.mapCont .mapLeft .svgForM15 {
+height: calc(100vh - 350px);
+margin-left: 50px
+}*/
+
+
+
+.campus-current-state2 + div .react-transform-wrapper,
+.campus-current-state2 + div .react-transform-component {
+    width: 100%;
+    height: calc(100vh - 265px) !important;
+    position: relative !important;
+    overflow: hidden !important;
+    width: 80vw !important;
+}
+.campus-current-state2 + div .react-transform-component svg {margin: auto !important; width: 80vw !important; height: 60vh !important;}
+
+
+
+/*BuildingFloorSwipeClient.tsx*/
+.asset-campus-data  + .mapCont .react-transform-component svg {margin: auto !important; width: 80vw !important; height: 60vh !important;}
+.asset-campus-data.fold + .mapCont .react-transform-wrapper,
+.asset-campus-data.fold + .mapCont .react-transform-component  {height: calc(100vh - 260px) !important;}
+.asset-campus-data.open + .mapCont .react-transform-wrapper,
+.asset-campus-data.open + .mapCont .react-transform-component  {height: calc(100vh - 355px) !important;}
+.asset-campus-data.open + .mapCont .react-transform-component svg {height: calc(100vh - 380px) !important;}
+.asset-campus-data.fold  + .mapCont .react-transform-component svg.svgForM10A {  height: calc(100vh - 390px) !important;}
+.asset-campus-data.open  + .mapCont .react-transform-component svg.svgForM10A {  height: calc(100vh - 420px) !important;}
+
+/*FloorNavigationPageClient.tsx*/
+.asset-campus-data  + .mapCont .react-transform-component svg {margin: auto !important; width: 80vw !important; height: 60vh !important;}
+
+
+.floor-map-client .react-transform-component svg {margin: auto !important; }
+
+.floor-map-container .asset-campus-data.fold + form + .floor-map-client .react-transform-wrapper,
+.floor-map-container .asset-campus-data.fold + form + .floor-map-client .react-transform-component {height: calc(100vh - 265px) !important;}
+.floor-map-container .asset-campus-data.open + form + .floor-map-client .react-transform-wrapper,
+.floor-map-container .asset-campus-data.open + form + .floor-map-client .react-transform-component {height: calc(100vh - 365px) !important;}
+
+
+.editor_area.h-700 {
+  height: unset;
+}
+
+/*평면도  -진행중*/
+#editor_area .react-transform-wrapper.mapCont ,
+#editor_area .react-transform-component.mapCont {width: 90vw !important;}
+
+.model_map_floorPlan .react-transform-wrapper,
+.model_map_floorPlan .transform-content {
+    width: 100%;
+    height: calc(100vh - 530px) !important; 
+    margin: auto !important;
+}
+
+.bay_map_floorPlan .react-transform-wrapper,
+.bay_map_floorPlan .transform-content {
+    width: 100%;
+    height: calc(100vh - 380px) !important; 
+    margin: auto !important;
+}

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>SK hynix 자산관리시스템</title>
+  <link rel="shortcut icon" href="../images/favicon.ico">
+  <link rel="stylesheet" href="../css/common.css">
+
+  <script type="text/javascript" src="../js/jquery.js"></script>
+  <script type="text/javascript" src="../js/jquery-ui.js"></script>
+</head>
+
+<body class="bg-gray">
+
+  <div class="container-scroller">
+
+    <nav class="navbar fixed-top">
+      <div class="navbar-logo-wrapper">
+        <button class="navbar-toggler" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+      <div class="navbar-menu-wrapper">
+
+        <a class="navbar-logo" href="../index.html"><img src="../images/logo.png" alt="SK hynix 로고" /></a>
+        <span class="navbar-title">자산관리MAPS</span>
+        <ul class="location-link">
+          <li><a href="">이천</a></li>
+          <li><a href="">청주</a></li>
+          <li><a href="">우시</a></li>
+          <li><a href="">충징</a></li>
+        </ul>
+        <ul class="navbar-nav">
+
+          <li class="nav-item nav-language dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="languageDropdown"><i
+                class="flag-korea"></i><span>한국어</span></a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="languageDropdown">
+              <a class="dropdown-item"><i class="flag-us"></i>English</a>
+              <a class="dropdown-item"><i class="flag-china"></i>中文</a>
+            </div>
+          </li>
+          <li class="nav-item nav-error">
+            <a class="nav-link" href="#" title="에러"><i class="icon-error"></i></a>
+          </li>
+          <li class="nav-item nav-mail" title="메일">
+            <a class="nav-link" href="#"><i class="icon-mail"></i></a>
+          </li>
+          <li class="nav-item nav-noti dropdown" title="공지">
+            <a class="nav-link count-indicator dropdown-toggle" id="notiDropdown" href="#" data-toggle="dropdown"><i
+                class="icon-bell mx-0"></i><span class="count"></span></a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notiDropdown">
+              <p class="dropdown-header">공지</p>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-success"><i class="ti-info-alt mx-0"></i></div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject fw-normal">에러</h6>
+                  <p class="fw-light small-text mb-0 text-muted">1분전</p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-warning"><i class="ti-settings mx-0"></i></div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject fw-normal">설정</h6>
+                  <p class="fw-light small-text mb-0 text-muted">메세지</p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-info"><i class="ti-user mx-0"></i></div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject fw-normal">사용자등록</h6>
+                  <p class="fw-light small-text mb-0 text-muted">2일전</p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item nav-profile dropdown ">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown"><img
+                src="../images/top_face.png" alt="profile" /><span>X20220610</span></a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item"><i class="ti-settings text-primary"></i>나의정보</a>
+              <a class="dropdown-item"><i class="ti-power-off text-primary"></i>로그아웃</a>
+            </div>
+          </li>
+          <li class="nav-item nav-name">
+            <div><span>hwchoi</span><span>슈퍼관리자</span></div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--//navbar-->
+
+    <div class="page-body-wrapper">
+
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <script src="../js/nav.js"></script>
+      </nav>
+      <!--//sidebar-->
+
+      <div class="main-panel">
+
+        <div class="content-wrapper">
+
+          <!--Tracker 추가 팝업-->
+          <div class="dimmed"></div>
+          <div class="popup" style="width:700px">
+            <div class="popTitle">
+              <h2>시방서 복사</h2>
+            </div>
+            <div class="popCont">
+              <div class="inner">
+
+
+                 <!--copy-area-->
+                <div class="copy-area"> 
+
+                    <!--tb-detail-area-->
+                    <div class="tb-detail-area">
+                      <div class="tb_body">
+                        <div class="w-100">
+                          <dl>
+                            <dt><div>시방서 ID</div></dt>
+                            <dd>
+                              <input type="text" placeholder="" value="" readonly>
+                            </dd>
+                          </dl>
+                          <dl>
+                            <dt><div>시방서 명</div></dt>
+                            <dd>
+                              <input type="text" placeholder="" value="" readonly>
+                            </dd>
+                          </dl>
+                          <dl>
+                            <dt><div>시방서 위치</div></dt>
+                            <dd>
+                              <input type="text" placeholder="" value="" readonly>
+                            </dd>
+                          </dl>
+                          <dl>
+                            <dt><div>시방서 버전</div></dt>
+                            <dd>
+                              <input type="text" placeholder="" value="" readonly>
+                            </dd>
+                          </dl>
+                        </div>
+                      </div>
+                    </div>
+                    <!--//tb-detail-area-->
+
+                    <button type="button" class="btn-copy"><span>복사</span></button>
+
+
+                 </div>
+                 <!--//copy-area-->
+                
+                
+                <!--tb-detail-area-->
+                <div class="tb-detail-area">
+                  <div class="tb_body">
+                    <div class="w-100">
+                      <dl>
+                        <dt><div>시방서 ID</div></dt>
+                        <dd>
+                          <input type="text" placeholder="" value="">
+                        </dd>
+                      </dl>
+                      <dl>
+                        <dt><div>시방서 명</div></dt>
+                        <dd>
+                          <input type="text" placeholder="" value="">
+                        </dd>
+                      </dl>
+                      <dl>
+                        <dt><div>시방서 위치</div></dt>
+                        <dd>
+                          <input type="text" placeholder="" value="">
+                        </dd>
+                      </dl>
+                      <dl>
+                        <dt><div>시방서 도면</div></dt>
+                        <dd>
+                          <div class="filebox"> 
+                            <input type="file" id="file"> 
+                            <input class="uploadName" value="">
+                            <label for="file">도면선택</label> 
+                            <button type="button" class="btnX">삭제</button>
+                          </div>
+                        </dd>
+                      </dl>
+                      <dl>
+                        <dt><div>시방서 버전</div></dt>
+                        <dd>
+                          <input type="text" placeholder="" value="">
+                        </dd>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
+                <!--//tb-detail-area-->
+
+              </div><!--//inner-->
+            </div><!--//popCont-->
+            <div class="tb_bottom">
+              <button type="button" class="btn btn02"><span>취소</span></button>
+              <button type="button" class="btn btn01"><span>저장</span></button>
+            </div>
+            <button type="button" class="popClose"><span>닫기</span></button>
+          </div>
+          <!--//Tracker 추가 팝업-->
+
+        </div>
+        <!--//content-wrapper-->
+
+        <footer class="footer">
+          <div>COPYRIGHT(C) 2025 SK TELECOM INC. ALL RIGHTS RESERVED.</div>
+        </footer>
+        <!--//footer-->
+
+      </div>
+      <!--//main-panel-->
+
+
+    </div>
+    <!--//page-body-wrapper-->
+
+  </div>
+  <!--//container-scroller -->
+</body>
+<script src="../js/template.js"></script>
+
+</html>

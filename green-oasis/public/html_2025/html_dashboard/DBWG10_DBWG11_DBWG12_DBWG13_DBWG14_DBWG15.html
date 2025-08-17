@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>SK hynix 자산관리시스템</title>
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/common.css">
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
+</head>
+
+<body>
+
+    <div class="container-scroller">
+
+        <nav class="navbar fixed-top">
+            <div class="navbar-logo-wrapper">
+              <button class="navbar-toggler" type="button" data-toggle="minimize">
+                <span class="icon-menu"></span>
+              </button>
+            </div>
+            <div class="navbar-menu-wrapper">
+      
+              <a class="navbar-logo" href="../index.html"><img src="../images/logo.png" alt="SK hynix 로고"/></a>
+              <span class="navbar-title">자산관리MAPS</span>
+              <ul class="location-link">
+                <li><a href="">이천</a></li>
+                <li><a href="">청주</a></li>
+                <li><a href="">우시</a></li>
+                <li><a href="">충징</a></li>
+              </ul>
+              <ul class="navbar-nav">
+                
+                <li class="nav-item nav-language dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="languageDropdown"><i class="flag-korea"></i><span>한국어</span></a>
+                  <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="languageDropdown">
+                    <a class="dropdown-item"><i class="flag-us"></i>English</a>
+                    <a class="dropdown-item"><i class="flag-china"></i>中文</a>              
+                  </div>
+                </li>
+                <li class="nav-item nav-error">
+                  <a class="nav-link" href="#" title="에러"><i class="icon-error"></i></a>
+                </li>
+                <li class="nav-item nav-mail" title="메일">
+                  <a class="nav-link" href="#"><i class="icon-mail"></i></a>
+                </li>
+                <li class="nav-item nav-noti dropdown" title="공지">
+                  <a class="nav-link count-indicator dropdown-toggle" id="notiDropdown" href="#" data-toggle="dropdown"><i class="icon-bell mx-0"></i><span class="count"></span></a>
+                  <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notiDropdown">
+                    <p class="dropdown-header">공지</p>
+                    <a class="dropdown-item preview-item">
+                      <div class="preview-thumbnail">
+                        <div class="preview-icon bg-success"><i class="ti-info-alt mx-0"></i></div>
+                      </div>
+                      <div class="preview-item-content">
+                        <h6 class="preview-subject fw-normal">에러</h6>
+                        <p class="fw-light small-text mb-0 text-muted">1분전</p>
+                      </div>
+                    </a>
+                    <a class="dropdown-item preview-item">
+                      <div class="preview-thumbnail">
+                        <div class="preview-icon bg-warning"><i class="ti-settings mx-0"></i></div>
+                      </div>
+                      <div class="preview-item-content">
+                        <h6 class="preview-subject fw-normal">설정</h6>
+                        <p class="fw-light small-text mb-0 text-muted">메세지</p>
+                      </div>
+                    </a>
+                    <a class="dropdown-item preview-item">
+                      <div class="preview-thumbnail">
+                        <div class="preview-icon bg-info"><i class="ti-user mx-0"></i></div>
+                      </div>
+                      <div class="preview-item-content">
+                        <h6 class="preview-subject fw-normal">사용자등록</h6>
+                        <p class="fw-light small-text mb-0 text-muted">2일전</p>
+                      </div>
+                    </a>
+                  </div>
+                </li>
+                <li class="nav-item nav-profile dropdown ">
+                  <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown"><img src="../images/top_face.png" alt="profile"/><span>X20220610</span></a>
+                  <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+                    <a class="dropdown-item"><i class="ti-settings text-primary"></i>나의정보</a>
+                    <a class="dropdown-item"><i class="ti-power-off text-primary"></i>로그아웃</a>
+                  </div>
+                </li>
+                <li class="nav-item nav-time">
+                  <div><span>2022.06.10 14:24</span><button type="button"><i class="icon-reset"></i></button></div>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <!--//navbar-->
+
+        <div class="page-body-wrapper">
+            <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <script src="../js/nav.js"></script>
+            </nav>
+            <!--//sidebar-->
+            <div class="main-panel">
+                <div class="content-wrapper">
+                    <div class="sub-cont">
+                        <div class="dashboard-widget-section">
+                            <div class="dashboard-widget-header">
+                                <div class="widget-button-area">
+                                    <div class="widget-button widget-button-style current" data-tab="dashboard-01">
+                                        <input type="text" value="Dashboard" class="tabEdit" disabled>
+                                        <div class="widget-functional-area">
+                                            <button type="button" class="widget-edit">
+                                                <span class="screen-out">수정하기</span>
+                                                <span class="edit-icon"></span></button>
+                                            <button type="button">
+                                                <span class="screen-out">닫기</span>
+                                                <span class="widget-close-icon"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="widget-button widget-button-style" data-tab="dashboard-02">
+                                        <input type="text" value="Dashboard" class="tabEdit" disabled>
+                                        <div class="widget-functional-area">
+                                            <button type="button" class="widget-edit">
+                                                <span class="screen-out">수정하기</span>
+                                                <span class="edit-icon"></span></button>
+                                            <button type="button">
+                                                <span class="screen-out">닫기</span>
+                                                <span class="widget-close-icon"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="widget-button widget-button-style" data-tab="dashboard-03">
+                                        <p>Dashboard 03</p>
+                                        <div class="widget-functional-area">
+                                            <button type="button">
+                                                <span class="screen-out">수정하기</span>
+                                                <span class="edit-icon"></span></button>
+                                            <button type="button">
+                                                <span class="screen-out">닫기</span>
+                                                <span class="widget-close-icon"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="widget-button widget-button-style" data-tab="dashboard-03">
+                                        <p>Dashboard 04</p>
+                                        <div class="widget-functional-area">
+                                            <button type="button">
+                                                <span class="screen-out">수정하기</span>
+                                                <span class="edit-icon"></span></button>
+                                            <button type="button">
+                                                <span class="screen-out">닫기</span>
+                                                <span class="widget-close-icon"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="widget-plus-button widget-button-style">
+                                        <span class="screen-out">추가하기</span>
+                                        <span class="add-icon"></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="widget-additional-area">
+                                <button type="button" class="btn btn02">새로고침</button>
+                                <button type="button" class="btn btn01">위젯추가</button>
+                            </div>
+                        </div>
+                        <div class="dashboard-contents-section">
+                            <div id="dashboard-01" class="dashboard-contents-area current">
+                                <div class="grid-stack">
+                                    <!-- 종합자산현황 -->
+                                    <div class="grid-stack-item" gs-x="9" gs-y="0" gs-w="3" gs-h="0" gs-min-w="3">
+                                        <div class="dashboard-card grid-stack-item-content">
+                                            <div class="title-area">
+                                                <h5>종합 자산 현황</h5>
+                                                <div class="dashboard-functional-area">
+                                                    <a class="dropdown-toggle arrow-none" href="#"
+                                                        data-toggle="dropdown" id="FunctionalDot">
+                                                        <span class="screen-out">더보기</span>
+                                                        <span class="functional-icon"></span>
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="FunctionalDot">
+                                                        <a class="dropdown-item">바로가기<span
+                                                                class="go-page-icon"></span></a>
+                                                        <a class="dropdown-item">삭제하기<span
+                                                                class="delete-icon"></span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dashboard-card-content padding-zero">
+                                                <div class="statistics-current-style-01">
+                                                    <div class="master-current-contents">
+                                                        <div class="dot-shape-1">
+                                                            <p>Super EQ Master</p>
+                                                            <span>5,950,000</span>
+                                                        </div>
+                                                        <div class="dot-shape-2">
+                                                            <p>EQ Master</p>
+                                                            <span>14,9500,000</span>
+                                                        </div>
+                                                        <div class="dot-shape-3">
+                                                            <p>Tracker</p>
+                                                            <div>
+                                                                <span>14,950,000(100%)</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grid-stack-item" gs-x="0" gs-y="0" gs-w="9" gs-h="2" gs-min-w="6">
+                                        <div class="dashboard-card grid-stack-item-content">
+                                            <div class="title-area">
+                                                <h5>자산 Count 추이</h5>
+                                                <div class="dashboard-functional-area">
+                                                    <a class="dropdown-toggle arrow-none" href="#"
+                                                        data-toggle="dropdown" id="FunctionalDot">
+                                                        <span class="screen-out">더보기</span>
+                                                        <span class="functional-icon"></span>
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="FunctionalDot">
+                                                        <a class="dropdown-item">바로가기<span
+                                                                class="go-page-icon"></span></a>
+                                                        <a class="dropdown-item">삭제하기<span
+                                                                class="delete-icon"></span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--자산 Count 추이 그래프-->
+                                            <div class="dashboard-card-content">
+                                                <div id="chart1" class="chart-resize"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Tracker 현황 -->
+                                    <div class="grid-stack-item" gs-x="9" gs-y="0" gs-w="3" gs-h="0" gs-min-w="3">
+                                        <div class="dashboard-card grid-stack-item-content">
+                                            <div class="title-area">
+                                                <h5>Tracker 현황</h5>
+                                                <div class="dashboard-functional-area">
+                                                    <a class="dropdown-toggle arrow-none" href="#"
+                                                        data-toggle="dropdown" id="FunctionalDot">
+                                                        <span class="screen-out">더보기</span>
+                                                        <span class="functional-icon"></span>
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="FunctionalDot">
+                                                        <a class="dropdown-item">바로가기<span
+                                                                class="go-page-icon"></span></a>
+                                                        <a class="dropdown-item">삭제하기<span
+                                                                class="delete-icon"></span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dashboard-card-content padding-zero">
+                                                <div class="statistics-current-style-01">
+                                                    <div class="master-current-contents">
+                                                        <div class="important-spot">
+                                                            <p>Total</p>
+                                                            <span>2,450,000,850</span>
+                                                        </div>
+                                                        <div class="normal-state">
+                                                            <p>정상</p>
+                                                            <span>14,950,000</span>
+                                                        </div>
+                                                        <div class="error-state">
+                                                            <p>장애</p>
+                                                            <div>
+                                                                <span>149,500</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="dead-state">
+                                                            <p>대기</p>
+                                                            <span>14,950,000</span>
+                                                        </div>
+                                                        <div class="disuse-state">
+                                                            <p>폐기</p>
+                                                            <span>14,950,000</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 철거자산현황 -->
+                                    <div class="grid-stack-item" gs-x="0" gs-y="3" gs-w="3" gs-h="0" gs-min-w="3">
+                                        <div class="dashboard-card grid-stack-item-content">
+                                            <div class="title-area">
+                                                <h5>철거 자산 현황</h5>
+                                                <div class="dashboard-functional-area">
+                                                    <a class="dropdown-toggle arrow-none" href="#"
+                                                        data-toggle="dropdown" id="FunctionalDot">
+                                                        <span class="screen-out">더보기</span>
+                                                        <span class="functional-icon"></span>
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="FunctionalDot">
+                                                        <a class="dropdown-item">바로가기<span
+                                                                class="go-page-icon"></span></a>
+                                                        <a class="dropdown-item">삭제하기<span
+                                                                class="delete-icon"></span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dashboard-card-content">
+                                                <div class="flex-spot">
+                                                    <canvas id="data03-chart"></canvas>
+                                                    <div id="data03-legend"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--유휴 자산 현황-->
+                                    <div class="grid-stack-item" gs-x="3" gs-y="3" gs-w="3" gs-h="0" gs-min-w="3">
+                                        <div class="dashboard-card grid-stack-item-content">
+                                            <div class="title-area">
+                                                <h5>유휴 자산 현황</h5>
+                                                <div class="dashboard-functional-area">
+                                                    <a class="dropdown-toggle arrow-none" href="#"
+                                                        data-toggle="dropdown" id="FunctionalDot">
+                                                        <span class="screen-out">더보기</span>
+                                                        <span class="functional-icon"></span>
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="FunctionalDot">
+                                                        <a class="dropdown-item">바로가기<span
+                                                                class="go-page-icon"></span></a>
+                                                        <a class="dropdown-item">삭제하기<span
+                                                                class="delete-icon"></span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--유휴 자산 현황 그래프-->
+                                            <div class="dashboard-card-content">
+                                                <div class="flex-spot">
+                                                    <canvas id="data04-chart" class="chart-position-resize"></canvas>
+                                                    <div id="data04-legend"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--이설 자산 현황-->
+                                    <div class="grid-stack-item" gs-x="6" gs-y="3" gs-w="3" gs-h="0" gs-min-w="3">
+                                        <div class="dashboard-card grid-stack-item-content">
+                                            <div class="title-area">
+                                                <h5>이설 자산 현황</h5>
+                                                <div class="dashboard-functional-area">
+                                                    <a class="dropdown-toggle arrow-none" href="#"
+                                                        data-toggle="dropdown" id="FunctionalDot">
+                                                        <span class="screen-out">더보기</span>
+                                                        <span class="functional-icon"></span>
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="FunctionalDot">
+                                                        <a class="dropdown-item">바로가기<span
+                                                                class="go-page-icon"></span></a>
+                                                        <a class="dropdown-item">삭제하기<span
+                                                                class="delete-icon"></span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--이설 자산 현황 그래프-->
+                                            <div class="dashboard-card-content">
+                                                <div class="flex-spot">
+                                                    <canvas id="data01-chart"></canvas>
+                                                    <div id="data01-legend"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div id="dashboard-02" class="dashboard-contents-area">
+                                <div class="dashboard-empty-section">
+                                    <div class="dashboard-empty-area">
+                                        <img src="../images/add_widget.png" alt="위젯을 추가해주세요">
+                                        <h1>위젯을 추가해 주세요</h1>
+                                        <p>우측 상단의 위젯 추가 버튼을 클릭하여 위젯을 추가하시면 다양한 데이터를 조회하실 수 있습니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="dashboard-03" class="dashboard-contents-area">
+                                <div class="dashboard-empty-section">
+                                    <div class="dashboard-empty-area">
+                                        <img src="../images/add_widget.png" alt="위젯을 추가해주세요">
+                                        <h1>위젯을 추가해 주세요</h1>
+                                        <p>우측 상단의 위젯 추가 버튼을 클릭하여 위젯을 추가하시면 다양한 데이터를 조회하실 수 있습니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="dashboard-04" class="dashboard-contents-area">
+                                <div class="dashboard-empty-section">
+                                    <div class="dashboard-empty-area">
+                                        <img src="../images/add_widget.png" alt="위젯을 추가해주세요">
+                                        <h1>위젯을 추가해 주세요</h1>
+                                        <p>우측 상단의 위젯 추가 버튼을 클릭하여 위젯을 추가하시면 다양한 데이터를 조회하실 수 있습니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--//content-wrapper-->
+
+                <footer class="footer">
+    <div>COPYRIGHT(C) 2025 SK TELECOM INC. ALL RIGHTS RESERVED.</div>
+</footer>
+                <!--//footer-->
+
+            </div>
+            <!--//main-panel-->
+        </div>
+        <!--//page-body-wrapper-->
+    </div>
+    <script src="../js/template.js"></script>
+    <script src="../js/chart.min.js"></script>
+    <script src="../js/highcharts/highcharts.src.js"></script>
+    <script src="../js/gridstack-poly.js"></script>
+    <script src="../js/gridstack-all.js"></script>
+    <script type="text/javascript">
+        // 대시보드 반응형 위젯
+        let GridSetting = {
+            cellHeight: 250,
+            animate: true,
+            margin: 0,
+            marginTop: 10,
+            marginRight: 10,
+        }
+        var grid = GridStack.init(GridSetting);
+
+        $(document).ready(function () {
+            var chartColor1 = '#50b7e4';
+            var chartColor2 = '#aed92c';
+            var chartColor3 = '#7b1ab3';
+            var chartColor4 = '#b17ef2';
+            var chartColor5 = '#2dd99f';
+            $('.widget-button').click(function () {
+                var tab_id = $(this).attr('data-tab');
+
+                $('.widget-button').removeClass('current');
+                $('.dashboard-contents-area').removeClass('current');
+
+                $(this).addClass('current');
+                $("#" + tab_id).addClass('current');
+
+            });
+
+            /*자산 Count 추이*/
+            var chart01 = Highcharts.chart('chart1', {
+                chart: {
+                    type: 'line',
+                    spacingTop: 30,
+                    spacingBottom: 0,
+                    spacingLeft: 0,
+                    spacingRight: 0
+                },
+                title: {
+                    text: null
+                },
+                subtitle: {
+                    text: null
+                },
+                xAxis: {
+                    labels: {
+                        style: {
+                            fontSize: 10,
+                            fontWeight: 'bold',
+                        },
+                    },
+                    title: {
+                        text: null
+                    },
+                    lineColor: '#e3e3e3',
+                    lineWidth: 1,
+                    gridLineWidth: 0,
+                    gridLineColor: '#e3e3e3',
+                    tickLength: 0,
+                    categories: ['2022-07-01', '2022-07-02', '2022-07-03', '2022-07-04', '2022-07-05', '2022-07-06', '2022-07-07'],
+                },
+                yAxis: [{
+                    lineColor: '#d2d2d2',
+                    lineWidth: 1,
+                    gridLineColor: '#e3e3e3',
+                    tickLength: 4,
+                    title: {
+                        text: null
+                    },
+                }, {
+                    title: {
+                        text: null
+                    },
+                    lineColor: '#d2d2d2',
+                    lineWidth: 1,
+                    gridLineColor: '#e3e3e3',
+                    tickLength: 4,
+                    opposite: true,
+                }],
+                legend: {
+                    verticalAlign: 'top',
+                    align: 'center',
+                    margin: 0,
+                    x: 0,
+                    y: -35,
+                    floating: true,
+                    shadow: false,
+                    symbolRadius: 0,
+                    reversed: false,
+                    labelFormat: '<span style="color:{color}">{name}</span>',
+                },
+                tooltip: {
+                    useHTML: true,
+                    borderWidth: 0,
+                    shadow: false,
+                    backgroundColor: "rgba(255,255,255,0)",
+                    headerFormat: '<div class="chart-tooltip div">',
+                    pointFormatter: function () {
+                        return '<p>' + this.series.name + ' : ' + this.y + '건</p>';
+                    },
+                    footerFormat: '</div>',
+                },
+                plotOptions: {
+                    column: {
+                        stacking: 'normal',
+                        borderWidth: 0,
+                    }
+                },
+                series: [{
+                    name: '금주',
+                    data: [20, 30, 20, 50, 60, 20, 60],
+                    color: chartColor1,
+                    pointWidth: 30,
+                    borderRadiusTopLeft: 5,
+                    borderRadiusTopRight: 5,
+                }, {
+                    name: '전주',
+                    data: [40, 25, 30, 50, 60, 20, 60],
+                    color: chartColor2,
+                    pointWidth: 30,
+                    borderRadiusTopLeft: 5,
+                    borderRadiusTopRight: 5,
+                }
+
+                ]
+            });
+
+            // 위젯 width,height 조절시 
+            $('.grid-stack').on('change', function (event, items) {
+                chart01.reflow();
+            });
+
+            // 철거 그래프
+            if ($("#data03-chart").length) {
+                var areaData = {
+                    labels: ["1F", "2F", "3F", "4F", "5F", "6F", "7F"],
+                    datasets: [{
+                        data: [250, 50, 100, 400, 65, 20, 10,],
+                        backgroundColor: [
+                            '#ffeaf5',
+                            '#ffbfe1',
+                            '#ff97cf',
+                            '#ff86c5',
+                            '#ff71bb',
+                            '#ef58d6',
+                            '#d92bbc'
+                        ],
+                        borderColor: "rgba(0,0,0,0)",
+
+                    }],
+                };
+                var areaOptions = {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    segmentShowStroke: false,
+                    cutoutPercentage: 70,
+                    elements: {
+                        arc: {
+                            borderWidth: 4
+                        }
+                    },
+                    legend: {
+                        display: false
+                    },
+                    tooltips: {
+                        enabled: true,
+                        bodyFontSize: 14,
+                        backgroundColor: '#ffffff',
+                        bodyFontColor: '#000',
+                        borderWidth: 1,
+                        borderColor: '#D0D1D6',
+                    },
+                    legendCallback: function (chart) {
+                        var text = [];
+                        text.push('<div class="report-chart">');
+                        text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[0] + '"></div><p style="width:40px;">1F</p></div>');
+                        text.push('<p class="mb-0 ml-3">250</p>');
+                        text.push('</div>');
+                        text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[1] + '"></div><p style="width:40px;">2F</p></div>');
+                        text.push('<p class="mb-0 ml-3">50</p>');
+                        text.push('</div>');
+                        text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[2] + '"></div><p style="width:40px;">3F</p></div>');
+                        text.push('<p class="mb-0 ml-3">100</p>');
+                        text.push('</div>');
+                        text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[3] + '"></div><p style="width:40px;">4F</p></div>');
+                        text.push('<p class="mb-0 ml-3">400</p>');
+                        text.push('</div>');
+                        text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[4] + '"></div><p style="width:40px;">5F</p></div>');
+                        text.push('<p class="mb-0 ml-3">65</p>');
+                        text.push('</div>');
+                        text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[5] + '"></div><p style="width:40px;">6F</p></div>');
+                        text.push('<p class="mb-0 ml-3">20</p>');
+                        text.push('</div>');
+                        text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[6] + '"></div><p style="width:40px;">7F</p></div>');
+                        text.push('<p class="mb-0 ml-3">10</p>');
+                        text.push('</div>');
+                        text.push('</div>');
+                        return text.join("");
+                    },
+                }
+                var southAmericaChartPlugins = {
+                    beforeDraw: function (chart) {
+                        var width = chart.chart.width,
+                            height = chart.chart.height,
+                            ctx = chart.chart.ctx;
+
+                        ctx.restore();
+                        var fontSize = 1.2;
+                        ctx.font = "600 " + fontSize + "em Noto Sans KR";
+                        ctx.textBaseline = "middle";
+                        ctx.fillStyle = "#000";
+
+                        var text = "철거",
+                            textX = Math.round((width - ctx.measureText(text).width) / 2),
+                            textY = height / 2;
+
+                        ctx.fillText(text, textX, textY);
+                        ctx.save();
+                    }
+                }
+                var southAmericaChartCanvas = $("#data03-chart").get(0).getContext("2d");
+                var southAmericaChart = new Chart(southAmericaChartCanvas, {
+                    type: 'doughnut',
+                    data: areaData,
+                    options: areaOptions,
+                    plugins: southAmericaChartPlugins
+                });
+                document.getElementById('data03-legend').innerHTML = southAmericaChart.generateLegend();
+            }
+
+
+            if ($("#data04-chart").length) {
+                var areaData = {
+                    labels: ["title", "title", "title", "title", "title", "title", "title"],
+                    datasets: [{
+                        data: [250, 50, 100, 400, 65, 65, 65],
+                        backgroundColor: [
+                            '#dee7f1',
+                            '#afbac4',
+                            '#b1b7bc',
+                            '#7d868f',
+                            '#76899e',
+                            '#666f7b',
+                            '#4c5257'
+                        ],
+                        borderColor: "rgba(0,0,0,0)"
+                    }]
+                };
+                var areaOptions = {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    segmentShowStroke: false,
+                    cutoutPercentage: 70,
+                    elements: {
+                        arc: {
+                            borderWidth: 4
+                        }
+                    },
+                    legend: {
+                        display: false
+                    },
+                    tooltips: {
+                        enabled: true,
+                        bodyFontSize: 14,
+                        backgroundColor: '#ffffff',
+                        bodyFontColor: '#000',
+                        borderWidth: 1,
+                        borderColor: '#D0D1D6',
+                    },
+                    legendCallback: function (chart) {
+                        var text = [];
+                        text.push('<div class="report-chart">');
+                        text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[0] + '"></div><p style="width:40px;">1F</p></div>');
+                        text.push('<p class="mb-0 ml-3">250</p>');
+                        text.push('</div>');
+                        text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[1] + '"></div><p style="width:40px;">2F</p></div>');
+                        text.push('<p class="mb-0 ml-3">50</p>');
+                        text.push('</div>');
+                        text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[2] + '"></div><p style="width:40px;">3F</p></div>');
+                        text.push('<p class="mb-0 ml-3">100</p>');
+                        text.push('</div>');
+                        text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[3] + '"></div><p style="width:40px;">4F</p></div>');
+                        text.push('<p class="mb-0 ml-3">400</p>');
+                        text.push('</div>');
+                        text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[4] + '"></div><p style="width:40px;">5F</p></div>');
+                        text.push('<p class="mb-0 ml-3">65</p>');
+                        text.push('</div>');
+                        text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[5] + '"></div><p style="width:40px;">6F</p></div>');
+                        text.push('<p class="mb-0 ml-3">65</p>');
+                        text.push('</div>');
+                        text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[6] + '"></div><p style="width:40px;">7F</p></div>');
+                        text.push('<p class="mb-0 ml-3">65</p>');
+                        text.push('</div>');
+                        text.push('</div>');
+                        return text.join("");
+                    },
+                }
+                var southAmericaChartPlugins = {
+                    beforeDraw: function (chart) {
+                        var width = chart.chart.width,
+                            height = chart.chart.height,
+                            ctx = chart.chart.ctx;
+
+                        ctx.restore();
+                        var fontSize = 1.2;
+                        ctx.font = "600 " + fontSize + "em sans-serif";
+                        ctx.textBaseline = "middle";
+                        ctx.fillStyle = "#000";
+
+                        var text = "유휴",
+                            textX = Math.round((width - ctx.measureText(text).width) / 2),
+                            textY = height / 2;
+
+                        ctx.fillText(text, textX, textY);
+                        ctx.save();
+                    }
+                }
+                var southAmericaChartCanvas = $("#data04-chart").get(0).getContext("2d");
+                var southAmericaChart = new Chart(southAmericaChartCanvas, {
+                    type: 'doughnut',
+                    data: areaData,
+                    options: areaOptions,
+                    plugins: southAmericaChartPlugins
+                });
+                document.getElementById('data04-legend').innerHTML = southAmericaChart.generateLegend();
+            }
+            if ($("#data01-chart").length) {
+                var areaData = {
+                    labels: ["title", "title", "title", "title", "title", "title", "title"],
+                    datasets: [{
+                        data: [250, 50, 100, 400, 65, 80, 120],
+                        backgroundColor: [
+                            '#bae8f8',
+                            '#a6e0f7',
+                            '#91d7f5',
+                            '#7ecef2',
+                            '#6cc7f0',
+                            '#46b1eb',
+                            '#3386e1'
+                        ],
+                        borderColor: "rgba(0,0,0,0)"
+                    }]
+                };
+                var areaOptions = {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    segmentShowStroke: false,
+                    cutoutPercentage: 70,
+                    elements: {
+                        arc: {
+                            borderWidth: 4
+                        }
+                    },
+                    legend: {
+                        display: false
+                    },
+                    tooltips: {
+                        enabled: true,
+                        bodyFontSize: 14,
+                        backgroundColor: '#ffffff',
+                        bodyFontColor: '#000',
+                        borderWidth: 1,
+                        borderColor: '#D0D1D6',
+                    },
+                    legendCallback: function (chart) {
+                        var text = [];
+                        text.push('<div class="report-chart">');
+                        text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[0] + '"></div><p style="width:40px;">1F</p></div>');
+                        text.push('<p class="mb-0 ml-3">250</p>');
+                        text.push('</div>');
+                        text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[1] + '"></div><p style="width:40px;">2F</p></div>');
+                        text.push('<p class="mb-0 ml-3">50</p>');
+                        text.push('</div>');
+                        text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[2] + '"></div><p style="width:40px;">3F</p></div>');
+                        text.push('<p class="mb-0 ml-3">100</p>');
+                        text.push('</div>');
+                        text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[3] + '"></div><p style="width:40px;">4F</p></div>');
+                        text.push('<p class="mb-0 ml-3">400</p>');
+                        text.push('</div>');
+                        text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[4] + '"></div><p style="width:40px;">5F</p></div>');
+                        text.push('<p class="mb-0 ml-3">65</p>');
+                        text.push('</div>');
+                        text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[4] + '"></div><p style="width:40px;">6F</p></div>');
+                        text.push('<p class="mb-0 ml-3">80</p>');
+                        text.push('</div>');
+                        text.push('<div class="d-flex justify-content-between"><div class="d-flex align-items-center"><div class="mr-1 dot" style="background-color: ' + chart.data.datasets[0].backgroundColor[4] + '"></div><p style="width:40px;">7F</p></div>');
+                        text.push('<p class="mb-0 ml-3">120</p>');
+                        text.push('</div>');
+                        text.push('</div>');
+                        return text.join("");
+                    },
+                }
+                var northAmericaChartPlugins = {
+                    beforeDraw: function (chart) {
+                        var width = chart.chart.width,
+                            height = chart.chart.height,
+                            ctx = chart.chart.ctx;
+
+                        ctx.restore();
+                        var fontSize = 1.2;
+                        ctx.font = "600 " + fontSize + "em Noto Sans KR";
+                        ctx.textBaseline = "middle";
+                        ctx.fillStyle = "#13381B";
+
+                        var text = "이설",
+                            textX = Math.round((width - ctx.measureText(text).width) / 2),
+                            textY = height / 2;
+
+                        ctx.fillText(text, textX, textY);
+                        ctx.save();
+                    }
+                }
+                var northAmericaChartCanvas = $("#data01-chart").get(0).getContext("2d");
+                var northAmericaChart = new Chart(northAmericaChartCanvas, {
+                    type: 'doughnut',
+                    data: areaData,
+                    options: areaOptions,
+                    plugins: northAmericaChartPlugins
+                });
+                document.getElementById('data01-legend').innerHTML = northAmericaChart.generateLegend();
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,789 @@
+/**************************************************
+  clearfix
+***************************************************/
+.clearfix:before,
+.clearfix:after {
+    display: block;
+    content: '';
+    line-height: 0;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/**************************************************
+  icon.zip
+***************************************************/
+
+.widget-add-card .setting-icon {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: url(/images/setting_icon.png) no-repeat;
+    background-size: cover;
+    filter: invert(88%) sepia(6%) saturate(147%) hue-rotate(191deg) brightness(81%) contrast(88%);
+}
+
+.widget-add-card .setting-icon:hover{
+    filter: invert(20%) sepia(81%) saturate(2172%) hue-rotate(231deg) brightness(92%) contrast(82%);
+}
+
+.dashboard-widget-section .edit-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url(/images/edit_icon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: invert(80%) sepia(6%) saturate(133%) hue-rotate(191deg) brightness(90%) contrast(86%);
+}
+
+.dashboard-widget-section .widget-close-icon {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-image: url(/images/widget_close_icon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: invert(80%) sepia(6%) saturate(133%) hue-rotate(191deg) brightness(90%) contrast(86%);
+}
+
+.dashboard-widget-section .add-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url(/images/add_icon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: invert(80%) sepia(6%) saturate(133%) hue-rotate(191deg) brightness(90%) contrast(86%);
+}
+
+.dashboard-functional-area .functional-icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url(/images/functional_icon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: invert(80%) sepia(6%) saturate(133%) hue-rotate(191deg) brightness(90%) contrast(86%);
+}
+
+.dashboard-functional-area.show .functional-icon{
+    filter: invert(20%) sepia(81%) saturate(2172%) hue-rotate(231deg) brightness(92%) contrast(82%);
+}
+
+.go-page-icon {
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    background-image: url(/images/link_icon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -2px;
+    filter: invert(80%) sepia(6%) saturate(133%) hue-rotate(191deg) brightness(90%) contrast(86%);
+}
+
+.delete-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url(/images/delete_icon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -2px;
+    filter: invert(80%) sepia(6%) saturate(133%) hue-rotate(191deg) brightness(90%) contrast(86%);
+}
+
+.arrow-none:after {
+    display: none;
+}
+
+/**************************************************
+  그래프 / 차트 크기 초기화
+***************************************************/
+
+.chart-resize {
+    height: 100% !important;
+}
+
+.dashboard-card-content .flex-spot {
+    width: 50% !important;
+    height: 100% !important; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dashboard-card-content .report-chart{
+    position: absolute;
+    top: 50%;
+    left: 90%;
+    transform: translate(-50% , -50%);
+    -webkit-transform: translate(-50% , -50%);
+}
+
+/**************************************************
+  조회된 데이터가 없습니다.
+***************************************************/
+.no-data-section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.no-data-section > div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.no-data-section p{
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/**************************************************
+  더보기 dropdown
+***************************************************/
+.dashboard-card {
+    position: relative;
+}
+
+.dashboard-card .dropdown-toggle {
+    position: absolute;
+    top: 10px;
+    right: 18px;
+}
+
+.dashboard-card .dropdown-menu {
+    position: absolute;
+    width: 140px;
+    box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+    border: none;
+}
+
+.dashboard-card .dropdown-menu .dropdown-item {
+    padding: 9px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.dashboard-card .dropdown-menu .dropdown-item:hover {
+    background-color: #F5F5FA;
+}
+
+.dashboard-card .dropdown-menu .dropdown-item:active {
+    background-color: #EAEAED;
+}
+
+
+/**************************************************
+ modal label margin
+***************************************************/
+
+.popCont .tb_body label {
+    margin: 0;
+}
+
+/**************************************************
+ widget table
+***************************************************/
+
+.dashboard-card-content.padding-zero {
+    padding: 0 0 0 0;
+}
+
+.dashboard-card-table table {
+    width: 100%;
+    font-size: 12px;
+}
+
+.dashboard-card-table th {
+    position: relative;
+    padding: 6px 4px 6px 20px;
+    color: rgba(0, 0, 0, .87);
+    text-align: left;
+    line-height: 20px;
+    letter-spacing: -0.5px;
+    border-bottom: 1px solid #d0d1d6;
+    background: #eaeaed;
+}
+
+.dashboard-card-table th:before {
+    position: absolute;
+    top: 7px;
+    left: 0;
+    z-index: 0;
+    content: '';
+    display: block;
+    width: 1px;
+    height: calc(100% - 14px);
+    background: #CCCCD4;
+}
+
+.dashboard-card-table th:first-child:before,
+.dashboard-card-table th.none:before {
+    display: none;
+}
+
+.dashboard-card-table tr.white th {
+    background: #fff;
+}
+
+.dashboard-card-table tbody th:before {
+    display: none;
+}
+
+.dashboard-card-table td {
+    padding: 6px 4px 6px 20px;
+    color: rgba(0, 0, 0, .87);
+    text-align: left;
+    line-height: 24px;
+    border-bottom: 1px solid #e1e1e6;
+    /*vertical-align:top;*/
+}
+
+.dashboard-card-table td a {
+    display: inline-block;
+    width: 98%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: top;
+}
+
+.dashboard-card-table tr:hover td {
+    background-color: #F8F8F9;
+    cursor: pointer;
+}
+
+.dashboard-card-table td.hover_none {
+    background: #fff !important;
+    cursor: default !important;
+}
+
+.dashboard-card-table tr.row_select td,
+.dashboard-card-table tr.row_select:hover td {
+    background: #e7e6ff;
+}
+
+.dashboard-card-table tr.disabled td {
+    color: rgba(0, 0, 0, .3);
+}
+
+/**************************************************
+ dashboard card scrollbar
+***************************************************/
+.dashboard-card-content::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.dashboard-card-content::-webkit-scrollbar-thumb {
+    background-color: #B0B1B5;
+    background-clip: padding-box;
+}
+
+/*스크롤바의 색상*/
+.dashboard-card-content::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+
+/**************************************************
+  dashboard_widget.html / 위젯을 추가해주세요
+***************************************************/
+.dashboard-empty-section {
+    width: 100%;
+    height: calc(100vh - 180px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.dashboard-empty-section .dashboard-empty-area {
+    width: 100%;
+
+}
+
+.dashboard-empty-section .dashboard-empty-area img{
+    width: 170px;
+}
+
+.dashboard-empty-area h1 {
+    font-weight: bold;
+    margin: 16px 0 6px 0;
+}
+
+.dashboard-empty-area p {
+    font-size: 16px;
+    color: #68696E;
+}
+
+.dashboard-widget-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid #D0D1D6;
+}
+
+/**************************************************
+  대시보드 tab
+***************************************************/
+.dashboard-widget-header {
+    width: 100%;
+    height: 100%;
+}
+
+.widget-button-area {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transform: translateY(1px);
+}
+
+.widget-button {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 180px;
+    height: 40px;
+    padding: 0 16px;
+    cursor: default;
+    font-weight: normal;
+    color: #000000de;
+    margin-right: 2px;
+}
+
+.widget-functional-area {
+    padding-top: 6px;
+}
+
+.widget-button-style {
+    font-weight: normal;
+    color: #68696E;
+    background-color: #EAEAED;
+    border: 1px solid #D0D1D6;
+}
+
+.widget-button-style:hover {
+    background-color: #F8F8F9;
+}
+
+.widget-button p {
+    font-size: 14px;
+}
+
+.widget-button.current {
+    background-color: transparent;
+}
+
+.widget-button.current::after{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -1.5px;
+    right: 0;
+    width: 99.99%;
+    height: 3px;
+    background-color: white;
+}
+
+.widget-button.current p{
+    color: #4747B3;
+}
+
+.widget-button button {
+    display: inline-block;
+    background-color: transparent;
+    padding-bottom: 2px;
+    font-weight: normal;
+}
+
+/* 버튼 안에 글씨 안보이게 하기 */
+.screen-out {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: polygon(0 0, 0 0, 0 0);
+}
+
+.widget-plus-button {
+    height: 40px;
+    padding: 0 13px;
+    margin-left: -1px;
+    padding-top: 5px;
+}
+
+.widget-additional-area {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.widget-additional-area button:nth-child(1) {
+    margin-right: 4px;
+}
+
+.widget-additional-area button img {
+    display: block;
+    margin-right: 4px;
+}
+
+/**************************************************
+  dashboard-statistics.html
+***************************************************/
+
+.dashboard-contents-section{
+    width: calc(100% + 10px);
+    min-height: calc(100vh - 170px);
+}
+
+.dashboard-contents-area {
+    visibility: hidden;
+    position: relative;
+    display: none;
+
+}
+
+.dashboard-contents-area.current {
+    display: initial;
+    visibility: visible;
+}
+
+.dashboard-card {
+    position: relative;
+    border: 1px solid #D0D1D6;
+    margin: 14px 14px 0 0;
+    background-color: #fff;
+}
+
+.dashboard-card .title-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    border-bottom: 1px solid #D0D1D6;
+}
+
+.dashboard-card-content {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 47px);
+    overflow-y: auto;
+    padding: 12px 16px 12px 16px;
+}
+
+.dashboard-card-content .sel_box {
+    position: absolute;
+    top: 10px;
+    right: 18px;
+}
+
+
+/**************************************************
+  dashboard-current.html
+***************************************************/
+
+.statistics-current-style-01 .master-current-contents>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 16px;
+    border-bottom: 1px solid #D0D1D6;
+}
+
+.statistics-current-style-01 .master-current-contents>div:hover {
+    background-color: #F8F8F9;
+}
+
+.statistics-current-style-01 .master-current-contents>div:last-child {
+    border-bottom: 0;
+}
+
+.statistics-current-style-01 .master-current-contents div p {
+    font-size: 12px;
+}
+
+.statistics-current-style-01 .master-current-contents div span {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.master-current-contents .important-spot {
+    background-color: #F8F8F9;
+    padding: 8px 16px !important;
+}
+
+.master-current-contents .important-spot p {
+    font-weight: bold;
+}
+
+.master-current-contents .important-spot+.line {
+    margin: 0 0 8px 0;
+}
+
+.master-current-contents .normal-state p:before {
+    content: "";
+    display: inline-block;
+    margin-right: 4px;
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    background-color: #03B35A;
+}
+
+.master-current-contents .error-state p:before {
+    content: "";
+    display: inline-block;
+    margin-right: 4px;
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    background-color: #FCAA1D;
+}
+
+.master-current-contents .dead-state p:before {
+    content: "";
+    display: inline-block;
+    margin-right: 4px;
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    background-color: #7F7F8D;
+}
+
+.master-current-contents .disuse-state p:before {
+    content: "";
+    display: inline-block;
+    margin-right: 4px;
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    background-color: #E10013;
+}
+
+.master-current-contents .dot-shape-1 p::before {
+    content: "";
+    display: inline-block;
+    margin-right: 4px;
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    background-color: #2F3034;
+}
+
+.master-current-contents .dot-shape-2 p::before {
+    content: "";
+    display: inline-block;
+    margin-right: 4px;
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    background-color: #8F9094;
+}
+
+.master-current-contents .dot-shape-3 p::before {
+    content: "";
+    display: inline-block;
+    margin-right: 4px;
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    background-color: #D0D1D6;
+}
+
+/**************************************************
+  add-widget.html
+***************************************************/
+
+.widget-functional-header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #d0d1d6;
+}
+
+.widget-functional-header .tabs {
+    margin-top: 0px;
+    transform: translateY(1px);
+    -webkit-transform: translateY(1px);
+}
+
+/* 위젯명 검색 */
+.popCont .search_wrap {
+    position: relative;
+    top:-5px;
+}
+
+.popCont .search_wrap input {
+    width: 160px;
+    height: 32px;
+    line-height: 30px;
+    padding-right: 40px;
+    
+}
+
+.popCont .search_wrap .search {
+    position: absolute;
+    top: 1px;
+    right: 0;
+    display: block;
+    font-size: 0;
+    width: 30px;
+    height: 30px;
+    cursor:pointer;
+    background: url(/images/ico_search.png) no-repeat center;
+}
+
+.popCont .search_wrap input:focus,
+.popCont .search_wrap input:hover {
+    border: 1px solid #4747B3;
+}
+
+.widget-add-contents-section {
+    position: relative;
+    overflow: auto;
+    height: 400px;
+    max-width: 100%;
+    padding-top: 10px;
+}
+
+.widget-add-contents-area {
+    display: none;
+}
+
+.widget-add-contents-area.current {
+    display: inherit;
+}
+
+.widget-add-contents-area>p {
+    margin-bottom: 10px;
+}
+
+.widget-add-card {
+    /*
+    width: calc(100%/2 - 7px);
+    height: 200px;
+    */
+    width: calc(100%/2 - 7px);
+    height: 215px;
+    background-color: #F8F8F9;
+    margin-bottom: 14px;
+}
+
+.widget-add-contents {
+    width: auto;
+    height: auto;
+    display: flex !important;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    overflow: hidden;
+
+}
+
+/* radio button */
+.widget-add-card .widget-add-title {
+    padding: 8px 14px;
+    border-bottom: 1px solid #D0D1D6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.widget-add-card .widget-add-title label {
+    margin-bottom: 0px;
+}
+
+.widget-add-title a {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+}
+
+
+.widget-functional-header + .tab-cont .in .total{margin-bottom:10px}
+.widget-functional-header + .tab-cont .in .total em{font-weight: 700;}
+
+/* 위젯 추가 팝업 */
+.widget-preview {
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+.widget-preview img {
+    max-width: 100%;
+    max-height:150px;
+    margin: 10px;
+}
+
+.widget-tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+.widget-tooltip .tooltiptext {
+    visibility: hidden;
+    width: 80%;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 15%;
+    left: 78%;
+    margin-left: -60px;
+    opacity: 0; 
+    transition: opacity 0.3s;
+    word-break: keep-all;
+}
+.widget-tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #000 transparent transparent transparent;
+}
+.widget-tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.widget-functional-header ~ .tab-cont {
+    overflow: auto;
+}
+.popup-widget .inner{
+    height: calc( 70vh - 60px)
+    
+}
+.popup.popup-widget .popCont {
+    padding: 10px 30px 0px !important;
+    max-height: initial;
+    height: 70vh;
+}

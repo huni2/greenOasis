@@ -1,0 +1,313 @@
+@charset "utf-8";
+@import url("common.css");/*
+@import url("aim.css");
+@import url("aim_board.css");*/
+
+/*==========공통적으로 쓰이는 css==============*/
+
+.account-title h1 {font-size: 18px;}
+.account-area {width: 100%;height: 100%;padding: 24px;}
+.account-area h2 {font-size: 16px;line-height: 1.6;letter-spacing: -0.5px;margin-bottom: 32px;}
+.account-area p {letter-spacing: -0.5px;}
+.account-area a {font-size: 14px;letter-spacing: -0.5px;text-decoration: none;}
+.account-area label {font-size: 14px;margin-bottom: 0;}
+.account-area button {height: 44px;}
+.account-mr {width: 100%;height: auto;display: flex;justify-content: space-between;margin-bottom: 10px;}
+.account-mr p strong {color: #FF4D36;}
+.account-flex-area {width: 340px;}
+.account-flex-area .account-flex-area-second {display: flex;justify-content: space-between;}
+
+/*성공과 에러 기호*/
+.account-flex-area span {font-size: 20px;font-weight: bold;height: 44px;line-height: 44px;}
+
+/*label 스타일 리스트*/
+.title-label {height: 44px;line-height: 44px;}
+.label-width-first {width: 80px;}
+.label-width-second {width: 110px;}
+
+/*모달 input 스타일 리스트*/
+.account-area input {height: 44px;padding: 0 12px;font-size: 14px;border: 1px solid #D2D9E2;}
+.account-area input:hover {border: 1px solid #6A68BC;}
+.account-area input:focus {border: 1px solid #6A68BC;}
+.account-area input:active {border: 1px solid #6A68BC;}
+.account-area input::placeholder {color: #AAB2BD;}
+
+/*input width 리스트*/
+.input-width-first {width: 100%;}
+.input-width-second {width: 220px !important;}
+.input-width-third {width: 280px !important;}
+
+/*패스워드 정책*/
+.password-rule-area {height: auto;background-color: #F7F7F7;padding: 16px;}
+.password-rule-area p {margin-bottom: 4px;}
+.password-rule-sucess {color: #007AFF;}
+.password-rule-error {color: #FF4D36;}
+
+/*알림/안내 정보 이메일 전송에 동의합니다, 남은 시간, 패스워드 정책 위에 존재하는 padding값*/
+.small-padding-top {padding-top: 8px;}
+
+/*===============Warning======================*/
+.error-border-warning {border: 1px solid #FF4D36 !important;}
+
+/*아이디 찾기 / 비밀번호 찾기 영역*/
+.modal-help-center {width: 100%;height: 44px;line-height: 43px;border: 1px solid #D2D9E2;margin-top: 32px;}
+.modal-help-center ul {display: flex;justify-content: center;align-items: center;}
+
+/*아이디 찾기와 비밀번호 찾기 사이에 있는 선*/
+.modal-help-center ul li:nth-child(2) {width: 1px;height: 20px;background-color: #D2D9E2;margin: 0 30px;}
+.modal-help-center ul li a {color: #333333;}
+.modal-help-center ul li a:hover {text-decoration: none;color: #5C51D6;}
+
+
+/*===========로그인 폼 체크박스*===========*/
+.login-checkbox + label {display: inline-block;cursor: pointer;position: relative;margin-left: 25px;}
+.login-checkbox + label:before {content: "";display: block;position: absolute;border: 1.5px solid #D2D9E2;width: 20px;height: 20px;top: 0;left: -25px;right: 0px;bottom: 0px;}
+.login-checkbox + label:after {content: "";display: block;position: absolute;top: 2px;left: -24px;right: 0px;bottom: 0px;margin-left: 3px;border-radius: 0;font-family: themify;content: '\e64c';font-size: 11px;font-weight: bold;color: #ffffff;}
+.login-checkbox:checked + label:before {background-color: #6A68BC;border: 2px solid #6A68BC;}
+.login-checkbox:checked + label:after {opacity: 1;filter: alpha(opacity=100);-webkit-transform: scale(1);-ms-transform: scale(1);-o-transform: scale(1);transform: scale(1);}
+.account-title {width: 100%;height: 54px;line-height: 54px;background-color: #505050;color: white;padding-left: 24px;}
+
+/*모달창 X닫기*/
+.accout-top-close {position: absolute;top: 18px !important;right: 24px !important;}
+.bottom-close {width: 100%;text-align: center;padding-top: 32px;}
+.bottom-flex {display: flex;justify-content: space-between;}
+.bottom-flex button {width: 206px;}
+
+/*모달창 아래 닫기 버튼*/
+.account-button-close {display: inline-block !important;width: 200px;text-align: center;background-color: #ededed;color: #333;font-size: 14px !important;border: 1px solid transparent;}
+.account-button-close:hover {background: #e6e5e5;color: #212121;}
+.account-button-success {background-color: #6A68BC;color: #ffffff;}
+.account-button-success:hover {background: #5c51d6;}
+.account-button-success:focus {background: #5c51d6;}
+.account-button-success:active {background: #5c51d6;}
+.secondary-button {background-color: #5f636f;color: #ffffff;}
+.button-width {width: 110px;}
+.secondary-button:hover {background-color: #444852;}
+.secondary-button:focus {background-color: #444852;}
+.secondary-button:active {background-color: #444852;}
+
+/*===============CMLG01.html=================*/
+.login-wrapper {background-color: #F4F7F9;min-width: 1280px;}
+.login-space {position: absolute;top: 50%;left: 50%;right: auto;bottom: auto;-webkit-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);transform: translate(-50%, -50%);}
+.login-space span {display: block;font-size: 14px;text-align: center;padding-top: 24px;color: #BBBBBB;}
+.login-area {width: 500px;height: auto;background-color: #ffffff;padding: 48px;}
+.login-wrapper .login-area .login-title {text-align: center;margin-bottom: 32px;}
+.login-wrapper .login-area .login-title img {margin-bottom: 16px;}
+
+/*===============로그인 스타일=================*/
+.login-area h2 {letter-spacing: -0.5px;}
+.login-area a {font-size: 14px;letter-spacing: -0.5px;color: #212121;text-decoration: none;}
+.login-area label {font-size: 14px;letter-spacing: -0.5px;}
+.login-area p {letter-spacing: -0.5px;}
+.login-area input {width: 100%;height: 54px;border: 1px solid transparent;padding: 0 16px;font-size: 16px;background-color: #F7F7F7;}
+.login-area input:hover {border: 1px solid #6A68BC;}
+.login-area input:focus {border: 1px solid #6A68BC;}
+.login-area input:active {border: 1px solid #6A68BC;}
+.login-area input:nth-child(1) {margin-bottom: 10px;}
+.login-area input::placeholder {color: #AAB2BD;}
+.login-help {display: flex;justify-content: space-between;padding: 16px 0 32px 0;}
+.login-help ul {width: auto;height: 20px;display: flex;justify-content: space-around;}
+.login-help ul li:nth-child(2) {width: 1px;height: 100%;background-color: #AAB2BD;margin: 2px 14px 0 14px;}
+.login-help ul li a:hover {color: #6A68BC;}
+
+/*로그인 버튼*/
+.login-area input[type=submit] {background-color: #6A68BC;color: #ffffff;}
+.login-area input[type=submit]:hover {background: #5c51d6;}
+.login-area input[type=submit]:focus {background: #5c51d6;}
+.login-area input[type=submit]:active {background: #5c51d6;}
+.help-center-if {display: flex;justify-content: space-between;padding-top: 24px;}
+.help-center-if p {font-size: 13px;color: rgb(67, 74, 84);}
+.help-center-if p strong {font-weight: bold;}
+
+/*===============CMLG03.html=================*/
+
+.user-id-area {display: flex;justify-content: center;align-items: center;width: 100%;height: 100px;border: 1px solid #D2D9E2;text-align: center;}
+.user-id-area p {width: 100%;font-size: 16px;color: #FF4D36;}
+
+/*===============CMMA01.html=================*/
+.my-password-area {width: 100%;height: calc(100vh - 280px);position: relative;}
+.my-password-area .password-entry {position: absolute;top: 50%;left: 50%;right: auto;bottom: auto;-webkit-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);transform: translate(-50%, -50%);text-align: center;}
+.my-password-area .password-entry h2 {padding-top: 24px;font-size: 20px;letter-spacing: -0.5px;}
+.entry-in-area {padding-top: 32px;}
+.entry-in-area input {width: 210px;height: 40px;border: 1px solid;padding: 0 16px;}
+/*
+.entry-in-area input:hover {border: 1px solid #6A68BC;}
+.entry-in-area input:focus {border: 1px solid #5c51d6;}
+.entry-in-area input:active {border: 1px solid #6A68BC;}*/
+.entry-in-area button {width: 110px;height: 40px;background-color: #6A68BC;color: #ffffff;margin-left: 6px;font-size: 16px;}
+/*
+.entry-in-area button:hover {background-color: #5c51d6;}
+.entry-in-area button:focus {background-color: #5c51d6;}
+.entry-in-area button:active {background-color: #5c51d6;}*/
+
+
+
+
+
+
+
+
+
+/*******20221024********************/
+
+input::placeholder {color:rgba(0,0,0,.3) !important;}
+
+
+@media screen and (max-width:1700px){
+  .login_des{margin-left:-600px;width:530px}
+}
+
+.login_wrap {display:flex; height:100vh; min-height:760px;}
+.login_wrap {display:flex;height:100vh;min-width:1520px; align-items:center; background:url(/images/login_bg2.png) no-repeat center; background-size :cover}
+.login_wrap_area {display:flex; align-items:center; width:1200px; margin:auto;}
+.login_left {display:flex; width:67%; background:#D5D2FF; align-items:center;}
+.login_des p {padding:50px 0 0 60px; font-size:38px; line-height:50px; color:#4747B3; letter-spacing:-1.5px;}
+.login_right {display:flex; width:33%;  background:#fff; align-items:center;}
+.login_area { margin:auto; width:330px; }
+
+.logins_des {position:absolute; margin-left:-600px; width:400px;}
+@media screen and (max-width:1700px) {
+  .logins_des {margin-left:-600px;}
+}
+.logins_des p {padding-top:60px; font-size:38px; line-height:54px; position:relative; letter-spacing:-1px;}
+.logins_des p::before {position:absolute; top:0; left:0; content:''; display:block; width:65px; height:60px; background:url(/images/login_sup.png) no-repeat 0 0;}
+.logins_des p::after {position:absolute; right:0; content:''; display:block; width:65px; height:60px; background:url(/images/login_sub.png) no-repeat 0 bottom;}
+
+.login_des { position: absolute;margin-left: -560px; width: 350px;margin-top: 150px; font-size: 46px;line-height: 60px;}
+.login_des p{padding-top:60px;font-size:38px;line-height:54px;position:relative;letter-spacing:-1px}
+.login_des p:before{position:absolute;top:0;left:0;content:'';display:block;width:65px;height:60px;background:url(/images/login_sub.png) no-repeat 0 bottom;}
+.login_des p:after{position:absolute;right:0;content:'';display:block;width:65px;height:60px;background:url(/images/login_sub.png) no-repeat 0 bottom}
+.login_area .language {margin-top:20px; text-align:center;}
+.login_area .language a {display:inline-block; padding-left:25px; font-size:12px; line-height:17px; position: relative; color:rgba(0,0,0,.3);}
+.login_area .language a:hover {color:rgba(0,0,0,.87);}
+.login_area .language a:active {color:rgba(0,0,0,.87);}
+.login_area .language a.active {color:rgba(0,0,0,.87); font-weight:700;}
+.login_area .language a::before {position:absolute; content:''; left:12px; top:3px; width:1px; height:12px; background:#D0D1D6;}
+.login_area .language a:first-child {padding-left:0;}
+.login_area .language a:first-child::before {display:none;}
+.login_area .tits {display:block;margin-top:34px;font-size:30px;line-height:40px;font-weight:500;text-align:center;color:#4747b3}
+.login_area .logins {margin-top:10px}
+.login_area .logins li{padding-top:18px}
+.login_area .logins li label{display:block;padding-bottom:8px}
+.login_area .logins li input{height:48px;line-height:48px;width:100%;font-size:16px;font-weight:500}
+.login_area .chk_ok{margin-top:10px}
+.login_area .links_bar a {padding:0 20px;}
+.login_area .links_bar .link-btn {background:none;cursor:pointer;padding:0 20px;}
+
+.login_area .btns {margin-top:35px}
+.login_area .btns .btn{height:56px;line-height:56px;font-size:18px;width:100%}
+.login_area .btns .btn.primary{color:#fff; border:1px solid #4747B3; background:#4747B3;}
+.login_area .btns .btn.primary:hover{color:#fff ; border:1px solid #5c51d6 ; background:#5c51d6 ;}
+.login_area .btns .btn.primary:active{color:#fff ; border:1px solid #342E73 ; background:#342E73 ;}
+.login_area .btns p{margin:25px -20px 0 ; line-height:22px; text-align:center;letter-spacing:-0.5px}
+.login_area .copyrights{margin-top:42px;font-size:12px;color:rgba(0,0,0,.4);text-align:center}
+.login_error_popup{margin-left:-260px;margin-top:-200px}
+.login_area .copyrights {margin-top:25px; font-size:12px; color:rgba(0,0,0,.6); text-align:center;}
+
+
+.login_wrap_area{/*margin:0 auto;*/background-color: #fff;width: 400px;padding-bottom:20px;padding-top:20px}
+.login_area .login-title {text-align: center;margin-top:30px}
+.login_area .login-title img{max-width: 120px;}
+.login_area .login-title h3 {letter-spacing: -0.5px;margin-top:16px}
+
+
+
+/*** button 
+button,
+button.btn,
+a.btn {display:inline-block; padding:0 16px; height:40px; line-height:38px; min-width:180px; font-size:16px; color:rgba(0,0,0,.87); text-align:center; border:1px solid #8f9094; background:#fff; outline:0; border-radius:0; white-space:nowrap; cursor:pointer;}
+button.btn.primary,
+a.btn.primary {color:#fff; border:1px solid #4747B3; background:#4747B3;}
+/*size
+button.btn.small,
+a.small {padding:0 16px; font-size:12px; min-width:96px; height:32px; line-height:30px;}
+button.btn.exsmall,
+a.btn.exsmall {padding:0 10px; font-size:12px; min-width:60px; height:24px; line-height:22px;}
+a.btn.full {width:100%;}
+/*color
+button.btn:hover,
+a.btn:hover {border:1px solid #5c51d6 !important; color:#5c51d6 !important;}
+button.btn.primary:hover,
+a.btn.primary:hover {color:#fff !important; border:1px solid #5c51d6 !important; background:#5c51d6 !important;}
+/*line
+button.btn.line,
+a.btn.line {border:1px solid #5c51d6 !important; color:#5c51d6 !important;}
+/*active
+button.btn:active
+a.btn:active {border:1px solid #342E73 !important; color:#342E73 !important;}
+button.btn.primary:active,
+a.btn.primary:active {color:#fff !important; border:1px solid #342E73 !important; background:#342E73 !important;}
+/*disabled
+button.btn:disabled,
+a.btn.disabled {border:1px solid #B0B1B5 !important; color:#B0B1B5 !important;}
+button.btn.primary:disabled,
+a.btn.primary.disabled {color:#8F9094 !important; border:1px solid #D0D1D6 !important; background:#D0D1D6 !important;}
+/*etc
+.btn_wrap button + button,
+.btn_wrap a + a {margin-left:7px;}
+button.btn i,
+a.btn i {display:inline-block; width:16px; height:16px; vertical-align:-3px; margin-right:5px; background-position:0 0; background-repeat:no-repeat;}
+button.btn i.download,
+a.btn i.download {background-image:url(../images/btn_download.png);}
+input[type="text"] + .btn {margin-left:3px;}
+*/
+
+
+
+
+
+#modal{display:block;position:fixed;z-index:1000;width:100%;height:100%;top:0;left:0;background:rgba(0,0,0,0.3)}
+.modal_wrap{display:block;position:fixed;z-index:1001;top:50%;left:50%;background:#fff}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4); /* 선택 */
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.d-block{display: block;}
+.tbl_view {width:100%; margin-top:14px; /*border:1px solid #d0d1d6;*/}
+.tbl_view.mt0 {margin-top:0;}
+.tbl_view th {padding:9px 6px 9px 16px; text-align:left; line-height:32px; border-bottom:1px solid #d0d1d6; background:#eaeaed; letter-spacing:-0.1px;}
+.tbl_view td {padding:9px 16px; border-bottom:1px solid #d0d1d6; line-height:22px;}
+.tbl_view th.line_l,
+.tbl_view td.line_l {border-left:1px solid #d0d1d6;}
+.tbl_view .menu_list li,
+.tbl_view .menu_list li a {line-height:24px; color:rgba(0,0,0,.5);}
+.tbl_view .menu_list li a span,
+.tbl_view .menu_list li span {color:rgba(0,0,0,.87);}
+.tbl_view td.scrolls {padding:0;}
+.tbl_scroll {max-height:350px; padding:9px 16px;}
+.stxt {margin-top:3px; font-size: 13px; color:rgba(0,0,0,.6); }
+.bp_wrap .tbl_view {border:0;}
+.hcont .tbl_view {border-top:1px solid #d0d1d6;}
+.chk_ok{margin-top:3px;}
+.chk_ok input[type="checkbox"] + label{font-size: 13px; color:rgba(0,0,0,.6);letter-spacing:-0.5px}
+
+.text_btn {position:relative; /*padding-right:102px;*/ padding-right:109px;}
+.text_btn .btn {position: absolute; right:0; top:0;}
+button.btn.line, a.btn.line {border: 1px solid #5c51d6 !important;color: #5c51d6 !important;background-color: #fff;}
+
+.tbl_view td button,
+button.btn.small,
+a.small {padding:0 16px; font-size:12px; min-width:96px; height:32px; line-height:30px;}
+
+.links_bar{margin-top:28px;text-align: center;}
+.links_bar button {display:inline-block; position: relative; color:#4D4E52; font-weight:500;padding:0 40px;}
+.links_bar button:hover{color:#5C51D6}
+.links_bar button:active{color:#342E73}
+.links_bar button:before{position:absolute;content:'';left:0;top:2px;width:1px;height:14px;background:#dcdcdc}
+.links_bar button:first-child:before{display:none}
+
+/*입력한 정보와 일치하는 아이디입니다.*/
+.info_match {margin: 20px 0;padding: 30px 40px; line-height: 22px;background: rgba(234,234,237,.3);text-align: center;}
+.info_match p.result{text-align: center;font-size: 14px;}
+.info_match dl{display: flex;justify-content: center;margin-top:15px;}
+.info_match dl dt{padding:0 20px;font-size: 14px;font-weight: 500;}
+.info_match dl dd{font-size: 14px;color:#5C51D6}

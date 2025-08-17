@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>SK hynix 자산관리시스템</title>
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/common.css">
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
+</head>
+
+<body>
+    <div class="container-scroller">
+
+        <nav class="navbar fixed-top">
+            <div class="navbar-logo-wrapper">
+              <button class="navbar-toggler" type="button" data-toggle="minimize">
+                <span class="icon-menu"></span>
+              </button>
+            </div>
+            <div class="navbar-menu-wrapper">
+      
+              <a class="navbar-logo" href="../index.html"><img src="../images/logo.png" alt="SK hynix 로고"/></a>
+              <span class="navbar-title">자산관리MAPS</span>
+              <ul class="location-link">
+                <li><a href="">이천</a></li>
+                <li><a href="">청주</a></li>
+                <li><a href="">우시</a></li>
+                <li><a href="">충징</a></li>
+              </ul>
+              <ul class="navbar-nav">
+                
+                <li class="nav-item nav-language dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="languageDropdown"><i class="flag-korea"></i><span>한국어</span></a>
+                  <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="languageDropdown">
+                    <a class="dropdown-item"><i class="flag-us"></i>English</a>
+                    <a class="dropdown-item"><i class="flag-china"></i>中文</a>              
+                  </div>
+                </li>
+                <li class="nav-item nav-error">
+                  <a class="nav-link" href="#" title="에러"><i class="icon-error"></i></a>
+                </li>
+                <li class="nav-item nav-mail" title="메일">
+                  <a class="nav-link" href="#"><i class="icon-mail"></i></a>
+                </li>
+                <li class="nav-item nav-noti dropdown" title="공지">
+                  <a class="nav-link count-indicator dropdown-toggle" id="notiDropdown" href="#" data-toggle="dropdown"><i class="icon-bell mx-0"></i><span class="count"></span></a>
+                  <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notiDropdown">
+                    <p class="dropdown-header">공지</p>
+                    <a class="dropdown-item preview-item">
+                      <div class="preview-thumbnail">
+                        <div class="preview-icon bg-success"><i class="ti-info-alt mx-0"></i></div>
+                      </div>
+                      <div class="preview-item-content">
+                        <h6 class="preview-subject fw-normal">에러</h6>
+                        <p class="fw-light small-text mb-0 text-muted">1분전</p>
+                      </div>
+                    </a>
+                    <a class="dropdown-item preview-item">
+                      <div class="preview-thumbnail">
+                        <div class="preview-icon bg-warning"><i class="ti-settings mx-0"></i></div>
+                      </div>
+                      <div class="preview-item-content">
+                        <h6 class="preview-subject fw-normal">설정</h6>
+                        <p class="fw-light small-text mb-0 text-muted">메세지</p>
+                      </div>
+                    </a>
+                    <a class="dropdown-item preview-item">
+                      <div class="preview-thumbnail">
+                        <div class="preview-icon bg-info"><i class="ti-user mx-0"></i></div>
+                      </div>
+                      <div class="preview-item-content">
+                        <h6 class="preview-subject fw-normal">사용자등록</h6>
+                        <p class="fw-light small-text mb-0 text-muted">2일전</p>
+                      </div>
+                    </a>
+                  </div>
+                </li>
+                <li class="nav-item nav-profile dropdown ">
+                  <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown"><img src="../images/top_face.png" alt="profile"/><span>X20220610</span></a>
+                  <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+                    <a class="dropdown-item"><i class="ti-settings text-primary"></i>나의정보</a>
+                    <a class="dropdown-item"><i class="ti-power-off text-primary"></i>로그아웃</a>
+                  </div>
+                </li>
+                <li class="nav-item nav-time">
+                  <div><span>2022.06.10 14:24</span><button type="button"><i class="icon-reset"></i></button></div>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <!--//navbar-->
+
+        <div class="page-body-wrapper">
+            <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <script src="../js/nav.js"></script>
+            </nav>
+            <!--//sidebar-->
+            <div class="main-panel">
+                <div class="content-wrapper">
+                    <div class="sub-cont">
+                        <div class="dashboard-widget-section">
+                            <div class="dashboard-widget-header">
+                                <div class="widget-button-area">
+                                    <div class="widget-button widget-button-style current" data-tab="dashboard-01">
+                                        <p>Dashboard 01</p>
+                                        <div class="widget-functional-area">
+                                            <button type="button">
+                                                <span class="screen-out">수정하기</span>
+                                                <span class="edit-icon"></span></button>
+                                            <button type="button">
+                                                <span class="screen-out">닫기</span>
+                                                <span class="widget-close-icon"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="widget-button widget-button-style" data-tab="dashboard-02">
+                                        <p>Dashboard 02</p>
+                                        <div class="widget-functional-area">
+                                            <button type="button">
+                                                <span class="screen-out">수정하기</span>
+                                                <span class="edit-icon"></span></button>
+                                            <button type="button">
+                                                <span class="screen-out">닫기</span>
+                                                <span class="widget-close-icon"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="widget-button widget-button-style" data-tab="dashboard-03">
+                                        <p>Dashboard 03</p>
+                                        <div class="widget-functional-area">
+                                            <button type="button">
+                                                <span class="screen-out">수정하기</span>
+                                                <span class="edit-icon"></span></button>
+                                            <button type="button">
+                                                <span class="screen-out">닫기</span>
+                                                <span class="widget-close-icon"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="widget-button widget-button-style" data-tab="dashboard-04">
+                                        <p>Dashboard 04</p>
+                                        <div class="widget-functional-area">
+                                            <button type="button">
+                                                <span class="screen-out">수정하기</span>
+                                                <span class="edit-icon"></span></button>
+                                            <button type="button">
+                                                <span class="screen-out">닫기</span>
+                                                <span class="widget-close-icon"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="widget-plus-button widget-button-style">
+                                        <span class="screen-out">추가하기</span>
+                                        <span class="add-icon"></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="widget-additional-area">
+                                <button type="button" class="btn btn02">새로고침</button>
+                                <button type="button" class="btn btn01">위젯추가</button>
+                            </div>
+                        </div>
+                        <div class="dashboard-contents-section">
+                            <div id="dashboard-01" class="dashboard-contents-area current">
+                                <div class="grid-stack">
+                                    <div class="grid-stack-item" gs-x="0" gs-y="0" gs-w="6" gs-h="0" gs-min-w="6">
+                                        <div class="dashboard-card grid-stack-item-content">
+                                            <div class="title-area">
+                                                <h5>자산 상태 통계</h5>
+                                                <div class="dashboard-functional-area">
+                                                    <a class="dropdown-toggle arrow-none" href="#"
+                                                        data-toggle="dropdown" id="FunctionalDot">
+                                                        <span class="screen-out">더보기</span>
+                                                        <span class="functional-icon"></span>
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="FunctionalDot">
+                                                        <a class="dropdown-item">바로가기<span
+                                                                class="go-page-icon"></span></a>
+                                                        <a class="dropdown-item">삭제하기<span
+                                                                class="delete-icon"></span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dashboard-card-content">
+                                                <div class="sel_box">
+                                                    <select name="" id="">
+                                                        <option value="">Week</option>
+                                                    </select>
+                                                </div>
+                                                <div id="chat1" class="chart-resize"></div>
+                                                <div class="sel_box">
+                                                    <select name="" id="">
+                                                        <option value="">Week</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--자산 화학물질 통계
+                                    <div class="grid-stack-item" gs-x="6" gs-y="0" gs-w="6" gs-h="0" gs-min-w="6">
+                                        <div class="dashboard-card grid-stack-item-content">
+                                            <div class="title-area">
+                                                <h5>자산 화학물질 통계</h5>
+                                                <div class="dashboard-functional-area">
+                                                    <a class="dropdown-toggle arrow-none" href="#"
+                                                        data-toggle="dropdown" id="FunctionalDot">
+                                                        <span class="screen-out">더보기</span>
+                                                        <span class="functional-icon"></span>
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="FunctionalDot">
+                                                        <a class="dropdown-item">바로가기<span
+                                                                class="go-page-icon"></span></a>
+                                                        <a class="dropdown-item">삭제하기<span
+                                                                class="delete-icon"></span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dashboard-card-content">
+                                                <div class="sel_box">
+                                                    <select name="" id="">
+                                                        <option value="">Week</option>
+                                                    </select>
+                                                </div>
+                                                <div id="chat2" class="chart-resize"></div>
+                                                <div class="sel_box">
+                                                    <select name="" id="">
+                                                        <option value="">Week</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>-->
+
+                                    <!--Tracker 장애 통계-->
+                                    <div class="grid-stack-item" gs-x="0" gs-y="2" gs-w="6" gs-h="0" gs-min-w="6">
+                                        <div class="dashboard-card grid-stack-item-content">
+                                            <div class="title-area">
+                                                <h5>Tracker 장애 통계</h5>
+                                                <div class="dashboard-functional-area">
+                                                    <a class="dropdown-toggle arrow-none" href="#"
+                                                        data-toggle="dropdown" id="FunctionalDot">
+                                                        <span class="screen-out">더보기</span>
+                                                        <span class="functional-icon"></span>
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="FunctionalDot">
+                                                        <a class="dropdown-item">바로가기<span
+                                                                class="go-page-icon"></span></a>
+                                                        <a class="dropdown-item">삭제하기<span
+                                                                class="delete-icon"></span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dashboard-card-content">
+                                                <div class="sel_box">
+                                                    <select name="" id="">
+                                                        <option value="">Week</option>
+                                                    </select>
+                                                </div>
+                                                <div id="chat3" class="chart-resize"></div>
+                                                <div class="sel_box">
+                                                    <select name="" id="">
+                                                        <option value="">Week</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Tracker 배터리 저하 통계-->
+                                    <div class="grid-stack-item" gs-x="6" gs-y="2" gs-w="6" gs-h="0" gs-min-w="6">
+                                        <div class="dashboard-card grid-stack-item-content">
+                                            <div class="title-area">
+                                                <h5>Tracker 배터리 저하 통계</h5>
+                                                <div class="dashboard-functional-area">
+                                                    <a class="dropdown-toggle arrow-none" href="#"
+                                                        data-toggle="dropdown" id="FunctionalDot">
+                                                        <span class="screen-out">더보기</span>
+                                                        <span class="functional-icon"></span>
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="FunctionalDot">
+                                                        <a class="dropdown-item">바로가기<span
+                                                                class="go-page-icon"></span></a>
+                                                        <a class="dropdown-item">삭제하기<span
+                                                                class="delete-icon"></span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dashboard-card-content">
+                                                <div class="sel_box">
+                                                    <select name="" id="">
+                                                        <option value="">Week</option>
+                                                    </select>
+                                                </div>
+                                                <div id="chat4" class="chart-resize"></div>
+                                                <div class="sel_box">
+                                                    <select name="" id="">
+                                                        <option value="">Week</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--WiFi  AP 장애 통계-->
+                                    <div class="grid-stack-item" gs-x="0" gs-y="3" gs-w="6" gs-h="0" gs-min-w="6">
+                                        <div class="dashboard-card grid-stack-item-content">
+                                            <div class="title-area">
+                                                <h5>WiFi  AP 장애 통계</h5>
+                                                <div class="dashboard-functional-area">
+                                                    <a class="dropdown-toggle arrow-none" href="#"
+                                                        data-toggle="dropdown" id="FunctionalDot">
+                                                        <span class="screen-out">더보기</span>
+                                                        <span class="functional-icon"></span>
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="FunctionalDot">
+                                                        <a class="dropdown-item">바로가기<span
+                                                                class="go-page-icon"></span></a>
+                                                        <a class="dropdown-item">삭제하기<span
+                                                                class="delete-icon"></span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dashboard-card-content">
+                                                <div class="sel_box">
+                                                    <select name="" id="">
+                                                        <option value="">Week</option>
+                                                    </select>
+                                                </div>
+                                                <div id="chat5" class="chart-resize"></div>
+                                                <div class="sel_box">
+                                                    <select name="" id="">
+                                                        <option value="">Week</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--BLE AP 장애 통계-->
+                                    <div class="grid-stack-item" gs-x="6" gs-y="3" gs-w="6" gs-h="0" gs-min-w="6">
+                                        <div class="dashboard-card grid-stack-item-content">
+                                            <div class="title-area">
+                                                <h5>BLE AP 장애 통계</h5>
+                                                <div class="dashboard-functional-area">
+                                                    <a href="#" class="link-icon"></a>
+                                                    <button type="button" class="widget-close-icon"></button>
+                                                </div>
+                                            </div>
+                                            <div class="dashboard-card-content">
+                                                <div class="sel_box">
+                                                    <select name="" id="">
+                                                        <option value="">Week</option>
+                                                    </select>
+                                                </div>
+                                                <div id="chat6" class="chart-resize"></div>
+                                                <div class="sel_box">
+                                                    <select name="" id="">
+                                                        <option value="">Week</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="dashboard-02" class="dashboard-contents-area">
+                                <div class="dashboard-empty-section">
+                                    <div class="dashboard-empty-area">
+                                        <img src="../images/add_widget.png" alt="위젯을 추가해주세요">
+                                        <h1>위젯을 추가해 주세요</h1>
+                                        <p>우측 상단의 위젯 추가 버튼을 클릭하여 위젯을 추가하시면 다양한 데이터를 조회하실 수 있습니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="dashboard-03" class="dashboard-contents-area">
+                                <div class="dashboard-empty-section">
+                                    <div class="dashboard-empty-area">
+                                        <img src="../images/add_widget.png" alt="위젯을 추가해주세요">
+                                        <h1>위젯을 추가해 주세요</h1>
+                                        <p>우측 상단의 위젯 추가 버튼을 클릭하여 위젯을 추가하시면 다양한 데이터를 조회하실 수 있습니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="dashboard-04" class="dashboard-contents-area">
+                                <div class="dashboard-empty-section">
+                                    <div class="dashboard-empty-area">
+                                        <img src="../images/add_widget.png" alt="위젯을 추가해주세요">
+                                        <h1>위젯을 추가해 주세요</h1>
+                                        <p>우측 상단의 위젯 추가 버튼을 클릭하여 위젯을 추가하시면 다양한 데이터를 조회하실 수 있습니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--//content-wrapper-->
+                <footer class="footer">
+    <div>COPYRIGHT(C) 2025 SK TELECOM INC. ALL RIGHTS RESERVED.</div>
+</footer>
+                <!--//footer-->
+
+            </div>
+            <!--//main-panel-->
+        </div>
+        <!--//page-body-wrapper-->
+
+    </div>
+    <!--//container-scroller -->
+</body>
+<script src="../js/template.js"></script>
+<script src="../js/highcharts/highcharts.src.js"></script>
+<script src="../js/gridstack-poly.js"></script>
+<script src="../js/gridstack-all.js"></script>
+<script type="text/javascript">
+    // 대시보드 반응형 위젯
+    let GridSetting = {
+        cellHeight: 250,
+        animate: true,
+        margin: 0,
+        marginTop: 10,
+        marginRight: 10,
+    }
+    var grid = GridStack.init(GridSetting);
+
+    var chartColor1 = '#50b7e4';
+    var chartColor2 = '#2dd99f';
+    $(document).ready(function () {
+        $('.widget-button').click(function () {
+            var tab_id = $(this).attr('data-tab');
+
+            $('.widget-button').removeClass('current');
+            $('.dashboard-contents-area').removeClass('current');
+
+            $(this).addClass('current');
+            $("#" + tab_id).addClass('current');
+
+        });
+        /*자산 상태 통계*/
+        var chart01 = Highcharts.chart('chat1', {
+            chart: {
+                type: 'column',
+                spacingTop: 40,
+                spacingBottom: 0,
+                spacingLeft: 0,
+                spacingRight: 5,
+            },
+            title: {
+                text: null
+            },
+            subtitle: {
+                text: null
+            },
+            xAxis: {
+                labels: {
+                    style: {
+                        color: '#787f92',
+                        fontSize: '12px'
+                    }
+                },
+                title: {
+                    text: null
+                },
+                lineColor: '#d2d2d2',
+                lineWidth: 1,
+                gridLineWidth: 1,
+                gridLineColor: '#e3e3e3',
+                tickLength: 0,
+                labels: {
+                    style: {
+                        color: '#787f92',
+                        fontSize: '12px'
+                    }
+                },
+                categories: ['10/1', '10/2', '10/3', '10/4', '10/5', '10/6', '10/7'],
+            },
+            yAxis: [{
+                lineColor: '#d2d2d2',
+                lineWidth: 1,
+                gridLineColor: '#e3e3e3',
+                tickLength: 4,
+                title: {
+                    text: null
+                },
+            }, {
+                title: {
+                    text: null
+                },
+                lineColor: '#d2d2d2',
+                lineWidth: 1,
+                gridLineColor: '#e3e3e3',
+                tickLength: 4,
+                opposite: true,
+            }],
+            legend: {
+                verticalAlign: 'top',
+                align: 'center',
+                margin: 0,
+                x: 0,
+                y: -40,
+                floating: true,
+                shadow: false,
+                symbolRadius: 0,
+                reversed: false,
+                labelFormat: '<span style="color:{color}">{name}</span>',
+            },
+            tooltip: {
+                useHTML: true,
+                backgroundColor: "rgba(255,255,255)",
+                borderWidth: 1,
+                borderColor: "rgba(208,209,214)",
+                shadow: false,
+                formatter: function () {
+                    var succ = 0,
+                        fail = 0;
+
+                    if (this.series.name == "조치") {
+                        succ = this.y;
+                        fail = this.total - this.y;
+                    } else {
+                        succ = this.total - this.y;
+                        fail = this.y;
+                    }
+
+                    var html = "<div class='donut-chart-tooltip rect'>";
+                    html += "<p>조치" + succ + "건</p>";
+                    html += "<p>미조치" + fail + "건</p>";
+                    html += "</div>";
+                    return html;
+                }
+            },
+            plotOptions: {
+                column: {
+                    stacking: 'normal',
+                    borderWidth: 0,
+                }
+            },
+            series: [{
+                name: '조치',
+                data: [45, 24, 40, 22, 43, 32, 40],
+                color: chartColor1,
+                pointWidth: 30,
+                borderRadiusTopLeft: 5,
+                borderRadiusTopRight: 5,
+            },
+            {
+                name: '미조치',
+                data: [14, 15, 22, 24, 42, 43, 28],
+                color: chartColor2,
+                pointWidth: 30,
+            }
+            ]
+        });
+        /*자산 화학물질 통계*/
+        var chart02 = Highcharts.chart('chat2', {
+            chart: {
+                type: 'column',
+                spacingTop: 40,
+                spacingBottom: 0,
+                spacingLeft: 0,
+                spacingRight: 5,
+            },
+            title: {
+                text: null
+            },
+            subtitle: {
+                text: null
+            },
+            xAxis: {
+                labels: {
+                    style: {
+                        color: '#787f92',
+                        fontSize: '12px'
+                    }
+                },
+                title: {
+                    text: null
+                },
+                lineColor: '#d2d2d2',
+                lineWidth: 1,
+                gridLineWidth: 1,
+                gridLineColor: '#e3e3e3',
+                tickLength: 0,
+                labels: {
+                    style: {
+                        color: '#787f92',
+                        fontSize: '12px'
+                    }
+                },
+                categories: ['10/1', '10/2', '10/3', '10/4', '10/5', '10/6', '10/7'],
+            },
+            yAxis: [{
+                lineColor: '#d2d2d2',
+                lineWidth: 1,
+                gridLineColor: '#e3e3e3',
+                tickLength: 4,
+                title: {
+                    text: null
+                },
+            }, {
+                title: {
+                    text: null
+                },
+                lineColor: '#d2d2d2',
+                lineWidth: 1,
+                gridLineColor: '#e3e3e3',
+                tickLength: 4,
+                opposite: true,
+            }],
+            legend: {
+                verticalAlign: 'top',
+                align: 'center',
+                margin: 0,
+                x: 0,
+                y: -40,
+                floating: true,
+                shadow: false,
+                symbolRadius: 0,
+                reversed: false,
+                labelFormat: '<span style="color:{color}">{name}</span>',
+            },
+            tooltip: {
+                useHTML: true,
+                backgroundColor: "rgba(255,255,255)",
+                borderWidth: 1,
+                borderColor: "rgba(208,209,214)",
+                shadow: false,
+                formatter: function () {
+                    var succ = 0,
+                        fail = 0;
+
+                    if (this.series.name == "조치") {
+                        succ = this.y;
+                        fail = this.total - this.y;
+                    } else {
+                        succ = this.total - this.y;
+                        fail = this.y;
+                    }
+
+                    var html = "<div class='donut-chart-tooltip rect'>";
+                    html += "<p>조치" + succ + "건</p>";
+                    html += "<p>미조치" + fail + "건</p>";
+                    html += "</div>";
+                    return html;
+
+                }
+            },
+            plotOptions: {
+                column: {
+                    stacking: 'normal',
+                    borderWidth: 0,
+                }
+            },
+            series: [{
+                name: '조치',
+                data: [7, 26, 28, 30, 35, 45, 52],
+                color: chartColor1,
+                pointWidth: 30,
+                borderRadiusTopLeft: 5,
+                borderRadiusTopRight: 5,
+            },
+            {
+                name: '미조치',
+                data: [5, 7, 19, 31, 32, 34, 34],
+                color: chartColor2,
+                pointWidth: 30,
+            }
+            ]
+        });
+
+        /*Tracker 장애 통계*/
+        var chart03 = Highcharts.chart('chat3', {
+            chart: {
+                type: 'column',
+                spacingTop: 40,
+                spacingBottom: 0,
+                spacingLeft: 0,
+                spacingRight: 5,
+            },
+            title: {
+                text: null
+            },
+            subtitle: {
+                text: null
+            },
+            xAxis: {
+                labels: {
+                    style: {
+                        color: '#787f92',
+                        fontSize: '12px'
+                    }
+                },
+                title: {
+                    text: null
+                },
+                lineColor: '#d2d2d2',
+                lineWidth: 1,
+                gridLineWidth: 1,
+                gridLineColor: '#e3e3e3',
+                tickLength: 0,
+                labels: {
+                    style: {
+                        color: '#787f92',
+                        fontSize: '12px'
+                    }
+                },
+                categories: ['10/1', '10/2', '10/3', '10/4', '10/5', '10/6', '10/7'],
+            },
+            yAxis: [{
+                lineColor: '#d2d2d2',
+                lineWidth: 1,
+                gridLineColor: '#e3e3e3',
+                tickLength: 4,
+                title: {
+                    text: null
+                },
+            }, {
+                title: {
+                    text: null
+                },
+                lineColor: '#d2d2d2',
+                lineWidth: 1,
+                gridLineColor: '#e3e3e3',
+                tickLength: 4,
+                opposite: true,
+            }],
+            legend: {
+                verticalAlign: 'top',
+                align: 'center',
+                margin: 0,
+                x: 0,
+                y: -40,
+                floating: true,
+                shadow: false,
+                symbolRadius: 0,
+                reversed: false,
+                labelFormat: '<span style="color:{color}">{name}</span>',
+            },
+            tooltip: {
+                useHTML: true,
+                backgroundColor: "rgba(255,255,255)",
+                borderWidth: 1,
+                borderColor: "rgba(208,209,214)",
+                shadow: false,
+                formatter: function () {
+                    var succ = 0,
+                        fail = 0;
+
+                    if (this.series.name == "조치") {
+                        succ = this.y;
+                        fail = this.total - this.y;
+                    } else {
+                        succ = this.total - this.y;
+                        fail = this.y;
+                    }
+
+                    var html = "<div class='donut-chart-tooltip rect'>";
+                    html += "<p>조치" + succ + "건</p>";
+                    html += "<p>미조치" + fail + "건</p>";
+                    html += "</div>";
+                    return html;
+                }
+            },
+            plotOptions: {
+                column: {
+                    stacking: 'normal',
+                    borderWidth: 0,
+                }
+            },
+            series: [{
+                name: '조치',
+                data: [10, 20, 30, 40, 50, 60, 70],
+                color: chartColor1,
+                pointWidth: 30,
+                borderRadiusTopLeft: 5,
+                borderRadiusTopRight: 5,
+            },
+            {
+                name: '미조치',
+                data: [70, 60, 50, 40, 30, 20, 10],
+                color: chartColor2,
+                pointWidth: 30,
+            }
+            ]
+        });
+
+        /*Tracker 배터리 저하 통계*/
+        var chart04 = Highcharts.chart('chat4', {
+            chart: {
+                type: 'column',
+                spacingTop: 40,
+                spacingBottom: 0,
+                spacingLeft: 0,
+                spacingRight: 5,
+            },
+            title: {
+                text: null
+            },
+            subtitle: {
+                text: null
+            },
+            xAxis: {
+                labels: {
+                    style: {
+                        color: '#787f92',
+                        fontSize: '12px'
+                    }
+                },
+                title: {
+                    text: null
+                },
+                lineColor: '#d2d2d2',
+                lineWidth: 1,
+                gridLineWidth: 1,
+                gridLineColor: '#e3e3e3',
+                tickLength: 0,
+                labels: {
+                    style: {
+                        color: '#787f92',
+                        fontSize: '12px'
+                    }
+                },
+                categories: ['10/1', '10/2', '10/3', '10/4', '10/5', '10/6', '10/7'],
+            },
+            yAxis: [{
+                lineColor: '#d2d2d2',
+                lineWidth: 1,
+                gridLineColor: '#e3e3e3',
+                tickLength: 4,
+                title: {
+                    text: null
+                },
+            }, {
+                title: {
+                    text: null
+                },
+                lineColor: '#d2d2d2',
+                lineWidth: 1,
+                gridLineColor: '#e3e3e3',
+                tickLength: 4,
+                opposite: true,
+            }],
+            legend: {
+                verticalAlign: 'top',
+                align: 'center',
+                margin: 0,
+                x: 0,
+                y: -40,
+                floating: true,
+                shadow: false,
+                symbolRadius: 0,
+                reversed: false,
+                labelFormat: '<span style="color:{color}">{name}</span>',
+            },
+            tooltip: {
+                useHTML: true,
+                backgroundColor: "rgba(255,255,255)",
+                borderWidth: 1,
+                borderColor: "rgba(208,209,214)",
+                shadow: false,
+                formatter: function () {
+                    var succ = 0,
+                        fail = 0;
+
+                    if (this.series.name == "조치") {
+                        succ = this.y;
+                        fail = this.total - this.y;
+                    } else {
+                        succ = this.total - this.y;
+                        fail = this.y;
+                    }
+
+                    var html = "<div class='donut-chart-tooltip rect'>";
+                    html += "<p>조치" + succ + "건</p>";
+                    html += "<p>미조치" + fail + "건</p>";
+                    html += "</div>";
+                    return html;
+                }
+            },
+            plotOptions: {
+                column: {
+                    stacking: 'normal',
+                    borderWidth: 0,
+                }
+            },
+            series: [{
+                name: '조치',
+                data: [10, 20, 30, 40, 50, 60, 70],
+                color: chartColor1,
+                pointWidth: 30,
+                borderRadiusTopLeft: 5,
+                borderRadiusTopRight: 5,
+            },
+            {
+                name: '미조치',
+                data: [70, 60, 50, 40, 30, 20, 10],
+                color: chartColor2,
+                pointWidth: 30,
+            }
+            ]
+        });
+
+
+
+
+
+
+        /*WiFi  AP 장애 통계*/
+        var chart05 = Highcharts.chart('chat5', {
+            chart: {
+                type: 'column',
+                spacingTop: 40,
+                spacingBottom: 0,
+                spacingLeft: 0,
+                spacingRight: 5,
+            },
+            title: {
+                text: null
+            },
+            subtitle: {
+                text: null
+            },
+            xAxis: {
+                labels: {
+                    style: {
+                        color: '#787f92',
+                        fontSize: '12px'
+                    }
+                },
+                title: {
+                    text: null
+                },
+                lineColor: '#d2d2d2',
+                lineWidth: 1,
+                gridLineWidth: 1,
+                gridLineColor: '#e3e3e3',
+                tickLength: 0,
+                labels: {
+                    style: {
+                        color: '#787f92',
+                        fontSize: '12px'
+                    }
+                },
+                categories: ['10/1', '10/2', '10/3', '10/4', '10/5', '10/6', '10/7'],
+            },
+            yAxis: [{
+                lineColor: '#d2d2d2',
+                lineWidth: 1,
+                gridLineColor: '#e3e3e3',
+                tickLength: 4,
+                title: {
+                    text: null
+                },
+            }, {
+                title: {
+                    text: null
+                },
+                lineColor: '#d2d2d2',
+                lineWidth: 1,
+                gridLineColor: '#e3e3e3',
+                tickLength: 4,
+                opposite: true,
+            }],
+            legend: {
+                verticalAlign: 'top',
+                align: 'center',
+                margin: 0,
+                x: 0,
+                y: -40,
+                floating: true,
+                shadow: false,
+                symbolRadius: 0,
+                reversed: false,
+                labelFormat: '<span style="color:{color}">{name}</span>',
+            },
+            tooltip: {
+                useHTML: true,
+                backgroundColor: "rgba(255,255,255)",
+                borderWidth: 1,
+                borderColor: "rgba(208,209,214)",
+                shadow: false,
+                formatter: function () {
+                    var succ = 0,
+                        fail = 0;
+
+                    if (this.series.name == "조치") {
+                        succ = this.y;
+                        fail = this.total - this.y;
+                    } else {
+                        succ = this.total - this.y;
+                        fail = this.y;
+                    }
+
+                    var html = "<div class='donut-chart-tooltip rect'>";
+                    html += "<p>조치" + succ + "건</p>";
+                    html += "<p>미조치" + fail + "건</p>";
+                    html += "</div>";
+                    return html;
+                }
+            },
+            plotOptions: {
+                column: {
+                    stacking: 'normal',
+                    borderWidth: 0,
+                }
+            },
+            series: [{
+                name: '조치',
+                data: [10, 20, 30, 40, 50, 60, 70],
+                color: chartColor1,
+                pointWidth: 30,
+                borderRadiusTopLeft: 5,
+                borderRadiusTopRight: 5,
+            },
+            {
+                name: '미조치',
+                data: [70, 60, 50, 40, 30, 20, 10],
+                color: chartColor2,
+                pointWidth: 30,
+            }
+            ]
+        });
+        /*BLE AP 장애 통계*/
+        var chart06 = Highcharts.chart('chat6', {
+            chart: {
+                type: 'column',
+                spacingTop: 40,
+                spacingBottom: 0,
+                spacingLeft: 0,
+                spacingRight: 5,
+            },
+            title: {
+                text: null
+            },
+            subtitle: {
+                text: null
+            },
+            xAxis: {
+                labels: {
+                    style: {
+                        color: '#787f92',
+                        fontSize: '12px'
+                    }
+                },
+                title: {
+                    text: null
+                },
+                lineColor: '#d2d2d2',
+                lineWidth: 1,
+                gridLineWidth: 1,
+                gridLineColor: '#e3e3e3',
+                tickLength: 0,
+                labels: {
+                    style: {
+                        color: '#787f92',
+                        fontSize: '12px'
+                    }
+                },
+                categories: ['10/1', '10/2', '10/3', '10/4', '10/5', '10/6', '10/7'],
+            },
+            yAxis: [{
+                lineColor: '#d2d2d2',
+                lineWidth: 1,
+                gridLineColor: '#e3e3e3',
+                tickLength: 4,
+                title: {
+                    text: null
+                },
+            }, {
+                title: {
+                    text: null
+                },
+                lineColor: '#d2d2d2',
+                lineWidth: 1,
+                gridLineColor: '#e3e3e3',
+                tickLength: 4,
+                opposite: true,
+            }],
+            legend: {
+                verticalAlign: 'top',
+                align: 'center',
+                margin: 0,
+                x: 0,
+                y: -40,
+                floating: true,
+                shadow: false,
+                symbolRadius: 0,
+                reversed: false,
+                labelFormat: '<span style="color:{color}">{name}</span>',
+            },
+            tooltip: {
+                useHTML: true,
+                backgroundColor: "rgba(255,255,255)",
+                borderWidth: 1,
+                borderColor: "rgba(208,209,214)",
+                shadow: false,
+                formatter: function () {
+                    var succ = 0,
+                        fail = 0;
+
+                    if (this.series.name == "조치") {
+                        succ = this.y;
+                        fail = this.total - this.y;
+                    } else {
+                        succ = this.total - this.y;
+                        fail = this.y;
+                    }
+                    var html = "<div class='donut-chart-tooltip rect'>";
+                    html += "<p>조치" + succ + "건</p>";
+                    html += "<p>미조치" + fail + "건</p>";
+                    html += "</div>";
+                    return html;
+                }
+            },
+            plotOptions: {
+                column: {
+                    stacking: 'normal',
+                    borderWidth: 0,
+                }
+            },
+            series: [{
+                name: '조치',
+                data: [10, 20, 30, 40, 50, 60, 70],
+                color: chartColor1,
+                pointWidth: 30,
+                borderRadiusTopLeft: 5,
+                borderRadiusTopRight: 5,
+            },
+            {
+                name: '미조치',
+                data: [70, 60, 50, 40, 30, 20, 10],
+                color: chartColor2,
+                pointWidth: 30,
+            }
+            ]
+        });
+
+        // 위젯 width,height 조절시 
+        $('.grid-stack').on('change', function (event, items) {
+            chart01.reflow();
+            chart02.reflow();
+            chart03.reflow();
+            chart04.reflow();
+            chart05.reflow();
+            chart06.reflow();
+        });
+    });
+</script>
+
+</html>

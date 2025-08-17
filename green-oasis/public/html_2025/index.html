@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>PUBLISHING</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/common.css">
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
+
+</head>
+
+<body class="bg-gray">
+
+    <div class="container-scroller">
+
+        <nav class="navbar fixed-top">
+            <div class="navbar-logo-wrapper">
+                <button class="navbar-toggler" type="button" data-toggle="minimize">
+                    <span class="icon-menu"></span>
+                </button>
+            </div>
+            <div class="navbar-menu-wrapper">
+
+                <a class="navbar-logo" href="index.html"><img src="images/logo.png" alt="SK hynix 로고" /></a>
+                <span class="navbar-title">자산관리MAPS</span>
+                <ul class="location-link">
+                    <li><a href="">이천</a></li>
+                    <li><a href="">청주</a></li>
+                    <li><a href="">우시</a></li>
+                    <li><a href="">충징</a></li>
+                </ul>
+                <ul class="navbar-nav">
+
+                    <li class="nav-item nav-language dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="languageDropdown"><i class="flag-korea"></i><span>한국어</span></a>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="languageDropdown">
+                            <a class="dropdown-item"><i class="flag-us"></i>English</a>
+                            <a class="dropdown-item"><i class="flag-china"></i>中文</a>                            
+                        </div>
+                    </li>
+                    <li class="nav-item nav-error">
+                        <a class="nav-link" href="#" title="에러"><i class="icon-error"></i></a>
+                    </li>
+                    <li class="nav-item nav-mail" title="메일">
+                        <a class="nav-link" href="#"><i class="icon-mail"></i></a>
+                    </li>
+                    <li class="nav-item nav-noti dropdown" title="공지">
+                        <a class="nav-link count-indicator dropdown-toggle" id="notiDropdown" href="#" data-toggle="dropdown"><i class="icon-bell mx-0"></i><span class="count"></span></a>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notiDropdown">
+                            <p class="dropdown-header">공지</p>
+                            <a class="dropdown-item preview-item">
+                                <div class="preview-thumbnail">
+                                    <div class="preview-icon bg-success"><i class="ti-info-alt mx-0"></i></div>
+                                </div>
+                                <div class="preview-item-content">
+                                    <h6 class="preview-subject fw-normal">에러</h6>
+                                    <p class="fw-light small-text mb-0 text-muted">1분전</p>
+                                </div>
+                            </a>
+                            <a class="dropdown-item preview-item">
+                                <div class="preview-thumbnail">
+                                    <div class="preview-icon bg-warning"><i class="ti-settings mx-0"></i></div>
+                                </div>
+                                <div class="preview-item-content">
+                                    <h6 class="preview-subject fw-normal">설정</h6>
+                                    <p class="fw-light small-text mb-0 text-muted">메세지</p>
+                                </div>
+                            </a>
+                            <a class="dropdown-item preview-item">
+                                <div class="preview-thumbnail">
+                                    <div class="preview-icon bg-info"><i class="ti-user mx-0"></i></div>
+                                </div>
+                                <div class="preview-item-content">
+                                    <h6 class="preview-subject fw-normal">사용자등록</h6>
+                                    <p class="fw-light small-text mb-0 text-muted">2일전</p>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item nav-profile dropdown ">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown"><img src="images/top_face.png" alt="profile" /><span>X20220610</span></a>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+                            <a class="dropdown-item"><i class="ti-settings text-primary"></i>나의정보</a>
+                            <a class="dropdown-item"><i class="ti-power-off text-primary"></i>로그아웃</a>
+                        </div>
+                    </li>
+                    <li class="nav-item nav-time">
+                        <div><span>2022.06.10 14:24</span><button type="button"><i class="icon-reset"></i></button></div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--//navbar-->
+
+        <div class="page-body-wrapper">
+
+            <nav class="sidebar sidebar-offcanvas" id="sidebar">
+                <script src="js/nav.js"></script>
+            </nav>
+            <!--//sidebar-->
+
+            <div class="main-panel">
+
+                <div class="content-wrapper">
+
+                    <style>
+                        .pup_list {
+                            padding: 20px 20px 100px;
+                            background: #fff;
+                        }
+
+                        .pup_list p.tit {
+                            margin-top: 30px;
+                            color: #222;
+                            margin-bottom: 10px;
+                            font-weight: 500;
+                        }
+
+                        .pup_list tbody td {
+                            padding: 10px 20px
+                        }
+
+                        .pup_list table {
+                            table-layout: initial;
+                            font-size: 13px;
+                        }
+
+                        .pup_list tbody td:nth-child(1) {
+                            width: 370px;
+                            text-align: left;
+                            padding-left: 70px;
+                            word-break: keep-all;
+                        }
+
+                        .pup_list tbody td:nth-child(2) {
+                            width: 370px;
+                            word-break: keep-all;
+                        }
+
+                        .pup_list tbody td:nth-child(3) {
+                            width: 110px
+                        }
+                        .pup_list tbody td:nth-child(4) {
+                            width: 80px
+                        }
+                        .pup_list tbody td:nth-child(5) {
+                            width: ;
+                        }
+                    </style>
+                    <!--퍼블리스트-->
+                    <section class="pup_list">
+                        <div class="tb_list01">
+                            <div class="tb_title">
+                                <p class="title">퍼블리스트 <span class="fw-bold ml-3">SKhynix_자산관리MAPS_WEB_화면설계서_v0.99_20250418_허재식.pptx</span></p>
+                                <button type="button" class="btn btn-arrow">이동</button>
+                            </div>
+
+                            <p class="tit">대시보드</p>
+                            <div class="tb_thead">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>경로명</th>
+                                            <th>설명</th>
+                                            <th>화면명</th>
+                                            <th>진행률</th>
+                                            <th>기타</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>대시보드</td>
+                                            <td>대시보드</td>
+                                            <td><a href="html_dashboard/DBDB01.html">DBDB01</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>대시보드 > 위젯 추가</td>
+                                            <td>대시보드 위젯 추가 팝업</td>
+                                            <td><a href="html_dashboard/DBDB02.html">DBDB02</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>대시보드 > 위젯 추가 > 위젯설정</td>
+                                            <td>위젯별 설정 팝업</td>
+                                            <td><a href="html_dashboard/DBDB03.html">DBDB03</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>자산관리 > 대시보드</td>
+                                            <td>대시보드(현황)</td>
+                                            <td><a href="html_dashboard/DBWG10_DBWG11_DBWG12_DBWG13_DBWG14_DBWG15.html">DBWG10 DBWG11 DBWG12 DBWG13 DBWG14 DBWG15</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>위젯</td>
+                                            <td>통계</td>
+                                            <td><a href="html_dashboard/DBWG01_DBWG03_DBWG04_DBWG05_DBWG06.html">DBWG01 DBWG03 DBWG04 DBWG05 DBWG06</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>자산관리 > 대시보드</td>
+                                            <td>대시보드(통계)</td>
+                                            <td><a href="html_dashboard/DBWG16_DBWG17_DBWG18_DBWG19_DBWG20.html">DBWG16 DBWG17 DBWG18 DBWG19 DBWG20</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>위젯</td>
+                                            <td>게시판</td>
+                                            <td><a href="html_dashboard/DBWG07_DBWG08_DBWG09.html">DBWG07 DBWG08 DBWG09</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                            <p class="tit">전경도</p>
+                            <div class="tb_thead">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>경로명</th>
+                                            <th>설명</th>
+                                            <th>화면ID</th>
+                                            <th>진행률</th>
+                                            <th>기타</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>자산관리 > 전경도 > 이천</td>
+                                            <td></td>
+                                            <td><a href="html_DEFV/DBFV01.html">DBFV01</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>자산관리 > 전경도 > 청주</td>
+                                            <td></td>
+                                            <td><a href="html_DEFV/DBFV01_02.html">DBFV01_02</a></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>자산관리 > 전경도 > 청주 1캠퍼스 </td>
+                                            <td></td>
+                                            <td><a href="html_DEFV/DBFV01_02_1.html">DBFV01_02_1</a></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>자산관리 > 전경도 > 청주 2캠퍼스</td>
+                                            <td></td>
+                                            <td><a href="html_DEFV/DBFV01_02_2.html">DBFV01_02_2</a></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>자산관리 > 전경도 > 청주 3캠퍼스</td>
+                                            <td></td>
+                                            <td><a href="html_DEFV/DBFV01_02_3.html">DBFV01_02_3</a></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>자산관리 > 전경도 > 청주 4캠퍼스</td>
+                                            <td></td>
+                                            <td><a href="html_DEFV/DBFV01_02_4.html">DBFV01_02_4</a></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>자산관리 > 전경도 > 우시</td>
+                                            <td></td>
+                                            <td><a href="html_DEFV/DBFV01_03.html">DBFV01_03</a></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>자산관리 > 전경도 > 충징</td>
+                                            <td></td>
+                                            <td><a href="html_DEFV/DBFV01_04.html">DBFV01_04</a></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>자산관리 > 전경도 > 덕평창고</td>
+                                            <td></td>
+                                            <td><a href="html_DEFV/DBFV01_05.html">DBFV01_05</a></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>자산관리 > 측면도</td>
+                                            <td></td>
+                                            <td><a href="html_DEFV/DBFV02.html">DBFV02</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>자산관리 > 측면도 > 이천 M10C</td>
+                                            <td></td>
+                                            <td><a href="html_DEFV/DBFV02_M10C.html">DBFV02 > M10C</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>자산관리 > 평면도(자산 클릭시)</td>
+                                            <td></td>
+                                            <td><a href="html_DEFV/DBFV03.html">DBFV03</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>자산관리 > 평면도(기본 베이 상세 정보 표시 화면)</td>
+                                            <td></td>
+                                            <td><a href="html_DEFV/DBFV03.html">DBFV03</a></td>
+                                            <td>100%</td>
+                                            <td>class="mapList" 안 내용</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>자산관리 > 평면도 상세장비 정보 List</td>
+                                            <td></td>
+                                            <td><a href="html_DEFV/DBFV03-02.html">DBFV03-02</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <p class="tit">Report</p>
+                            <div class="tb_thead">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>경로명</th>
+                                            <th>설명</th>
+                                            <th>화면ID</th>
+                                            <th>진행률</th>
+                                            <th>기타</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Report > MDM장비 Report</td>
+                                            <td>MDM장비 Report 화면</td>
+                                            <td><a href="html_report/STAS01.html">STAS01</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Report > Tracker 운영 Report</td>
+                                            <td>Tracker 운영 Report</td>
+                                            <td><a href="html_report/STAS03.html">STAS03</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Report > MDM장비 이동 Report</td>
+                                            <td>MDM장비의 이동현황 확인</td>
+                                            <td><a href="html_report/HTAS01.html">HTAS01</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>이력 > 자산 이동 현황</td>
+                                            <td>자산 이동 현황 팝업</td>
+                                            <td><a href="html_report/HTAS02.html">HTAS02</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <p class="tit">Tracker 관리</p>
+                            <div class="tb_thead">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>경로명</th>
+                                            <th>설명</th>
+                                            <th>화면ID</th>
+                                            <th>진행률</th>
+                                            <th>기타</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Tracker 관리 > Tracker 관리 (현황)</td>
+                                            <td>Tacker 현황을 리스트 형태로 조회한다.</td>
+                                            <td><a href="html_tracker/TKMS01.html">TKMS01</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tracker관리 > Tracker 관리</td>
+                                            <td>대상 Tracker가 자산 상세 화면</td>
+                                            <td><a href="html_tracker/TKMS02.html">TKMS02</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tracker 관리 > Tracker 현황</td>
+                                            <td>대상 Tracker가 자산 수정화면</td>
+                                            <td><a href="html_tracker/TKMS03.html">TKMS03</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tracker 관리 > Tracker 현황</td>
+                                            <td>Tracker 등록 버튼 클릭시 등록화면</td>
+                                            <td><a href="html_tracker/TKMS04.html">TKMS04</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tracker 관리 > Tracker 장애</td>
+                                            <td>Tracker 장애 이력</td>
+                                            <td><a href="html_tracker/HTTK01.html">HTTK01</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tracker 관리 > Tracker 장애 상세 팝업</td>
+                                            <td>Tracker 장애 상세</td>
+                                            <td><a href="html_tracker/HTTK02.html">HTTK02</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tracker 관리 > 트랙커 데이터 수집현황</td>
+                                            <td>트랙커 데이터 수집 현황 조회</td>
+                                            <td><a href="html_tracker/HTA401.html">HTA401</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tracker관리 > 설정명령 관리</td>
+                                            <td>설정명령 관리</td>
+                                            <td><a href="html_tracker/TKFV01.html">TKFV01</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tracker관리 > Tracker 제어명령 관리( 펌웨어 버전관리)</td>
+                                            <td>Tracker 제어명령 팝업</td>
+                                            <td><a href="html_tracker/TKFV02.html">TRFV02 TRFV03 TRFV04 TRFV05</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tracker관리 > 제어전송 관리</td>
+                                            <td>제어명령 관리</td>
+                                            <td><a href="html_tracker/TKFU01.html">TKFU01</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tracker관리 > 제어전송 관리</td>
+                                            <td>제어명령 관리</td>
+                                            <td><a href="html_tracker/TRFV06.html">TRFV06</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tracker 관리 > Tracker 입고출고</td>
+                                            <td>Tracker 입고출고 현황 조회</td>
+                                            <td><a href="html_tracker/HTA401_2.html">HTA401</a></td>
+                                            <td>100%</td>
+                                            <td>HTA401 화면 아이디 중복</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tracker 관리 > Tracker 설치 현황</td>
+                                            <td>Tracker 설치 현황 화면</td>
+                                            <td><a href="html_tracker/TRACKER설치현황.html">TRACKER 설치현황</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tracker 관리 > Tracker 설치 현황 > Tracker 설치 현황 상세</td>
+                                            <td>Tracker 설치 현황 상세</td>
+                                            <td><a href="html_tracker/TRACKER설치현황상세화면.html">TRACKER 설치현황 상세 화면</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>트래커 설치 현황 > 트래커 설치 현황 상세</td>
+                                            <td>트래커 설치 현황 수정</td>
+                                            <td><a href="html_tracker/TRACKER설치현황수정.html">TRACKER 설치현황 수정</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <p class="tit">기준정보 관리</p>
+                            <div class="tb_thead">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>경로명</th>
+                                            <th>설명</th>
+                                            <th>화면ID</th>
+                                            <th>진행률</th>
+                                            <th>기타</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>기준정보 관리 > MDM장비 관리</td>
+                                            <td>자산 관리  메인 출력 화면</td>
+                                            <td><a href="html_MDM/MMMS01.html">MMMS01</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>자산관리 > 자산 관리</td>
+                                            <td>자산에 등록된 Tracker가 있을경우</td>
+                                            <td><a href="html_MDM/MMMS02.html">MMMS02</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>자산관리 > 자산 관리</td>
+                                            <td>자산에 Tracker 가 연결되어 있지않을경우 </td>
+                                            <td><a href="html_MDM/MMMS03.html">MMMS03</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>기준정보 관리 > 자산연결 관리</td>
+                                            <td>자산 연결관리  화면</td>
+                                            <td><a href="html_MDM/MMAS01.html">MMAS01</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>기준정보 관리 > 자산 관리</td>
+                                            <td>자산에 등록된 Tracker가 조회</td>
+                                            <td><a href="html_MDM/MMAS02.html">MMAS02</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>기준정보 관리 > 자산 관리 > Tracker 추가</td>
+                                            <td>Tracker 추가 팝업</td>
+                                            <td><a href="html_MDM/MMAS03.html">MMAS03</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>기준정보 관리 > 도면항목 관리</td>
+                                            <td></td>
+                                            <td><a href="html_MDM/SIMD01.html">SIMD01</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>기준정보 관리 > 도면항목 상세</td>
+                                            <td>자산모델 상세</td>
+                                            <td><a href="html_MDM/SIMD02.html">SIMD02</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>기준정보 관리 > 자산 모델 수정</td>
+                                            <td>자산모델 수정</td>
+                                            <td><a href="html_MDM/SIMD03.html">SIMD03</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>기준정보 관리 > 자산 모델 등록</td>
+                                            <td>자산모델 등록</td>
+                                            <td><a href="html_MDM/SIMD03_2.html">SIMD03</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>기준정보 관리 > 도면 관리</td>
+                                            <td>도면 목록</td>
+                                            <td><a href="html_MDM/MMMD01.html">MMMD01</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>기준정보 관리 > 도면 상세</td>
+                                            <td>도면 상세</td>
+                                            <td><a href="html_MDM/MMMD02.html">MMMD02</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>기준정보 관리 > 도면 수정</td>
+                                            <td>도면 수정</td>
+                                            <td><a href="html_MDM/MMMD03.html">MMMD03</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>기준정보 관리 > 도면 등록</td>
+                                            <td>도면 등록</td>
+                                            <td><a href="html_MDM/MMMD04.html">MMMD04</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>기준정보 관리 > 도면자산연결 관리</td>
+                                            <td>도면 연결 관리 목록</td>
+                                            <td><a href="html_MDM/MMMD01_2.html">MMMD01</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>기준정보 관리 > 도면자산연결 상세</td>
+                                            <td>도면 연결 관리 상세</td>
+                                            <td><a href="html_MDM/MMMD02_2.html">MMMD02</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>기준정보  관리 > 도면자산연결 상세 > BAY 설정</td>
+                                            <td>BAY 설정</td>
+                                            <td><a href="html_MDM/MMMS05.html">MMMS05</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>기준정보  관리 > 도면자산연결 상세 > 장비영역 설정</td>
+                                            <td>장비영역 설정</td>
+                                            <td><a href="html_MDM/MMMS05_2.html">MMMS05</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>기준정보  관리 > 도면자산연결 상세 > Bay 정보 팝업</td>
+                                            <td>베이정보</td>
+                                            <td><a href="html_MDM/MMMS06.html">MMMS06</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>기준정보  관리 > 도면자산연결 상세> 장비 설정</td>
+                                            <td>장비설정</td>
+                                            <td><a href="html_MDM/MMMS08.html">MMMS08</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>기준정보 관리 > 도면장비연결 상세 > 베이 관리 > 장비 선택</td>
+                                            <td>도면 선택 (3D도면, FMS 도면 화면 구성은 같다) </td>
+                                            <td><a href="html_MDM/TKDM04-1.html">TKDM04-1</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>기준정보 관리 > 시방서 관리</td>
+                                            <td>시방서 정보 리스트</td>
+                                            <td><a href="html_MDM/TKSB01.html">TKSB01</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>기준정보 관리 > 시방서 관리 > 시방서 복사</td>
+                                            <td>시방서 정보 리스트</td>
+                                            <td><a href="html_MDM/TKSB05.html">TKSB05</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>기준정보 관리 > 시방서 관리 > 시방서 상세</td>
+                                            <td>시방서 상세 정보 조회, 시방서의 자산에 연결된 자산 정보 조회</td>
+                                            <td><a href="html_MDM/TKSB02.html">TKSB02</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>기준정보 관리 > 시방서 관리 > 연결 자산 추가</td>
+                                            <td>연결 자산 추가 팝업</td>
+                                            <td><a href="html_MDM/TKSB06.html">TKSB06</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>기준정보 관리 > 시방서 관리 > 시방서 수정</td>
+                                            <td>대상 Tracker가 자산에 등록되어 있을 경우 수정 클릭시</td>
+                                            <td><a href="html_MDM/TKSB03.html">TKSB03</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>기준정보 관리 > 시방서 관리 > 시방서 등록</td>
+                                            <td>시방서목록화면에서 등록 버튼 클릭시 및 트래커 등록</td>
+                                            <td><a href="html_MDM/TKSB04.html">TKSB04</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>기준정보 > BLE AP 관리</td>
+                                            <td>BLE AP 정보 리스트</td>
+                                            <td><a href="html_MDM/BEIM01.html">BEIM01</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>기준정보 관리 > 창고관리</td>
+                                            <td>창고 관리  메인 출력 화면</td>
+                                            <td><a href="html_MDM/MMMS01_2.html">MMMS01</a></td>
+                                            <td>100%</td>
+                                            <td>MMMS01 화면아이디 중복</td>
+                                        </tr>
+                                        <tr>
+                                            <td>자산관리 > 자산 관리</td>
+                                            <td>자산에 등록된 Tracker가 있을경우</td>
+                                            <td><a href="html_MDM/MMMS02_2.html">MMMS02</a></td>
+                                            <td>100%</td>
+                                            <td>MMMS02 화면아이디 중복</td>
+                                        </tr>
+                                        <tr>
+                                            <td>자산관리 > 자산 관리</td>
+                                            <td>자산에 Tracker 가 연결되어 있지않을경우 </td>
+                                            <td><a href="html_MDM/MMMS03_2.html">MMMS03</a></td>
+                                            <td>100%</td>
+                                            <td>MMMS03 화면아이디 중복</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <p class="tit">게시판</p>
+                            <div class="tb_thead">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>경로명</th>
+                                            <th>설명</th>
+                                            <th>화면ID</th>
+                                            <th>진행률</th>
+                                            <th>기타</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>게시판 > 공지사항</td>
+                                            <td>공지시항 리스트</td>
+                                            <td><a href="html_bbs/NBNT01.html">NBNT01</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>게시판 > 공지사항</td>
+                                            <td>공지사항 상세</td>
+                                            <td><a href="html_bbs/NBNT02.html">NBNT02</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>게시판 > 공지사항</td>
+                                            <td>공지사항 수정</td>
+                                            <td><a href="html_bbs/NBNT03.html">NBNT03</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>게시판 > 공지사항</td>
+                                            <td>공지사항 등록</td>
+                                            <td><a href="html_bbs/NBNT04.html">NBNT04</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>게시판 > 게시판</td>
+                                            <td>게시판 리스트</td>
+                                            <td><a href="html_bbs/NBNB01.html">NBNB01</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>게시판 > 게시판</td>
+                                            <td>게시판 상세</td>
+                                            <td><a href="html_bbs/NBNB02.html">NBNB02</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>게시판 > 게시판</td>
+                                            <td>공지사항 수정</td>
+                                            <td><a href="html_bbs/NBNB03.html">NBNB03</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>게시판 > 게시판</td>
+                                            <td>게시판 등록</td>
+                                            <td><a href="html_bbs/NBNB04.html">NBNB04</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>게시판 > 게시판</td>
+                                            <td>게시판 댓글 등록</td>
+                                            <td><a href="html_bbs/NBNB04-1.html">NBNB04-1</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>게시판 > Q&A</td>
+                                            <td>Q&A 리스트</td>
+                                            <td><a href="html_bbs/NBQA01.html">NBQA01</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>게시판 > Q&A</td>
+                                            <td>Q&A 상세</td>
+                                            <td><a href="html_bbs/NBQA02.html">NBQA02</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>게시판 > Q&A</td>
+                                            <td>Q&A 수정</td>
+                                            <td><a href="html_bbs/NBQA03.html">NBQA03</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>게시판 > Q&A</td>
+                                            <td>Q&A 등록</td>
+                                            <td><a href="html_bbs/NBQA04.html">NBQA04</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>게시판 > Q&A</td>
+                                            <td>Q&A 댓글 등록</td>
+                                            <td><a href="html_bbs/NBQA04-1.html">NBQA04-1</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <p class="tit">시스템</p>
+                            <div class="tb_thead">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>경로명</th>
+                                            <th>설명</th>
+                                            <th>화면ID</th>
+                                            <th>진행률</th>
+                                            <th>기타</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>시스템 > 사용자 관리</td>
+                                            <td>사용자 관리 목록</td>
+                                            <td><a href="html_system/SYUI01.html">SYUI01</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>시스템 > 사용자 관리</td>
+                                            <td>사용자 상세</td>
+                                            <td><a href="html_system/SYUI02.html">SYUI02</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>시스템 > 메뉴 관리</td>
+                                            <td>메뉴 관리</td>
+                                            <td><a href="html_system/SYME01.html">SYME01</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>시스템 > 메뉴 관리</td>
+                                            <td>메뉴 관리 상세</td>
+                                            <td><a href="html_system/SYME02.html">SYME02</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>시스템 > 메뉴 관리</td>
+                                            <td>메뉴 관리 수정</td>
+                                            <td><a href="html_system/SYME03.html">SYME03</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>시스템 > 메뉴 관리</td>
+                                            <td>메뉴 관리 등록</td>
+                                            <td><a href="html_system/SYME04.html">SYME04</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>시스템 > 그룹 관리</td>
+                                            <td>그룹 관리 등록</td>
+                                            <td><a href="html_system/SYGR01.html">SYGR01</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>시스템 > 그룹 관리</td>
+                                            <td>그룹 관리 상세</td>
+                                            <td><a href="html_system/SYGR02.html">SYGR02</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>시스템 > 그룹 관리</td>
+                                            <td>그룹 관리 수정</td>
+                                            <td><a href="html_system/SYGR03.html">SYGR03</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>시스템 > 그룹 관리</td>
+                                            <td>그룹 관리 등록</td>
+                                            <td><a href="html_system/SYGR04.html">SYGR04</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>시스템 > 코드 관리</td>
+                                            <td>코드 관리</td>
+                                            <td><a href="html_system/SYCD01.html">SYCD01</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>시스템 > 코드 관리</td>
+                                            <td>코드 관리 상세</td>
+                                            <td><a href="html_system/SYCD02.html">SYCD02</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>시스템 > 코드 관리</td>
+                                            <td>코드 관리 수정</td>
+                                            <td><a href="html_system/SYCD03.html">SYCD03</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>시스템 > 코드 관리</td>
+                                            <td>코드 관리 등록</td>
+                                            <td><a href="html_system/SYCD04.html">SYCD04</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                            <p class="tit">나의정보</p>
+                            <div class="tb_thead">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>경로명</th>
+                                            <th>설명</th>
+                                            <th>화면ID</th>
+                                            <th>진행률</th>
+                                            <th>기타</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>공통 > 나의 정보</td>
+                                            <td>나의 개인 정보</td>
+                                            <td><a href="html_login/CMLG01.html">CMLG01</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <p class="tit">로그인</p>
+                            <div class="tb_thead">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>경로명</th>
+                                            <th>설명</th>
+                                            <th>화면ID</th>
+                                            <th>진행률</th>
+                                            <th>기타</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>로그인</td>
+                                            <td>로그인</td>
+                                            <td><a href="html_login/CMLG01.html">CMLG01</a></td>
+                                            <td>100%</td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+
+                        </div>
+                    </section>
+                    <!--//퍼블리스트-->
+
+                    <style>
+                        .pup_guide {
+                            padding: 20px;
+                            background: #fff;
+                        }
+
+                        .pup_guide p.tit {
+                            margin-top: 30px;
+                            color: #222;
+                            margin-bottom: 10px;
+                            font-weight: 500;
+                            margin-top: 30px;
+                            background-color: #ddd;
+                            padding: 20px 10px
+                        }
+
+                        .pup_guide code {
+                            width: 100%;
+                            display: block;
+                            padding: 20px
+                        }
+                    </style>
+
+
+
+                </div>
+                <!--//content-wrapper-->
+
+                <footer class="footer">
+                    <div>COPYRIGHT(C) 2025 SK TELECOM INC. ALL RIGHTS RESERVED.</div>
+                </footer>
+                <!--//footer-->
+
+            </div>
+            <!--//main-panel-->
+
+
+        </div>
+        <!--//page-body-wrapper-->
+
+    </div>
+    <!--//container-scroller -->
+</body>
+<script src="js/template.js"></script></html>

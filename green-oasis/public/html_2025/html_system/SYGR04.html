@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>SK hynix 자산관리시스템</title>
+  <link rel="shortcut icon" href="../images/favicon.ico">
+  <link rel="stylesheet" href="../css/common.css">
+
+  <script type="text/javascript" src="../js/jquery.js"></script>
+  <script type="text/javascript" src="../js/jquery-ui.js"></script>
+</head>
+<body class="bg-gray">
+  
+  <div class="container-scroller">
+
+    <nav class="navbar fixed-top">
+      <div class="navbar-logo-wrapper">
+        <button class="navbar-toggler" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+      <div class="navbar-menu-wrapper">
+
+        <a class="navbar-logo" href="../index.html"><img src="../images/logo.png" alt="SK hynix 로고"/></a>
+        <span class="navbar-title">자산관리MAPS</span>
+        <ul class="location-link">
+          <li><a href="">이천</a></li>
+          <li><a href="">청주</a></li>
+          <li><a href="">우시</a></li>
+          <li><a href="">충징</a></li>
+        </ul>
+        <ul class="navbar-nav">
+          
+          <li class="nav-item nav-language dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="languageDropdown"><i class="flag-korea"></i><span>한국어</span></a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="languageDropdown">
+              <a class="dropdown-item"><i class="flag-us"></i>English</a>
+              <a class="dropdown-item"><i class="flag-china"></i>中文</a>              
+            </div>
+          </li>
+          <li class="nav-item nav-error">
+            <a class="nav-link" href="#" title="에러"><i class="icon-error"></i></a>
+          </li>
+          <li class="nav-item nav-mail" title="메일">
+            <a class="nav-link" href="#"><i class="icon-mail"></i></a>
+          </li>
+          <li class="nav-item nav-noti dropdown" title="공지">
+            <a class="nav-link count-indicator dropdown-toggle" id="notiDropdown" href="#" data-toggle="dropdown"><i class="icon-bell mx-0"></i><span class="count"></span></a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notiDropdown">
+              <p class="dropdown-header">공지</p>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-success"><i class="ti-info-alt mx-0"></i></div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject fw-normal">에러</h6>
+                  <p class="fw-light small-text mb-0 text-muted">1분전</p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-warning"><i class="ti-settings mx-0"></i></div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject fw-normal">설정</h6>
+                  <p class="fw-light small-text mb-0 text-muted">메세지</p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-info"><i class="ti-user mx-0"></i></div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject fw-normal">사용자등록</h6>
+                  <p class="fw-light small-text mb-0 text-muted">2일전</p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item nav-profile dropdown ">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown"><img src="../images/top_face.png" alt="profile"/><span>X20220610</span></a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item"><i class="ti-settings text-primary"></i>나의정보</a>
+              <a class="dropdown-item"><i class="ti-power-off text-primary"></i>로그아웃</a>
+            </div>
+          </li>
+          <li class="nav-item nav-name">
+            <div><span>hwchoi</span><span>슈퍼관리자</span></div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--//navbar-->
+
+    <div class="page-body-wrapper">
+
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <script src="../js/nav.js"></script>
+      </nav>
+      <!--//sidebar-->
+
+      <div class="main-panel">
+
+        <div class="content-wrapper">
+
+            <!--SYGR04 그룹관리 등록-->
+            <div class="sub-cont">
+
+                 <div class="page-title-box">
+                  <div class="left">
+                    <h2 class="title">그룹관리</h2>
+                  </div>
+                  <div class="right">
+                    <div>
+                      <ol class="breadcrumb m-0">
+                        <li class="breadcrumb-item">Home</li>
+                        <li class="breadcrumb-item">시스템</li>
+                        <li class="breadcrumb-item active">그룹관리</li>
+                      </ol>
+                    </div>
+                  </div>
+                 </div>
+                 <!--//page-title-box-->
+  
+                <section>
+
+                  <div class="tb-write-area">
+                    
+                    <div class="tb_top">
+                      <div>
+                          <h3 class="title ml-3">그룹 권한 정보</h3>
+                      </div>
+                      <div>
+                        <button type="button" class="btn btn02"><span>취소</span></button>
+                        <button type="button" class="btn btn01"><span>저장</span></button>
+                      </div>
+                    </div>
+
+                    <div class="tb_body">
+                      <div class="">
+                        <dl>
+                          <dt><div><em class="star">*</em>그룹이름</div></dt>
+                          <dd>
+                              <div class="td">
+                                <div class="idGroup">
+                                  <div class="d-flex">
+                                      <input type="text" placeholder="" value="" class="w200">
+                                      <button type="button" class="btn btn02"><span>중복확인</span></button>
+                                  </div>
+                                  <div class="validation_result">
+                                    <span class="valid-feedback">사용가능합니다.</span>
+                                    <span class="invalid-feedback">사용할 수 없습니다.</span>
+                                  </div>
+                                </div>
+                                <!--
+                                <ul class="validation_tip">
+                                    <li>숫자, 영문 대/소문자 조합 4자 ~ 12자</li>
+                                    <li>’_’, ‘-‘ 기호외 불가</li>
+                                </ul>
+                                -->
+                            </div>
+                          </dd>
+                        </dl>
+                        <dl>
+                          <dt><div><em class="star">*</em>사용여부</div></dt>
+                          <dd>
+                              <div>
+                                  <input type="radio" class="inp_rdo" name="rdo" id="rdo_Y" checked><label for="rdo_Y">Y</label>
+                                  <input type="radio" class="inp_rdo" name="rdo" id="rdo_N"/><label for="rdo_N">N</label>
+                              </div>
+                          </dd>
+                        </dl>
+                      </div>
+                    </div>
+                  </div>
+                  <!--//tb-write-area-->
+
+  
+                    <!--리스트-->
+                    <div class="whiteBox mt-3">
+                      <div class="tb_list01">
+                        <div class="tb_thead">
+                          <table>
+                            <colgroup>
+                              <col width="90px"><!--체크 -->
+                              <col width=""><!--메뉴 -->
+                              <col width="100px"><!--All-->
+                              <col width="100px"><!--Read-->
+                            </colgroup>
+                            <thead>
+                              <tr>
+                                <th>
+                                  <div>
+                                    <input type="checkbox" class="inp_chk" name="chk1" id="chk_All"><label for="chk_All" class=""></label>
+                                  </div>
+                                </th>
+                                <th>
+                                  <div class="th-wrap"><span class="s-tit">메뉴</span>
+                                  <span class="s-ico">
+                                    <span sort="asc" class="ico-sort icon-asc disabled"></span>
+                                    <span sort="desc" class="ico-sort icon-desc disabled"></span>
+                                    </span>
+                                  </div>
+                                </th>
+                                <th>
+                                  <div class="th-wrap"><span class="s-tit">All</span>
+                                  <span class="s-ico">
+                                    <span sort="asc" class="ico-sort icon-asc disabled"></span>
+                                    <span sort="desc" class="ico-sort icon-desc disabled"></span>
+                                    </span>
+                                  </div>
+                                </th>
+                                <th>
+                                  <div class="th-wrap"><span class="s-tit">Read</span>
+                                  <span class="s-ico">
+                                    <span sort="asc" class="ico-sort icon-asc disabled"></span>
+                                    <span sort="desc" class="ico-sort icon-desc disabled"></span>
+                                    </span>
+                                  </div>
+                                </th>
+                            </thead>
+                          </table>
+                        </div>
+                        <div class="tb_tbody" style="height: 540px"><!--임시 height 값-->
+                          <table>
+                            <colgroup>
+                              <col width=""><!--체크 -->
+                              <col width="100px"><!--메뉴 --> 
+                              <col width="100px"><!--Read-->
+                            </colgroup>
+                            <tbody>
+                              <tr>
+                                <td class="text-left">
+                                    <div class="ml-20">
+                                      <input type="checkbox" class="inp_chk" name="chk1" id="chk1" checked><label for="chk1" class="mr-5">대시보드</label>
+                                    </div>
+                                </td>
+                                <td><input type="radio" class="inp_rdo" name="rdo" id="rdo1"><label for="rdo1"></label></td>
+                                <td><input type="radio" class="inp_rdo" name="rdo" id="rdo2"><label for="rdo2"></label></td>
+                              </tr>
+                              <tr>
+                                <td class="text-left">
+                                    <div class="ml-40">
+                                      <input type="checkbox" class="inp_chk" name="chk1" id="chk1" checked><label for="chk1" class="mr-5">1depth</label>
+                                    </div>
+                                </td>
+                                <td><input type="radio" class="inp_rdo" name="rdo" id="rdo3" checked><label for="rdo3"></label></td>
+                                <td><input type="radio" class="inp_rdo" name="rdo" id="rdo4" disabled><label for="rdo4"></label></td>
+                              </tr>
+                              <tr>
+                                <td class="text-left">
+                                    <div class="ml-60">
+                                      <input type="checkbox" class="inp_chk" name="chk1" id="chk1" checked><label for="chk1" class="mr-5">2depth</label>
+                                    </div>
+                                </td>
+                                <td><input type="radio" class="inp_rdo" name="rdo" id="rdo1"><label for="rdo1"></label></td>
+                                <td><input type="radio" class="inp_rdo" name="rdo" id="rdo2"><label for="rdo2"></label></td>
+                              </tr>
+                              <tr>
+                                <td class="text-left">
+                                    <div class="ml-80">
+                                      <input type="checkbox" class="inp_chk" name="chk1" id="chk1" checked><label for="chk1" class="mr-5">3depth</label>
+                                    </div>
+                                </td>
+                                <td><input type="radio" class="inp_rdo" name="rdo" id="rdo1"><label for="rdo1"></label></td>
+                                <td><input type="radio" class="inp_rdo" name="rdo" id="rdo2"><label for="rdo2"></label></td>
+                              </tr>
+
+                              <tr>
+                                <td class="text-left">
+                                    <div class="ml-40">
+                                      <input type="checkbox" class="inp_chk" name="chk1" id="chk1" checked disabled><label for="chk1" class="mr-5">1depth</label>
+                                    </div>
+                                </td>
+                                <td><input type="radio" class="inp_rdo" name="rdo" id="rdo3" checked><label for="rdo3"></label></td>
+                                <td><input type="radio" class="inp_rdo" name="rdo" id="rdo4" disabled><label for="rdo4"></label></td>
+                              </tr>
+                              <tr>
+                                <td class="text-left">
+                                    <div class="ml-60">
+                                      <input type="checkbox" class="inp_chk" name="chk1" id="chk1" checked disabled><label for="chk1" class="mr-5">2depth</label>
+                                    </div>
+                                </td>
+                                <td><input type="radio" class="inp_rdo" name="rdo" id="rdo1"><label for="rdo1"></label></td>
+                                <td><input type="radio" class="inp_rdo" name="rdo" id="rdo2"><label for="rdo2"></label></td>
+                              </tr>
+                              <tr>
+                                <td class="text-left">
+                                    <div class="ml-80">
+                                      <input type="checkbox" class="inp_chk" name="chk1" id="chk1" checked disabled><label for="chk1" class="mr-5">3depth</label>
+                                    </div>
+                                </td>
+                                <td><input type="radio" class="inp_rdo" name="rdo" id="rdo1"><label for="rdo1"></label></td>
+                                <td><input type="radio" class="inp_rdo" name="rdo" id="rdo2"><label for="rdo2"></label></td>
+                              </tr>
+
+                              <tr>
+                                <td class="text-left">
+                                    <div class="ml-20">
+                                      <input type="checkbox" class="inp_chk" name="chk1" id="chk1" checked><label for="chk1" class="mr-5">운영</label>
+                                    </div>
+                                </td>
+                                <td><input type="radio" class="inp_rdo" name="rdo" id="rdo1" disabled><label for="rdo1"></label></td>
+                                <td><input type="radio" class="inp_rdo" name="rdo" id="rdo2" disabled><label for="rdo2"></label></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                    <!--//리스트-->
+
+                    
+                </section> 
+
+            </div>
+            <!--//SYGR04 그룹관리 등록-->
+
+        </div>
+        <!--//content-wrapper-->
+
+        <footer class="footer">
+          <div>COPYRIGHT(C) 2025 SK TELECOM INC. ALL RIGHTS RESERVED.</div>
+        </footer> 
+        <!--//footer-->
+
+      </div>
+      <!--//main-panel-->
+
+
+
+    </div>   
+    <!--//page-body-wrapper-->
+
+  </div>
+  <!--//container-scroller -->
+</body>
+  <script src="../js/template.js"></script>
+
+</html>

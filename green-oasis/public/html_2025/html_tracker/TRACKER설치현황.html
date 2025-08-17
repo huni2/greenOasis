@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>SK hynix 자산관리시스템</title>
+  <link rel="shortcut icon" href="../images/favicon.ico">
+  <link rel="stylesheet" href="../css/common.css">
+
+  <script type="text/javascript" src="../js/jquery.js"></script>
+  <script type="text/javascript" src="../js/jquery-ui.js"></script>
+</head>
+<body class="bg-gray">
+  
+  <div class="container-scroller">
+
+    <nav class="navbar fixed-top">
+      <div class="navbar-logo-wrapper">
+        <button class="navbar-toggler" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+      <div class="navbar-menu-wrapper">
+
+        <a class="navbar-logo" href="../index.html"><img src="../images/logo.png" alt="SK hynix 로고"/></a>
+        <span class="navbar-title">자산관리MAPS</span>
+        <ul class="location-link">
+          <li><a href="">이천</a></li>
+          <li><a href="">청주</a></li>
+          <li><a href="">우시</a></li>
+          <li><a href="">충징</a></li>
+        </ul>
+        <ul class="navbar-nav">
+          
+          <li class="nav-item nav-language dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="languageDropdown"><i class="flag-korea"></i><span>한국어</span></a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="languageDropdown">
+              <a class="dropdown-item"><i class="flag-us"></i>English</a>
+              <a class="dropdown-item"><i class="flag-china"></i>中文</a>              
+            </div>
+          </li>
+          <li class="nav-item nav-error">
+            <a class="nav-link" href="#" title="에러"><i class="icon-error"></i></a>
+          </li>
+          <li class="nav-item nav-mail" title="메일">
+            <a class="nav-link" href="#"><i class="icon-mail"></i></a>
+          </li>
+          <li class="nav-item nav-noti dropdown" title="공지">
+            <a class="nav-link count-indicator dropdown-toggle" id="notiDropdown" href="#" data-toggle="dropdown"><i class="icon-bell mx-0"></i><span class="count"></span></a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notiDropdown">
+              <p class="dropdown-header">공지</p>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-success"><i class="ti-info-alt mx-0"></i></div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject fw-normal">에러</h6>
+                  <p class="fw-light small-text mb-0 text-muted">1분전</p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-warning"><i class="ti-settings mx-0"></i></div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject fw-normal">설정</h6>
+                  <p class="fw-light small-text mb-0 text-muted">메세지</p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-info"><i class="ti-user mx-0"></i></div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject fw-normal">사용자등록</h6>
+                  <p class="fw-light small-text mb-0 text-muted">2일전</p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item nav-profile dropdown ">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown"><img src="../images/top_face.png" alt="profile"/><span>X20220610</span></a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item"><i class="ti-settings text-primary"></i>나의정보</a>
+              <a class="dropdown-item"><i class="ti-power-off text-primary"></i>로그아웃</a>
+            </div>
+          </li>
+          <li class="nav-item nav-name">
+            <div><span>hwchoi</span><span>슈퍼관리자</span></div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--//navbar-->
+
+    <div class="page-body-wrapper">
+
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <script src="../js/nav.js"></script>
+      </nav>
+      <!--//sidebar-->
+
+      <div class="main-panel">
+
+        <div class="content-wrapper">
+
+            <!--sub-cont-->
+            <div class="sub-cont">
+
+                 <div class="page-title-box">
+                  <div class="left">
+                    <h2 class="title">Traker 설치 현황</h2>
+                  </div>
+                  <div class="right">
+                    <div>
+                      <ol class="breadcrumb m-0">
+                        <li class="breadcrumb-item">Home</li>
+                        <li class="breadcrumb-item">Tracker 관리</li>
+                        <li class="breadcrumb-item active">Traker 설치 현황</li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+                <!--//page-title-box-->
+
+                <div class="top-search-area">
+                  <div class="left"> 
+                    <dl>
+                      <dt>위치</dt>
+                      <dd>
+
+                        <div class="d-flex gap5">
+                          <select>
+                            <option>전체</option>
+                            <option>이천</option>
+                            <option>청주</option>
+                            <option>우시</option>
+                          </select>
+                          <select>
+                            <option>1캠퍼스</option>
+                            <option>2캠퍼스</option>
+                            <option>3캠퍼스</option>
+                            <option>4캠퍼스</option>
+                          </select>
+                          <select>
+                            <option>건물명</option>
+                            <option>건물명</option>
+                            <option>건물명</option>
+                            <option>건물명</option>
+                          </select>
+                          <select>
+                            <option>1층</option>
+                            <option>2층</option>
+                            <option>3층</option>
+                            <option>4층</option>
+                          </select>
+                        </div> 
+
+                      </dd>
+                    </dl>
+                    <dl>
+                      <dt>설치일자</dt>
+                      <dd>
+                        <span class="datepickerBox"><input type="text" placeholder="2025-02-11"></span>
+                      </dd>
+                    </dl> 
+                  </div>
+                  <div class="right">
+                    <button type="button" class="btn btn-search"><span class="ti-search"></span><span class="icon-name">조회</span></button>
+                  </div>
+                </div>
+                <!--//top-search-area-->
+
+
+
+                <!--Trakcer 설치현황 (마스터/슬레이브)-->
+                <div class="mt-3">
+                  <div class="tb_top">
+                      <h3>Trakcer 설치현황 (마스터/슬레이브)</h3>
+                  </div>
+                  <div class="tb_list04" style="overflow: auto;">
+                    <table class="" style="min-width: 1024px;">
+                        <tbody>
+                          <tr>
+                            <th>상태</th>
+                            <th colspan="2">총 설치 대상(A)</th>
+                            <th colspan="2">트래커 설치(B)</th>
+                            <th colspan="4">대기</th>
+                            <th colspan="8">미설치</th>
+                            <th colspan="2">설치 점검율(%)</th>
+                            <th colspan="2">정상 설치율(%)</th>
+                          </tr>
+                          <tr>
+                            <th>설명</th>
+                            <th colspan="2">MDN 기준정보</th>
+                            <th colspan="2">최종 설치 완료</th>
+                            <th colspan="2">자산 등록 중 (DB에 장비정보 등록)</th>
+                            <th colspan="2">트래커 준비 중 (트래커 ID / 장비 ID 맵핑)</th>
+                            <th colspan="2">트래커 준비 / 분출 중(C)</th>
+                            <th colspan="2">폴더부착(D)</th>
+                            <th colspan="2">이설장비회수(E)</th>
+                            <th colspan="2">회수(F)</th>
+                            <th colspan="2">(B+C+D+E+F)/A</th>
+                            <th colspan="2">B/A</th>
+                          </tr>
+                          <tr>
+                            <th>타입</th>
+                            <th>Master</th>
+                            <th>Slave</th>
+                            <th>Master</th>
+                            <th>Slave</th>
+                            <th>Master</th>
+                            <th>Slave</th>
+                            <th>Master</th>
+                            <th>Slave</th>
+                            <th>Master</th>
+                            <th>Slave</th>
+                            <th>Master</th>
+                            <th>Slave</th>
+                            <th>Master</th>
+                            <th>Slave</th>
+                            <th>Master</th>
+                            <th>Slave</th>
+                            <th>Master</th>
+                            <th>Slave</th>
+                            <th>Master</th>
+                            <th>Slave</th>
+                          </tr>
+                          <tr>
+                            <td>수량</td>
+                            <td>1197</td>
+                            <td>1816</td>
+                            <td>1191</td>
+                            <td>1809</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>2</td>
+                            <td>0</td>
+                            <td>2</td>
+                            <td>0</td>
+                            <td>2</td>
+                            <td>7</td>
+                            <td>100%</td>
+                            <td>100%</td>
+                            <td>100%</td>
+                            <td>100%</td>
+                          </tr>
+                          <tr>
+                            <td>합계</td>
+                            <td colspan="2">3013</td>
+                            <td colspan="2">3000</td>
+                            <td colspan="2">0</td>
+                            <td colspan="2">0</td>
+                            <td colspan="2">0</td>
+                            <td colspan="2">2</td>
+                            <td colspan="2">2</td>
+                            <td colspan="2">9</td>
+                            <td colspan="2">100%</td>
+                            <td colspan="2">99.57%</td>
+                          </tr>
+                        </tbody>
+                    </table>
+                  </div>
+                </div>
+                <!--//Trakcer 설치현황 (마스터/슬레이브)-->
+
+
+
+                <!--상세정보리스트 테이블-->
+                <div class="tb-list-area mt-3">
+                  <div class="tb_list01">
+                    <div class="tb_top">
+                        <p class="total">Total : <em>99,999</em>건</p>
+                        <div>
+                          <button type="button" class="btn btn-excel">Excel</button>
+                          <button type="button" class="btn btn02">취소</button>
+                          <button type="button" class="btn btn02">저장</button>
+                          <button type="button" class="btn btn02">수정</button>
+                        </div>
+                    </div>
+                    
+                    <!--데이터테이블-->
+                    <section class="dataTable-Group">
+                      <!--tb_top-->
+                      <!--//tb_top-->
+                      <!--datatable-->
+                        <div class="dataTable-wrap">
+                          <table class="dataTable">
+                              <thead>
+                                <tr>
+                                  <th></th>
+                                  <th colspan="5">MDM 기준정보</th>
+                                  <th colspan="12">설치현황</th>
+                                </tr>
+                                <tr>
+                                  <th>
+                                    <div>
+                                      <input type="checkbox" class="inp_chk" name="chk1" id="chk1_1"><label for="chk1_1" class=""></label>
+                                    </div>
+                                  </th>
+                                  <th>No.</th>
+                                  <th>EQ ID</th>
+                                  <th>EQ Hierachy Type</th>
+                                  <th>위치</th>
+                                  <th>설치일시</th>
+                                  <th>설치상태</th>
+                                  <th>특이사항</th>
+                                  <th>신규홀더여부</th>
+                                  <th>홀더부착일</th>
+                                  <th>트래커 거치일</th>
+                                  <th>무게추 점검여부</th>
+                                  <th>담당자</th>
+                                  <th>최종점검</th>
+                                  <th>최종점검일</th>
+                                  <th>최종검검간 특이사항</th>
+                                  <th>좌우구분</th>
+                                  <th>ACESS FLOOR POINT</th>
+                                </tr>
+                              </thead>
+                              <tbody>     
+                                <tr>
+                                  <td class="center">
+                                    <div>
+                                        <input type="checkbox" class="inp_chk" name="chk1" id="chk1_1"><label for="chk1_1" class=""></label>
+                                    </div>
+                                  </td>
+                                  <td>2</td>
+                                  <td><a href="#" class="link">CP12093749</a></td>
+                                  <td>CH</td>
+                                  <td><a href="#" class="link">이천 > 이천 캠퍼스 > M14 > 1F</a></td>
+                                  <td>2025-02-11</td>
+                                  <td>
+                                    <select>
+                                      <option>대기</option>
+                                      <option>홀더부착</option>
+                                      <option>회수</option>
+                                      <option>이설장비 회수</option>
+                                      <option>설치완료</option>
+                                    </select>
+                                  </td>
+                                  <td>재설치</td>
+                                  <td>O</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td>O</td>
+                                  <td>김진욱</td>
+                                  <td>O</td>
+                                  <td></td>
+                                  <td>장비없음</td>
+                                  <td>좌</td>
+                                  <td>189</td>
+                                </tr>   
+                                <tr>
+                                  <td class="center">
+                                    <div>
+                                        <input type="checkbox" class="inp_chk" name="chk1" id="chk1_1"><label for="chk1_1" class=""></label>
+                                    </div>
+                                  </td>
+                                  <td>1</td>
+                                  <td><a href="#" class="link">JO90293849</a></td>
+                                  <td></td>
+                                  <td><a href="#" class="link">이천 > 이천 캠퍼스 > M14 > 1F</a></td>
+                                  <td>2025-02-11</td>
+                                  <td>
+                                    <select>
+                                      <option>대기</option>
+                                      <option>홀더부착</option>
+                                      <option>회수</option>
+                                      <option>이설장비 회수</option>
+                                      <option>설치완료</option>
+                                    </select>
+                                  </td>
+                                  <td></td>
+                                  <td>X</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td>X</td>
+                                  <td></td>
+                                  <td>X</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                </tr> 
+                                <tr>
+                                  <td class="center">
+                                    <div>
+                                        <input type="checkbox" class="inp_chk" name="chk1" id="chk1_1"><label for="chk1_1" class=""></label>
+                                    </div>
+                                  </td>
+                                  <td>3</td>
+                                  <td><a href="#" class="link">CP12093749</a></td>
+                                  <td>CH</td>
+                                  <td><a href="#" class="link">이천 > 이천 캠퍼스 > M14 > 1F</a></td>
+                                  <td>2025-02-11</td>
+                                  <td>
+                                    <select>
+                                      <option>대기</option>
+                                      <option>홀더부착</option>
+                                      <option>회수</option>
+                                      <option>이설장비 회수</option>
+                                      <option>설치완료</option>
+                                    </select>
+                                  </td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                </tr>   
+                                <tr>
+                                  <td class="center">
+                                    <div>
+                                        <input type="checkbox" class="inp_chk" name="chk1" id="chk1_1"><label for="chk1_1" class=""></label>
+                                    </div>
+                                  </td>
+                                  <td>4</td>
+                                  <td><a href="#" class="link">JO90293849</a></td>
+                                  <td></td>
+                                  <td><a href="#" class="link">이천 > 이천 캠퍼스 > M14 > 1F</a></td>
+                                  <td>2025-02-11</td>
+                                  <td>
+                                    <select>
+                                      <option>대기</option>
+                                      <option>홀더부착</option>
+                                      <option>회수</option>
+                                      <option>이설장비 회수</option>
+                                      <option>설치완료</option>
+                                    </select>
+                                  </td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                </tr> 
+                              </tbody>
+                          </table>
+                        </div>
+                      <!--//datatable-->
+                    </section>
+                    <!--데이터테이블-->
+
+
+                    <ul class="pagination">
+                      <li class="page-item">
+                          <a class="page-link" href="javascript: void(0);" aria-label="Previous">
+                              <span aria-hidden="true">&laquo;</span>
+                          </a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="javascript: void(0);">1</a></li>
+                      <li class="page-item"><a class="page-link" href="javascript: void(0);">2</a></li>
+                      <li class="page-item active"><a class="page-link" href="javascript: void(0);">3</a></li>
+                      <li class="page-item"><a class="page-link" href="javascript: void(0);">4</a></li>
+                      <li class="page-item"><a class="page-link" href="javascript: void(0);">5</a></li>
+                      <li class="page-item">
+                          <a class="page-link" href="javascript: void(0);" aria-label="Next">
+                              <span aria-hidden="true">&raquo;</span>
+                          </a>
+                      </li>
+                    </ul>
+
+                  </div><!--//tb_list01-->
+                </div>
+                <!--//상세정보리스트 테이블-->
+
+
+            </div>
+            <!--//sub-cont-->
+
+
+        </div>
+        <!--//content-wrapper-->
+
+        <footer class="footer">
+          <div>COPYRIGHT(C) 2025 SK TELECOM INC. ALL RIGHTS RESERVED.</div>
+        </footer> 
+        <!--//footer-->
+
+      </div>
+      <!--//main-panel-->
+
+
+    </div>   
+    <!--//page-body-wrapper-->
+
+  </div>
+  <!--//container-scroller -->
+</body>
+  <script src="../js/template.js"></script>
+
+  <!--데이터테이블-->
+<link rel="stylesheet" href="../css/datatables.css">
+<script src="../js/datatables.min.js"></script>
+<script>
+  $(document).ready( function () {
+      $('table.dataTable ').DataTable({
+
+        //가로 스크롤바
+        scrollX: true,
+
+        //세로 스크롤바
+        scrollY: 400,
+
+        //일정높이 이상 시 Y스크롤 추가
+        //"scrollCollapse" : true,
+
+        // 표시 건수기능 
+        lengthChange: false,
+
+        // 검색 기능 
+        searching: false,
+
+        // 정렬 기능 
+        ordering: true,
+
+        // 정보 표시 
+        info: false,
+
+        "pageLength": 10,
+
+        // 페이징 기능 
+        paging: false, 
+
+        pagingType : "full_numbers",
+
+        columnDefs: [
+            { width: "50px", targets: 0 },
+            { width: "50px", targets: 1 },
+            { width: "100px", targets: 2 },
+        ],
+
+        });
+  } );
+</script>
+<!--//데이터테이블-->
+</html>

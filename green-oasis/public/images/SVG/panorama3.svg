@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1160 438">
+<!--    <image width="1160" height="438" xlink:href="/static/images/panorama4.png"></image>-->
+    <image width="1160" height="438" xlink:href="/images/panorama4H.png"></image>
+    <g class="skhynixWrap-ic floorPlan">
+        <g id="landmark">
+            <polygon id="B01104" points="193 184 137 184 192 68 241 68 193 184"/>
+            <polygon id="B01105" points="260 185 207 184 253 68 301 68 260 185"/>
+            <polygon id="B01106" points="328.45 185 275.45 184 312 68 361 68 328.45 185"/>
+            <polygon id="B01107" points="397 185 342 184 371 68 420 68 397 185"/>
+            <polygon id="B01108" points="465.47 185 410 184 430 68 480 68 465.47 185"/>
+            <polygon id="B01109" points="534 183 480 184 492 66 541 66 534 183"/>
+            <polygon id="B01110" points="551 66 547 184 601 184 599 66 551 66"/>
+            <polygon id="B01111" points="610 67 616 184 669 184 660 67 610 67"/>
+            <polygon id="B01112" points="669 66 684 185 739 185 721 66 669 66"/>
+            <polygon id="B01113" points="729 66 751 185 805 184 778 67 729 66"/>
+            <polygon id="B01114" points="787.22 66.35 818 184 873 184 836.22 67.35 787.22 66.35"/>
+            <polygon id="B01115" points="848 67 887 184 942 184 897 67 848 67"/>
+            <polygon id="B01116" points="907.11 67 955 184 1009 184 956.11 67 907.11 67"/>
+            
+            <polygon id="B01091" points="136 189 62 345 125 345 190 190 136 189"/>
+            <polygon id="B01092" points="204 189 143 344 207 345 260 190 204 189"/>
+            <polygon id="B01093" points="273 189 223 344 286 345 328 190 273 189"/>
+            <polygon id="B01094" points="342 189 303 343 366 344 396 190 342 189"/>
+            <polygon id="B01095" points="410 189 383 343 445 344 463 190 410 189"/>
+            <polygon id="B01096" points="480 188 464.19 342 526 343 534 189 480 188"/>
+            <polygon id="B01097" points="547 189 543 342 606 343 602 189 547 189"/>
+            <polygon id="B01098" points="616 189 621.02 342 686 343 671 189 616 189"/>
+            <polygon id="B01099" points="684 188 702 343 764.02 342 739 188 684 188"/>
+            <polygon id="B01100" points="753 188 782.81 343 844 342 807 188 753 188"/>
+            <polygon id="B01101" points="821 189 861.13 343 924 342 876 188 821 189"/>
+            <polygon id="B01102" points="889 189 941.54 343 1004 342 945 188 889 189"/>
+            <polygon id="B01103" points="956 189 1020 343 1083 342 1014.41 188 956 189"/>
+            <polygon points="480,354 564.5,353.5 562.5,406.8 476.7,406.8 "/>
+            <rect class="tit_b" x="488" y="367" width="66" height="28" rx="14" ry="14"/>
+            <text transform="translate(503.04 385.3)" class="tit_build">출입구</text>
+            <a xlink:href="#">
+<!--                <title>TRACKER</title>-->
+<!--                <circle cx="200" cy="100" r="4.5" class="red" />-->
+<!--                <circle cx="205.34" cy="120.4" r="4.5" class="blue"/>-->
+            </a>
+        </g>
+    </g>
+</svg>
